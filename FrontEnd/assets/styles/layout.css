@@ -1,0 +1,30 @@
+.col-1, .col-2, .col-3, .col-4{ float:left}
+/*======= width =======*/
+.main{margin:0 auto; text-align:left; width:783px; background:#c2c0c0 }
+
+/*======= header =======*/
+#header {height:445px;  background:url(images/top.gif) repeat-x top center}
+
+/*======= index.html =======*/
+#page1 #content .col-1{ width:451px; margin-right:8px}
+#page1 #content .col-2{ width:268px}
+/*======= index-1.html =======*/
+#page2 #content .col-1{ width:451px; margin-right:8px}
+#page2 #content .col-2{ width:268px}
+/*======= index-2.html =======*/
+#page3 #content .col-1{ width:451px; margin-right:8px}
+#page3 #content .col-2{ width:268px}
+/*======= index-3.html =======*/
+#page4 #content .col-1{ width:451px; margin-right:8px}
+#page4 #content .col-2{ width:268px}
+
+#page4 #content .col-3{ width:115px}
+#page4 #content .col-4{ width:276px}
+/*======= index-4.html =======*/
+#page5 #content .col-1{ width:451px; margin-right:8px}
+#page5 #content .col-2{ width:268px}
+#page5 #content .col-3{ width:60px}
+#page5 #content .col-4{ width:162px}
+
+/*======= footer =======*/
+#footer { height:81px; }
