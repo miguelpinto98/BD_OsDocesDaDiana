@@ -486,21 +486,21 @@ nav div.mainNav ul li a.home{
 }
 
 nav div.mainNav ul li a.movies{
-	background: transparent url('../images/menu-movies.png') no-repeat;
+	/*background: transparent url('../images/menu-movies.png') no-repeat;*/
 	background-position: 35px 10px;
 	padding-left: 60px;
 	width: 78px;
 }
 
 nav div.mainNav ul li a.series{
-	background: transparent url('../images/menu-series.png') no-repeat;
+	/*background: transparent url('../images/menu-series.png') no-repeat;*/
 	background-position: 35px 11px;
 	padding-left: 60px;
 	width: 78px;
 }
 
 nav div.mainNav ul li a.animes{
-	background: transparent url('../images/menu-animes.png') no-repeat;
+	/*background: transparent url('../images/menu-animes.png') no-repeat;*/
 	background-position: 35px 10px;
 	padding-left: 60px;
 	width: 78px;
