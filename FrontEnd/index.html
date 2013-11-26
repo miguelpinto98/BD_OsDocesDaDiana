@@ -49,12 +49,6 @@
 		<script type="text/javascript" src="View/templates/default/includes/autoresize.jquery.min.js"></script>	
 		<script type="text/javascript" src="View/templates/default/includes/functions.js"></script>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
-		
-		<script type="text/javascript">
-			var adParams = {
-				a: '12678003', numOfTimes: '1',duration: '1',serverdomain: 'ads.adplxmd.com' ,period: 'Hour' 
-			};
-		</script>
 	</head>
 	
 	<body>
@@ -87,12 +81,20 @@
 						<ul>
 							<!--<li class="first"><a href="index.php" class="home slctd">Entrada</a></li>-->
 							<li class="first "><a href="movies.html" class="movies ">Categorias</a></li>
-							<li class=""><a href="#" class="series ">Chefs</a></li>
-							<li class=""><a href="news.html" class="news ">Notícias</a></li>
-							<li class="{requestsClass}"><a href="requests.html" class="chat {requestsClass}">Pedidos</a></li>
+							<li class=""><a href="#" class="series ">Novidades</a></li>
+							<li class="last"><a href="news.html" class="news ">Bosses</a></li>
+							<!--<li class="{requestsClass}"><a href="requests.html" class="chat {requestsClass}">Pedidos</a></li>-->
 							<!--<li><a href="http://www.wareztuga.ws/forum/index.php" class="forum" target="_blank">Fórum</a></li>-->
-							<li class="last "><a href="faq.html" class="faq ">Ajuda</a></li>
+							<!--<li class="last "><a href="#" class="faq ">Search</a></li>-->
 						</ul>
+
+						<div class="box-search">
+					<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
+					<input type="text" name="searchBox" id="searchBox" value="Procure aqui uma sobremesa" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
+					<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span></a>
+					</form>
+				</div>
+
 					</div>
 				</div></nav>
 				<div class="clear"></div>
@@ -109,7 +111,7 @@
 				<div class="box-header">
 					<input type="hidden" id="box-media" value="movies" />
 					<div class="movies-box-icon"></div>
-						<div class="movies-box-caption">Veja aqui filmes online</div>
+						<div class="movies-box-caption">XXX CATEGORIA XXX</div>
 							<input type="hidden" id="boxheaderBtnSlctd" value="" />
 							<ul class="movies-box-btn">
 								<li id="movies" class="first "><a href="javascript:;" onclick="changeHighLightsContent('movies', 'movies');">Mais Recentes</a></li>
@@ -118,18 +120,10 @@
 								<li id="recommendedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'recommendedmovies');">Recomendados</a></li>
 								<li id="" style="display: none;"><a href="javascript:;" onclick=""></a></li>
 							</ul>
-	
-				<div class="box-search">
-					<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-					<input type="text" name="searchBox" id="searchBox" value="Procure aqui um filme" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-					<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span></a>
-					</form>
 				</div>
-				
-				<div class="movies-box-separator"></div>
-			</div><div id="movies-box-content" class="movies-box-content" style="padding: 15px;">
-			
-			<div class="movies-box-media">
+
+				<div id="movies-box-content" class="movies-box-content" style="padding: 15px;">
+				<div class="movies-box-media">
 				<!-- movies list -->
 				<div class="movies-list-content">
 					<div id="movies-list" class="movies-list">

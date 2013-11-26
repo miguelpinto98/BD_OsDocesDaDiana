@@ -157,7 +157,7 @@ div.movie-rate span.star-full{
 	
 div#topBar{
 	height: 60px;
-	background: #f3f3f3;
+	background: #b5dcd1;
 }
 
 div#topBar div.logo{
@@ -421,7 +421,7 @@ nav div.mainNav ul {
 	display: block;
 	float: left;
 	height: 32px;
-	width: 845px;
+	width: 422px;
 	border: 1px solid #2c3035;
 	border-top: 0px;
 	border-radius: 5px;
@@ -430,7 +430,7 @@ nav div.mainNav ul {
 	overflow: hidden;
 }
 
-nav div.mainNav ul li{
+nav div.mainNav ul li{ /* BARRA POR BAIXO DOS BUTOES*/
 	float: left;
 	height: 32px;
 	width: 139px;
@@ -454,7 +454,7 @@ nav div.mainNav ul li.first{
 }
 
 nav div.mainNav ul li.last{
-	border-right: 0px;
+	border-right: 10px;
 }
 
 nav div.mainNav ul li.slctd{
@@ -472,7 +472,7 @@ nav div.mainNav ul li a{
 	height: 32px;
 	line-height: 34px;
 	width: 83px;
-	padding-left: 55px;
+	padding-left: 41px;
 	text-transform: uppercase;
 }
 
@@ -480,56 +480,23 @@ nav div.mainNav ul li a.slctd{
 	color: #f1f1f1;
 }
 
-nav div.mainNav ul li a.home{
-	background: transparent url('../images/menu-home.png') no-repeat;
-	background-position: 30px 9px;
-}
-
 nav div.mainNav ul li a.movies{
 	/*background: transparent url('../images/menu-movies.png') no-repeat;*/
-	background-position: 35px 10px;
-	padding-left: 60px;
-	width: 78px;
+	/*background-position: 35px 10px;*/
+	/*padding-left: 60px;*/
+	/*width: 78px;*/
 }
 
 nav div.mainNav ul li a.series{
 	/*background: transparent url('../images/menu-series.png') no-repeat;*/
-	background-position: 35px 11px;
+	/*background-position: 35px 11px;
 	padding-left: 60px;
-	width: 78px;
-}
-
-nav div.mainNav ul li a.animes{
-	/*background: transparent url('../images/menu-animes.png') no-repeat;*/
-	background-position: 35px 10px;
-	padding-left: 60px;
-	width: 78px;
+	width: 78px;*/
 }
 
 nav div.mainNav ul li a.news{
-	background: transparent url('../images/menu-news.png') no-repeat;
-	background-position: 30px 11px;
-}
-
-nav div.mainNav ul li a.chat{
-	background: transparent url('../images/menu-chat.png') no-repeat;
-	background-position: 30px 12px;
-	padding-left: 55px;
-	width: 73px;
-}
-
-nav div.mainNav ul li a.forum{
-	background: transparent url('../images/menu-forum.png') no-repeat;
-	background-position: 35px 12px;
-	padding-left: 60px;
-	width: 78px;
-}
-
-nav div.mainNav ul li a.faq{
-	background: transparent url('../images/menu-faq.png') no-repeat;
-	background-position: 30px 11px;
-	padding-left: 55px;
-	width: 73px;
+	/*background: transparent url('../images/menu-news.png') no-repeat;*/
+	/*background-position: 30px 11px;*/
 }
 
 nav div.mainNav ul li:hover a{
@@ -758,24 +725,24 @@ div#content  div.content-box div.movies-box-separator{
 	margin-right: 15px;
 }
 
-div#content  div.content-box div.box-search{
+div.mainNav div.box-search{ /*BARRA DE NAVEGAÇAO*/
 	float: right;
-	width: 170px;
+	width: 250px;
 	height: 33px;
 	background-color: #fff;
 	border: 1px solid #b6b6b6;
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
-	margin-top: 7px;
+	margin-top: 12px;
 	padding-left: 10px;
 	overflow: hidden;
 	margin-right: 10px;
 }
 
-div#content  div.content-box div.box-search input{
+div.mainNav  div.box-search input{
 	float: left;
-	width: 140px;
+	width: 213px;
 	height: 21px;
 	line-height: 21px;
 	border: 0px;
@@ -786,7 +753,7 @@ div#content  div.content-box div.box-search input{
 	margin-top: 5px;
 }
 
-div#content  div.content-box div.box-search a.search-btn{
+div.mainNav  div.box-search a.search-btn{
 	display: block;
 	float: left;
 	width: 30px;
@@ -794,7 +761,7 @@ div#content  div.content-box div.box-search a.search-btn{
 	overflow: hidden;
 }
 
-div#content  div.content-box div.box-search a.search-btn span{
+div.mainNav  div.box-search a.search-btn span{
 	display: block;
 	float: left;
 	width: 12px;
@@ -804,7 +771,7 @@ div#content  div.content-box div.box-search a.search-btn span{
 	margin-left: 9px;
 }
 
-div#content  div.content-box div.box-search a.search-btn:hover span{
+div.mainNav  div.box-search a.search-btn:hover span{
 	background-position: -12px 0px;
 }
 
