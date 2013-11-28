@@ -126,7 +126,7 @@ img {
 }
 
 header {
-	background-color: #CFCFCF;
+	background-color: #b5dcd1;
 }
 
 div.wtv-rating span, div.movie-rate a, div.movie-rate span.star{
@@ -178,10 +178,6 @@ div#topBar div.socials{
 	width: 87px;
 	margin-left: 28px;
 	margin-top: 11px;
-	
-	/* Christmas */
-	/*margin-left: 100px;
-	margin-top: 16px;*/
 }
 
 div#topBar div.socials a{
@@ -375,7 +371,8 @@ div#topBar div.topNav a.avatar img{
 
 nav {
 	display: block;
-	background: url('../images/nav-bg.png');
+	/*background: url('../images/nav-bg.png');*/
+	background: #1dad8c;
 	height: 60px;
 }
 
@@ -403,26 +400,12 @@ nav div.mainNav div#logo a:hover, nav div.mainNav div#logo a.hover{
 	background-position: -123px 0px;
 }
 
-nav div.mainNav a.christmas{
-	position: absolute;
-	display: block;
-	width: 128px;
-	height: 211px;
-	background: transparent url('../images/christmasCap.png') no-repeat;
-	margin-left: -30px;
-	margin-top: -38px;
-}
-
-nav div.mainNav a.christmas:hover{
-	cursor: pointer;
-}
-
 nav div.mainNav ul {
 	display: block;
 	float: left;
 	height: 32px;
 	width: 422px;
-	border: 1px solid #2c3035;
+	border: 1px solid #116754;
 	border-top: 0px;
 	border-radius: 5px;
 	margin-top: 13px;
@@ -439,9 +422,10 @@ nav div.mainNav ul li{ /* BARRA POR BAIXO DOS BUTOES*/
 	color: #bcbcbc;
 	text-transform: uppercase;
 	line-height: 32px;
-	border-left: 1px solid #707070;
-	border-right: 1px solid #353a41;
-	background: transparent url('../images/menu-bg.png') repeat-x;
+	border-left: 1px solid #1dad8c;
+	border-right: 1px solid #1dad8c;
+	/*background: transparent url('../images/menu-bg.png') repeat-x;*/
+	background: #f7f2de ;
 }
 
 nav div.mainNav ul li:hover {
@@ -465,7 +449,7 @@ nav div.mainNav ul li a{
 	font-family: Tahoma;
 	font-size: 11px;
 	font-weight: bold;
-	color: #bcbcbc;
+	color: #90b0a7;
 	text-decoration: none;
 	display: block;
 	float: left;
@@ -500,7 +484,7 @@ nav div.mainNav ul li a.news{
 }
 
 nav div.mainNav ul li:hover a{
-	color: #f1f1f1;
+	color: #1dad8c;
 	cursor: pointer;
 }
 
@@ -509,7 +493,7 @@ nav div.mainNav ul li:hover a{
 /* CONTENT */
 
 div#content{
-	background-color: #cfcfcf;
+	background-color: #b5dcd1;
 	padding-bottom: 30px;
 	overflow: hidden;
 	padding-top: 10px;
@@ -705,17 +689,6 @@ div#content  div.content-box div.box-header ul.movies-box-btn li.slctd a{
 	color: #93a842;
 }
 
-div#content  div.content-box div.box-header ul.movies-box-btn li.christmas a{
-	color: #dc4242;
-	text-shadow: 0px 0px #fff;
-	-moz-text-shadow: 0px 0px #fff;
-	-webkit-text-shadow: 0px 0px #fff;
-}
-
-div#content  div.content-box div.box-header ul.movies-box-btn li.christmas a:hover{
-	color: #dc4242;
-}
-
 div#content  div.content-box div.movies-box-separator{
 	float: right;
 	width: 2px;
@@ -730,7 +703,7 @@ div.mainNav div.box-search{ /*BARRA DE NAVEGAÇAO*/
 	width: 250px;
 	height: 33px;
 	background-color: #fff;
-	border: 1px solid #b6b6b6;
+	border: 1px solid #116754;
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
@@ -749,7 +722,7 @@ div.mainNav  div.box-search input{
 	font-family: Tahoma;
 	font-size: 13px;
 	font-style: italic;
-	color: #b6b6b6;
+	color: #1dad8c;
 	margin-top: 5px;
 }
 
@@ -4298,7 +4271,7 @@ div#content div#player-box div.player-aux div.movie-actions{
 	width: 890px;
 	height: 45px;
 	overflow: hidden;
-	border: 1px solid #CFCFCF;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -4958,7 +4931,7 @@ div#content div#play-box div.player-aux div.play-box{
 	width: 930px;
 	height: 45px;
 	overflow: hidden;
-	border: 1px solid #CFCFCF;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -5319,8 +5292,8 @@ div#content div#play-box div.player-aux div.play-box div.media-stats span.posted
 div#content div#play-box div#play-now-aux div.movie-stats{
 	width: 930px;
 	height: 45px;
-	border-top: 1px solid #CFCFCF;
-	border-bottom: 1px solid #CFCFCF;
+	border-top: 1px solid #b5dcd1;
+	border-bottom: 1px solid #b5dcd1;
 	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
 	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
 	box-shadow: 0 1px 10px -1px #D9D9D9;

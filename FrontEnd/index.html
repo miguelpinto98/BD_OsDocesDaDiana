@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 
 	<head>
@@ -10,7 +10,7 @@
 		//]]>
 		</script>
 
-		<link rel="shortcut icon" href="assets/images/favicon.png" />
+		<link rel="shortcut icon" href="assets/images/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="assets/styles/newstyle.css" />
 		
 		<!--<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -50,8 +50,12 @@
 		<script type="text/javascript" src="View/templates/default/includes/functions.js"></script>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
 	</head>
+
+
 	
 	<body>
+
+
 		<header>
 			<div id="topBar">
 				<div class="center">
@@ -65,373 +69,399 @@
 						</div>
 					</div>
 				</div>
-				</div><nav>
+			</div>
+
+
+
+			<!-- BARRA PRETA -->						
+				<nav>
 
 					<div class="center">
 						<div class="mainNav">
-							<div id="logo" class="logo">
-								<a href="index-2.html"></a>
-							</div>
+							<div id="logo" class="logo"><a href="index-2.html"></a></div>
 
 							<!--
 							Christmas Logo
+							<a href="index.php" class="christmas" onmouseover="$('nav div.mainNav div#logo a').addClass('hover');" onmouseout="$('nav div.mainNav div#logo a').removeClass('hover');"></a>-->
+						
 
-							<a href="index.php" class="christmas" onmouseover="$('nav div.mainNav div#logo a').addClass('hover');" onmouseout="$('nav div.mainNav div#logo a').removeClass('hover');"></a>
-							-->
-						<ul>
+
+							<ul>
 							<!--<li class="first"><a href="index.php" class="home slctd">Entrada</a></li>-->
 							<li class="first "><a href="movies.html" class="movies ">Categorias</a></li>
 							<li class=""><a href="#" class="series ">Novidades</a></li>
-							<li class="last"><a href="news.html" class="news ">Bosses</a></li>
+							<li class="last"><a href="news.html" class="news ">Chefs</a></li>
 							<!--<li class="{requestsClass}"><a href="requests.html" class="chat {requestsClass}">Pedidos</a></li>-->
 							<!--<li><a href="http://www.wareztuga.ws/forum/index.php" class="forum" target="_blank">Fórum</a></li>-->
 							<!--<li class="last "><a href="#" class="faq ">Search</a></li>-->
-						</ul>
+							</ul>
 
-						<div class="box-search">
-					<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-					<input type="text" name="searchBox" id="searchBox" value="Procure aqui uma sobremesa" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-					<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span></a>
-					</form>
-				</div>
+							<div class="box-search">
+							<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
+							<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
+							<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
+							</a>
+							</form>
+							</div>
 
+						</div>
 					</div>
-				</div></nav>
+				</nav>
+			<!-- BARRA PRETA -->
+
+
 				<div class="clear"></div>
 		</header>
 
-		<div id="content">
-			<div class="center">
-				<div class="pub" style="width: 978px; height: 200px;">
-					->Isto era de publicidade/acho que pode ficar o cenas de anuncios
+
+<div id="content">
+	<div class="center">
+
+
+<!-- ANUNCIOS-->
+	<!-- <div class="pub" style="width: 978px; height: 200px;">
+		CENAS
+	</div> -->
+<!-- ANUNCIOS-->
+
+
+
+<!-- CORPO-->				
+	<div id="movies-box" class="content-box">
+
+
+	<!-- BARRA CINZENTA-->		
+		<div class="box-header">
+			<input type="hidden" id="box-media" value="movies" />
+				<div class="movies-box-icon"></div>
+					<div class="movies-box-caption">XXX CATEGORIA XXX</div>
+						<input type="hidden" id="boxheaderBtnSlctd" value="" />
+						<ul class="movies-box-btn">
+							<li id="movies" class="first "><a href="javascript:;" onclick="changeHighLightsContent('movies', 'movies');">Mais Recentes</a></li>
+							<li id="featuredmovies" class="slctd"><a href="javascript:;" onclick="changeHighLightsContent('movies', 'featuredmovies');">Em Destaque</a></li>
+							<li id="mostviewedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'mostviewedmovies');">Mais Vistas</a></li>
+							<li id="recommendedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'recommendedmovies');">Recomendadas</a></li>
+						</ul>
+		</div>
+	<!-- BARRA CINZENTA-->
+
+
+	<!-- CAIXA (comentários e imagens)-->
+		<div id="movies-box-content" class="movies-box-content" style="padding: 15px;">
+		<div class="movies-box-media">
+
+
+		<!-- CAIXAS PEQUENAS + SCROLL -->				
+			<div class="movies-list-content">
+			<div id="movies-list" class="movies-list">
+				<div class="list-aux">
+
+			<!-- quadrados pequenos -->
+				<div id="5" class="item first under5">
+					<a href="moviefb5f.html?m=The_Worlds_End">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+						<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+				<div class="thumb-effect" title="The World's End"></div>
+					</a>
 				</div>
-				
-			<div id="movies-box" class="content-box">
-			<!-- header -->
-				<div class="box-header">
-					<input type="hidden" id="box-media" value="movies" />
-					<div class="movies-box-icon"></div>
-						<div class="movies-box-caption">XXX CATEGORIA XXX</div>
-							<input type="hidden" id="boxheaderBtnSlctd" value="" />
-							<ul class="movies-box-btn">
-								<li id="movies" class="first "><a href="javascript:;" onclick="changeHighLightsContent('movies', 'movies');">Mais Recentes</a></li>
-								<li id="featuredmovies" class="slctd"><a href="javascript:;" onclick="changeHighLightsContent('movies', 'featuredmovies');">Em Destaque</a></li>
-								<li id="mostviewedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'mostviewedmovies');">Mais Vistos</a></li>
-								<li id="recommendedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'recommendedmovies');">Recomendados</a></li>
-								<li id="" style="display: none;"><a href="javascript:;" onclick=""></a></li>
-							</ul>
+
+
+				<div id="5" class="item under5">
+					<a href="movieba68.html?m=Prisoners">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /><noscript>
+						<img src="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /></noscript>
+							<div class="thumb-effect" title="Raptadas"></div>
+					</a>
 				</div>
 
-				<div id="movies-box-content" class="movies-box-content" style="padding: 15px;">
-				<div class="movies-box-media">
-				<!-- movies list -->
-				<div class="movies-list-content">
-					<div id="movies-list" class="movies-list">
-						<div class="list-aux">
-						<div id="5" class="item first under5">
-							<a href="moviefb5f.html?m=The_Worlds_End">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript><img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-								<div class="thumb-effect" title="The World's End"></div>
-							</a>
-
-						</div><div id="5" class="item under5">
-							<a href="movieba68.html?m=Prisoners">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /><noscript><img src="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /></noscript>
-								<div class="thumb-effect" title="Raptadas"></div>
-							</a>
-
-						</div><div id="5" class="item under5">
-							<a href="moviec5cd.html?m=Elysium">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5109.png" alt="Elysium" title="Elysium" /><noscript><img src="images/movies_thumbs/thumb5109.png" alt="Elysium" title="Elysium" /></noscript>
-								<div class="thumb-effect" title="Elysium"></div>
-							</a>
-
-						</div><div id="5" class="item under5">
-							<a href="movie3649.html?m=Percy_Jackson_Sea_of_Monsters">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5104.png" alt="Percy Jackson e o ..." title="Percy Jackson e o Mar dos Monstros" /><noscript><img src="images/movies_thumbs/thumb5104.png" alt="Percy Jackson e o ..." title="Percy Jackson e o Mar dos Monstros" /></noscript>
-								<div class="thumb-effect" title="Percy Jackson e o Mar dos Monstros"></div>
-							</a>
-
-						</div><div id="5" class="item under5">
-							<a href="moviecb44.html?m=The_Wolverine">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5064.png" alt="Wolverine" title="Wolverine" /><noscript><img src="images/movies_thumbs/thumb5064.png" alt="Wolverine" title="Wolverine" /></noscript>
-								<div class="thumb-effect" title="Wolverine"></div>
-							</a>
-
-						</div><div id="5" class="item first">
-							<a href="moviea189.html?m=Planes">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5062.png" alt="Aviões" title="Aviões" /><noscript><img src="images/movies_thumbs/thumb5062.png" alt="Aviões" title="Aviões" /></noscript>
-								<div class="thumb-effect" title="Aviões"></div>
-							</a>
-
-						</div><div id="5" class="item">
-							<a href="moviebac2.html?m=2_Guns">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript><img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
-								<div class="thumb-effect" title="Dois Tiros"></div>
-							</a>
-
-						</div><div id="5" class="item">
-							<a href="moviebcac.html?m=Red_2">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5060.png" alt="Red 2: Ainda Mais ..." title="Red 2: Ainda Mais Perigosos" /><noscript><img src="images/movies_thumbs/thumb5060.png" alt="Red 2: Ainda Mais ..." title="Red 2: Ainda Mais Perigosos" /></noscript>
-								<div class="thumb-effect" title="Red 2: Ainda Mais Perigosos"></div>
-							</a>
-						</div>
-					</div>
+				<div id="5" class="item under5">
+					<a href="movieba68.html?m=Prisoners">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5128.png" alt="Raptadas" title=		"Raptadas" /><noscript>
+						<img src="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /></noscript>
+							<div class="thumb-effect" title="Raptadas"></div>
+					</a>
 				</div>
-				<div class="list-scrollbar" id="movies-list-scrollbar">
+
+				<div id="5" class="item under5">
+					<a href="movieba68.html?m=Prisoners">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /><noscript>
+						<img src="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /></noscript>
+							<div class="thumb-effect" title="Raptadas"></div>
+					</a>
+				</div>
+
+
+				<div id="5" class="item under5">
+					<a href="movieba68.html?m=Prisoners">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /><noscript>
+						<img src="images/movies_thumbs/thumb5128.png" alt="Raptadas" title="Raptadas" /></noscript>
+							<div class="thumb-effect" title="Raptadas"></div>
+					</a>
+				</div>
+
+
+				<div id="5" class="item first">
+					<a href="moviea189.html?m=Planes">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5062.png" alt="Aviões" title="Aviões" /><noscript>
+						<img src="images/movies_thumbs/thumb5062.png" alt="Aviões" title="Aviões" /></noscript>
+							<div class="thumb-effect" title="Aviões"></div>
+					</a>
+				</div>
+
+
+
+				<div id="5" class="item">
+					<a href="moviebac2.html?m=2_Guns">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+						<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+							<div class="thumb-effect" title="Dois Tiros"></div>
+					</a>
+				</div>
+
+
+				<div id="5" class="item">
+					<a href="moviebac2.html?m=2_Guns">
+						<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+						<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+							<div class="thumb-effect" title="Dois Tiros"></div>
+					</a>
+				</div>
+
+			<!-- quadrados pequenos -->
+
+			</div></div>
+
+				<!-- scrollbar lateral -->
+					<div class="list-scrollbar" id="movies-list-scrollbar">
 					<div class="scrollbar-up"></div>
-					<div class="scrollbar-down"></div>
-						<div class="scrollbar-bg">
-							<div class="scrollbar-btn"></div>
-						</div>
-				</div>
+						<div class="scrollbar-down"></div>
+							<div class="scrollbar-bg">
+								<div class="scrollbar-btn"></div>
+							</div>
+					</div>
+				<!-- scrollbar lateral -->
+
 			</div>
-		
-		<!-- movies news -->
-		<div class="news-list-content">
+		<!-- CAIXAS PEQUENAS + SCROLL -->
+
+		<!-- CAIXAS GRANDES + SCROLL -->
+			<div class="news-list-content">
 			<div id="mycustomscroll" class="movies-news-list flexcroll">
 				<div id="horizontalwrap" class="list-aux">
-					<div id="new55" class="movie-new first">
-						<div class="nimg">
-							<a href="new084c.html?n=Filme_da_Semana_3_Biutiful">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new55.png" alt="" /><noscript><img src="images/news/new55.png" alt="" /></noscript>
-							<div class="img-effect"></div>
-							</a>
-							<div class="title-bg">
-								<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Biutiful</a></div>
-							</div>
-						</div>
-					<div class="preview">
-						<span>"Biutiful" é o filme escolhido para esta semana. Este aborda um homem que arruma negócios antes de morrer.</span>
-					</div>
-					</div><div id="new54" class="movie-new">
-						<div class="nimg">
-							<a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new54.png" alt="" /><noscript><img src="images/news/new54.png" alt="" /></noscript>
-							<div class="img-effect"></div>
-							</a>
-							<div class="title-bg">
-								<div class="title"><a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">Um Mal Nunca Vem Só</a></div>
-							</div>
-						</div>
-					<div class="preview">
-						<span>Um grupo de amigos tem uma dívida por pagar e uma semana para o fazer, caso contrário sofrerá as consequências.</span>
-					</div>
-					</div><div id="new52" class="movie-new">
+					
+			<!-- quadrados grandes -->
+
+				<div id="new55" class="movie-new first">
 					<div class="nimg">
-						<a href="new8cf2.html?n=Filme_da_Semana_2_A_Mulher_Que_Viveu_Duas_Vezes">
-						<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new52.png" alt="" /><noscript><img src="images/news/new52.png" alt="" /></noscript>
-						<div class="img-effect"></div>
+						<a href="new084c.html?n=Filme_da_Semana_3_Biutiful">
+							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new55.png" alt="" /><noscript><img src="images/news/new55.png" alt="" /></noscript>
+								<div class="img-effect"></div>
 						</a>
-						<div class="title-bg">
-							<div class="title"><a href="new8cf2.html?n=Filme_da_Semana_2_A_Mulher_Que_Viveu_Duas_Vezes">A Mulher Que Viveu Duas Vezes</a></div>
-						</div>
+							<div class="title-bg">
+								<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Nome1</a></div>
+							</div>
 					</div>
-					<div class="preview">
-						<span>"Vertigo" é o filme da semana. Trata-se de um filme que, cada vez que o vemos, nunca pára de crescer.</span>
-					</div>
+							<div class="preview"><span>Descrição1</span></div>
+				</div>
 
 
-					</div><div id="new26" class="movie-new">				
-						<div class="nimg">
-							<a href="new1ab7.html?n=Nolan_termina_saga_Batman">
+
+				<div id="new54" class="movie-new">
+					<div class="nimg">
+						<a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">
+							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new54.png" alt="" /><noscript><img src="images/news/new54.png" alt="" /></noscript>
+								<div class="img-effect"></div>
+						</a>
+							<div class="title-bg">
+								<div class="title"><a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">Nome2</a></div>
+							</div>
+					</div>
+								<div class="preview"><span>Descrição2.</span></div>
+				</div>
+
+
+
+					<div id="new54" class="movie-new">
+					<div class="nimg">
+						<a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">
+							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new54.png" alt="" /><noscript><img src="images/news/new54.png" alt="" /></noscript>
+								<div class="img-effect"></div>
+						</a>
+							<div class="title-bg">
+								<div class="title"><a href="new2043.html?n=Um_Mal_Nunca_Vem_So_Lock_Stock_and_Two_Smoking_Barrels">Nome2</a></div>
+							</div>
+					</div>
+								<div class="preview"><span>Descrição2.</span></div>
+				</div>
+
+
+
+
+
+				<div id="new26" class="movie-new">				
+					<div class="nimg">
+						<a href="new1ab7.html?n=Nolan_termina_saga_Batman">
 							<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new26.png" alt="" /><noscript><img src="images/news/new26.png" alt="" /></noscript>
-			<div class="img-effect"></div>
-		</a>
-		<div class="title-bg">
-			<div class="title"><a href="new1ab7.html?n=Nolan_termina_saga_Batman">Último Batman de Nolan</a></div>
-		</div>
-	</div>
-	<div class="preview">
-		<span>O novo filme de Batman, o "O Cavaleiro das Trevas Renasce" será o último do realizador à frente da saga.</span>
-	</div>
-</div>
-		</div>
-	</div>
-</div>
-</div>
+								<div class="img-effect"></div>
+						</a>
+							<div class="title-bg">
+								<div class="title"><a href="new1ab7.html?n=Nolan_termina_saga_Batman">Nome3</a></div>
+							</div>
+					</div>
+								<div class="preview"><span>Descrição3.</span></div>
+				</div>
 
-		<!-- movies comments -->
+			<!-- quadrados grandes -->
+
+			</div></div></div>
+		<!-- CAIXAS GRANDES + SCROLL -->
+
+		</div>
+
+
+		<!-- BARRA COMENTARIOS -->
 		<div id="movies-box-comments" class="box-comments">
-			<div class="msgs-header"><span>Mensagens Recentes</span></div>
-			<div id="movies-comments-list" class="comments-list">
-				<div id="msg811192" class="item first" title="Escrito em 'Alone in the Dark - Sozinhos no Escuro'">
-					<input type="hidden" name="movies-lcID" id="movies-lcID" value="811192" />
-					<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">
-					<div class="msg-info">
-						<div class="avatar">
-							<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar736262.png" alt="" /><noscript><img src="images/users/avatar736262.png" alt="" /></noscript>
+			<div class="msgs-header">
+				<span>Mensagens Recentes</span>
+			</div>
+				<div id="movies-comments-list" class="comments-list">
+					<!-- comentarios -->
+						<div id="msg811192" class="item first" title="Escrito em 'Alone in the Dark - Sozinhos no Escuro'">
+						<input type="hidden" name="movies-lcID" id="movies-lcID" value="811192" />
+						<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">
+							<div class="msg-info">
+								<div class="avatar">
+									<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar736262.png" alt=""/>
+									<noscript>
+									<img src="images/users/avatar736262.png" alt="" /></noscript>
+								</div>
+									<div class="user-date">
+										<div class="user"><span>Utilizador1</span>
+										<div class="online"></div>
+										</div>
+											<div class="date"><span>há x minutos</span></div>
+								</div>
+							</div>
+									<div class="preview"> <span>Comentário1</span></div>
+						</a>
 						</div>
-					<div class="user-date">
-						<div class="user">
-							<span>RuthFreckles</span>
-							<div class="online"></div>
-						</div>
-						<div class="date"><span>há 9 minutos</span></div>
+
+
+
+		<div id="msg811189" class="item" title="Escrito em 'Depois da Vida'">	
+		<a href="movie3e9f.html?m=AfterLife&amp;comment=811189">
+		<div class="msg-info">
+			<div class="avatar">
+				<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar736262.png" alt=""/>
+				<noscript>
+				<img src="images/users/avatar736262.png" alt="" /></noscript>
+			</div>
+				<div class="user-date">
+					<div class="user"><span>Utilizador2</span>
+						<div class="online"></div>
 					</div>
-					</div>
-					<div class="preview">
-						<span>Adorei este filme, a Clare Bowen é uma atriz fenomenal, ela devia ter tido o papel principal. </span>
-					</div>
-					</a>
-
-</div><div id="msg811191" class="item" title="Escrito em 'Os Estagiários'">
-	<a href="movieaa4b.html?m=The_Internship&amp;comment=811191">
-		<div class="msg-info">
-			<div class="avatar">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar509896.jpg" alt="" /><noscript><img src="images/users/avatar509896.jpg" alt="" /></noscript>
-			</div>
-			<div class="user-date">
-				<div class="user">
-					<span>joanaalobo</span>
-					<div class="online"></div>
+						<div class="date"><span>há x minutos</span></div>
 				</div>
-				<div class="date"><span>há 9 minutos</span></div>
-			</div>
 		</div>
-		<div class="preview">
-			<span>Dylaaaaaaaaaan ?? *.* </span>
+			<div class="preview"><span>Comentário2</span></div>
+		</a>
 		</div>
-	</a>
-</div><div id="msg811189" class="item" title="Escrito em 'Depois da Vida'">
-	
-	<a href="movie3e9f.html?m=AfterLife&amp;comment=811189">
-		<div class="msg-info">
-			<div class="avatar">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar736262.png" alt="" /><noscript><img src="images/users/avatar736262.png" alt="" /></noscript>
-			</div>
-			<div class="user-date">
-				<div class="user">
-					<span>RuthFreckles</span>
-					<div class="online"></div>
+
+					<!-- comentarios -->
 				</div>
-				<div class="date"><span>há 10 minutos</span></div>
-			</div>
 		</div>
-		<div class="preview">
-			<span>Este filme não vale um chavo. </span>
+		<!-- BARRA COMENTARIOS -->
+
 		</div>
-	</a>
-</div><div id="msg811181" class="item" title="Escrito em 'Elysium'">
-	
-	<a href="movieb62d.html?m=Elysium&amp;comment=811181">
-		<div class="msg-info">
-			<div class="avatar">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatars/tom_hardy.png" alt="" /><noscript><img src="images/users/avatars/tom_hardy.png" alt="" /></noscript>
-			</div>
-			<div class="user-date">
-				<div class="user">
-					<span>Leo.ferrao@g..</span>
-					<div class="online"></div>
-				</div>
-				<div class="date"><span>há 13 minutos</span></div>
-			</div>
-		</div>
-		<div class="preview">
-			<span>Grande filme
+	<!-- CAIXA (comentários e imagens)-->
 
-
-
-
-
-
-
-
-
-
-
-</span>
-		</div>
-	</a>
-</div><div id="msg811177" class="item" title="Escrito em 'Red 2: Ainda Mais Perigosos'">
-	
-	<a href="movieb876.html?m=Red_2&amp;comment=811177">
-		<div class="msg-info">
-			<div class="avatar">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatars/josh_duhamel.png" alt="" /><noscript><img src="images/users/avatars/josh_duhamel.png" alt="" /></noscript>
-			</div>
-			<div class="user-date">
-				<div class="user">
-					<span>cedriccunha</span>
-					<div class="online"></div>
-				</div>
-				<div class="date"><span>há 14 minutos</span></div>
-			</div>
-		</div>
-		<div class="preview">
-			<span>hoje tb n consigo ver, para ao minuto 12:46 no put.. no shock, mal carrega..
-</span>
-		</div>
-	</a>
-</div>
 	</div>
-</div>
-</div>
-</div><div class="main-separator"></div>
+<!-- CORPO-->
+
+
+<div class="main-separator"></div>
 
 </div>
 </div>
-</div><div class="main-separator"></div>
+
+
+
+<div class="main-separator"></div>
 
 	
-<!-- movies list -->
 
-		<!--<div class="pub" style="margin-top: 20px; margin-bottom: -10px; width: 978px; height: 120px;">
+	<!--<div class="pub" style="margin-top: 20px; margin-bottom: -10px; width: 978px; height: 120px;">
 			<a href="mailto:lab.wareztuga@gmail.com">
-				<img src="images/anuncie-aqui.png" alt="anuncie aqui" style="width: 978px; height: 120px;" />
+				<img src="images/anuncie-aqui.png" alt="anuncie aqui" style="width: 978px; height: 120px;"/>
 			</a>
 		</div>-->
-	</div>
-</div>	
 
-		<footer>
-			<div class="center">
-				<div id="footer">
-					<div class="cats">
-						<div class="cat">
-							<div class="cat-title"><span>Filmes</span></div>
-							<div class="sub-cat"><a href="moviescff1.html?p=1">Todos</a></div>
-							<div class="sub-cat"><a href="movies1b08.html?p=1&amp;btn=moviesfeatured">Em destaque</a></div>
-							<div class="sub-cat"><a href="moviesa6cf.html?p=1&amp;order=views">Mais vistos</a></div>
-							<div class="sub-cat"><a href="movies8fe2.html?p=1&amp;btn=moviesrecommended">Recomendados</a></div>
-						</div>
-						<div class="cat">
-							<div class="cat-title"><span>Notícias</span></div>
-							<div class="sub-cat"><a href="newscff1.html?p=1">Todas</a></div>
-							<div class="sub-cat"><a href="newsa6cf.html?p=1&amp;order=views">Mais lidas</a></div>
-							<div class="sub-cat"><a href="newsaf79.html?p=1&amp;order=msgs">Mais Comentadas</a></div>
-						</div>
-						<div class="cat small">
-							<div class="cat-title"><span>Ajuda</span></div>
-							<div class="sub-cat"><a href="faq.html">Dúvidas</a></div>
-							<div class="sub-cat"><a href="requests.html">Pedidos</a></div>
-						</div>
-						<div class="cat small">
-							<div class="cat-title"><span>CHAT</span></div>
-							<div class="sub-cat"><a href="#">Entrar</a></div>
-						</div>
-						<div class="cat">
-							<div class="cat-title"><span>Contactos</span></div>
-							<div class="sub-cat"><a href="#">E-mail</a></div>
-						</div>
-					</div>
-				</div>
+
+
+
+
+<!-- rodape -->
+	<footer>
+		<div class="center">
+
+
+	<div id="footer">
+		<div class="cats">
+
+
+			<div class="cat">
+				<div class="cat-title"><span>Filmes</span></div>
+				<div class="sub-cat"><a href="moviescff1.html?p=1">Todos</a></div>
+				<div class="sub-cat"><a href="movies1b08.html?p=1&amp;btn=moviesfeatured">Em destaque</a></div>
+				<div class="sub-cat"><a href="moviesa6cf.html?p=1&amp;order=views">Mais vistos</a></div>
+				<div class="sub-cat"><a href="movies8fe2.html?p=1&amp;btn=moviesrecommended">Recomendados</a></div>
 			</div>
-		</footer>
-		
-		<script type="text/javascript">
-			  var _gaq = _gaq || [];
-			  _gaq.push(['_setAccount', 'UA-25434137-1']);
-			  _gaq.push(['_setDomainName', 'wareztuga.tv']);
-			  _gaq.push(['_setAllowHash', false]);
-			  _gaq.push(['_setAllowLinker', true]);
-			  _gaq.push(['_trackPageview']);
 
-			  (function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			  })();
-		</script>	
+			<div class="cat">
+				<div class="cat-title"><span>Notícias</span></div>
+				<div class="sub-cat"><a href="newscff1.html?p=1">Todas</a></div>
+				<div class="sub-cat"><a href="newsa6cf.html?p=1&amp;order=views">Mais lidas</a></div>
+				<div class="sub-cat"><a href="newsaf79.html?p=1&amp;order=msgs">Mais Comentadas</a></div>
+			</div>
+
+			<div class="cat small">
+				<div class="cat-title"><span>Ajuda</span></div>
+				<div class="sub-cat"><a href="faq.html">Dúvidas</a></div>
+				<div class="sub-cat"><a href="requests.html">Pedidos</a></div>
+			</div>
+
+			<div class="cat small">
+				<div class="cat-title"><span>CHAT</span></div>
+				<div class="sub-cat"><a href="#">Entrar</a></div>
+			</div>
+
+			<div class="cat">
+				<div class="cat-title"><span>Contactos</span></div>
+				<div class="sub-cat"><a href="#">E-mail</a></div>
+			</div>
+
+
+	</div></div>
+	</div></footer>
+<!-- rodape -->
+
+		
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-25434137-1']);
+	  _gaq.push(['_setDomainName', 'wareztuga.tv']);
+	  _gaq.push(['_setAllowHash', false]);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+	</script>
+
+
+
 	</body>
 </html>
