@@ -372,7 +372,7 @@ div#topBar div.topNav a.avatar img{
 nav {
 	display: block;
 	/*background: url('../images/nav-bg.png');*/
-	background: #1dad8c;
+	background: #6c847d;
 	height: 60px;
 }
 
@@ -422,8 +422,8 @@ nav div.mainNav ul li{ /* BARRA POR BAIXO DOS BUTOES*/
 	color: #bcbcbc;
 	text-transform: uppercase;
 	line-height: 32px;
-	border-left: 1px solid #1dad8c;
-	border-right: 1px solid #1dad8c;
+	border-left: 1px solid #6c847d;
+	border-right: 1px solid #6c847d;
 	/*background: transparent url('../images/menu-bg.png') repeat-x;*/
 	background: #f7f2de ;
 }
@@ -484,7 +484,7 @@ nav div.mainNav ul li a.news{
 }
 
 nav div.mainNav ul li:hover a{
-	color: #1dad8c;
+	color: #6c847d;
 	cursor: pointer;
 }
 
@@ -722,7 +722,7 @@ div.mainNav  div.box-search input{
 	font-family: Tahoma;
 	font-size: 13px;
 	font-style: italic;
-	color: #1dad8c;
+	color: #6c847d;
 	margin-top: 5px;
 }
 
