@@ -285,8 +285,14 @@ div#topBar div.topNav div.opts a.myAccount, div#topBar div.topNav div.opts a.use
 }
 
 div#topBar div.topNav div.opts a.openRegs {
-	color: #36423e;
+	font-family: 'PTSans Bold', Tahoma;
+	font-size: 13px;
+	padding: 0px;
+	margin-left: 0px;
 }
+
+
+
 
 div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts a.username, div#topBar div.topNav div.opts a.notifsslctd{
 	color: #36423e;
