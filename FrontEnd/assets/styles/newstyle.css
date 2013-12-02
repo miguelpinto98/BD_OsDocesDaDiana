@@ -571,17 +571,47 @@ div#content  div.content-box div.box-header div.movies-box-icon{
 	margin-top: 17px;
 }
 
-div#content  div.content-box div.box-header div.categorias-receitas{
+/*Botao dinamico para escolher categorias de receitas*/
+
+div#content div.content-box div.box-header div.categorias-receita {
 	float: left;
-	width: 128px;
-	height: 35px;
-	margin: 10px 10px 0px 16px;
-	text-transform: uppercase;
-	font-family: 'AvenirLT Heavy Bold';
-	font-size: 14px;
-	color: #797777;
-	text-transform: uppercase;)
+	margin-left: 15px;
 }
+
+div#content div.content-box div.box-header div.categorias-receita div.categorias-receita-box {
+	box-shadow: inset 1px;
+	display: block;
+	float: right;
+	width: 200px;
+	height: 33px;
+	background: transparent url('../images/box-btn-bg.png') repeat-x;
+	border: 1px solid #c2c2c2;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin-right: 20px;
+	margin-top: 7px;
+	text-align: center;
+	line-height: 33px;
+	padding-right: 10px;
+}
+
+div#content  div.content-box div.box-header div.categorias-receita div.categorias-receita-box:hover {
+	background: transparent url('../images/box-btn-bg2.png') repeat-x;
+	border: 1px solid #a8a8a8;
+	position: absolute;
+}
+
+div#content  div.content-box div.box-header div.categorias-receita div.categorias-receita-box>span{
+	font-family: Arial;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+div.categorias-receita div.categorias-receita-box {
+	
+}
+
 
 div#content  div.content-box div.box-header div.onlymovies-box-caption{
 	float: left;
@@ -594,16 +624,6 @@ div#content  div.content-box div.box-header div.onlymovies-box-caption{
 	text-transform: uppercase;
 }
 
-div#content  div.content-box div.box-header div.onlyseries-box-caption{
-	float: left;
-	width: 55px;
-	height: 14px;
-	margin: 17px 19px 0px 19px;
-	font-family: 'AvenirLT Heavy Bold';
-	font-size: 14px;
-	color: #797777;
-	text-transform: uppercase;
-}
 
 div#content  div.content-box div.box-header ul.movies-box-btn li{
 	box-shadow: inset 1px;
@@ -758,17 +778,6 @@ div#content  div.content-box div.movies-box-media div.movies-list{
 	/*height: 428px;*/
 	width: 736px;
 	position: absolute;
-}
-
-div#content  div.content-box div.movies-box-media div#series-list{
-	/*height: 442px;*/
-	/*height: 603px;*/
-	height: 442px;
-}
-
-div#content  div.content-box div.movies-box-media div#animes-list{
-	/*height: 442px;*/
-	height: 603px;
 }
 
 div#content  div.content-box div.movies-box-media div.loading{
