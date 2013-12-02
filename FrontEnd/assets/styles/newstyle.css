@@ -285,11 +285,11 @@ div#topBar div.topNav div.opts a.myAccount, div#topBar div.topNav div.opts a.use
 }
 
 div#topBar div.topNav div.opts a.openRegs {
-	color: #93a842;
+	color: #36423e;
 }
 
 div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts a.username, div#topBar div.topNav div.opts a.notifsslctd{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#topBar div.topNav div.opts a.username:hover{
@@ -301,7 +301,7 @@ div#topBar div.topNav div.opts a span{
 }
 
 div#topBar div.topNav div.opts a:hover span, div#topBar div.topNav div.opts a.notifsslctd span{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#topBar div.topNav div.opts span.pipe{
@@ -675,11 +675,11 @@ div#content  div.content-box div.box-header ul.movies-box-btn li a{
 }
 
 div#content  div.content-box div.box-header ul.movies-box-btn li:hover a{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content  div.content-box div.box-header ul.movies-box-btn li.slctd a{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content  div.content-box div.movies-box-separator{
@@ -1119,7 +1119,7 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
 	font-family: 'AvenirLT Heavy Bold';
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	text-transform: uppercase;
 	overflow: hidden;
 	opacity: 1.0;
@@ -1132,7 +1132,7 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 	font-family: Tahoma;
 	font-size: 11px;
 	font-weight: bold;
-	color: #93a842;
+	color: #36423e;
 	text-transform: uppercase;
 	text-decoration: none;
 	overflow: hidden;
@@ -1547,7 +1547,7 @@ div#footer div.cats div.cat div.sub-cat a{
 }
 
 div#footer div.cats div.cat div.sub-cat a:hover{
-	color: #93A842;
+	color: #36423e;
 }
 
 	/* Divider */
@@ -1588,7 +1588,7 @@ div#footer div.footer-content div.copyright span{
 }
 
 div#footer div.footer-content div.copyright span.madewhere{
-	color: #93a842;
+	color: #36423e;
 }
 	
 div#footer div.footer-content div.socnet{
@@ -1690,11 +1690,11 @@ div#content  div.content-box div.movies-box-content div.media-left-filters div.i
 }
 
 div#content  div.content-box div.movies-box-content div.media-left-filters div.item:hover label{
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content  div.content-box div.movies-box-content div.media-left-filters div.item label.slctd{
-	color: #93A842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -1874,7 +1874,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.thumb-and-episodes div.episodes-number span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.thumb a div.thumb-effect2{
@@ -1908,7 +1908,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info a.movie-name{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -1981,7 +1981,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-actions a:hover, div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-actions a.slctd{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-actions a.slctd:hover{
@@ -2093,7 +2093,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-actions a:hover{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.wtv-rating{
@@ -2122,7 +2122,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info span.movie-synopsis a{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -2179,7 +2179,7 @@ div#content div.content-box div.faq-content div.faq-item div.question span{
 	float: left;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -2330,7 +2330,7 @@ div#content div.content-box div.news-list div.item div.new-image div.title-bg di
 	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
 	font-family: 'AvenirLT Heavy Bold';
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	text-transform: uppercase;
 	overflow: hidden;
 	opacity: 1.0;
@@ -2343,7 +2343,7 @@ div#content div.content-box div.news-list div.item div.new-image div.title-bg di
 	font-family: Tahoma;
 	font-size: 11px;
 	font-weight: bold;
-	color: #93a842;
+	color: #36423e;
 	text-transform: uppercase;
 	text-decoration: none;
 	overflow: hidden;
@@ -2381,7 +2381,7 @@ div#content div.content-box div.news-list div.item div.new-info div.title{
 div#content div.content-box div.news-list div.item div.new-info div.title a{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -2504,7 +2504,7 @@ div#content div.content-box div.login-register div.login{
 div#content div.content-box div.login-register div.title{
 	font-family: Arial, Tahoma;
 	font-size: 25px;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.login-register div.login-divider{
@@ -2547,7 +2547,7 @@ div#content div.content-box div.login-register input.form-input{
 	padding: 5px;
 	font-family: Arial, Tahoma;
 	font-size: 14px;
-	color: #93A842;
+	color: #36423e;
 	font-weight: bold;
 	line-height: 23px;
 }
@@ -2593,7 +2593,7 @@ div#content div.content-box div.login-register div.login-form span{
 div#content div.content-box div.login-register div.login-form span a{
 	font-family: Arial, Tahoma;
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -2684,7 +2684,7 @@ div#content div.content-box div.login-register div.or div.or-btn{
 div#content div.content-box div.login-register div.or div.or-btn span{
 	font-family: Arial, Tahoma;
 	font-size: 25px;
-	color: #93a842;
+	color: #36423e;
 }
 
 	/* Register Form */
@@ -2751,7 +2751,7 @@ div#content div.content-box div.login-register div.register-form span.info{
 
 div#content div.content-box div.login-register div.register-form span.info span{
 	font-weight: bold;
-	color: #93A842;
+	color: #36423e;
 }
 
 	/* Facebook Connect */
@@ -2813,7 +2813,7 @@ div#content div.content-box div.wishlist-content div.wishlist-top div.title{
 div#content div.content-box div.wishlist-content div.wishlist-top div.title span{
 	font-family: Arial, Tahoma;
 	font-size: 25px;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.wishlist-content div.wishlist-top div.finished{
@@ -2979,7 +2979,7 @@ div#content div.content-box div.notifications-content div.notifications-top div.
 	float: left;
 	width: 5px;
 	height: 36px;
-	background-color: #93a842;
+	background-color: #36423e;
 	margin-bottom: -1px;
 	margin-right: 15px;
 }
@@ -3011,7 +3011,7 @@ div#content div.content-box div.notifications-content div.notifications-top div.
 div#content div.content-box div.notifications-content div.notifications-top div.notifications-types div label{
 	font-family: 'AvenirLT Heavy Bold', Tahoma;
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	text-transform: uppercase;
 	padding-left: 5px;
 }
@@ -3078,7 +3078,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	float: left;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item span.notification-icon, div#content div.content-box div.notifications-content div.notifications-items div.item span.series-icon, div#content div.content-box div.notifications-content div.notifications-items div.item span.comments-icon, div#content div.content-box div.notifications-content div.notifications-items div.item span.likes-icon, div#content div.content-box div.notifications-content div.notifications-items div.item span.movies-icon {
@@ -3253,7 +3253,7 @@ div#content div.content-box div.notifications-content div.notification-preview d
 div#content div.content-box div.notifications-content div.notification-preview div.comment-header div.comment-info div.announce-title span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 18px;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.notifications-content div.notification-preview div.comment-header div.comment-info div.announce-title a.title{
@@ -3315,7 +3315,7 @@ div#content div.content-box div.notifications-content div.notification-preview d
 }
 
 div#content div.content-box div.notifications-content div.notification-preview div.comment-header div.comment-info div.comment-likes a.like-btn:hover {
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div.content-box div.notifications-content div.notification-preview div.comment-header div.comment-info div.comment-likes a.like-btn span{
@@ -3353,7 +3353,7 @@ div#content div.content-box div.notifications-content div.notification-preview d
 div#content div.content-box div.notifications-content div.notification-preview div.comment-header div.comment-info div.comment-reply a {
 	font-family: 'AvenirLT Heavy Bold', Tahoma;
 	font-size: 11px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -3391,7 +3391,7 @@ div#content div.content-box div.notifications-content div.notification-preview d
 div#content div.content-box div.notifications-content div.notification-preview div.comment-body a.read-more {
 	font-family: 'HelveticaNeue', Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -3480,7 +3480,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.thumb-and-episodes div.episodes-number span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	float: none;
 }
 
@@ -3496,7 +3496,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info a.movie-name{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -3573,7 +3573,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-actions a:hover, div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-actions a.slctd{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-actions a.slctd:hover{
@@ -3685,7 +3685,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-actions a:hover{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.wtv-rating{
@@ -3713,7 +3713,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info span.movie-synopsis a{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -3781,7 +3781,7 @@ div#content div#player-box div.player-aux div.serie div.episodes-number{
 div#content div#player-box div.player-aux div.serie div.episodes-number span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#player-box div.player-aux div.thumb a.thumb-aux{
@@ -3858,7 +3858,7 @@ div#content div#player-box div.player-aux div.movie-info{
 div#content div#player-box div.player-aux div.movie-info a.movie-name{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -4037,7 +4037,7 @@ div#content div#player-box div.player-aux div.movie-info div.votes span{
 }
 
 div#content div#player-box div.player-aux div.movie-info div.votes span.average{
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#player-box div.player-aux div.movie-info span.movie-synopsis{
@@ -4055,7 +4055,7 @@ div#content div#player-box div.player-aux div.movie-info span.movie-synopsis{
 div#content div#player-box div.player-aux div.movie-info span.movie-synopsis a{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -4092,7 +4092,7 @@ div#content div#player-box div.player-aux div.movie-faves{
 }
 
 div#content div#player-box div.player-aux div.movie-faves span{
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -4233,7 +4233,7 @@ div.player div#player div.player-errors div.error-label{
 div.player div#player div.player-errors div.error-label span, div.player div#player div.player-errors div.error-label a{
 	font-family: Tahoma;
 	font-size: 13px;
-	color: #93A842;
+	color: #36423e;
 	line-height: 19px;
 	text-decoration: none;
 }
@@ -4287,7 +4287,7 @@ div#content div#player-box div.player-aux div.movie-actions a.watched{
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover, div#content div#player-box div.player-aux div.movie-actions a.slctd{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#player-box div.player-aux div.movie-actions a.slctd:hover{
@@ -4507,7 +4507,7 @@ div#content div#player-box div.episodes-slide div.slide-top div.episode-info div
 	line-height: 55px;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#player-box div.episodes-slide div.slide-top div.episode-info div.episode-number-name span {
@@ -4654,12 +4654,12 @@ div#content div#player-box div.episodes-slide div.slide-bottom div.season-info d
 }
 
 div#content div#player-box div.episodes-slide div.slide-bottom div.season-info div.seasons-list div.season:hover a, div#content div#player-box div.episodes-slide div.slide-bottom div.season-info div.seasons-list div a.slctd {
-	border-bottom: 5px solid #93a842;
+	border-bottom: 5px solid #36423e;
 	background-color: #EFF2E3;
 }
 
 div#content div#player-box div.episodes-slide div.slide-bottom div.season-info div.seasons-list div.season:hover a, div#content div#player-box div.episodes-slide div.slide-bottom div.season-info div.seasons-list div.season a.slctd {
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#player-box div.episodes-slide div.slide-bottom div.season-info div.seasons-list div.season:hover a.slctd {
@@ -4809,7 +4809,7 @@ div#content div#player-box div.episodes-slide div.slide-content div.episodes-lis
 }
 
 div#content div#player-box div.episodes-slide div.slide-content div.episodes-list div.item div.thumb:hover, div#content div#player-box div.episodes-slide div.slide-content div.episodes-list div.slctd div.thumb{
-	background: #93A842;
+	background: #36423e;
 	-moz-box-shadow: 0 0 25px -8px #fff;
 	-webkit-box-shadow: 0 0 25px -8px #fff;
 	box-shadow: 0 0 25px -8px #fff;
@@ -4887,7 +4887,7 @@ div#content div#player-box div.episodes-slide div.slide-content div.episodes-lis
 }
 
 div#content div#player-box div.episodes-slide div.slide-content div.episodes-list div.slctd div.thumb a div.episode-number, div#content div#player-box div.episodes-slide div.slide-content div.episodes-list div.item div.thumb:hover a div.episode-number{
-	background: #93a842;
+	background: #36423e;
 	color: #fff;
 }
 
@@ -4954,7 +4954,7 @@ div#content div#play-box div.player-aux div.play-box a.play-now span.click-here{
 	font-family:  Tahoma;
 	font-size: 12px;
 	font-weight: bold;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 	text-align: right;
 }
@@ -5258,7 +5258,7 @@ div#content div#play-box div.player-aux div.play-box div.media-stats span.views{
 div#content div#play-box div.player-aux div.play-box div.media-stats span.views span{
 	font-family: Tahoma;
 	font-weight: bold;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#play-box div.player-aux div.play-box div.media-stats span.posted-by{
@@ -5267,7 +5267,7 @@ div#content div#play-box div.player-aux div.play-box div.media-stats span.posted
 
 div#content div#play-box div.player-aux div.play-box div.media-stats span.posted-by span{
 	font-family: Tahoma;
-	color: #93A842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -5305,9 +5305,9 @@ div#content div#play-box div#play-now-aux div.movie-stats div.quality span{
 div#content div#play-box div#play-now-aux div.movie-stats div.quality span.slctd{
 	font-family: Arial;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
-	border-bottom: 1px solid #93a842;
+	border-bottom: 1px solid #36423e;
 	margin-top: 1px;
 }
 
@@ -5331,7 +5331,7 @@ div#content div#play-box div#play-now-aux div.movie-stats div.views span, div#co
 
 div#content div#play-box div#play-now-aux div.movie-stats div.report a:hover{
 	text-decoration: none;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#play-box div#play-now-aux div.movie-stats div.subs{
@@ -5359,7 +5359,7 @@ div#content div#play-box div#play-now-aux div.movie-stats div.posted-by{
 }
 
 div#content div#play-box div#play-now-aux div.movie-stats div.subs span span, div#content div#play-box div#play-now-aux div.movie-stats div.posted-by span span{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#play-box div#play-now-aux div.movie-stats div.report{
@@ -5663,7 +5663,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 }
 
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a:hover{
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a span{
@@ -5916,7 +5916,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 }
 
 div#content div#comments-box div.comments-list div.item-wrapper div.item div.comment-footer div.user-rate div.rate span{
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -5952,7 +5952,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 }
 
 div#content div#comments-box div.comments-list div.item-wrapper div.item div.comment-footer div.comment-likes a.like-btn:hover {
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#comments-box div.comments-list div.item-wrapper div.item div.comment-footer div.comment-likes a.like-btn span.like-icon {
@@ -6000,7 +6000,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 }
 
 div#content div#comments-box div.comments-list div.item-wrapper div.item div.comment-footer div.comment-reply a.reply-btn:hover {
-	color: #93A842;
+	color: #36423e;
 }
 
 
@@ -6066,7 +6066,7 @@ div#content div#new-info-box div.slide-content div.item{
 }
 
 div#content div#new-info-box div.slide-content div.slctd, div#content div#new-info-box div.slide-content div.item:hover{
-	border-bottom: 5px solid #93a842;
+	border-bottom: 5px solid #36423e;
 	height: 75px;
 }
 
@@ -6090,7 +6090,7 @@ div#content div#new-info-box div.slide-content div.item a img{
 }
 
 div#content div#new-info-box div.slide-content div.slctd a img, div#content div#new-info-box div.slide-content div.item:hover a img{
-	border: 1px solid #93a842;
+	border: 1px solid #36423e;
 }
 
 div#content div#new-info-box div.slide-content div.item a div.new-thumb-effect{
@@ -6147,7 +6147,7 @@ div#content div#new-info-box div.new-info div.title span{
 	overflow: hidden;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -6188,7 +6188,7 @@ div#content div#new-info-box div.new-info div.body span{
 }
 
 div#content div#new-info-box div.new-info div.body span a{
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -6356,7 +6356,7 @@ div#content div#account-box div.left-content div.account-settings div#settings-w
 	line-height: 70px;
 	font-family: Arial;
 	font-size: 24px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: normal;
 	text-align: center;
 	border: 0px;
@@ -6452,7 +6452,7 @@ div#content div#account-box div.left-content div.account-settings div#settings-w
 	text-align: center;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 }
 
 			/* Continue with normal settings */
@@ -6497,7 +6497,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-h
 	overflow: hidden;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-header div.user-info div.register-date{
@@ -6550,7 +6550,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.avatar-option a span{
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -6575,7 +6575,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email span{
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -6591,7 +6591,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.pw a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.pw span{
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -6615,7 +6615,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.site-color div.site-color-label span{
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -6658,7 +6658,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 	width: 10px;
 	height: 10px;
 	overflow: hidden;
-	background-color: #93A842;
+	background-color: #36423e;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.site-color div.colors-list div.color-bg div.blue{
@@ -6713,7 +6713,7 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 	width: 261px;
 	height: 35px;
 	line-height: 35px;
-	border-left: 5px solid #93a842;
+	border-left: 5px solid #36423e;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
 	color: #9d9d9d;
@@ -6798,7 +6798,7 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item div.serie-info a.serie-title{
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -6833,11 +6833,11 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item div.subscribe-btn:hover label{
-	color: #93A842;
+	color: #36423e;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item div.subscribe-btn label.subscribed{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item div.subscribe-btn input.custom-checkbox{
@@ -6890,8 +6890,8 @@ div#content div#account-box div.media-box div.media-header div.episodes{
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover, div#content div#account-box div.media-box div.media-header div.h-slctd{
-	border-left: 5px solid #93a842;
-	border-bottom: 1px solid #93a842;
+	border-left: 5px solid #36423e;
+	border-bottom: 1px solid #36423e;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a{
@@ -6959,7 +6959,7 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.media-header-option-label, div#content div#account-box div.media-box div.media-header div.h-slctd a div.how-many-media, div#content div#account-box div.media-box div.media-header div.h-slctd a div.media-header-option-label{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#account-box div.media-box div.media-header-options{
@@ -7014,7 +7014,7 @@ div#content div#account-box div.media-box div.media-header-options div.media-opt
 }
 
 div#content div#account-box div.media-box div.media-header-options div.media-options div.opt label.slctd, div#content div#account-box div.media-box div.media-header-options div.media-options div.opt:hover label{
-	color: #93a842;
+	color: #36423e;
 }
 
 div#content div#account-box div.media-box div.account-media-divider{
@@ -7196,7 +7196,7 @@ div#content div#news-box div.movies-order{
 div#content div.content-box div.movies-order span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 13px;
-	color: #93a842;
+	color: #36423e;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7210,7 +7210,7 @@ div#content div.content-box div.movies-order span.pipe{
 }
 
 div#content div.content-box div.movies-order a{
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -7241,7 +7241,7 @@ div#content div.content-box div.pagination a, div#content div.content-box div.pa
 	line-height: 25px;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 	text-decoration: none;
 	text-align: center;
 	margin: 0px 1px;
@@ -7347,7 +7347,7 @@ div#report-problems div.reports-header{
 	line-height: 70px;
 	font-family: Arial;
 	font-size: 24px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: normal;
 	text-align: center;
 	padding: 0px 30px;
@@ -7422,7 +7422,7 @@ div#report-problems div.reports-msg{
 	text-align: center;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 }
 
 				/* No Results */
@@ -7502,7 +7502,7 @@ div.popup div.ph-header{
 	line-height: 70px;
 	font-family: Arial;
 	font-size: 24px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: normal;
 	text-align: center;
 	padding: 0px 30px;
@@ -7523,7 +7523,7 @@ div.popup div.ph-box a {
 	margin: 15px 0px;
 	font-family: Tahoma;
 	font-size: 18px;
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -7573,7 +7573,7 @@ div#pw-recovery div.pwr-header{
 	line-height: 70px;
 	font-family: Arial;
 	font-size: 24px;
-	color: #93a842;
+	color: #36423e;
 	font-weight: normal;
 	text-align: center;
 	padding: 0px 30px;
@@ -7663,7 +7663,7 @@ div#pw-recovery div.pw-recovery-msg{
 	text-align: center;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #93A842;
+	color: #36423e;
 }
 
 /* REQUESTS */
@@ -7698,7 +7698,7 @@ div#requests-box div#makeAReq span.title{
 	display: block;
 	font-family: Arial;
 	font-size: 25px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#requests-box div#makeAReq div.sep, div#requests-box div#makeAReq div.sep2{
@@ -7747,7 +7747,7 @@ div#requests-box div#makeAReq form#reqForm input.form-input{
 	padding: 5px;
 	font-family: Arial, Tahoma;
 	font-size: 14px;
-	color: #93A842;
+	color: #36423e;
 	line-height: 23px;
 	margin-top: 5px;
 }
@@ -7811,7 +7811,7 @@ div#requests-box div.myRequests span.title{
 	display: block;
 	font-family: Arial;
 	font-size: 25px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#requests-box div.myRequests div.sep{
@@ -7870,7 +7870,7 @@ div#requests-box div.myRequests div.myRequestList div.myReq span.resolved {
 	background: transparent url('../images/requestsResolved.png') no-repeat;
 	padding-left: 18px;
 	margin-left: 2px;
-	color: #93A842;
+	color: #36423e;
 }
 
 div#requests-box div.myRequests div.myRequestList div.myReq span.hidden {
@@ -7882,7 +7882,7 @@ div#requests-box div.myRequests a.myReqPrev, div#requests-box div.myRequests a.m
 	display: block;
 	font-family: Arial;
 	font-size: 25px;
-	color: #93A842;
+	color: #36423e;
 	margin-top: 2px;
 	text-decoration: none;
 }
@@ -7938,7 +7938,7 @@ div#requests-box div.requests div.reqOrder {
 div#requests-box div.requests div.reqOrder span{
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 12px;
-	color: #93a842;
+	color: #36423e;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7953,7 +7953,7 @@ div#requests-box div.requests div.reqOrder span.pipe{
 }
 
 div#requests-box div.requests div.reqOrder a{
-	color: #93a842;
+	color: #36423e;
 	text-decoration: none;
 }
 
@@ -7962,7 +7962,7 @@ div#requests-box div.requests div.reqOrder a:hover{
 }
 
 div#requests-box div.requests div.reqOrder a.slctd{
-	color: #93a842;
+	color: #36423e;
 	font-weight: bold;
 }
 
@@ -7978,7 +7978,7 @@ div#requests-box div.requests div.listMediaType{
 
 div#requests-box div.requests div.listMediaType a{
 	font-family: Tahoma;
-	color: #93A842;
+	color: #36423e;
 	font-size: 11px;
 	font-weight: normal;
 	text-decoration: none;
@@ -8221,7 +8221,7 @@ div#requests-box div#mediaPreview div.mediaInfo div.info a.mediaName{
 	font-family: Tahoma;
 	font-size: 14px;
 	font-weight: bold;
-	color: #93A842;
+	color: #36423e;
 	margin-top: 2px;
 	text-decoration: none;
 	overflow: hidden;
