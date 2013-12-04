@@ -168,7 +168,7 @@ div#topBar div.logo{
 
 div#topBar div.logo a{
 	display: block;
-	height: 22px;
+	height: 22px; 
 	width: 131px;
 	background: transparent url('../images/logo.png') no-repeat;
 }
@@ -536,7 +536,7 @@ div#content div.pub a img{
 div#content  div.main-separator {
 	width: 100%;
 	height: 2px;
-	background: transparent url('../images/main-separator.png') center center no-repeat;
+	background: transparent 
 	clear: both;
 	margin: 25px 0px;
 }
@@ -1089,7 +1089,7 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 	float: left;
 	width: 147px;
 	height: 170px;
-	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	
 	opacity: 0.4;
 	filter: alpha(opacity=40);
 	margin-left: 74px;
@@ -1107,7 +1107,6 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 	display: block;
 	max-width: 221px;
 	height: 24px;
-	background: transparent url('../images/news-title-bgtransp.png');
 	overflow: hidden;
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -1122,7 +1121,7 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 	max-width: 221px;
 	height: 24px;
 	line-height: 24px;
-	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
+	background: #f4f4f4 
 	font-family: 'AvenirLT Heavy Bold';
 	font-size: 11px;
 	color: #36423e;
@@ -1179,16 +1178,16 @@ div#content  div.content-box div.box-comments{
 div#content  div.content-box div.box-comments div.msgs-header{
 	width: 190px;
 	height: 20px;
-	text-align: left;
+	text-align: center;
 	padding-left: 15px;
 	padding-top: 5px;
 }
 
 div#content  div.content-box div.box-comments div.msgs-header span{
-	font-family: 'PTSans Bold';
-	font-size: 13px;
+	font-family: 'Tahoma';
+	font-size: 15px;
 	font-weight: normal;
-	color: #9c9c9c;
+	color: #000000;
 }
 
 div#content  div.content-box div.box-comments div.comments-list{
@@ -1493,12 +1492,12 @@ div#mycustomscroll_vscrollerbase{
 
 
 footer{
-	height: 175px;
+	height: 100px;
 	background: #E4E4E4 url('../images/footer-bg.png') repeat-x;
 }
 
 div#footer{
-	height: 175px;
+	height: 100px;
 	width: 978px;
 	overflow: hidden;
 }
@@ -1507,7 +1506,7 @@ div#footer{
 
 div#footer div.cats{
 	overflow: hidden;
-	margin: 40px 0px 0px 165px;
+	margin: 40px 0px 0px 395px;
 }
 
 div#footer div.cats div.cat{
@@ -5894,7 +5893,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 
 div#content div#comments-box div.comments-list div.item-wrapper div.item div.comment-footer {
 	overflow: hidden;
-	width: 420px;
+	width: 20px;
 	height: 17px;
 }
 
