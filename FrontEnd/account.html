@@ -131,86 +131,41 @@
 			</div>
 			<div class="user-info">
 				<div class="username">98jigs</div>
-				<div class="register-date">Desde&nbsp;<span>12 de Dezembro, 2011</span></div>
 			</div>
 		</div>
 		<div class="settings-content">
-			<div class="avatar-option">
-				<a href="javascript: openAccountSettings('avatar');">Modificar <span>imagem de exibição</span></a>
+			<div class="account-options">
+				<span class="label">Alterar dados:</span>
+				<div class="email"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('avatar');">Imagem de perfil</a></div>
+				<div class="email"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">Password</a></div>
 			</div>
 			<div class="separator"></div>
 			<div class="account-options">
-				<span class="label">Alterar dados de acesso:</span>
-				<div class="email"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('email');">Endereço de e-mail</a></div>
-				<div class="pw"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">Password</a></div>
-			</div>
-			<div class="separator"></div>
-			<div class="site-color">
-				<div class="site-color-label">Substituir <span>esquema de cores</span></div>
-				<div id="colors-list" class="colors-list">
-					<a href="javascript: changeSiteColor(1);"><div id="siteColor1" class="color-bg first "><div class="green"></div></div></a>
-					<a href="javascript: changeSiteColor(2);"><div id="siteColor2" class="color-bg "><div class="rose"></div></div></a>
-					<a href="javascript: changeSiteColor(3);"><div id="siteColor3" class="color-bg slctd"><div class="blue"></div></div></a>
-					<a href="javascript: changeSiteColor(4);"><div id="siteColor4" class="color-bg "><div class="red"></div></div></a>
-				</div>
+				<span class="label">Sobre mim:</span>
+				<div class="email"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('avatar');">Descrição:</a></div>
 			</div>
 		</div>
 	</div>
+
+
 </div><div class="subscribe-series">
-	<div class="subscribe-header">Subscreva mais séries</div>
+	<div class="subscribe-header">As minhas receitas</div>
 	<div class="separator"></div>
-	<div id="accountSubscribeSeries" class="subscribe-content">
-		<div id="accountSubscribeSerie199" class="subscribe-serie-item first">
-	<article>
-		<div class="thumb">
-			<a href="http://www.wareztuga.tv/serie.php?s=NCIS_Los_Angeles">
-				<img data-cfsrc="images/series_v2_thumbs/thumb199.png" alt="NCIS: Los Angeles" src="./Minha Conta_files/thumb199.png">
-				<div class="thumb-effect"></div>
-			</a>
-		</div>
-		<div class="serie-info">
-			<a href="http://www.wareztuga.tv/serie.php?s=NCIS_Los_Angeles" class="serie-title">NCIS: Los Angeles<br></a>
-			<span class="serie-synopsis">A série Investigação Criminal - LOS ANGELES (NCIS - Los Angeles) deriva da série policial americana Investigação Criminal (NCIS) criada por Shane Brennan, com um elenco de luxo constítuido por: Chris O'Donnell, LL Cool J, Daniela Ruah, Petter Cambor, Adam Jamal Craig e Linda Hunt. Esta unidade tra...</span>
-		</div>
-	</article>
-	<div class="subscribe-btn">
-		<span class="checkbox" onclick="accountSerieSubscribe(199);" style="background-position: 0px 0px;"></span><input type="checkbox" name="subscribeSeries[]" id="subscribeSerie199" class="custom-checkbox">
-		<label for="subscribeSerie199" id="subscribeSerie199Label" onclick="accountSerieSubscribe(199);">Subscrever</label>
-	</div>
-</div><div id="accountSubscribeSerie176" class="subscribe-serie-item ">
-	<article>
-		<div class="thumb">
-			<a href="http://www.wareztuga.tv/serie.php?s=The_Simpsons">
-				<img data-cfsrc="images/series_v2_thumbs/thumb176.png" alt="The Simpsons" src="./Minha Conta_files/thumb176.png">
-				<div class="thumb-effect"></div>
-			</a>
-		</div>
-		<div class="serie-info">
-			<a href="http://www.wareztuga.tv/serie.php?s=The_Simpsons" class="serie-title">The Simpsons<br></a>
-			<span class="serie-synopsis">The Simpsons, de Matt Groening, são os desenhos animados de maior longevidade na história da televisão nos Estados Unidos e vistos em mais de cem países. Altamente satírica tem como alvos principais a classe média e a mediocridade americana. O nome da cidade, Springfield, foi escolhido por ser um ...</span>
-		</div>
-	</article>
-	<div class="subscribe-btn">
-		<span class="checkbox" onclick="accountSerieSubscribe(176);" style="background-position: 0px 0px;"></span><input type="checkbox" name="subscribeSeries[]" id="subscribeSerie176" class="custom-checkbox">
-		<label for="subscribeSerie176" id="subscribeSerie176Label" onclick="accountSerieSubscribe(176);">Subscrever</label>
-	</div>
+
 </div>
-	</div>
-</div>
+
 </div><div class="media-box">
 	<div id="mediaHeader" class="media-header">
 		<div id="mediaHeader-movies" class="media-header-option movies h-slctd">
 			<a href="javascript: myAccount('accountMedia.ajax.php?cat=movies', $('#accountMediaChangeContent')); setAccountCategory('movies');">
 				<div class="movies-icon"></div>
-				<div class="how-many-media">2</div>
-				<div class="media-header-option-label">&nbsp;&nbsp;filmes</div>
+				<div class="media-header-option-label">Favoritos</div>
 			</a>
 		</div>
 		<div id="mediaHeader-series" class="media-header-option series">
 			<a href="javascript: myAccount('accountMedia.ajax.php?cat=series', $('#accountMediaChangeContent')); setAccountCategory('series');">
 				<div class="series-icon"></div>
-				<div class="how-many-media">6</div>
-				<div class="media-header-option-label">&nbsp;&nbsp;séries</div>
+				<div class="media-header-option-label">&nbsp;&nbsp;A seguir</div>
 			</a>
 		</div>
 		<div id="mediaHeader-episodes" class="media-header-option episodes">
@@ -262,14 +217,7 @@
 		<div class="center">
 			<div id="footer">
 				<div class="cats">
-					<div class="cat small">
-						<div class="cat-title"><span>Receitas</span></div>
-							<div class="sub-cat"><a href="#">Todas</a></div>
-					</div>
-								<div class="cat small">
-									<div class="cat-title"><span>Sobre Nós</span></div>
-										<div class="sub-cat"><a href="#">Contatos</a></div>
-								</div>
+					
 				</div>
 			</div>
 		</div>

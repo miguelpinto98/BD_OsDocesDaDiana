@@ -1493,7 +1493,7 @@ div#mycustomscroll_vscrollerbase{
 
 footer{
 	height: 100px;
-	background: #E4E4E4 url('../images/footer-bg.png') repeat-x;
+	background: #E4E4E4 
 }
 
 div#footer{
@@ -3284,7 +3284,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	height: 15px;
 	background: transparent url('../images/account-media-movies.png') center left no-repeat;
 	margin: 8px 5px 0px 5px;
-}
+} 
 
 div#content div.content-box div.notifications-content div.notifications-items div.item span.comments-icon {
 	width: 17px;
@@ -6426,7 +6426,6 @@ div#content div#new-info-box div.new-info div.new-details div.new-type span.seri
 	display: block;
 	width: 13px;
 	height: 12px;
-	background: transparent url('../images/account-media-series.png') no-repeat;
 	margin-top: 2px;
 	margin-right: 8px;
 }
@@ -6710,7 +6709,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 	line-height: 18px;
 	overflow: hidden;
 	padding-left: 15px;
-	background: transparent url('../images/account-settings-dot.png') 1px 7px no-repeat;
+	background: transparent 
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.avatar-option a{
@@ -6734,13 +6733,14 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 	height: 70px;
 	overflow: hidden;
 	padding-left: 15px;
-	background: transparent url('../images/account-settings-dot.png') 1px 8px no-repeat;
+	background: transparent 
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options span.label{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #8e8e94;
+	color: #36423e;
+	font-weight: bold;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email{
@@ -6750,8 +6750,8 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email span{
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #36423e;
-	font-weight: bold;
+	color: #8e8e94;
+	font-weight: normal;
 	text-decoration: none;
 }
 
@@ -7086,7 +7086,6 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 	float: left;
 	width: 13px;
 	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
 	margin: 10px 15px;
 }
 
