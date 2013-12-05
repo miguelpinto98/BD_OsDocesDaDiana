@@ -2267,6 +2267,176 @@ div#content div.content-box div.news-list div.first{
 	margin-top: 0px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias {
+	float: left;
+	width: 217px;
+	height: 217px;
+	background-color: #fff;
+	border: 1px solid #d4d4d4;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
+	box-shadow: 0 1px 10px -1px #D9D9D9;
+	padding: 2px;
+	margin: 2px;
+	margin-right: 10px;
+}
+
+
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias a img {
+	float: left;
+	position: relative;
+	max-width: 221px;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias a div.img-effect {
+	position: absolute;
+	float: left;
+	width: 147px;
+	height: 170px;
+	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	margin-left: 74px;
+	margin-top: 51px;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias:hover a div.img-effect {
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias div.title-bg {
+	position: absolute;
+	float: left;
+	display: block;
+	max-width: 221px;
+	height: 24px;
+	background: transparent url('../images/news-title-bgtransp.png');
+	overflow: hidden;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+	margin-top: 174px;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias div.title-bg div.title {
+	max-width: 221px;
+	height: 24px;
+	line-height: 24px;
+	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
+	font-family: 'AvenirLT Heavy Bold';
+	font-size: 11px;
+	color: #36423e;
+	text-transform: uppercase;
+	overflow: hidden;
+	opacity: 1.0;
+	filter: alpha(opacity=10);
+	padding: 0px 10px;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias div.title-bg div.title a {
+	display: block;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #36423e;
+	text-transform: uppercase;
+	text-decoration: none;
+	overflow: hidden;
+	text-shadow: 0px 1px #fff;
+	-moz-text-shadow: 0px 1px #fff;
+	-webkit-text-shadow: 0px 1px #fff;
+}
+
+div#content div.content-box div.news-list div.item div.new-imagecategorias:hover div.title-bg div.title a {
+	text-decoration: underline;
+}
+
+div#content div#new-info-box div.new-imagecategorias{
+	text-align: center;
+	margin: 15px 0px;
+}
+
+div#content div#new-info-box div.new-imagecategorias img{
+	border: 2px solid #e3e3e3;
+	max-width: 900px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 div#content div.content-box div.news-list div.item div.new-image {
 	float: left;
 	width: 221px;
