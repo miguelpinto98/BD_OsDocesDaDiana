@@ -1,4 +1,4 @@
--Decidir título: ideias: iCake!, BeeCandy, O Lambão, El Gordito…
+-Decidir titulo: ideias: iCake!, Be Candy, ...
 
 -Acabar html:
 ->index 
@@ -18,8 +18,8 @@
 -Fazer base de dados
 
 
--Laravel, para começar php e fazer ligações à base de dados(acho que é preciso um bundle que a laravel fornece)
+-Laravel, para comecar php e fazer ligacoes à base de dados(acho que e preciso um bundle que a laravel fornece)
 
 
--Aplicação admin em java
+-Aplicacao admin em java
 
