@@ -512,11 +512,7 @@ function validateLogin(){
 }
 
 function validateRegister(){
-	
-	// Registos fechados
-	$('form#registerForm span.info ').html('Os registos encontram-se <span>fechados.</span>');
-	
-	/*$('#registerForm #regUsername').removeClass('error-input');
+	$('#registerForm #regUsername').removeClass('error-input');
 	$('#registerForm #regUsernameL').css('color', '#727272');
 	$('#registerForm #regEmail').removeClass('error-input');
 	$('#registerForm #regEmailL').css('color', '#727272');
@@ -596,7 +592,7 @@ function validateRegister(){
 				}
 			}
 		});
-	}`*/
+	}
 }
 
 /* Wish List */
