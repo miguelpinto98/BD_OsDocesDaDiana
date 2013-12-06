@@ -6468,7 +6468,7 @@ div#content div#account-box div.left-content{
 
 div#content div#account-box div.left-content div.account-settings-wrapper{
 	width: 290px;
-	height: 270px;
+	height: 315px;
 	overflow: hidden;
 	background-color: #F6F6F6;
 	border: 0px solid #d4d4d4;
@@ -6483,7 +6483,7 @@ div#content div#account-box div.left-content div.account-settings-wrapper{
 div#content div#account-box div.left-content div.account-settings{
 	float: left;
 	width: 270px;
-	height: 250px;
+	height: 295px;
 	overflow: hidden;
 	background-color: #fff;
 	padding: 10px;
@@ -6730,10 +6730,25 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options{
 	width: 265px;
-	height: 70px;
+	height: 115px;
+	overflow: hidden;
+	padding-left: 20px;
+	background: transparent 
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2{
+	width: 265px;
+	height: 30px;
 	overflow: hidden;
 	padding-left: 15px;
-	background: transparent 
+	background: transparent
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2 span.label{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #36423e;
+	font-weight: bold;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options span.label{
