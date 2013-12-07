@@ -554,7 +554,7 @@ div#content div.content-box{
 	box-shadow: 0px 1px 10px -4px #000;
 	overflow: hidden;
 	margin-top: 5px;
-}
+} 
 
 	/* Movies Box Header */
 	
@@ -6470,12 +6470,12 @@ div#content div#account-box div.left-content div.account-settings-wrapper{
 	width: 290px;
 	height: 315px;
 	overflow: hidden;
-	background-color: #F6F6F6;
-	border: 0px solid #d4d4d4;
-	border-bottom: 0px solid #a7a7a7;
-	/*-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	background-color: #fff;
+	/*border: 1px solid #d4d4d4;
+	border-bottom: 1px solid #a7a7a7; */
+	-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
 	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
-	box-shadow: 0 1px 10px -1px #D9D9D9;*/
+	box-shadow: 0 1px 10px -1px #D9D9D9;
 	padding: 5px;
 	 
 }
@@ -7146,6 +7146,8 @@ div#content div#account-box div.media-box div.media-header div.episodes{
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover, div#content div#account-box div.media-box div.media-header div.h-slctd{
 	border-left: 2px solid #36423e;
+	border-top: 2px solid #36423e;
+	border-right: 2px solid #36423e;
 	border-bottom: 2px solid #36423e;
 }
 
@@ -7173,12 +7175,12 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 	background-position: -13px 0px;
 }
 
-/*div#content div#account-box div.media-box div.media-header div.series div.series-icon{
+div#content div#account-box div.media-box div.media-header div.series div.series-icon{
 	float: left;
 	width: 13px;
 	height: 12px;
 	margin: 12px 15px 10px 15px;
-} */
+} 
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover div.series-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.series-icon{
 	background-position: -13px 0px;
@@ -7201,7 +7203,7 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 	font-family: Helvetica;
 	font-size: 20px;
 	font-weight: bold;
-	color: #d1d1d1;
+	color: #6c847d;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a div.media-header-option-label{
@@ -7211,7 +7213,7 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.media-header-option-label, div#content div#account-box div.media-box div.media-header div.h-slctd a div.how-many-media, div#content div#account-box div.media-box div.media-header div.h-slctd a div.media-header-option-label{
-	color: #36423e;
+	color: #36423e; 
 }
 
 div#content div#account-box div.media-box div.media-header-options{
