@@ -271,9 +271,9 @@ div#topBar div.topNav div.opts a{
 	font-size: 11px;
 	color: #8e8e94;
 	text-decoration: none;
-	text-shadow: 0px 1px #fff;
+	/*text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
+	-webkit-text-shadow: 0px 1px #fff;*/
 	margin-left: 10px;
 }
 
@@ -316,7 +316,7 @@ div#topBar div.topNav div.opts span.pipe{
 	height: 12px;
 	width: 2px;
 	margin: 4px 10px;
-	background-color: #d3d3d3;
+	/*background-color: #d4d4d4; */
 }
 
 div#topBar div.topNav div.opts a.notifs{
@@ -545,7 +545,7 @@ div#content  div.main-separator {
 
 div#content div.content-box{
 	width: 980px;
-	background-color: #f4f4f4;
+	background-color: #6c847d;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -6473,11 +6473,11 @@ div#content div#account-box div.left-content div.account-settings-wrapper{
 	background-color: #F6F6F6;
 	border: 0px solid #d4d4d4;
 	border-bottom: 0px solid #a7a7a7;
-	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
-	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9; 
-	box-shadow: 0 1px 10px -1px #D9D9D9; 
+	/*-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
+	box-shadow: 0 1px 10px -1px #D9D9D9;*/
 	padding: 5px;
-	
+	 
 }
 
 div#content div#account-box div.left-content div.account-settings{
@@ -6907,15 +6907,15 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 
 div#content div#account-box div.left-content div.subscribe-series{
 	width: 300px;
-	height: 450px;
+	height: 350px;
 	overflow: hidden;
 	background-color: #fff;
-	border: 0px solid #d4d4d4;
-	border-bottom: 0px solid #a7a7a7; 
+	border: 1px solid #d4d4d4;
+	/*border-bottom: 0px solid #a7a7a7; 
 	border-right: 0px solid #a7a7a7;
 	-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
 	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
-	box-shadow: 0 1px 10px -1px #D9D9D9; 
+	box-shadow: 0 1px 10px -1px #D9D9D9; */
 	margin-top: 15px;
 }
 
@@ -6941,10 +6941,50 @@ div#content div#account-box div.left-content div.subscribe-series div.separator{
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content{
 	width: 270px;
-	height: 380px;
+	height: 280px;
 	overflow: hidden;
-	padding-left: 15px;
+	padding-left: 20px;
 	padding-right: 15px;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content{
+	width: 250px;
+	height: 115px;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	background: transparent 
+}
+
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content span.label{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #36423e;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content span.label2{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #9d9d9d;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content div.imagem{
+	margin-top: 5px;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content div.imagem a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.imagem span{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #8e8e94;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.options-content div.imagem a:hover{
+	text-decoration: underline;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item{
@@ -7080,6 +7120,9 @@ div#content div#account-box div.media-box{
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
+	/*-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
+	box-shadow: 0 1px 10px -1px #D9D9D9;*/ 
 	padding: 20px;
 }
 
