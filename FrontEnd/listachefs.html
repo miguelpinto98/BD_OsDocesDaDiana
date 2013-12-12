@@ -1,103 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 	
 	<head>
 		<title>Os Doces da Diana</title>
 
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+
 		<link rel="stylesheet" type="text/css" href="assets/styles/newstyle.css" />
+		<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
+		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<script type="text/javascript" src="engine1//jquery.js"></script>
 		<script type="text/javascript" src="assets/scripts/flexcroll.js"></script>
-		
-		<!--<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/js/newfunctions.js"></script>
-		
-		
-		<script type="text/javascript" src="View/templates/default/includes/js/flowplayer-3.2.10.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/js/flowplayer.ipad-3.2.9.min.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="../releases.flowplayer.org/5.4.0/commercial/skin/minimalist.css" />
-		<script src="../releases.flowplayer.org/5.4.0/commercial/flowplayer.min.js"></script>
-		
-		<meta property="og:title" content="wareztuga.tv - Filmes, S√©ries, Anime e Document√°rios HD Online Legendados" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="http://www.wareztuga.ws/forum/tv1.png" />
-		<meta property="og:site_name" content="wareztuga.tv" />
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<meta name="description" content="filmes e s√©ries ONLINE com legendas em portugu√™s - gratuito" />-->
-		<!--<script type="text/javascript" src="View/templates/default/includes/js/lightbox.js"></script>-->
-		<!--<link rel="stylesheet" type="text/css" href="View/templates/default/includes/lightbox.css" />-->
-
-		<script language='javascript' type='text/javascript'>
-		if (top != self) {
-		top.location.href = location.href;
-		}
+		<script src="assets/scripts/bootstrap.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".dropdown-toggle").dropdown();
+			});  
 		</script>
-
-		<!--
-		<link rel="stylesheet" href="View/templates/default/includes/skin.min.css" />
-		<link rel="stylesheet" href="View/templates/default/includes/nivo-slider.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="View/templates/default/includes/default.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="View/templates/default/includes/jquery.nivo.slider.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/jquery.nivo.slider.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/jquery.pixelentity.kenburnsSlider.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/autoresize.jquery.min.js"></script>	
-		<script type="text/javascript" src="View/templates/default/includes/functions.js"></script>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+		
+		<script language='javascript' type='text/javascript'>
+			if (top != self) {
+			top.location.href = location.href;
+			}
+		</script>		
 	</head>
 
 
 
-	<body>
-		
+	<body>		
 		<header>
 			<div id="topBar">
 				<div class="center">
 					<div class="topNav">
 						<div class="opts">
         					<div class="to-right">
-								<a href="login.html" class="myAccount">Login</a>
-								<span style="float: left;">&nbsp;|&nbsp;</span>
-								<a href="login.php" class="myAccount openRegs">Registar</a>
+								<a href="login.html" class="myAccount">Entrar | Registar</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-
-
 			<!-- BARRA PRETA -->						
 				<nav>
-
 					<div class="center">
 						<div class="mainNav">
-							<div id="logo" class="logo"><a href="index-2.html"></a></div>
-
-							<!--
-							Christmas Logo
-							<a href="index.php" class="christmas" onmouseover="$('nav div.mainNav div#logo a').addClass('hover');" onmouseout="$('nav div.mainNav div#logo a').removeClass('hover');"></a>-->
-						
-
-
-							<ul>
-							<!--<li class="first"><a href="index.php" class="home slctd">Entrada</a></li>-->
-							<li class="first "><a href="categorias.html" class="movies ">Categorias</a></li>
-							<li class=""><a href="#" class="series ">Novidades</a></li>
-							<li class="last"><a href="chefs.html" class="news ">Chefs</a></li>
-							<!--<li class="{requestsClass}"><a href="requests.html" class="chat {requestsClass}">Pedidos</a></li>-->
-							<!--<li><a href="http://www.wareztuga.ws/forum/index.php" class="forum" target="_blank">F√≥rum</a></li>-->
-							<!--<li class="last "><a href="#" class="faq ">Search</a></li>-->
-							</ul>
-
+							<div id="logo" class="logo" title="P√°gina Inicial"><a href="index-2.html"></a></div>
+								<ul>
+									<li class="first "><a href="categorias.html" class="movies ">Categorias</a></li>
+									<li class=""><a href="#" class="series ">Novidades</a></li>
+									<li class="last"><a href="listachefs.html" class="news ">Chefs</a></li>
+								</ul>
 							<div class="box-search">
-							<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-							<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-							<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
-							</a>
-							</form>
+								<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
+								<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
+								<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
+								</a>
+								</form>
 							</div>
-
 						</div>
 					</div>
 				</nav>
@@ -118,10 +80,10 @@
 
 	<div class="movies-order" style="margin-top: 30px; margin-left: 23px;">
 		<div class="movies-order-caption">Ordernar por:
-			<a href="javascript: ajaxRequestGET('news.ajax733c.html?p=1&amp;order=date', $('#news-box')); setOrderBy('news', 'date');" style="font-family: 'HelveticaNeueBold';">...(Nome De Chef)</a>,
-			<a href="javascript: ajaxRequestGET('news.ajaxa94b.html?p=1&amp;order=name', $('#news-box')); setOrderBy('news', 'name');" style="">...(PontuaÁ„o)</a>,
-			<a href="javascript: ajaxRequestGET('news.ajaxa6cf.html?p=1&amp;order=views', $('#news-box')); setOrderBy('news', 'views');" style="">...</a>,
-			<a href="javascript: ajaxRequestGET('news.ajaxaf79.html?p=1&amp;order=msgs', $('#news-box')); setOrderBy('news', 'msgs');" style="">...</a>
+			<a href="javascript: ajaxRequestGET('news.ajax733c.html?p=1&amp;order=date', $('#news-box')); setOrderBy('news', 'date');" style="">Nome</a> | 
+			<a href="javascript: ajaxRequestGET('news.ajaxa94b.html?p=1&amp;order=name', $('#news-box')); setOrderBy('news', 'name');" style="">Pontua√ß√£o</a> | 
+			<a href="javascript: ajaxRequestGET('news.ajaxa6cf.html?p=1&amp;order=views', $('#news-box')); setOrderBy('news', 'views');" style="">N√∫mero de Receitas Publicadas</a>
+			<!--<a href="javascript: ajaxRequestGET('news.ajaxaf79.html?p=1&amp;order=msgs', $('#news-box')); setOrderBy('news', 'msgs');" style="">...</a>-->
 		</div>
 			<input type="hidden" value="" id="news-order" />
 	</div>
@@ -134,7 +96,7 @@
 	</div>
 
 
-	<!-- A p·g expande mas tinha sÛ 4 por p·gina -->
+	<!-- A p√°g expande mas tinha s√≥ 4 por p√°gina -->
 	<div id="news-list" class="news-list">
 		
 		<div class="clear"></div>
@@ -145,20 +107,18 @@
 					<img src="images/news/new55.png" alt="Filme da Semana #3 - Biutiful"/></noscript>
 					<div class="img-effect"></div>
 				</a>
-				<div class="title-bg">
-					<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Qq cena1</a></div>
-				</div>
 			</div>
 			<div class="new-info">
-				<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Nome do Chef1</a></div>
-				<div class="new-type"><span class="movies-icon"></span><span>Cinema</span></div>
+				<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Nome</a></div>
+				<div class="new-type"><a href="#">Visitar Perfil</a></div>
 				<div class="clear"></div>
 				<div class="divider"></div>
-				<div class="body"><span>DescriÁ„o Chef1 (algo escrito por ele tipo "sobre ti" do face) ou informaÁıes tipo n∫ receitas inseridas, n∫ receitas seguidas, pontuaÁ„o, ...</span></div>
+				<div class="body"><span>Ol√°. Eu sou a Mariana mas tamb√©m me chamam 63linda ou simplesmente 63... <p></p>Ps- Nesta caixa cabem 325 caracteres.</span></div>
 				<div class="divider" style="margin-top: 15px;"></div>
 				<div class="new-details">
-					<div class="comments"><span>5</span> coment·rios</div>
-					<div class="postedby"><span class="date">Ver Chef -> </span></div>
+					<div class="comments">Pontua√ß√£o <span>5</span> estrelas</div>
+					<div class="comments">Seguido por <span>10</span> chefs</div>
+					<div class="comments"><span>5</span> Receitas pr√≥prias</div>
 				</div>
 			</div>
 		</div>
@@ -168,23 +128,21 @@
 		<div id="new50" class="item">
 			<div class="new-image">
 				<a href="new12cb.html?n=Reveladas_novas_imagens_de_O_Hobbit_A_Desolacao_de_Smaug">
-					<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new50.png" alt="Reveladas novas imagens de "O Hobbit: A DesolaÁ„o de Smaug""/>
+					<img style="display:none;visibility:hidden;" data-cfsrc="images/news/new50.png" alt="Reveladas novas imagens de "O Hobbit: A Desola√ß√£o de Smaug""/>
 					<div class="img-effect"></div>
 				</a>
-				<div class="title-bg">
-					<div class="title"><a href="new12cb.html?n=Reveladas_novas_imagens_de_O_Hobbit_A_Desolacao_de_Smaug">QQ CENA2</a></div>
-				</div>
 			</div>
 			<div class="new-info">
-				<div class="title"><a href="#">Nome2</a></div>
-				<div class="new-type"><span class="movies-icon"></span><span>Cinema</span></div>
+				<div class="title"><a href="new084c.html?n=Filme_da_Semana_3_Biutiful">Nome</a></div>
+				<div class="new-type"><a href="#">Visitar Perfil</a></div>
 				<div class="clear"></div>
 				<div class="divider"></div>
-				<div class="body"><span>Desc2</span></div>
+				<div class="body"><span>Ol√°. Eu sou a Mariana mas tamb√©m me chamam 63linda ou simplesmente 63... <p></p>Ps- Nesta caixa cabem 325 caracteres.</span></div>
 				<div class="divider" style="margin-top: 15px;"></div>
 				<div class="new-details">
-					<div class="comments"><span>76</span> coment·rios</div>
-					<div class="postedby">Inserido por <span>dudaslb</span> em <span class="date">12 de Novembro, 2013</span> (02:28)</div>
+					<div class="comments">Pontua√ß√£o <span>5</span> estrelas</div>
+					<div class="comments">Seguido por <span>10</span> chefs</div>
+					<div class="comments"><span>5</span> Receitas pr√≥prias</div>
 				</div>
 			</div>
 		</div>
@@ -236,7 +194,7 @@
 							<div class="sub-cat"><a href="#">Todas</a></div>
 					</div>
 								<div class="cat small">
-									<div class="cat-title"><span>Sobre NÛs</span></div>
+									<div class="cat-title"><span>Sobre N√≥s</span></div>
 										<div class="sub-cat"><a href="#">Contatos</a></div>
 								</div>
 				</div>

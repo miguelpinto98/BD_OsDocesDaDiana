@@ -5,12 +5,15 @@
 	<head>
 		<title>Os Doces da Diana</title>
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<link rel="shortcut icon" href="assets/images/favicon.ico" />
+
 		<link rel="stylesheet" type="text/css" href="assets/styles/newstyle.css" />
 		<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+		<script type="text/javascript" src="engine1//jquery.js"></script>
 		<script type="text/javascript" src="assets/scripts/flexcroll.js"></script>
 		<script src="assets/scripts/bootstrap.js"></script>
 		<script type="text/javascript">
@@ -19,48 +22,15 @@
 			});  
 		</script>
 		
-
-		<!--<script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/js/newfunctions.js"></script>
-		
-		
-		<script type="text/javascript" src="View/templates/default/includes/js/flowplayer-3.2.10.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/js/flowplayer.ipad-3.2.9.min.js"></script>
-
-		<link rel="stylesheet" type="text/css" href="../releases.flowplayer.org/5.4.0/commercial/skin/minimalist.css" />
-		<script src="../releases.flowplayer.org/5.4.0/commercial/flowplayer.min.js"></script>
-		
-		<meta property="og:title" content="wareztuga.tv - Filmes, SÃ©ries, Anime e DocumentÃ¡rios HD Online Legendados" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="http://www.wareztuga.ws/forum/tv1.png" />
-		<meta property="og:site_name" content="wareztuga.tv" />
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<meta name="description" content="filmes e sÃ©ries ONLINE com legendas em portuguÃªs - gratuito" />
-		<script type="text/javascript" src="View/templates/default/includes/js/lightbox.js"></script>
-		<link rel="stylesheet" type="text/css" href="View/templates/default/includes/lightbox.css" />-->
-
 		<script language='javascript' type='text/javascript'>
-		if (top != self) {
-		top.location.href = location.href;
-		}
-		</script>
-
-		<!--
-		<link rel="stylesheet" href="View/templates/default/includes/skin.min.css" />
-		<link rel="stylesheet" href="View/templates/default/includes/nivo-slider.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="View/templates/default/includes/default.css" type="text/css" media="screen" />
-		<script type="text/javascript" src="View/templates/default/includes/jquery.nivo.slider.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/jquery.nivo.slider.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/jquery.pixelentity.kenburnsSlider.min.js"></script>
-		<script type="text/javascript" src="View/templates/default/includes/autoresize.jquery.min.js"></script>	
-		<script type="text/javascript" src="View/templates/default/includes/functions.js"></script>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+			if (top != self) {
+			top.location.href = location.href;
+			}
+		</script>		
 	</head>
 
 
 	<body>
-		
 
 		<header>
 			<div id="topBar">
@@ -79,35 +49,21 @@
 
 			<!-- BARRA PRETA -->						
 				<nav>
-
 					<div class="center">
 						<div class="mainNav">
 							<div id="logo" class="logo" title="Página Inicial"><a href="index-2.html"></a></div>
-
-							<!--
-							Christmas Logo
-							<a href="index.php" class="christmas" onmouseover="$('nav div.mainNav div#logo a').addClass('hover');" onmouseout="$('nav div.mainNav div#logo a').removeClass('hover');"></a>-->
-						
-
-
-							<ul>
-							<!--<li class="first"><a href="index.php" class="home slctd">Entrada</a></li>-->
-							<li class="first "><a href="categorias.html" class="movies ">Categorias</a></li>
-							<li class=""><a href="#" class="series ">Novidades</a></li>
-							<li class="last"><a href="listachefs.html" class="news ">Chefs</a></li>
-							<!--<li class="{requestsClass}"><a href="requests.html" class="chat {requestsClass}">Pedidos</a></li>-->
-							<!--<li><a href="http://www.wareztuga.ws/forum/index.php" class="forum" target="_blank">FÃ³rum</a></li>-->
-							<!--<li class="last "><a href="#" class="faq ">Search</a></li>-->
-							</ul>
-
+								<ul>
+									<li class="first "><a href="categorias.html" class="movies ">Categorias</a></li>
+									<li class=""><a href="#" class="series ">Novidades</a></li>
+									<li class="last"><a href="listachefs.html" class="news ">Chefs</a></li>
+								</ul>
 							<div class="box-search">
-							<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-							<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-							<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
-							</a>
-							</form>
+								<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
+								<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
+								<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
+								</a>
+								</form>
 							</div>
-
 						</div>
 					</div>
 				</nav>
@@ -122,27 +78,7 @@
 		<div class="center">
 
 
-			<!-- ANUNCIOS-->
-					<!-- Start WOWSlider.com HEAD section -->
-						<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-						<script type="text/javascript" src="engine1//jquery.js"></script>
-					<!-- End WOWSlider.com HEAD section -->
-
-
-
-					<!-- Start WOWSlider.com HEAD section -->
-						<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-						<script type="text/javascript" src="engine1//jquery.js"></script>
-					<!-- End WOWSlider.com HEAD section -->
-
-
-
-					<!-- Start WOWSlider.com HEAD section -->
-						<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
-						<script type="text/javascript" src="engine1//jquery.js"></script>
-					<!-- End WOWSlider.com HEAD section -->
-				
-				
+			<!-- SLIDE -->
 					<div id="wowslider-container1">
 						<div class="ws_images">
 							<ul>
@@ -172,20 +108,15 @@
 							</div>
 							<script type="text/javascript" src="engine1//wowslider.js"></script>
 							<script type="text/javascript" src="engine1//script.js"></script>
-				
-
-						<!-- <div class="pub" style="width: 978px; height: 200px;"></div> -->
-			<!-- ANUNCIOS-->
+			<!-- SLIDE -->
 
 				<div class="main-separator"></div>
 
 			
 					<div id="movies-box" class="content-box">
-
 					<!-- BARRA CINZENTA-->
 
 						<div class="box-header"> 
-
 							<div class="btn-group">
 					            <button data-toggle="dropdown" class="btn dropdown-toggle">Seleccione uma categoria <span class="caret"></span></button>
 					            <ul class="dropdown-menu">
@@ -383,25 +314,11 @@
 
 						</div>
 					<!-- CAIXA (comentÃ¡rios e imagens)-->
-
 					</div>
 				
 				<div class="main-separator"></div>
-
-				</div>
-				</div>
-
-
-
+				</div></div>
 				<div class="main-separator"></div>
-
-					
-
-					<!--<div class="pub" style="margin-top: 20px; margin-bottom: -10px; width: 978px; height: 120px;">
-							<a href="mailto:lab.wareztuga@gmail.com">
-								<img src="images/anuncie-aqui.png" alt="anuncie aqui" style="width: 978px; height: 120px;"/>
-							</a>
-						</div>-->
 	</body>
 
 

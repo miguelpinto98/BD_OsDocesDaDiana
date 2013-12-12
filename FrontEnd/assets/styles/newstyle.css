@@ -2298,8 +2298,8 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias:hover
 
 div#content div.content-box div.news-list div.item div.new-image {
 	float: left;
-	width: 221px;
-	height: 221px;
+	width: 180px;
+	height: 180px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-radius: 2px;
@@ -2393,7 +2393,7 @@ div#content div.content-box div.news-list div.item div.new-image:hover div.title
 div#content div.content-box div.news-list div.item div.new-info{
 	float: left;
 	width: 665px;
-	height: 195px;
+	height: 154px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
@@ -2431,12 +2431,13 @@ div#content div.content-box div.news-list div.item div.new-info div.new-type{
 	line-height: 26px;
 }
 
-div#content div.content-box div.news-list div.item div.new-info div.new-type span{
+div#content div.content-box div.news-list div.item div.new-info div.new-type a{
 	display: block;
 	float: right;
+	font-weight: bold;
 	font-family: Tahoma;
-	font-size: 11px;
-	color: #9D9D9D;
+	font-size: 12px;
+	color: #b5dcd1;
 	text-align: right;
 }
 
@@ -2456,7 +2457,7 @@ div#content div.content-box div.news-list div.item div.new-info div.body{
 
 div#content div.content-box div.news-list div.item div.new-info div.body span{
 	float: left;
-	height: 107px;
+	height: 60px;
 	font-family: Tahoma;
 	font-size: 13px;
 	color: #545457;
@@ -7000,7 +7001,6 @@ div#content div.content-box div.movies-order{
 	color: #9d9d9d;
 	margin-left: 20px;
 	padding-left: 30px;
-	background: transparent url('../images/movies-order.png') 0px 2px no-repeat;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7021,7 +7021,7 @@ div#content div#news-box div.movies-order{
 	font-size: 12px;
 	color: #9d9d9d;
 	margin-left: 20px;
-	padding-left: 30px;
+	padding-left: 0px;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7087,12 +7087,12 @@ div#content div.content-box div.pagination span{
 }
 
 div#content div.content-box div.pagination a:hover{
-	background-color: #aec068;
+	background-color: #6c847d;
 	color: #fff;
 }
 
 div#content div.content-box div.pagination a.actual{
-	background-color: #aec068;
+	background-color: #6c847d;
 	color: #fff;
 	font-weight: bold;
 }
@@ -7832,10 +7832,6 @@ div#requests-box div.requests div.listMediaType span.pipe{
 	font-size: 13px;
 	opacity: 0.5;
 	filter: alpha(opacity=50);
-}
-
-div#requests-box div.requests div.pagination{
-	/*width: 265px;*/
 }
 
 div#requests-box div.requests div.pagination div.pagination-aux{
