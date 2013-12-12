@@ -185,17 +185,6 @@ div#topBar div.socials a{
 	float: left;
 }
 
-div#topBar div.socials a.facebook{
-	width: 16px;
-	height: 15px;
-	background: transparent url('../images/facebook-btn.png') no-repeat;
-	margin-right: 10px;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.facebook:hover{
-	background-position: -16px 0px;
-}
 
 div#topBar div.socials a.mail{
 	width: 19px;
@@ -206,28 +195,6 @@ div#topBar div.socials a.mail{
 
 div#topBar div.socials a.mail:hover{
 	background-position: -19px 0px;
-}
-
-div#topBar div.socials a.twitter{
-	width: 21px;
-	height: 16px;
-	background: transparent url('../images/twitter-btn.png') no-repeat;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.twitter:hover{
-	background-position: -20px 0px;
-}
-
-div#topBar div.socials a.google{
-	width: 18px;
-	height: 18px;
-	background: transparent url('../images/google-btn.png') no-repeat;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.google:hover{
-	background-position: -18px 0px;
 }
 
 div#topBar div.topNav{
@@ -402,9 +369,10 @@ nav div.mainNav div#logo a{
 	background-position: 0px 0px;
 }
 
+/*efeito logo
 nav div.mainNav div#logo a:hover, nav div.mainNav div#logo a.hover{
-	background-position: -123px 0px;
-}
+	background-position: -2px 0px;
+}*/
 
 nav div.mainNav ul {
 	display: block;
@@ -470,25 +438,6 @@ nav div.mainNav ul li a.slctd{
 	color: #f1f1f1;
 }
 
-nav div.mainNav ul li a.movies{
-	/*background: transparent url('../images/menu-movies.png') no-repeat;*/
-	/*background-position: 35px 10px;*/
-	/*padding-left: 60px;*/
-	/*width: 78px;*/
-}
-
-nav div.mainNav ul li a.series{
-	/*background: transparent url('../images/menu-series.png') no-repeat;*/
-	/*background-position: 35px 11px;
-	padding-left: 60px;
-	width: 78px;*/
-}
-
-nav div.mainNav ul li a.news{
-	/*background: transparent url('../images/menu-news.png') no-repeat;*/
-	/*background-position: 30px 11px;*/
-}
-
 nav div.mainNav ul li:hover a{
 	color: #6c847d;
 	cursor: pointer;
@@ -505,31 +454,7 @@ div#content{
 	padding-top: 10px;
 }
 
-	/* Pub */
-div#content div.pub{
-	display: block;
-	/*height: 120px;*/
-	width: 978px;
-	border: 1px solid #bdbdbd;
-	-moz-box-shadow: 0px 0px 10px -4px #000;
-	-webkit-box-shadow: 0px 0px 10px -4px #000;
-	box-shadow: 0px 0px 10px -4px #000;
-	background-color: #F6F6F6;
-	background-image: -webkit-linear-gradient(top, #fff, #f6f6f6);
-	background-image: linear-gradient(top, #fff,#f6f6f6);
-	margin-top: 10px;
-	margin-bottom: 15px;
-	overflow: hidden;
-}
 
-div#content div.pub a{
-	display: block;
-	height: 120px;
-	width: 978px;
-}
-
-div#content div.pub a img{
-}
 
 	/* Main Separator */
 
@@ -568,14 +493,6 @@ div#content  div.content-box div.box-header{
 	-webkit-border-radius: 5px;
 }
 
-div#content  div.content-box div.box-header div.movies-box-icon{
-	float: left;
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/box-movies-btn.png') no-repeat;
-	margin-left: 25px;
-	margin-top: 17px;
-}
 
 /*Botao dinamico para escolher categorias de receitas*/
 
@@ -760,6 +677,7 @@ div#content  div.content-box div.movies-box-media{
 	overflow: hidden;
 }
 
+/*tamanho da "caixa" cinzenta toda*/
 div#content  div.content-box div.movies-box-media div.movies-list-content{
 	overflow: hidden;
 	height: 642px;
@@ -769,15 +687,11 @@ div#content  div.content-box div.movies-box-media div.movies-list-content{
 	position: relative;
 }
 
-div#content  div.content-box div#series-box-content div.movies-box-media div.movies-list-content{
-	height: 442px;
-	/*height: 603px;*/
-}
-
 div#content  div.content-box div.movies-box-media div.list-aux{
 	position: absolute;
 }
 
+/*tamanho da "caixa" interior que tem o scroll e a barra cinzenta como bordas*/
 div#content  div.content-box div.movies-box-media div.movies-list{
 	overflow: hidden;
 	height: 832px;
@@ -790,10 +704,11 @@ div#content  div.content-box div.movies-box-media div.loading{
 	background: transparent url('../images/loading-highLights.gif') center center no-repeat;
 }
 
+/*tamanho dos quadrados do index*/
 div#content  div.content-box div.movies-box-media div.movies-list div.item{
 	float: left;
-	width: 128px;
-	height: 190px;
+	width: 220px;
+	height: 220px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
@@ -808,6 +723,8 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item{
 	margin-top: 20px;
 }
 
+
+
 div#content  div.content-box div.movies-box-media div.movies-list div.serie{
 	height: 128px;
 	margin-top: 15px;
@@ -815,6 +732,10 @@ div#content  div.content-box div.movies-box-media div.movies-list div.serie{
 
 div#content  div.content-box div.movies-box-media div.movies-list div.first{
 	margin-left: 0px;
+}
+
+div#content  div.content-box div.movies-box-media div.movies-list div.under3{
+	margin-top: 0px;
 }
 
 div#content  div.content-box div.movies-box-media div.movies-list div.under5{
@@ -855,21 +776,6 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item a div
 div#content  div.content-box div.movies-box-media div.movies-list div.item:hover a div.thumb-effect, div#content  div.content-box div.movies-box-media div.movies-list div.item:hover a div.thumb-effect2{
 	opacity: 0.1;
 	filter: alpha(opacity=10);
-}
-
-div#content  div.content-box div.movies-box-media div.movies-list div.item a div.officialSubs {
-	float: left;
-	position: absolute;
-	width: 115px;
-	height: 22px;
-	background: transparent url('../images/officialSubs.png') no-repeat;
-	overflow: hidden;
-	margin-top: 2px;
-	margin-left: 2px;
-}
-
-div#content  div.content-box div.movies-box-media div.movies-list div.item:hover a div.officialSubs {
-	background-position: 0px -22px;
 }
 
 div#mycustomscroll{
@@ -2389,53 +2295,6 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias:hover
 	text-decoration: underline;
 }
 
-div#content div#new-info-box div.new-imagecategorias{
-	text-align: center;
-	margin: 15px 0px;
-}
-
-div#content div#new-info-box div.new-imagecategorias img{
-	border: 2px solid #e3e3e3;
-	max-width: 900px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 div#content div.content-box div.news-list div.item div.new-image {
 	float: left;
@@ -2581,22 +2440,6 @@ div#content div.content-box div.news-list div.item div.new-info div.new-type spa
 	text-align: right;
 }
 
-div#content div.content-box div.news-list div.item div.new-info div.new-type span.movies-icon{
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
-	margin-top: 5px;
-	margin-left: 8px;
-}
-
-div#content div.content-box div.news-list div.item div.new-info div.new-type span.series-icon{
-	display: block;
-	width: 13px;
-	height: 12px;
-	background: transparent url('../images/account-media-series.png') no-repeat;
-	margin-top: 7px;
-	margin-left: 8px;
-}
 
 div#content div.content-box div.news-list div.item div.new-info div.divider{
 	display: block;
@@ -2734,21 +2577,19 @@ div#content div.content-box div.login-register input.error-input{
 div#content div.content-box div.login-register input.form-btn{
 	width: 274px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #6c847d;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	background: transparent url('../images/login-btn-bg.png') repeat-x;
+	background: #6c847d;
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #777;
+	color: #b5dcd1;
 	font-weight: bold;
 	line-height: 40px;
 	text-align: center;
 	/*text-transform: uppercase;*/
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
+
 }
 
 div#content div.content-box div.login-register input.form-btn:hover{
@@ -3003,7 +2844,7 @@ div#content div.content-box div.wishlist-content div.wishlist-top div.finished a
 	width: 130px;
 	height: 38px;
 	overflow: hidden;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -6184,270 +6025,10 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 
 	/* News Slide */
 	
-div#content div#new-info-box div.news-slide{
-	float: left;
-	width: 920px;
-	overflow: hidden;
-	margin: 25px 25px 0px 35px;
-}
 
-div#content div#new-info-box div.left-arrow, div#content div#new-info-box div.right-arrow{
-	float: left;
-	width: 23px;
-	height: 40px;
-	overflow: hidden;
-	background: transparent url('../images/news-slide-arrows.png') no-repeat;
-	margin: 13px 25px 13px 25px;
-}
 
-div#content div#new-info-box div.left-arrow{
-	background-position: 0px 0px;
-}
 
-div#content div#new-info-box div.left-arrow:hover{
-	background-position: -23px 0px;
-}
 
-div#content div#new-info-box div.right-arrow{
-	background-position: -46px 0px;
-}
-
-div#content div#new-info-box div.right-arrow:hover{
-	background-position: -69px 0px;
-}
-
-div#content div#new-info-box div.left-arrow a, div#content div#new-info-box div.right-arrow a{
-	display: block;
-	float: left;
-	width: 23px;
-	height: 40px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.slide-content{
-	float: left;
-	width: 761px;
-	height: 78px;
-	border-bottom: 1px solid #c5c3c3;
-}
-
-div#content div#new-info-box div.slide-content div.item{
-	float: left;
-	width: 67px;
-	height: 78px;
-	margin-left: 10px;
-	overflow: hidden;
-	margin-bottom: -1px;
-}
-
-div#content div#new-info-box div.slide-content div.slctd, div#content div#new-info-box div.slide-content div.item:hover{
-	border-bottom: 5px solid #36423e;
-	height: 75px;
-}
-
-div#content div#new-info-box div.slide-content div.first{
-	margin-left: 0px;
-}
-
-div#content div#new-info-box div.slide-content div.item a{
-	float: left;
-	width: 67px;
-	height: 67px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.slide-content div.item a img{
-	float: left;
-	width: 65px;
-	height: 65px;
-	overflow: hidden;
-	border: 1px solid #c5c3c3;
-}
-
-div#content div#new-info-box div.slide-content div.slctd a img, div#content div#new-info-box div.slide-content div.item:hover a img{
-	border: 1px solid #36423e;
-}
-
-div#content div#new-info-box div.slide-content div.item a div.new-thumb-effect{
-	float: left;
-	position: absolute;
-	width: 38px;
-	height: 37px;
-	background: transparent url('../images/new-thumb-effect.png') no-repeat;
-	overflow: hidden;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
-	margin-left: 28px;
-	margin-top: 29px;
-}
-
-div#content div#new-info-box div.slide-content div.item:hover a div.new-thumb-effect{
-	opacity: 0.2;
-	filter: alpha(opacity=20);
-}
-
-	/* New Info */
-
-div#content div#new-info-box div.new-info{
-	float: left;
-	width: 900px;
-	overflow: hidden;
-	background-color: #fff;
-	border: 1px solid #d4d4d4;
-	padding: 15px;
-	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
-	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
-	box-shadow: 0 1px 10px -1px #D9D9D9;
-	margin: 25px;
-}
-
-div#content div#new-info-box div.new-image{
-	text-align: center;
-	margin: 15px 0px;
-}
-
-div#content div#new-info-box div.new-image img{
-	border: 2px solid #e3e3e3;
-	max-width: 900px;
-}
-
-div#content div#new-info-box div.new-info div.title{
-	overflow: hidden;
-	
-}
-
-div#content div#new-info-box div.new-info div.title span{
-	float: left;
-	width: 700px;
-	overflow: hidden;
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 20px;
-	color: #36423e;
-	text-decoration: none;
-}
-
-div#content div#new-info-box div.new-info div.new-like-btn{
-	float: right;
-	width: 180px;
-	overflow: hidden;
-	text-align: right;
-	margin-top: 2px;
-}
-
-div#content div#new-info-box div.new-info div.new-like-btn .likeBtn{
-	border: none;
-	overflow: hidden;
-	width: 89px;
-	height: 21px;
-}
-
-div#content div#new-info-box div.new-info div.divider{
-	display: block;
-	width: 900px;
-	height: 1px;
-	background-color: #e1e1e1;
-	margin: 10px 0px;
-}
-
-div#content div#new-info-box div.new-info div.body{
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.new-info div.body span{
-	float: left;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 13px;
-	color: #545457;
-	line-height: 17px;
-}
-
-div#content div#new-info-box div.new-info div.body span a{
-	color: #36423e;
-	text-decoration: none;
-}
-
-div#content div#new-info-box div.new-info div.body span a:hover{
-	text-decoration: underline;
-}
-
-div#content div#new-info-box div.new-info div.body span div.img{
-	text-align: center;
-	overflow: hidden;
-	margin: 0px auto;
-}
-
-div#content div#new-info-box div.new-info div.new-details{
-	overflow: hidden;
-	margin-top: 12px;
-	height: 15px;
-	line-height: 15px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.comments{
-	float: left;
-	width: 150px;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9d9d9d;
-	padding-left: 22px;
-	background: transparent url('../images/comments-btn.png') no-repeat;
-	background-position: -1px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.comments span{
-	font-weight: bold;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type{
-	float: left;
-	width: 150px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span{
-	display: block;
-	float: left;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9D9D9D;
-	text-align: left;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span.movies-icon{
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
-	margin-right: 8px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span.series-icon{
-	display: block;
-	width: 13px;
-	height: 12px;
-	margin-top: 2px;
-	margin-right: 8px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby{
-	float: right;
-	width: 450px;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9d9d9d;
-	text-align: right;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby span{
-	color: #545457;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby span.date{
-	color: #9d9d9d;
-	font-weight: bold;
-}
 
 
 /* MY ACCOUNT */
@@ -6596,7 +6177,7 @@ div#content div#account-box div.left-content div.account-settings div#settings-w
 div#content div#account-box div.left-content div.account-settings div#settings-window div#settings div.window-settings-box input.form-btn{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -7643,7 +7224,7 @@ div#report-problems div.reports-box textarea.error{
 div#report-problems div.reports-box input{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -7886,7 +7467,7 @@ div#pw-recovery div.pwr-box div.divider{
 div#pw-recovery div.pwr-box input.form-btn{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -8017,7 +7598,7 @@ div#requests-box div#makeAReq form#reqForm input.form-btn{
 	display: block;
 	width: 289px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -8531,19 +8112,82 @@ div#requests-box div#mediaPreview div.mediaInfo div.info div.divider{
 }
 
 
+div#content  div.content-box div.movies-box-media div.movies-list div.item
+div#content div.content-box div.news-list div.item div.nreceitasinicio
 
+div#content div.content-box div.movies-box-media div.movies-list div.item a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item a img {
+	float: left;
+	position: relative;
+	max-width: 221px;
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item a div.img-effect {
+	position: absolute;
+	float: left;
+	width: 147px;
+	height: 170px;
+	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	margin-left: 74px;
+	margin-top: 51px;
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item:hover a div.img-effect {
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg {
+	position: absolute;
+	float: left;
+	display: block;
+	max-width: 221px;
+	height: 24px;
+	background: transparent url('../images/news-title-bgtransp.png');
+	overflow: hidden;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+	margin-top: 174px;
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg div.title {
+	max-width: 221px;
+	height: 24px;
+	line-height: 24px;
+	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
+	font-family: 'AvenirLT Heavy Bold';
+	font-size: 11px;
+	color: #36423e;
+	text-transform: uppercase;
+	overflow: hidden;
+	opacity: 1.0;
+	filter: alpha(opacity=10);
+	padding: 0px 10px;
+}
 
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg div.title a {
+	display: block;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #36423e;
+	text-transform: uppercase;
+	text-decoration: none;
+	overflow: hidden;
+	text-shadow: 0px 1px #fff;
+	-moz-text-shadow: 0px 1px #fff;
+	-webkit-text-shadow: 0px 1px #fff;
+}
 
-
-
-
-
-
-
-
-
+div#content div.content-box div.movies-box-media div.movies-list div.item:hover div.title-bg div.title a {
+	text-decoration: underline;
+}
