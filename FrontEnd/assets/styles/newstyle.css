@@ -2203,7 +2203,6 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias {
 	float: left;
 	width: 217px;
 	height: 217px;
-	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -2214,8 +2213,14 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias {
 	padding: 2px;
 	margin: 2px;
 	margin-right: 10px;
+	background: #FFF;
 }
 
+div#content div.content-box div.news-list div.item div.new-imagecategorias .box1 img {
+	width: 217px;
+	height: 217px;
+	background-color: #FFF;
+}
 
 
 div#content div.content-box div.news-list div.item div.new-imagecategorias a {
@@ -2236,11 +2241,11 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias a div
 	float: left;
 	width: 147px;
 	height: 170px;
-	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	background: transparent url('assets/images/categorias/docesdecolher.png') no-repeat;
 	opacity: 0.4;
 	filter: alpha(opacity=40);
 	margin-left: 74px;
-	margin-top: 51px;
+	margin-ntop: 51px;
 }
 
 div#content div.content-box div.news-list div.item div.new-imagecategorias:hover a div.img-effect {
@@ -2251,7 +2256,6 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias:hover
 div#content div.content-box div.news-list div.item div.new-imagecategorias div.title-bg {
 	position: absolute;
 	float: left;
-	display: block;
 	max-width: 221px;
 	height: 24px;
 	background: transparent url('../images/news-title-bgtransp.png');
