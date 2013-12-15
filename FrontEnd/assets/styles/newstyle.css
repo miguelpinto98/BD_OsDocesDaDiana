@@ -379,7 +379,7 @@ nav div.mainNav ul {
 	float: left;
 	height: 32px;
 	width: 422px;
-	border: 1px solid #116754;
+	border: 1px solid #6c847d;
 	border-top: 0px;
 	border-radius: 5px;
 	margin-top: 13px;
@@ -430,9 +430,25 @@ nav div.mainNav ul li a{
 	height: 32px;
 	line-height: 34px;
 	width: 83px;
-	padding-left: 41px;
+	padding-left: 35px;
 	text-transform: uppercase;
 }
+
+nav div.mainNav ul li a.mm{
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #90b0a7;
+	text-decoration: none;
+	display: block;
+	float: left;
+	height: 32px;
+	line-height: 34px;
+	width: 83px;
+	padding-left: 50px;
+	text-transform: uppercase;
+}
+
 
 nav div.mainNav ul li a.slctd{
 	color: #f1f1f1;
@@ -486,8 +502,8 @@ div#content div.content-box{
 div#content  div.content-box div.box-header{
 	height: 48px;
 	width: 979px;
-	background: #f4f4f4 url('../images/box-bg.png') repeat-x;
-	border: 1px solid #bdbcbc;
+	background: #90b0a7;
+	border: 1px solid #90b0a7;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -619,7 +635,7 @@ div.mainNav div.box-search{ /*BARRA DE NAVEGAÇAO*/
 	width: 250px;
 	height: 33px;
 	background-color: #fff;
-	border: 1px solid #116754;
+	border: 1px solid #6c847d;
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
@@ -681,7 +697,6 @@ div#content  div.content-box div.movies-box-media{
 div#content  div.content-box div.movies-box-media div.movies-list-content{
 	overflow: hidden;
 	height: 642px;
-	/*height: 428px;*/
 	width: 760px;
 	float: left;
 	position: relative;
@@ -786,7 +801,6 @@ div#mycustomscroll{
 div#content  div.content-box div.movies-box-media div.list-scrollbar{
 	float: right;
 	width: 17px;
-	/*height: 633px;*/
 	height: 420px;
 	visibility: visible;
 	background: #e4e4e4;
@@ -896,7 +910,7 @@ div#content  div.content-box div.movies-box-media div.list-scrollbar div.scrollb
 	width: 17px;
 	height: 163px;
 	cursor: pointer;
-	background: transparent url('../images/scrollbar.png') no-repeat;
+	background: #6c847d;
 }
 
 div#content  div.content-box div.movies-box-media div.list-scrollbar div#scrollbar-news-bg div.scrollbar-btn{
@@ -1085,15 +1099,15 @@ div#content  div.content-box div.box-comments div.msgs-header{
 	width: 190px;
 	height: 20px;
 	text-align: center;
-	padding-left: 15px;
+	padding-left: 3px;
 	padding-top: 5px;
 }
 
 div#content  div.content-box div.box-comments div.msgs-header span{
-	font-family: 'Tahoma';
-	font-size: 15px;
-	font-weight: normal;
-	color: #000000;
+	font-family: 'Arial';
+	font-size: 14px;
+	font-weight: bold;
+	color: #6c847d;
 }
 
 div#content  div.content-box div.box-comments div.comments-list{
@@ -1108,10 +1122,6 @@ div#content  div.content-box div.box-comments div.comments-list div.item{
 	margin-left: 15px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #d9d9d9;
-}
-
-div#content  div.content-box div.box-comments div.comments-list div.item:hover{
-	background: #F7F7F7;
 }
 
 div#content  div.content-box div.box-comments div.comments-list div.first{
@@ -1304,7 +1314,6 @@ div#content  div.content-box div.movies-box-media div.list-scrollbar div.scrollb
 	position: absolute;
 	top: 20px;
 	height: 590px;
-	/*height: 387px;*/
 	width: 17px;
 }
 
