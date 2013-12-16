@@ -356,15 +356,15 @@ nav div.mainNav {
 nav div.mainNav div#logo{
 	float: left;
 	width: 123px;
-	margin-top: -24px;
-	margin-left: -10px;
+	margin-top: -33px;
+	margin-left: -11px;
 	z-index: 9999;
 }
 
 nav div.mainNav div#logo a{
 	display: block;
-	height: 108px;
-	width: 123px;
+	height: 140px;
+	width: 157px;
 	background: transparent url('../images/logo.png') no-repeat;
 	background-position: 0px 0px;
 }
@@ -383,7 +383,7 @@ nav div.mainNav ul {
 	border-top: 0px;
 	border-radius: 5px;
 	margin-top: 13px;
-	margin-left: 20px;
+	margin-left: 70px;
 	overflow: hidden;
 }
 
@@ -1407,149 +1407,25 @@ div#mycustomscroll_vscrollerbase{
 
 
 footer{
-	height: 100px;
-	background: #E4E4E4 
+	height: 60px;
+	background: #90b0a7;
 }
 
 div#footer{
-	height: 100px;
+	height: 60px;
 	width: 978px;
 	overflow: hidden;
-}
-
-	/* Cats */
-
-div#footer div.cats{
-	overflow: hidden;
-	margin: 40px 0px 0px 395px;
-}
-
-div#footer div.cats div.cat{
 	float: left;
-	width: 150px;
-	height: 100px;
 	line-height: 20px;
-}
-
-div#footer div.cats div.first{
-	margin-left: 0px;
-}
-
-div#footer div.cats div.small{
-	width: 110px;
-}
-
-div#footer div.cats div.cat div.cat-title{
-	
-}
-
-div#footer div.cats div.cat div.cat-title span{
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #797777;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
-	text-decoration: none;
-	cursor: default;
-}
-
-div#footer div.cats div.cat div.sub-cat a{
+	margin-top: 10px;
+	padding-left: 220px;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #7d7d7d;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
+	color: #ffffff;
 	text-decoration: none;
 }
 
-div#footer div.cats div.cat div.sub-cat a:hover{
-	color: #36423e;
-}
 
-	/* Divider */
-
-div#footer div.footer-divider{
-	display: block;
-	width: 978px;
-	height: 2px;
-	background: transparent url('../images/footer-divider.png') repeat-x;
-	margin-top: 25px;
-	margin-bottom: 10px;
-}
-
-	/* Copyright & Stuff */
-
-div#footer div.footer-content{
-	overflow: hidden;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-	
-div#footer div.footer-content div.copyright{
-	float: left;
-	width: 500px;
-	height: 43px;
-	line-height: 43px;
-	overflow: hidden;
-}
-
-div#footer div.footer-content div.copyright span{
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 13px;
-	color: #929191;
-	text-transform: uppercase;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
-}
-
-div#footer div.footer-content div.copyright span.madewhere{
-	color: #36423e;
-}
-	
-div#footer div.footer-content div.socnet{
-	float: right;
-	width: 300px;
-}
-
-div#footer div.footer-content div.socnet a.facebook-btn{
-	float: right;
-	width: 93px;
-	height: 27px;
-	background: transparent url('../images/footer-facebook-btn.png') no-repeat;
-	margin-top: 7px;
-}
-
-div#footer div.footer-content div.socnet a.facebook-btn:hover{
-	background-position: -93px 0px;
-}
-
-div#footer div.footer-content div.socnet span.pipe{
-	float: right;
-	width: 1px;
-	height: 43px;
-	background: transparent url('../images/play-now-pipe.png') no-repeat;
-	margin: 0px 30px;
-}
-
-div#footer div.footer-content div.socnet a.twitter-btn{
-	float: right;
-	width: 82px;
-	height: 27px;
-	background: transparent url('../images/footer-twitter-btn.png') no-repeat;
-	margin-top: 9px;
-}
-
-div#footer div.footer-content div.socnet a.twitter-btn:hover{
-	background-position: -82px 0px;
-}
-
-
-/* MOVIES PAGE */
 
 	/* Left Filters */
 
