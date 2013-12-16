@@ -1402,22 +1402,22 @@ div#mycustomscroll_vscrollerbase{
 	height: 300px !important;
 }
 
-
-/* FOOTER */
-
-
 footer{
-	height: 100px;
+	height: 60px;
 	background: #90b0a7;
+	position: relative;
+	bottom: 0;
+	width: 100%;
 }
 
+
 div#footer{
-	width: 978px;
 	overflow: hidden;
 	float: left;
+	padding-left: 220px;
 	line-height: 20px;
 	margin-top: 15px;
-	padding-left: 220px;
+	margin-bottom: 0px;
 	font-family: Tahoma;
 	font-size: 12px;
 	color: #ffffff;
@@ -1425,8 +1425,6 @@ div#footer{
 }
 
 
-
-	/* Left Filters */
 
 div#content  div.content-box div.movies-box-content div.media-left-filters{
 	float: left;
