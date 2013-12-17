@@ -238,17 +238,16 @@ div#topBar div.topNav div.opts a{
 	font-size: 11px;
 	color: #8e8e94;
 	text-decoration: none;
-	/*text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;*/
 	margin-left: 10px;
 }
 
 div#topBar div.topNav div.opts a.myAccount, div#topBar div.topNav div.opts a.username{
 	font-family: 'PTSans Bold', Tahoma;
-	font-size: 13px;
+	font-size: 11px;
+	color: #8e8e94;
 	padding: 0px;
 	margin-left: 0px;
+	font-weight: bold;
 }
 
 div#topBar div.topNav div.opts a.openRegs {
@@ -261,17 +260,10 @@ div#topBar div.topNav div.opts a.openRegs {
 
 
 
-div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts a.username, div#topBar div.topNav div.opts a.notifsslctd{
-	color: #36423e;
+div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts div.username, div#topBar div.topNav div.opts a.notifsslctd{
+	color: #93a842;
 }
 
-div#topBar div.topNav div.opts a.username:hover{
-	text-decoration: underline;
-}
-
-div#topBar div.topNav div.opts a span{
-	color: #595959;
-}
 
 div#topBar div.topNav div.opts a:hover span, div#topBar div.topNav div.opts a.notifsslctd span{
 	color: #36423e;
@@ -281,9 +273,9 @@ div#topBar div.topNav div.opts span.pipe{
 	display: block;
 	float: left;
 	height: 12px;
-	width: 2px;
+	width: 1px;
 	margin: 4px 10px;
-	/*background-color: #d4d4d4; */
+	background-color: #6c847d;
 }
 
 div#topBar div.topNav div.opts a.notifs{
@@ -2657,40 +2649,6 @@ div#content div.content-box div.login-register div.register-form span.info span{
 	color: #36423e;
 }
 
-	/* Facebook Connect */
-
-div#content div.content-box div.fb-connect{
-	width: 914px;
-	height: 65px;
-	overflow: hidden;
-	background-color: #fff;
-	border: 1px solid #e0e0e0;
-	margin: 0px 33px 33px 33px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-btn{
-	display: block;
-	float: left;
-	width: 180px;
-	height: 25px;
-	margin: 20px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-label{
-	float: left;
-	width: 694px;
-	height: 25px;
-	margin: 20px 0px;
-	line-height: 25px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-label span{
-	font-family: Arial, Tahoma;
-	font-size: 11px;
-	color: #727272;
-}
-
-
 /* WISH LIST */
 
 div#content div.content-box div.wishlist-content{
@@ -4327,7 +4285,7 @@ div#content div#play-box {
 
 div#content div#player-box div.player-pub, div#content div#play-box div.player-pub {
 	width: 925px;
-	height: 120px;
+	height: 70px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
@@ -5935,12 +5893,13 @@ div#content div#account-box div.left-content{
 	/* My Account - Settings */
 
 div#content div#account-box div.left-content div.account-settings-wrapper{
+	display: block;
 	width: 290px;
 	height: 315px;
 	overflow: hidden;
-	background-color: #fff;
-	/*border: 1px solid #d4d4d4;
-	border-bottom: 1px solid #a7a7a7; */
+	background-color: #F6F6F6;
+	border: 1px solid #d4d4d4;
+	border-bottom: 1px solid #a7a7a7;
 	-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
 	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
 	box-shadow: 0 1px 10px -1px #D9D9D9;
@@ -6139,7 +6098,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-h
 	overflow: hidden;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #36423e;
+	color: #6c847d;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-header div.user-info div.register-date{
@@ -6215,7 +6174,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2 span.label{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #36423e;
+	color: #90b0a7;
 	font-weight: bold;
 }
 
@@ -6230,7 +6189,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options span.label{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #36423e;
+	color: #90b0a7;
 	font-weight: bold;
 }
 
@@ -6395,7 +6354,7 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 	/*border-bottom: 2px solid #a7a7a7;*/
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #9d9d9d;
+	color: #6c847d;
 	margin: 15px 15px 0px 15px;
 	padding-left: 15px;
 }
@@ -6425,10 +6384,12 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 }
 
 
+
+
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content span.label{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #36423e;
+	color: #90b0a7;
 	font-weight: bold;
 }
 
@@ -6595,33 +6556,25 @@ div#content div#account-box div.media-box{
 }
 
 div#content div#account-box div.media-box div.media-header{
+	float: left;
+	padding-left: 10px;
 	overflow: hidden;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option{
 	float: left;
-	width: 150px;
+	width: 180px;
 	height: 35px;
 	line-height: 35px;
 	overflow: hidden;
-	border-left: 2px solid #E9E9E9;
-	border-bottom: 1px solid #E9E9E9;
+	border: 2px solid #E9E9E9;
 }
 
-div#content div#account-box div.media-box div.media-header div.episodes{
-	width: 260px;
-}
-
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover, div#content div#account-box div.media-box div.media-header div.h-slctd{
-	border-left: 2px solid #36423e;
-	border-top: 2px solid #36423e;
-	border-right: 2px solid #36423e;
-	border-bottom: 2px solid #36423e;
-}
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a{
 	float: left;
-	width: 150px;
+	padding-left: 15px;
+	width: 210px;
 	height: 35px;
 	overflow: hidden;
 	text-decoration: none;
@@ -6629,7 +6582,8 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 }
 
 div#content div#account-box div.media-box div.media-header div.episodes a{
-	width: 260px;
+	float: left;
+	padding-left: 27px;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option div.movies-icon{
@@ -6639,31 +6593,6 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 	margin: 10px 15px;
 }
 
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover div.movies-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.movies-icon{
-	background-position: -13px 0px;
-}
-
-div#content div#account-box div.media-box div.media-header div.series div.series-icon{
-	float: left;
-	width: 13px;
-	height: 12px;
-	margin: 12px 15px 10px 15px;
-} 
-
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover div.series-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.series-icon{
-	background-position: -13px 0px;
-}
-
-div#content div#account-box div.media-box div.media-header div.episodes div.episodes-icon{
-	float: left;
-	width: 12px;
-	height: 12px;
-	margin: 12px 15px 10px 15px;
-}
-
-div#content div#account-box div.media-box div.media-header div.episodes:hover div.episodes-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.episodes-icon{
-	background-position: -12px 0px;
-}
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option a div.media-header-option-label{
 	float: left;
@@ -6681,7 +6610,7 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.media-header-option-label, div#content div#account-box div.media-box div.media-header div.h-slctd a div.how-many-media, div#content div#account-box div.media-box div.media-header div.h-slctd a div.media-header-option-label{
-	color: #36423e; 
+	color: #b5dcd1; 
 }
 
 div#content div#account-box div.media-box div.media-header-options{
@@ -8072,4 +8001,58 @@ div#content div.content-box div.movies-box-media div.movies-list div.item div.ti
 
 div#content div.content-box div.movies-box-media div.movies-list div.item:hover div.title-bg div.title a {
 	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#content div.content-box div.login-register2{
+	width: 200px;
+	overflow: hidden;
+	height: 42px;
+	float:left;
+	padding-left: 30px;
+	margin-top: 40px; 
+}
+	
+div#content div.content-box div.login-register2 div.login{
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+div#content div.content-box div.login-register2 div.login-form{
+	width: 200px;
+	overflow: hidden;
+	height: 45px;
+}
+
+div#content div.content-box div.login-register2 input.form-btn{
+	width: 200px;
+	height: 40px;
+	border: 1px solid #6c847d;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #6c847d;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #b5dcd1;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
 }
