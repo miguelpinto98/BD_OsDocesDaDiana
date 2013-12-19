@@ -1,0 +1,3 @@
+-receita
+-criar receita
+-categoria
