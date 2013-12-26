@@ -149,8 +149,8 @@
 
 					</div>
 
-						<div class="media-box">
-							<div id="mediaHeader" class="media-header">
+					<div class="media-box">
+						<div id="mediaHeader" class="media-header">
 								<div id="mediaHeader-movies" class="media-header-option movies">
 									<a href="javascript: myAccount('accountMedia.ajax.php?cat=movies', $('#accountMediaChangeContent')); setAccountCategory('movies');">
 										<div class="media-header-option-label">As Minhas Receitas</div>
@@ -166,27 +166,58 @@
 										<div class="media-header-option-label">Chefs Seguidos</div>
 									</a>
 								</div>
-							</div>
-								<div id="mediaAccountContent" class="media-account-content">
-									jhbvjhbv
-								</div>
-
-
 						</div>
+							<div id="mediaAccountContent" class="media-account-content">								
+								<input type="hidden" name="selectedCat" id="selectedCat" value="series">
+								<div id="mediaHeaderOptions" class="media-header-options">
+									<div class="movies-order without-icon" style="width: 300px; margin-top: 15px;">
+										<div class="movies-order-caption">Ordernar por:
+											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=name&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'name');" style="font-family: 'HelveticaNeueBold';">Título</a>,
+											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=date&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'date');" style="">Data</a>,
+											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=year&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'year');" style="">Ano</a>
+										</div>
+										<input type="hidden" value="name" id="account-order">
+									</div>
+								</div>
+								<div class="clear"></div>
+								<div class="account-media-divider"></div>
+								<div id="mediaAccountContent" class="media-account-content">
+									<div id="accmedia183" class="accmedia-item first series">
+										<a href="serie.php?s=90210" title="90210">
+											<img src="images/series_v2_thumbs/thumb183.png" alt="90210">
+											<div class="thumb-effect"></div>
+										</a>
+										<a href="javascript:;" class="remove-media-content series" onclick="removeMediaContent('series', 183, 'Deseja remover este conteúdo desta lista?');"></a>
+									</div>
+									<div id="accmedia509" class="accmedia-item series">
+										<a href="serie.php?s=Bates_Motel" title="Bates Motel">
+											<img src="images/series_v2_thumbs/thumb509.png" alt="Bates Motel">
+											<div class="thumb-effect"></div>
+										</a>
+										<a href="javascript:;" class="remove-media-content series" onclick="removeMediaContent('series', 509, 'Deseja remover este conteúdo desta lista?');"></a>
+									</div>
+								</div>
+							</div>
+
+
+								<div id="pagination" class="pagination" style="margin-top: 10px;">
+									<div class="pagination-aux">
+										<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: myAccount('accountMedia.ajax.php?p=2&cat=movies', $('#accountMediaChangeContent'));" onclick="scrollToDiv('#content #account-box');">2</a>
+									</div>
+								</div>
+					</div>
 
 				</div>
 			</div>
 		</div>
 
-	<footer>
-		<div class="center">
-			<div id="footer">
-				<div class="cats">
-					
+		<footer>
+			<div class="center">
+				<div id="footer">
+					Design por Diana Lemos, Mariana Medeiros, Mário Leite, Miguel Pinto e Pedro Duarte.
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
 </body>
 </html>
