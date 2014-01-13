@@ -1,57 +1,59 @@
-package Business_Layer;
+package BusinessLayer;
 
 public class Imagem {
-	private String nome;
+
+    private String nome;
     private String path;
-    
+
     public Imagem() {
-    	this.nome = new String();
-    	this.path = new String();
+        this.nome = new String();
+        this.path = new String();
     }
-    
+
     public Imagem(String nome, String path) {
-    	this.nome = nome;
-    	this.path = path;
+        this.nome = nome;
+        this.path = path;
     }
-    
-    // Getters e Setters
+
     public String getNome() {
-    	return this.nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
-    	this.nome = nome;
+        this.nome = nome;
     }
 
     public String getPath() {
-    	return path;
+        return path;
     }
 
     public void setPath(String path) {
-    	this.path = path;
+        this.path = path;
     }
 
     // Clone, toString, equals
-        public boolean equals(Object obj) {
-                if (obj == null) {
-                        return false;
-                }
-                if (getClass() != obj.getClass()) {
-                        return false;
-                }
-                final Imagem other = (Imagem) obj;
-                if (!this.nome.equals(other.getNome())) {
-                        return false;
-                }
-                return true;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
         }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Imagem other = (Imagem) obj;
+        if (!this.nome.equals(other.getNome())) {
+            return false;
+        }
+        return true;
+    }
 
-        @Override
-        public String toString() {
-                return "Imagem{" + "nome=" + this.nome + ", path=" + this.path + '}';
-        }
+    @Override
+    public String toString() {
+        return "Imagem{" + "nome=" + this.nome + ", path=" + this.path + '}';
+    }
 
-        public Imagem clone() {
-                return new Imagem(this.nome, this.path);
-        }
+    @Override
+    public Imagem clone() {
+        return new Imagem(this.nome, this.path);
+    }
 }
