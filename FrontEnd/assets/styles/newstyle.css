@@ -3719,11 +3719,21 @@ div#content div#player-box div.player-aux div.movie-info{
 
 div#content div#player-box div.player-aux div.movie-info2{
 	float: right;
-	width: 340px;
-	height: 200px;
-	margin-top: 2px;
-	margin-right: 5px;
-	background: #E4E4E4;
+	width: 350px;
+	height: 230px;
+	margin-top: 0px;
+	margin-right: 3px;
+	overflow: hidden;
+	background-color: #8e8e94;
+	border: 1px solid #D4D4D4;
+	border-bottom: 1px solid #A7A7A7;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 5px 10px -7px #000;
+	-webkit-box-shadow: 0px 5px 10px -7px #000;
+	box-shadow: 0px 5px 10px -7px #000;
+	padding: 5px;
 }
 
 div#content div#player-box div.player-aux div.movie-info a.movie-name{
@@ -8060,10 +8070,10 @@ div#content div.content-box div.login-register2 input.form-btn{
 div#content div#player-box div.player-aux div.thumb2 a.thumb-aux{
 	float: left;
 	width: 100px;
-	height: 90px;
+	height: 100px;
 	overflow: hidden;
 	background-color: white;
-	border: 1px solid #D4D4D4;
+	border: 3px solid #8e8e94;
 	border-bottom: 1px solid #A7A7A7;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
