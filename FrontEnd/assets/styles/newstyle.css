@@ -1704,16 +1704,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 	margin-top: 12px;
 }
 
-div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info a.movie-name{
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 20px;
-	color: #36423e;
-	text-decoration: none;
-}
 
-div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-detailed-info{
 	float: left;
@@ -3375,10 +3366,6 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	text-decoration: none;
 }
 
-div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
-
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-detailed-info{
 	float: left;
 	width: 350px;
@@ -3726,8 +3713,17 @@ div#content div#player-box div.player-aux div.thumb a.thumb-aux div.officialSubs
 
 div#content div#player-box div.player-aux div.movie-info{
 	float: left;
-	width: 779px;
+	width: 300px;
 	margin-top: 2px;
+}
+
+div#content div#player-box div.player-aux div.movie-info2{
+	float: right;
+	width: 340px;
+	height: 200px;
+	margin-top: 2px;
+	margin-right: 5px;
+	background: #E4E4E4;
 }
 
 div#content div#player-box div.player-aux div.movie-info a.movie-name{
@@ -3737,9 +3733,6 @@ div#content div#player-box div.player-aux div.movie-info a.movie-name{
 	text-decoration: none;
 }
 
-div#content div#player-box div.player-aux div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
 
 div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info{
 	float: left;
@@ -3768,6 +3761,13 @@ div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 13px;
 	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info span.genre a{
+	font-family: 'PTSansBoldItalic', Tahoma;
+	font-size: 13px;
+	color: #7F7F82;
+	text-decoration: underline;
 }
 
 div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info span.original-name{
@@ -3812,11 +3812,11 @@ div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info
 		
 div#content div#player-box div.player-aux div.movie-info div.movie-imdb{
 	float: right;
-	width: 335px;
+	width: 300px;
 	height: 67px;
 	line-height: 67px;
-	background: transparent url('../images/movie-info-imdb-bg.png') right top no-repeat;
-	margin-right: -32px;
+	background: #234434;
+	margin-right: -30px;
 	padding-left: 40px;
 }
 
@@ -3824,28 +3824,7 @@ div#content div#player-box div.player-aux div.movie-info div.serie-imdb{
 	margin-top: -23px;
 }
 
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars {
-	float: left;
-	width: 200px;
-	height: 18px;
-	margin-top: 24px;
-}
 
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span {
-	float: left;
-	width: 18px;
-	height: 18px;
-	margin-right: 2px;
-	background: transparent url('../images/imdb-stars.png') no-repeat;
-}
-
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span.full {
-	background-position: -18px 0px;
-}
-
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span.half {
-	background-position: -36px 0px;
-}
 
 div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-rate {
 	float: left;
@@ -3884,9 +3863,9 @@ div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb
 
 div#content div#player-box div.player-aux div.movie-info div.wtv-rating{
 	float: left;
-	width: 195px;
+	width: 100px;
 	overflow: hidden;
-	margin: 0px 0px 5px 0px;
+	margin: 4px 0px 5px 0px;
 }
 
 div#content div#player-box div.player-aux div.movie-info div.wtv-rating span{
@@ -4181,7 +4160,9 @@ div#content div#player-box div.player-aux div.movie-actions a span{
 div#content div#player-box div.player-aux div.movie-actions a span.watch{
 	width: 20px;
 	height: 13px;
-	background: transparent url('../images/watched-icon.png') no-repeat;
+	background: transparent url('../images/watched-icon.png') no-repeat;	
+	margin-top: 3px;	
+	margin-left: 30px;
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.watch{
@@ -4193,6 +4174,7 @@ div#content div#player-box div.player-aux div.movie-actions a span.watched{
 	height: 13px;
 	background: transparent url('../images/watched-icon.png') no-repeat;
 	background-position: -20px 0px;
+
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.watched{
@@ -4225,6 +4207,7 @@ div#content div#player-box div.player-aux div.movie-actions a span.fave{
 	height: 13px;
 	background: transparent url('../images/faved-icon.png') no-repeat;
 	margin-left: 0px;
+	margin-top: 3px;
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.fave{
@@ -8069,4 +8052,33 @@ div#content div.content-box div.login-register2 input.form-btn{
 	line-height: 40px;
 	text-align: center;
 	text-transform: uppercase;
+}
+
+
+
+
+div#content div#player-box div.player-aux div.thumb2 a.thumb-aux{
+	float: left;
+	width: 100px;
+	height: 90px;
+	overflow: hidden;
+	background-color: white;
+	border: 1px solid #D4D4D4;
+	border-bottom: 1px solid #A7A7A7;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 5px 10px -7px #000;
+	-webkit-box-shadow: 0px 5px 10px -7px #000;
+	box-shadow: 0px 5px 10px -7px #000;
+	padding: 5px;
+}
+
+div#content div#player-box div.player-aux div.thumb2 a.thumb-aux img{
+	float: left;
+	position: relative;
+	max-width: 128px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
 }
