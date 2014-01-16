@@ -2,10 +2,10 @@ package GUI.Receitas;
 
 import GUI.Categorias.*;
 
-public class JAdicionarReceita extends javax.swing.JDialog {
+public class JEditarReceita extends javax.swing.JDialog {
 
     private ListaReceitas r;
-    public JAdicionarReceita(ListaReceitas r) {
+    public JEditarReceita(ListaReceitas r) {
         this.r=r;
         initComponents();
     }
@@ -40,7 +40,7 @@ public class JAdicionarReceita extends javax.swing.JDialog {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Adicionar Receita");
+        jLabel3.setText("Editar Receita");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
