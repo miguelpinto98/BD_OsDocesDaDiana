@@ -41,6 +41,9 @@ public class ListaReceitas extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(359, 351));
         setPreferredSize(new java.awt.Dimension(359, 351));
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(76, 106, 98));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lista de Receitas");
 
         listaReceita.setModel(new javax.swing.AbstractListModel() {
@@ -91,7 +94,7 @@ public class ListaReceitas extends javax.swing.JPanel {
                         .addComponent(adicionarCategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(adicionarCategoria2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
