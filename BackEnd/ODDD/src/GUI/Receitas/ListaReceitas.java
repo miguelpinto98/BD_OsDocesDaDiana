@@ -61,6 +61,11 @@ public class ListaReceitas extends javax.swing.JPanel {
         });
 
         adicionarCategoria1.setText("Editar");
+        adicionarCategoria1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarCategoria1ActionPerformed(evt);
+            }
+        });
 
         adicionarCategoria2.setText("Remover");
 
@@ -107,6 +112,16 @@ public class ListaReceitas extends javax.swing.JPanel {
          frame.setVisible(true);
         }
     }//GEN-LAST:event_adicionarCategoriaActionPerformed
+
+    private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
+        // TODO add your handling code here:
+        String s = seleccionaReceita();
+        if(s!=null){
+         JDialog frame = new JEditarReceita(this);
+         frame.setLocationRelativeTo(null);
+         frame.setVisible(true);
+        }
+    }//GEN-LAST:event_adicionarCategoria1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
