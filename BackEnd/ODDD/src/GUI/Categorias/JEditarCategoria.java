@@ -10,12 +10,12 @@ package GUI.Categorias;
  *
  * @author Champion
  */
-public class adicionarCategoria extends javax.swing.JDialog {
+public class JEditarCategoria extends javax.swing.JDialog {
 
     /**
      * Creates new form adicionarCategoria
      */
-    public adicionarCategoria(java.awt.Frame parent, boolean modal) {
+    public JEditarCategoria(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -38,7 +38,7 @@ public class adicionarCategoria extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Adicionar Categoria");
+        jLabel1.setText("Editar Categoria");
 
         jLabel2.setText("Nome");
 
