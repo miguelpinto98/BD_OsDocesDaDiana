@@ -3631,9 +3631,9 @@ div#content div#player-box div.player-aux2 div.lista-ing{
 	
 div#content div#player-box div.player-aux div.thumb{
 	float: left;
-	width: 136px;
+	width: 175px;
 	overflow: hidden;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 
 div#content div#player-box div.player-aux div.serie div.episodes-number{
@@ -3655,7 +3655,7 @@ div#content div#player-box div.player-aux div.serie div.episodes-number span{
 
 div#content div#player-box div.player-aux div.thumb a.thumb-aux{
 	float: left;
-	width: 128px;
+	width: 165px;
 	height: 190px;
 	overflow: hidden;
 	background-color: white;
@@ -3678,7 +3678,7 @@ div#content div#player-box div.player-aux div.thumb a.series {
 div#content div#player-box div.player-aux div.thumb a.thumb-aux img{
 	float: left;
 	position: relative;
-	max-width: 128px;
+	max-width: 190px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -3726,14 +3726,14 @@ div#content div#player-box div.player-aux div.movie-info{
 
 div#content div#player-box div.player-aux div.movie-info2{
 	float: right;
-	width: 350px;
-	height: 230px;
+	width: 348px;
+	height: 229px;
 	margin-top: 0px;
 	margin-right: 3px;
 	overflow: hidden;
-	background-color: #c6c6cf;
-	border: 1px solid #c6c6cf;
-	border-bottom: 1px solid #c6c6cf;
+	background-color: #c1c1c1;
+	border: 1px solid #d2d3dd;
+	border-bottom: 1px solid #d2d3dd;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -3742,6 +3742,7 @@ div#content div#player-box div.player-aux div.movie-info2{
 	box-shadow: 0px 5px 10px -7px #000;
 	padding: 5px;
 }
+
 
 div#content div#player-box div.player-aux div.movie-info a.movie-name{
 	font-family: 'PTSans Bold', Tahoma;
@@ -8080,8 +8081,8 @@ div#content div#player-box div.player-aux div.thumb2 a.thumb-aux{
 	height: 100px;
 	overflow: hidden;
 	background-color: white;
-	border: 3px solid #c6c6cf;
-	border-bottom: 1px solid #c6c6cf;
+	border: 3px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -8111,4 +8112,41 @@ div#content div#player-box div.player-aux2{
 	width: 930px;
 	padding: 25px;
 	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#content div.content-box div.ver-receita{
+	width: 960px;
+	height: 40px;
+	line-height: 19px;
+	overflow: hidden;
+}
+
+div#content div.content-box div.ver-receita a{
+	float: left;
+	margin-left: 450px;
+	margin-top: 9px;
+	height: 19px;
+	line-height: 19px;
+	overflow: hidden;
+	font-family: Tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	color: #6c847d;
+	text-decoration: none;
+}
+
+div#content div.content-box div.ver-receita a:hover{
+	color: #36423e;
 }

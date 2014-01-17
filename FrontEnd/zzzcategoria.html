@@ -5,7 +5,6 @@
 	<head>
 		<title>Os Doces da Diana</title>
 
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 		<link rel="shortcut icon" href="assets/images/favicon.ico" />
 
 		<link rel="stylesheet" type="text/css" href="assets/styles/newstyle.css" />
@@ -32,253 +31,54 @@
 
 	<body>
 
-		<header>
-			<div id="topBar">
-				<div class="center">
-					<div class="topNav">
-						<div class="opts">
-        					<div class="to-right">
-								<a href="login.html" class="myAccount">Entrar | Registar</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-			<!-- BARRA PRETA -->						
-				<nav>
-					<div class="center">
-						<div class="mainNav">
-							<div id="logo" class="logo" title="Página Inicial"><a href="index-2.html"></a></div>
-								<ul>
-									<li class="first "><a href="categorias.html" class="movies ">Categorias</a></li>
-									<li class=""><a href="#" class="series ">Novidades</a></li>
-									<li class="last"><a href="listachefs.html" class="news ">Chefs</a></li>
-								</ul>
-							<div class="box-search">
-								<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-								<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-								<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
-								</a>
-								</form>
-							</div>
-						</div>
-					</div>
-				</nav>
-			<!-- BARRA PRETA -->
-
-
-				<div class="clear"></div>
-		</header>
 
 		
 <div id="content">
 	<div class="center">
 		
 <div id="series-box" class="content-box">
-	<!-- header -->
-<div class="box-header">
-	<input type="hidden" id="box-media" value="series" />
-	<div class="series-box-icon"></div>
-	<div class="onlyseries-box-caption">Séries</div>
-	<input type="hidden" id="boxheaderBtnSlctd" value="" />
-	<ul class="movies-box-btn">
-		<li id="allseries" class="first "><a href="javascript:;" onclick="cleanGenresAndYears(); cleanSearchField('series'); highLightsHeaderBtns('series', 'allseries'); moviesList('pagination.ajaxe035.html?p=0&amp;genres=0&amp;order=date&amp;mediaType=series', $('#media-right-content'));">Todos</a></li>
-		<li id="seriesrunning" class="slctd"><a href="javascript:;" onclick="cleanGenresAndYears(); cleanSearchField('series'); highLightsHeaderBtns('series', 'seriesrunning'); moviesList('pagination.ajax9f54.html?p=0&amp;genres=0&amp;order=episodes&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));">Em Exibição</a></li>
-		<li id="seriescompleted" class="{btn3Slctd}"><a href="javascript:;" onclick="cleanGenresAndYears(); cleanSearchField('series'); highLightsHeaderBtns('series', 'seriescompleted'); moviesList('pagination.ajax5888.html?p=0&amp;genres=0&amp;order=name&amp;btn=seriescompleted&amp;mediaType=series', $('#media-right-content'));">Completas</a></li>
-		<li id="mostviewed" class="{btn4Slctd}"><a href="javascript:;" onclick="cleanGenresAndYears(); cleanSearchField('series'); highLightsHeaderBtns('series', 'mostviewed'); moviesList('pagination.ajax433a.html?p=0&amp;genres=0&amp;order=views&amp;mediaType=series', $('#media-right-content'));">Mais Vistas</a></li>
-		<li id="seriesrecommended" style="display: block;"><a href="javascript:;" onclick="cleanGenresAndYears(); cleanSearchField('series'); highLightsHeaderBtns('series', 'seriesrecommended'); moviesList('pagination.ajaxc86e.html?p=0&amp;genres=0&amp;order=name&amp;btn=seriesrecommended&amp;mediaType=series', $('#media-right-content'));">Recomendadas</a></li>
-	</ul>
+	<div id="series-box-content" class="movies-box-content" style="padding: 0px; width: 980px;">
+	<div id="media-right-content" class="media-right-content">
 	
-	<div class="box-search">
-		<form action="javascript: moviesSearch('series', 'pagination.ajaxac10.html?p=0&amp;mediaType=series', $('#media-right-content'));" method="post" id="series-searchForm" onsubmit="if(($('#series-searchForm input#searchBox').attr('defaultText') == $('#series-searchForm input#searchBox').val()) || ($('#series-searchForm input#searchBox').val() == '')) return false;">
-			<input type="text" name="searchBox" id="searchBox" value="Procure aqui uma série" onfocus="vfocus(this, 'Procure aqui uma série');" onblur="vblur(this, 'Procure aqui uma série');" defaulttext="Procure aqui uma série" />
-			<a href="javascript:;" class="search-btn" onclick="$('#series-searchForm').submit();"><span></span></a>
-		</form>
-	</div>
-	<div class="movies-box-separator"></div>
-</div><div id="series-box-content" class="movies-box-content" style="padding: 0px; width: 980px;">
-	<div id="media-left-filters" class="media-left-filters">
-	<div id="genres-list" class="genres-list">
-	<input type="hidden" name="selectedGenres" id="selectedGenres" value="" />
-	<div class="genres-caption"><span>Géneros</span></div>
-	<!--<div id="item0" class="item">
-		<input type="checkbox" name="genres[]" id="genre0" class="custom-checkbox" checked="checked" />
-		<label for="genre0" onclick="moviesGenres(0, 0);">Todos</label>
-	</div>-->
-	<div id="item1" class="item">
-	<input type="checkbox" name="genres[]" id="genre1" class="custom-checkbox" />
-	<label for="genre1" id="genre1Label" onclick="moviesGenres(1, 0);">Acção</label>
-</div><div id="item17" class="item">
-	<input type="checkbox" name="genres[]" id="genre17" class="custom-checkbox" />
-	<label for="genre17" id="genre17Label" onclick="moviesGenres(17, 0);">Animação</label>
-</div><div id="item4" class="item">
-	<input type="checkbox" name="genres[]" id="genre4" class="custom-checkbox" />
-	<label for="genre4" id="genre4Label" onclick="moviesGenres(4, 0);">Aventura</label>
-</div><div id="item5" class="item">
-	<input type="checkbox" name="genres[]" id="genre5" class="custom-checkbox" />
-	<label for="genre5" id="genre5Label" onclick="moviesGenres(5, 0);">Biografia</label>
-</div><div id="item6" class="item">
-	<input type="checkbox" name="genres[]" id="genre6" class="custom-checkbox" />
-	<label for="genre6" id="genre6Label" onclick="moviesGenres(6, 0);">Comédia</label>
-</div><div id="item2" class="item">
-	<input type="checkbox" name="genres[]" id="genre2" class="custom-checkbox" />
-	<label for="genre2" id="genre2Label" onclick="moviesGenres(2, 0);">Crime</label>
-</div><div id="item21" class="item">
-	<input type="checkbox" name="genres[]" id="genre21" class="custom-checkbox" />
-	<label for="genre21" id="genre21Label" onclick="moviesGenres(21, 0);">Desporto</label>
-</div><div id="item18" class="item">
-	<input type="checkbox" name="genres[]" id="genre18" class="custom-checkbox" />
-	<label for="genre18" id="genre18Label" onclick="moviesGenres(18, 0);">Documentário</label>
-</div><div id="item3" class="item">
-	<input type="checkbox" name="genres[]" id="genre3" class="custom-checkbox" />
-	<label for="genre3" id="genre3Label" onclick="moviesGenres(3, 0);">Drama</label>
-</div><div id="item7" class="item">
-	<input type="checkbox" name="genres[]" id="genre7" class="custom-checkbox" />
-	<label for="genre7" id="genre7Label" onclick="moviesGenres(7, 0);">Familiar</label>
-</div><div id="item8" class="item">
-	<input type="checkbox" name="genres[]" id="genre8" class="custom-checkbox" />
-	<label for="genre8" id="genre8Label" onclick="moviesGenres(8, 0);">Fantasia</label>
-</div><div id="item14" class="item">
-	<input type="checkbox" name="genres[]" id="genre14" class="custom-checkbox" />
-	<label for="genre14" id="genre14Label" onclick="moviesGenres(14, 0);">Ficção Científica</label>
-</div><div id="item15" class="item">
-	<input type="checkbox" name="genres[]" id="genre15" class="custom-checkbox" />
-	<label for="genre15" id="genre15Label" onclick="moviesGenres(15, 0);">Guerra</label>
-</div><div id="item9" class="item">
-	<input type="checkbox" name="genres[]" id="genre9" class="custom-checkbox" />
-	<label for="genre9" id="genre9Label" onclick="moviesGenres(9, 0);">História</label>
-</div><div id="item13" class="item">
-	<input type="checkbox" name="genres[]" id="genre13" class="custom-checkbox" />
-	<label for="genre13" id="genre13Label" onclick="moviesGenres(13, 0);">Mistério</label>
-</div><div id="item11" class="item">
-	<input type="checkbox" name="genres[]" id="genre11" class="custom-checkbox" />
-	<label for="genre11" id="genre11Label" onclick="moviesGenres(11, 0);">Musical</label>
-</div><div id="item12" class="item">
-	<input type="checkbox" name="genres[]" id="genre12" class="custom-checkbox" />
-	<label for="genre12" id="genre12Label" onclick="moviesGenres(12, 0);">Romance</label>
-</div><div id="item10" class="item">
-	<input type="checkbox" name="genres[]" id="genre10" class="custom-checkbox" />
-	<label for="genre10" id="genre10Label" onclick="moviesGenres(10, 0);">Terror</label>
-</div><div id="item16" class="item">
-	<input type="checkbox" name="genres[]" id="genre16" class="custom-checkbox" />
-	<label for="genre16" id="genre16Label" onclick="moviesGenres(16, 0);">Thriller</label>
-</div><div id="item20" class="item">
-	<input type="checkbox" name="genres[]" id="genre20" class="custom-checkbox" />
-	<label for="genre20" id="genre20Label" onclick="moviesGenres(20, 0);">Western</label>
-</div>
-</div><div id="years-list" class="years-list">
-	<div class="years-caption"><span>Anos</span></div>
-	<input type="hidden" name="selectedYears" id="selectedYears" value="" />
-
-<div id="item2013" class="item">
-	<input type="checkbox" name="years[]" id="year2013" class="custom-checkbox" onclick="moviesYears(2013, 0);" />
-	<label for="year2013" id="year2013Label">2013</label>
-</div>
-<div id="item2012" class="item">
-	<input type="checkbox" name="years[]" id="year2012" class="custom-checkbox" onclick="moviesYears(2012, 0);" />
-	<label for="year2012" id="year2012Label">2012</label>
-</div>
-<div id="item2011" class="item">
-	<input type="checkbox" name="years[]" id="year2011" class="custom-checkbox" onclick="moviesYears(2011, 0);" />
-	<label for="year2011" id="year2011Label">2011</label>
-</div>
-<div id="item2010" class="item">
-	<input type="checkbox" name="years[]" id="year2010" class="custom-checkbox" onclick="moviesYears(2010, 0);" />
-	<label for="year2010" id="year2010Label">2010</label>
-</div>
-<div id="item2009" class="item">
-	<input type="checkbox" name="years[]" id="year2009" class="custom-checkbox" onclick="moviesYears(2009, 0);" />
-	<label for="year2009" id="year2009Label">2009</label>
-</div>
-<div id="item2008" class="item">
-	<input type="checkbox" name="years[]" id="year2008" class="custom-checkbox" onclick="moviesYears(2008, 0);" />
-	<label for="year2008" id="year2008Label">2008</label>
-</div>
-<div id="item2007" class="item">
-	<input type="checkbox" name="years[]" id="year2007" class="custom-checkbox" onclick="moviesYears(2007, 0);" />
-	<label for="year2007" id="year2007Label">2007</label>
-</div>
-<div id="item2006" class="item">
-	<input type="checkbox" name="years[]" id="year2006" class="custom-checkbox" onclick="moviesYears(2006, 0);" />
-	<label for="year2006" id="year2006Label">2006</label>
-</div>
-<div id="item2000" class="item">
-	<input type="checkbox" name="years[]" id="year2000" class="custom-checkbox" onclick="moviesYears(2000, 0);" />
-	<label for="year2000" id="year2000Label">2000-2005</label>
-</div>
-<div id="item1990" class="item">
-	<input type="checkbox" name="years[]" id="year1990" class="custom-checkbox" onclick="moviesYears(1990, 0);" />
-	<label for="year1990" id="year1990Label">1990-1999</label>
-</div>
-<div id="item1980" class="item">
-	<input type="checkbox" name="years[]" id="year1980" class="custom-checkbox" onclick="moviesYears(1980, 0);" />
-	<label for="year1980" id="year1980Label">1980-1989</label>
-</div>
-<div id="item1970" class="item">
-	<input type="checkbox" name="years[]" id="year1970" class="custom-checkbox" onclick="moviesYears(1970, 0);" />
-	<label for="year1970" id="year1970Label">1970-1979</label>
-</div>
-<div id="item1960" class="item">
-	<input type="checkbox" name="years[]" id="year1960" class="custom-checkbox" onclick="moviesYears(1960, 0);" />
-	<label for="year1960" id="year1960Label">1960-1969</label>
-</div>
-<div id="item1950" class="item">
-	<input type="checkbox" name="years[]" id="year1950" class="custom-checkbox" onclick="moviesYears(1950, 0);" />
-	<label for="year1950" id="year1950Label">1950-1959</label>
-</div>
-<div id="item1900" class="item">
-	<input type="checkbox" name="years[]" id="year1900" class="custom-checkbox" onclick="moviesYears(1900, 0);" />
-	<label for="year1900" id="year1900Label">1900-1949</label>
-</div>
-</div>
-</div><div id="media-right-content" class="media-right-content">
-	<div class="movies-order" style="{style}">
-	<div class="movies-order-caption">Ordernar por: <a href="javascript: moviesList('pagination.ajax7e39.html?p=1&amp;order=date&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content')); setOrderBy('series', 'date');" style="font-family: 'HelveticaNeueBold';">Data</a>, <a href="javascript: moviesList('pagination.ajax86d8.html?p=1&amp;order=name&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content')); setOrderBy('series', 'name');" style="">Título</a>, <a href="javascript: moviesList('pagination.ajaxcd19.html?p=1&amp;order=year&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content')); setOrderBy('series', 'year');" style="">Ano</a>, <a href="javascript: moviesList('pagination.ajax3222.html?p=1&amp;order=rate&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content')); setOrderBy('series', 'rate');" style="">Pontuação</a></div>
-	<input type="hidden" value="" id="series-order" />
-</div><div id="pagination" class="pagination" style="">
-	<div class="pagination-aux">
-		<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: moviesList('pagination.ajax58de.html?p=2&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));">2</a><a href="javascript: moviesList('pagination.ajax5715.html?p=3&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));">3</a><span>...</span><a href="javascript: moviesList('pagination.ajax3c55.html?p=9&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));">9</a>
-	</div>
-</div><div class="clear"></div>
 <div id="series-list" class="movies-list">
+
+
+
 	<div id="movie166" class="item first">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="Hawaii Five-0">
-			<a href="serie204f.html?s=Hawaii_Five-0&amp;ep=Hauoli_Land257;_Hoomaikai">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /><noscript><img src="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /></noscript>
-				<div class="thumb-effect2" title="Hawaii Five-0"></div>
-			</a>
+		<div class="thumb-and-episodes">
+			<div class="thumb thumb-serie" title="Hawaii Five-0">
+				<a href="#">
+					<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /><noscript><img src="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /></noscript>
+					<div class="thumb-effect2" title="Hawaii Five-0"></div>
+				</a>
+			</div>
+			<div class="episodes-number"><span>Receita por:</span> Mariana63</div>
 		</div>
-		<div class="episodes-number"><span>81</span> episódios</div>
+		<div class="movie-info">
+			<a href="serie204f.html?s=Hawaii_Five-0&amp;ep=Hauoli_Land257;_Hoomaikai" class="movie-name">Doce da Avó</a>
+			<div class="clear"></div>
+			<div class="movie-detailed-info"></span></span>
+				<br />
+				<span class="director">4</span>
+				<span class="director-caption">temporadas disponíveis</span>
+			</div>
+			<div class="movie-actions" style="display: none;">
+				<a id="subscribed" href="javascript: movieUserAction('series', 166, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
+				<a id="watched" href="javascript: movieUserAction('series', 166, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
+				<a id="faved" href="javascript: movieUserAction('series', 166, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
+			</div>
+			<div class="clear"></div>
+			<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
+			<div class="clear"></div>
+			<span id="movie-synopsis" class="movie-synopsis">AAAAAAAA<a href="javascript: readMore('movies', 166);">ler mais</a></span>
+			<span id="movie-synopsis-aux" class="movie-synopsis-aux">AAAAAAAAAAA</span>
+		</div>
 	</div>
-	<div class="movie-info">
-		<a href="serie204f.html?s=Hawaii_Five-0&amp;ep=Hauoli_Land257;_Hoomaikai" class="movie-name">Hawaii Five-0</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Acção, Crime</span>
-			<span class="year"><span> (</span>2010<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">4</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 166, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 166, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 166, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Hawaii Five-0 é um remake da série Hawaii Five-O que foi exibida de 1968 e 1980. A história roda à volta de uma força federal de elite, cuja missão é acabar com o crime nas praias do Hawaii. O detective Steve McGarrett (Alex O’Loughlin), um oficial da Marinha condecorado que se tornou policia, volta para Oahu para investigar o assassinato do pai ... <a href="javascript: readMore('movies', 166);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Hawaii Five-0 é um remake da série Hawaii Five-O que foi exibida de 1968 e 1980. A história roda à volta de uma força federal de elite, cuja missão é acabar com o crime nas praias do Hawaii. O detective Steve McGarrett (Alex O’Loughlin), um oficial da Marinha condecorado que se tornou policia, volta para Oahu para investigar o assassinato do pai e decide ficar depois de o governador do Hawaii o convencer a ser chefe da nova equipa de elite.</span>
-	</div>
-</div><div id="movie226" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="Glee">
+
+
+
+<div id="movie226" class="item">
+	<div class="thumb-and-episodes"><div class="thumb thumb-serie" title="Glee">
 			<a href="serie5ab6.html?s=Glee&amp;ep=Movin_Out">
 				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb226.png" alt="Glee" /><noscript><img src="images/series_v2_thumbs/thumb226.png" alt="Glee" /></noscript>
 				<div class="thumb-effect2" title="Glee"></div>
@@ -305,335 +105,31 @@
 		<div class="clear"></div>
 		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
 		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">O professor de espanhol Will Schuester, tem como objetivo reerguer o Glee Club (o coral da escola secundária McKinley), mas isso não vai ser nada fácil, devido à baixa reputação que ele tomou após alguns incidentes do passado. Por isso, ele vai precisar de toda a ajuda possível, e é aí que entram Rachel e Finn, dois estudantes praticamente oposto... <a href="javascript: readMore('movies', 226);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">O professor de espanhol Will Schuester, tem como objetivo reerguer o Glee Club (o coral da escola secundária McKinley), mas isso não vai ser nada fácil, devido à baixa reputação que ele tomou após alguns incidentes do passado. Por isso, ele vai precisar de toda a ajuda possível, e é aí que entram Rachel e Finn, dois estudantes praticamente opostos, mas que vão conseguir fazer com que o coral volte a ter o prestígio do passado. </span>
-	</div>
-</div><div id="movie622" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="Masters of Sex">
-			<a href="serieb06f.html?s=Masters_of_Sex&amp;ep=Love_And_Marriage">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb622.png" alt="Masters of Sex" /><noscript><img src="images/series_v2_thumbs/thumb622.png" alt="Masters of Sex" /></noscript>
-				<div class="thumb-effect2" title="Masters of Sex"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>8</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="serieb06f.html?s=Masters_of_Sex&amp;ep=Love_And_Marriage" class="movie-name">Masters of Sex</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Drama</span>
-			<span class="year"><span> (</span>2013<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">1</span>
-			<span class="director-caption">temporada disponível</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 622, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 622, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 622, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Michael Sheen (de "A Rainha") e Lizzy Caplan encarnam os pioneiros do estudo da sexualidade humana, William Masters e Virginia Johnson acompanhando as vidas, romances e trajetórias de ambos no seio da cultura popular.
-
-O trabalho destes dois cientistas iníciou a revolução sexual e levou-os de um pequeno hospital no interior dos Estados Unidos à... <a href="javascript: readMore('movies', 622);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Michael Sheen (de "A Rainha") e Lizzy Caplan encarnam os pioneiros do estudo da sexualidade humana, William Masters e Virginia Johnson acompanhando as vidas, romances e trajetórias de ambos no seio da cultura popular.
-
-O trabalho destes dois cientistas iníciou a revolução sexual e levou-os de um pequeno hospital no interior dos Estados Unidos à capa da revista Time e a inúmeras presenças na televisão.
-
-John Madden (de "A Paixão de Shakespeare" e "O Exótico Hotel Marigold") realiza o episódio-piloto e assume ainda o lugar de produtor executivo desta série criada por Michelle Ashford ("The Pacific").</span>
-	</div>
-</div><div id="movie393" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="The Neighbors">
-			<a href="seriee010.html?s=The_Neighbors&amp;ep=Thanksgiving_is_No_Schmuck_Bait">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb393.png" alt="The Neighbors" /><noscript><img src="images/series_v2_thumbs/thumb393.png" alt="The Neighbors" /></noscript>
-				<div class="thumb-effect2" title="The Neighbors"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>31</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="seriee010.html?s=The_Neighbors&amp;ep=Thanksgiving_is_No_Schmuck_Bait" class="movie-name">The Neighbors</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Comédia</span>
-			<span class="year"><span> (</span>2012<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">2</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 393, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 393, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 393, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Algures no universo existe um planeta chamado Zabvron. Alguns dos habitantes desse planeta viajam até à Terra, tendo como líder Larry Bird (Simon Templeman). Ocupam todas as casas de Hidden Hills e por cá ficam durante dez anos à espera de contato do seu planeta, para futuras ordens. Entretanto o dispositivo que lhes permitia receber a ligação fi... <a href="javascript: readMore('movies', 393);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Algures no universo existe um planeta chamado Zabvron. Alguns dos habitantes desse planeta viajam até à Terra, tendo como líder Larry Bird (Simon Templeman). Ocupam todas as casas de Hidden Hills e por cá ficam durante dez anos à espera de contato do seu planeta, para futuras ordens. Entretanto o dispositivo que lhes permitia receber a ligação fica sem bateria, o que faz com alguns membros da comunidade alienígena comecem a dispersar. Grande problema para os extraterrestres! Voltam a existir casas à venda na comunidade! Uma dessas casas é ocupada pela família Weaver. Composta pelo marido Marty Weaver (Lenny Venito), a esposa Debbie (Jami Gertz) e três filhos.</span>
-	</div>
-</div><div id="movie228" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="White Collar">
-			<a href="serie3bb4.html?s=White_Collar&amp;ep=Master_Plan">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb228.png" alt="White Collar" /><noscript><img src="images/series_v2_thumbs/thumb228.png" alt="White Collar" /></noscript>
-				<div class="thumb-effect2" title="White Collar"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>66</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="serie3bb4.html?s=White_Collar&amp;ep=Master_Plan" class="movie-name">White Collar</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Comédia, Crime</span>
-			<span class="year"><span> (</span>2009<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">5</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 228, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 228, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 228, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">A história gira em torno de Neal Caffrey, um trapaceiro brilhante que contra a sua vontade acaba por se tornar parceiro do chefe da divisão de investigação de crimes de colarinho branco do FBI, Peter Burke. Este persegue Neal durante muito tempo, e quando finalmente o captura, prende-o apenas para vê-lo fugir da prisão e lhe propôr uma parceria.</span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">A história gira em torno de Neal Caffrey, um trapaceiro brilhante que contra a sua vontade acaba por se tornar parceiro do chefe da divisão de investigação de crimes de colarinho branco do FBI, Peter Burke. Este persegue Neal durante muito tempo, e quando finalmente o captura, prende-o apenas para vê-lo fugir da prisão e lhe propôr uma parceria.</span>
-	</div>
-</div><div id="movie174" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="The Big Bang Theory">
-			<a href="seried3fc.html?s=The_Big_Bang_Theory&amp;ep=The_Thanksgiving_Decoupling">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb174.png" alt="The Big Bang Theory" /><noscript><img src="images/series_v2_thumbs/thumb174.png" alt="The Big Bang Theory" /></noscript>
-				<div class="thumb-effect2" title="The Big Bang Theory"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>148</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="seried3fc.html?s=The_Big_Bang_Theory&amp;ep=The_Thanksgiving_Decoupling" class="movie-name">The Big Bang Theory</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Comédia</span>
-			<span class="year"><span> (</span>2007<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">7</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 174, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 174, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 174, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Esta série conta a história de Leonard e Sheldon, dois brilhantes físicos que conhecem fórmulas indecifráveis. Mas nada dessa inteligência os ajuda a interagir com as pessoas, principalmente as mulheres. Só que tudo muda quando chega uma nova vizinha...os dois acabam por descobrir que não sabem muito sobre a vida.
-</span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Esta série conta a história de Leonard e Sheldon, dois brilhantes físicos que conhecem fórmulas indecifráveis. Mas nada dessa inteligência os ajuda a interagir com as pessoas, principalmente as mulheres. Só que tudo muda quando chega uma nova vizinha...os dois acabam por descobrir que não sabem muito sobre a vida.
-</span>
-	</div>
-</div><div id="movie192" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="The Walking Dead">
-			<a href="seriebda5.html?s=The_Walking_Dead&amp;ep=Dead_Weight">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb192.png" alt="The Walking Dead" /><noscript><img src="images/series_v2_thumbs/thumb192.png" alt="The Walking Dead" /></noscript>
-				<div class="thumb-effect2" title="The Walking Dead"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>44</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="seriebda5.html?s=The_Walking_Dead&amp;ep=Dead_Weight" class="movie-name">The Walking Dead</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Drama, Terror</span>
-			<span class="year"><span> (</span>2010<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">4</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 192, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 192, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 192, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Ao acordar de um coma num hospital abandonado, o policial Rick Grimes percebe que o mundo que ele conhecia não existe mais porque foi arrasado por uma epidemia de zombies de dimensões apocalípticas. Perto dali, nos arredores de Atlanta, um grupo luta para sobreviver num pequeno acampamento enquanto "os mortos" os perseguem o tempo todo.</span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Ao acordar de um coma num hospital abandonado, o policial Rick Grimes percebe que o mundo que ele conhecia não existe mais porque foi arrasado por uma epidemia de zombies de dimensões apocalípticas. Perto dali, nos arredores de Atlanta, um grupo luta para sobreviver num pequeno acampamento enquanto "os mortos" os perseguem o tempo todo.</span>
-	</div>
-</div><div id="movie429" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="The Legend of Korra">
-			<a href="seriec3ab.html?s=The_Legend_of_Korra&amp;ep=Light_in_the_Dark">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb429.png" alt="The Legend of Korra" /><noscript><img src="images/series_v2_thumbs/thumb429.png" alt="The Legend of Korra" /></noscript>
-				<div class="thumb-effect2" title="The Legend of Korra"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>21</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="seriec3ab.html?s=The_Legend_of_Korra&amp;ep=Light_in_the_Dark" class="movie-name">The Legend of Korra</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Acção, Animação</span>
-			<span class="year"><span> (</span>2012<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">2</span>
-			<span class="director-caption">temporadas disponíveis</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 429, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 429, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 429, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Mike e Bryan imaginaram uma nova história inspirada na mitologia do Mestre do Ar, que foi tão brilhantemente concebida quando a série iniciou. Este novo avatar, não é apenas uma menina, mas sim uma guerreira de cabeça quente, independente e que já está pronta para enfrentar o mundo", diz Johnson na divulgação. A Lenda de Korra começa 70 anos após... <a href="javascript: readMore('movies', 429);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Mike e Bryan imaginaram uma nova história inspirada na mitologia do Mestre do Ar, que foi tão brilhantemente concebida quando a série iniciou. Este novo avatar, não é apenas uma menina, mas sim uma guerreira de cabeça quente, independente e que já está pronta para enfrentar o mundo", diz Johnson na divulgação. A Lenda de Korra começa 70 anos após os eventos de A Lenda de Aang, e segue as aventuras do mais novo Avatar, uma menina rebelde, brava e destemida, pertencente à tribo da água, chamada Korra.
-Com três dos quatro elementos (Terra, Água e Fogo), ela pretende dominar o elemento final, Ar, levando-a a uma busca totalmente nova. A jornada de Korra se desenvolve no epicentro do Avatar moderno, a Republic City, uma metrópole que é alimentada pela tecnologia steampunk, onde mestres e dobradores de todas as nações vivem e prosperam. No entanto, Korra descobre que a cidade é assolada pelo crime, bem como uma crescente revolução que ameaça a região. Sob a tutela de Tenzin, filho de Aang, ela começa o treinamento para aperfeiçoar o quarto elemento, e assim iniciar o combate contra as forças do mal.</span>
-	</div>
-</div><div id="movie621" class="item">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="The Michael J. Fox Show">
-			<a href="serie10a6.html?s=The_Michael_J_Fox_Show&amp;ep=Bed_Bugs">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb621.png" alt="The Michael J. Fox Show" /><noscript><img src="images/series_v2_thumbs/thumb621.png" alt="The Michael J. Fox Show" /></noscript>
-				<div class="thumb-effect2" title="The Michael J. Fox Show"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>8</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="serie10a6.html?s=The_Michael_J_Fox_Show&amp;ep=Bed_Bugs" class="movie-name">The Michael J. Fox Show</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Comédia</span>
-			<span class="year"><span> (</span>2013<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">1</span>
-			<span class="director-caption">temporada disponível</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 621, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 621, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 621, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">Mike Henry (Michael J. Fox) era um dos pivots mais populares dos noticíário de televisão em Nova Iorque, mas fez uma pausa na carreira após lhe ter sido diagnosticada a doença de Parkinson.
-
-Agora, cinco anos mais tarde, com os filhos a crescer e Mike cada vez mais impaciente, poderá ser uma boa altura para voltar ao trabalho.
-
-O antigo chefe... <a href="javascript: readMore('movies', 621);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">Mike Henry (Michael J. Fox) era um dos pivots mais populares dos noticíário de televisão em Nova Iorque, mas fez uma pausa na carreira após lhe ter sido diagnosticada a doença de Parkinson.
-
-Agora, cinco anos mais tarde, com os filhos a crescer e Mike cada vez mais impaciente, poderá ser uma boa altura para voltar ao trabalho.
-
-O antigo chefe, Harris Green, nunca quis que Mike deixasse a estação e agarra a oportunidade com as duas mãos. O truque, como sempre, é deixar Mike pensar que a idea foi dele.
-
-Após muitas tentativas falhadas, a família, desejosa de o ver fora de casa, finalmente consegue que ele vá a uma reunião com Green. O plano está em movimento. Mike voltará a ter de conjugar trabalho, familia e carreira, como nos velhos tempos.</span>
-	</div>
-</div><div id="movie610" class="item last">
-	<div class="thumb-and-episodes">
-		<div class="thumb thumb-serie" title="Hostages">
-			<a href="seriee7e9.html?s=Hostages&amp;ep=Loose_Ends">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb610.png" alt="Hostages" /><noscript><img src="images/series_v2_thumbs/thumb610.png" alt="Hostages" /></noscript>
-				<div class="thumb-effect2" title="Hostages"></div>
-			</a>
-		</div>
-		<div class="episodes-number"><span>9</span> episódios</div>
-	</div>
-	<div class="movie-info">
-		<a href="seriee7e9.html?s=Hostages&amp;ep=Loose_Ends" class="movie-name">Hostages</a>
-		<div class="clear"></div>
-		<div class="movie-detailed-info">
-			<span class="genre">Drama, Thriller</span>
-			<span class="year"><span> (</span>2013<span>) </span></span>
-			<span class="original-name">- Em exibição</span>
-			<br />
-			<span class="director">1</span>
-			<span class="director-caption">temporada disponível</span>
-		</div>
-		<div class="movie-actions" style="display: none;">
-			<a id="subscribed" href="javascript: movieUserAction('series', 610, 'subscribed');" class="" style="display: block;">Seguir esta série<span class="subscribe"></span></a><br />
-			<a id="watched" href="javascript: movieUserAction('series', 610, 'watched');" class="">Marcar como vista<span class="watch"></span></a><br />
-			<a id="faved" href="javascript: movieUserAction('series', 610, 'faved');" class="">Adicionar série aos favoritos<span class="fave"></span></a>
-		</div>
-		<div class="clear"></div>
-		<div class="wtv-rating"><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span class="full"></span><span></span></div>
-		<div class="clear"></div>
-		<span id="movie-synopsis" class="movie-synopsis">A história gira em torno de uma família envolvida numa grande conspiração política. Ellen Sanders é uma cirurgiã bem sucedida que vive em Washington. Quando ela é escolhida para realizar uma cirurgia ao presidente dos EUA, a sua família é feita refém pelo agente do FBI Duncan Carlisle, o seu cunhado Kramer, o ex-militar Archer, e Sandrine, que se... <a href="javascript: readMore('movies', 610);">ler mais</a></span>
-		<span id="movie-synopsis-aux" class="movie-synopsis-aux">A história gira em torno de uma família envolvida numa grande conspiração política. Ellen Sanders é uma cirurgiã bem sucedida que vive em Washington. Quando ela é escolhida para realizar uma cirurgia ao presidente dos EUA, a sua família é feita refém pelo agente do FBI Duncan Carlisle, o seu cunhado Kramer, o ex-militar Archer, e Sandrine, que se uniu ao grupo de sequestradores no último minuto. O objetivo de Duncan é forçar Ellen a matar o presidente durante a operação. Agora ela precisa de encontrar uma forma de salvar o marido e os filhos. Brian, marido de Ellen, é um ex-atleta que segue uma carreira de agente imobiliário, enfrentando problemas financeiros e devendo dinheiro, ele esconde da esposa a sua verdadeira situação.</span>
+		<span id="movie-synopsis" class="movie-synopsis">aaaaaaaaaa <a href="javascript: readMore('movies', 226);">ler mais</a></span>
+		<span id="movie-synopsis-aux" class="movie-synopsis-aux">aaaaaa</span>
 	</div>
 </div>
-</div><div id="pagination" class="pagination" style="padding-top: 15px;">
-	<div class="pagination-aux">
-		<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: moviesList('pagination.ajax58de.html?p=2&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));" onclick="paginationScroll();">2</a><a href="javascript: moviesList('pagination.ajax5715.html?p=3&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));" onclick="paginationScroll();">3</a><span>...</span><a href="javascript: moviesList('pagination.ajax3c55.html?p=9&amp;btn=seriesrunning&amp;mediaType=series', $('#media-right-content'));" onclick="paginationScroll();">9</a>
+
+
+
+
+
+		
 	</div>
+</div>
+
+
+
+
 </div>
 </div>
 </div>
 </div>
-		<!--<div class="pub" style="margin-top: 20px; margin-bottom: -10px; width: 978px; height: 120px;">
-			<a href="mailto:lab.wareztuga@gmail.com">
-				<img src="images/anuncie-aqui.png" alt="anuncie aqui" style="width: 978px; height: 120px;" />
-			</a>
-		</div>-->
+</div>
 	</div>
 </div>	
 
-	<footer>
-		<div class="center">
-			<div id="footer">
-				<div class="cats">
-					<div class="cat small">
-						<div class="cat-title"><span>Receitas</span></div>
-							<div class="sub-cat"><a href="#">Todas</a></div>
-					</div>
-								<div class="cat small">
-									<div class="cat-title"><span>Sobre Nós</span></div>
-										<div class="sub-cat"><a href="#">Contatos</a></div>
-								</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-		
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-25434137-1']);
-		  _gaq.push(['_setDomainName', 'wareztuga.tv']);
-		  _gaq.push(['_setAllowHash', false]);
-		  _gaq.push(['_setAllowLinker', true]);
-		  _gaq.push(['_trackPageview']);
+	
 
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
-		
-	</body>
-
-<!-- Mirrored from www.wareztuga.tv/series.php?p=1&mediaType=series&btn=seriesrunning by HTTrack Website Copier/3.x [XR&CO'2010], Mon, 25 Nov 2013 16:40:45 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+	</body><meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
 </html>
