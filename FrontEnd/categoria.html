@@ -12,7 +12,7 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/slide/style.css" media="screen" />
-		<script type="text/javascript" src="assets/slide//jquery.js"></script>
+		<script type="text/javascript" src="assets/slide/jquery.js"></script>
 		<script type="text/javascript" src="assets/scripts/flexcroll.js"></script>
 		<script src="assets/scripts/bootstrap.js"></script>
 		<script type="text/javascript">
@@ -25,12 +25,13 @@
 			if (top != self) {
 			top.location.href = location.href;
 			}
-		</script>		
+		</script>	
 	</head>
 
 
 	<body>
-
+		
+		
 		<header>
 			<div id="topBar">
 				<div class="center">
@@ -54,7 +55,7 @@
 								<ul>
 									<li class="first"><a href="categorias.html" class="movies">Categorias</a></li>
 									<li class=""><a class="mm" href="listachefs.html" class="centro">Chefs</a></li>
-									<li class="last"><a href="aboutus.html" class="news">Contactos</a></li>
+									<li class="last"><a href="sobrenos.html" class="news">Sobre Nós</a></li>
 								</ul>
 							<div class="box-search">
 								<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
@@ -73,78 +74,90 @@
 		</header>
 
 
-
-
-
-
-		<div id="content">
-		<div class="center">
-			<div id="series-box" class="content-box">
-
-
-
-				<div id="series-box-content" class="movies-box-content" style="padding: 0px; height:300px; width:400px;">
-					<div id="media-right-content" class="media-right-content">cena
-						<div id="series-list" class="movies-list">cena1
-
-
-								
-								<div id="movie166" class="item first">
-									<div class="thumb-and-episodes">
-										<div class="thumb thumb-serie" title="Hawaii Five-0">
-											<a href="#">
-												<img style="display:none;visibility:hidden;" data-cfsrc="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /><noscript><img src="images/series_v2_thumbs/thumb166.png" alt="Hawaii Five-0" /></noscript>
-												<div class="thumb-effect2" title="Hawaii Five-0"></div>
-											</a>
-										</div>
-										<div class="episodes-number"><span>Receita por:</span> Mariana63</div>
+			<div id="content">
+				<div class="center">
+					
+					<div id="requests-box" class="content-box">
+						<div class="reqRightContent">
+							<div id="requests" class="requests">
+								<div class="reqOrder">
+									<div class="hmReq">
+										Categoria: <span>Doces de Colher</span>
+										&nbsp;<span class="pipe">|</span>&nbsp;
+										Ordernar por:&nbsp;
+										<a href="javascript: requestsOrderBy('date');" id="date" class="slctd">Pontuação</a>, <a href="javascript: requestsOrderBy('name');" id="name" class="">Título</a>
 									</div>
+									<input type="hidden" value="" id="reqOrderValue" />
+								</div>
+									<input type="hidden" id="reqsListTypeActive" value="series" />
+									<div class="clear"></div>
+				
+						<div id="requestsList" class="requestsList">
 
-									<div class="movie-info">
-										<a href="#" class="movie-name">Doce da Avó</a>
-										<div class="clear"></div>
-										<div class="movie-detailed-info"></span></span><br />
-											<span class="director">4</span>
-											<span class="director-caption">temporadas disponíveis</span>
-										</div>										
-										<div class="clear"></div>
-											<div class="wtv-rating">
-												<span class="full"></span>
-												<span class="full"></span>
-												<span class="full"></span>
-												<span class="full"></span>
-												<span></span>
-											</div>
-										<div class="clear"></div>
+							<div id="req404" class="request first">
+								<div class="thumb">
+									<a href="receita1.html" target="_blank">
+										<img src="assets/images/categorias/docesdecolher.png" width="150px" height="150px"><noscript><img src="images/requests_thumbs/thumb404.jpg"></noscript>
+										</a>
+								</div>
+								<div class="reqInfo">
+									<span class="hmReqs">Doce da Avó</span>
+									<div class="wtv-rating" style="padding-left:40px;">
+										<span class="full"></span>
+										<span class="full"></span>
+										<span class="full"></span>
+										<span class="full"></span>
+										<span></span>
 									</div>
 								</div>
+							</div>
+
+
+							<div id="req404" class="request">
+								<div class="thumb">
+									<a href="receita1.html" target="_blank">
+										<img src="assets/images/categorias/docesdecolher.png" width="150px" height="150px"><noscript><img src="images/requests_thumbs/thumb404.jpg"></noscript>
+										</a>
+								</div>
+								<div class="reqInfo">
+									<span class="hmReqs">Doce da Avó</span>
+									<div class="wtv-rating" style="padding-left:40px;">
+										<span class="full"></span>
+										<span class="full"></span>
+										<span class="full"></span>
+										<span class="full"></span>
+										<span></span>
+									</div>
+								</div>
+							</div>
 
 
 
 
-								
+						
+						</div>
 
 
-</div></div></div></div></div></div>
+				<div id="pagination" class="pagination" style="">
+					<div class="pagination-aux">
+						<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: requestsList('series', 'pagination', 2);">2</a><a href="javascript: requestsList('series', 'pagination', 3);">3</a><span>...</span><a href="javascript: requestsList('series', 'pagination', 420);">420</a>
+					</div>
+				</div>
 
 
+			</div></div></div></div></div>
+			
 
-
-
-
-
-
-	</body>
-
-	<footer>
-		<div class="center">
-			<div id="footer">
-				Design por Diana Lemos, Mariana Medeiros, Mário Leite, Miguel Pinto e Pedro Duarte.
+		<footer>
+			<div class="center">
+				<div id="footer">
+					Design por Diana Lemos, Mariana Medeiros, Mário Leite, Miguel Pinto e Pedro Duarte.
+				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
-	<script type="text/javascript">
+		
+		<script type="text/javascript">
 
 			  var _gaq = _gaq || [];
 			  _gaq.push(['_setAccount', 'UA-25434137-1']);
@@ -158,5 +171,11 @@
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			  })();
-	</script>
+
+			</script>
+		
+	</body>
+
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+
 </html>
