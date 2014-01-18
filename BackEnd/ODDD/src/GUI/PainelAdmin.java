@@ -6,44 +6,66 @@ import GUI.Categorias.JAdicionarCategoria;
 import GUI.Receitas.ListaReceitas;
 import GUI.Users.InfoUser;
 import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Window;
+import java.lang.reflect.Method;
+import java.util.Collection;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 public class PainelAdmin extends javax.swing.JFrame {
+
+    public static final String OS = System.getProperty("os.name").toLowerCase();
+
     private ODDD sistema;
-   
+
     public PainelAdmin() {
+        this.sistema = new ODDD();
+
+        Utilizador user = this.sistema.getUsers().get("DianaAdmin");
+        System.out.println(user.getNick());
+        
+        this.sistema.getUsers().remove("JigsAdmin");
+        
+        Collection<Utilizador> values = this.sistema.getUsers().values();
+        for(Utilizador u : values)
+            System.out.println(u.getEmail());
+        
+        
+
         initComponents();
     }
-    
-    
-      public String seleccionaUser(){
+
+    public String seleccionaUser() {
         String s;
-        
-        if (listaUser.getSelectedIndex() != -1){
+
+        if (listaUser.getSelectedIndex() != -1) {
             s = listaUser.getSelectedValue().toString();
+        } else {
+            s = null;
         }
-        else{s= null;}
-        
+
         listaUser.clearSelection();
-        
-       return s;
+
+        return s;
     }
-     
-    public String seleccionaCategoria(){
+
+    public String seleccionaCategoria() {
         String s;
-        
-        if (listaCategoria.getSelectedIndex() != -1){
+
+        if (listaCategoria.getSelectedIndex() != -1) {
             s = listaCategoria.getSelectedValue().toString();
+        } else {
+            s = null;
         }
-        else{s= null;}
-        
+
         listaCategoria.clearSelection();
-        
-       return s;
+
+        return s;
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -72,6 +94,7 @@ public class PainelAdmin extends javax.swing.JFrame {
         BloquearUser = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -132,7 +155,7 @@ public class PainelAdmin extends javax.swing.JFrame {
                 .addGap(114, 114, 114)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -196,7 +219,7 @@ public class PainelAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         categoriasLayout.setVerticalGroup(
@@ -215,7 +238,7 @@ public class PainelAdmin extends javax.swing.JFrame {
                         .addGroup(categoriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 343, Short.MAX_VALUE)
                             .addComponent(jSeparator1))))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         painelgeral.addTab("Categorias & Receitas", categorias);
@@ -249,6 +272,8 @@ public class PainelAdmin extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(368, 344));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
+        jButton1.setText("Adicionar");
+
         javax.swing.GroupLayout utilizadoresLayout = new javax.swing.GroupLayout(utilizadores);
         utilizadores.setLayout(utilizadoresLayout);
         utilizadoresLayout.setHorizontalGroup(
@@ -258,14 +283,15 @@ public class PainelAdmin extends javax.swing.JFrame {
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane2)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(consultarUser, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
-                    .addComponent(BloquearUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(BloquearUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
                 .addContainerGap())
         );
         utilizadoresLayout.setVerticalGroup(
@@ -279,13 +305,15 @@ public class PainelAdmin extends javax.swing.JFrame {
                     .addGroup(utilizadoresLayout.createSequentialGroup()
                         .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utilizadoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator2)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -299,25 +327,25 @@ public class PainelAdmin extends javax.swing.JFrame {
     private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
         // TODO add your handling code here:
         String s = seleccionaCategoria();
-        
-        if(s != null) {
-             this.jPanel3.removeAll();
-             this.jPanel3.add(new ListaReceitas(this), BorderLayout.CENTER);
-             this.jPanel3.updateUI();
-             this.jPanel3.validate();
+
+        if (s != null) {
+            this.jPanel3.removeAll();
+            this.jPanel3.add(new ListaReceitas(this), BorderLayout.CENTER);
+            this.jPanel3.updateUI();
+            this.jPanel3.validate();
         }
-        
+
     }//GEN-LAST:event_adicionarCategoria1ActionPerformed
 
     private void consultarUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultarUserActionPerformed
         // TODO add your handling code here:
         String s = seleccionaUser();
-        
-        if(s != null) {
-             this.jPanel5.removeAll();
-             this.jPanel5.add(new InfoUser(this), BorderLayout.CENTER);
-             this.jPanel5.updateUI();
-             this.jPanel5.validate();
+
+        if (s != null) {
+            this.jPanel5.removeAll();
+            this.jPanel5.add(new InfoUser(this), BorderLayout.CENTER);
+            this.jPanel5.updateUI();
+            this.jPanel5.validate();
         }
     }//GEN-LAST:event_consultarUserActionPerformed
 
@@ -325,12 +353,37 @@ public class PainelAdmin extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new PainelAdmin().setVisible(true);
+                try {
+                    final PainelAdmin frame = new PainelAdmin();
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+                    if (isMac()) {
+                        enableOSXFullscreen(frame);
+                    }
+
+                    frame.setVisible(true);
+                } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+                }
             }
         });
+    }
+
+    public static boolean isMac() {
+        return (OS.indexOf("mac") >= 0);
+    }
+
+    public static void enableOSXFullscreen(Window window) {
+        try {
+            Class<?> util = Class.forName("com.apple.eawt.FullScreenUtilities");
+            Class<?> params[] = new Class[]{Window.class, Boolean.TYPE};
+            Method method = util.getMethod("setWindowCanFullScreen", params);
+            method.invoke(util, window, true);
+        } catch (ClassNotFoundException exp) {
+        } catch (Exception exp) {
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -338,6 +391,7 @@ public class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JButton adicionarCategoria1;
     private javax.swing.JPanel categorias;
     private javax.swing.JButton consultarUser;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

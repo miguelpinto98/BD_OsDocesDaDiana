@@ -96,12 +96,12 @@ public class ODDD {
         return res;
     }
 
-    public boolean registarUser(String nickname, String password, String email, int tipo) {
+    public boolean registarUser(String nickname, String nome, String password, String email, int tipo) {
         GregorianCalendar g = new GregorianCalendar();
         boolean inserido = false;
 
         if (validaPassword(password)) {
-            Utilizador user = new Utilizador(tipo, nickname, password, email, g);
+            Utilizador user = new Utilizador(tipo, nickname, nome, password, email, g);
             String pw = Utilizador.encriptarPassword(password);
             user.setPassw(pw);
             inserido = inserirUtilizador(user);
@@ -132,24 +132,18 @@ public class ODDD {
 
     /* Ainda Falta Fazer Uma Verificação */
     public boolean login(String nickname, String password) {
-        boolean lg = false;
-
+        boolean lg;
         if (validaLogin(nickname, password)) {
-            if (this.users.get(nickname).getAtivo() == 1) {
-                this.emSessao = this.users.get(nickname);
-                lg = true;
-                if ((this.users.get(nickname).getAtivo()==1) && (this.users.get(nickname).getDadosCompletos()==1)) {
-                    /**
-                     * metodo prencher campos
-                     */
-                    lg = true;
-                }
-            } else {
-                System.out.println("espera validacao");
+            this.emSessao = this.users.get(nickname);
+            lg = true;
+            if (this.users.get(nickname).getDadosCompletos() == 1) {
+                /**
+                 * metodo prencher campos
+                 */
                 lg = true;
             }
-        } else //System.out.println("LOGIN INVALIDO");
-        {
+        } else {
+            //System.out.println("LOGIN INVALIDO");
             lg = false;
         }
         return lg;

@@ -6,8 +6,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.GregorianCalendar;
 
 public class Utilizador {
-
-    private int tipo;
+    private int tipo; /* TIPO 0 = NORMAL TIPO 1 = ADMIN  */
     private String nick;
     private String nome;
     private String email;
@@ -18,16 +17,45 @@ public class Utilizador {
     private int nreceitas;
     private int valorav;
     private int navaliacoes;
-    private int ativo;
     private int dadoscomp;
     private int removido;
 
-    Utilizador(int tipo, String nickname, String password, String email, GregorianCalendar g) {
+    Utilizador(int tipo, String nickname, String nome, String password, String email, GregorianCalendar g) {
         this.tipo = tipo;
         this.nick = nickname;
+        this.nome = nome;
         this.passw = password;
         this.email = email;
         this.datareg = g;
+    }
+
+    public Utilizador(int tipo, String nick, String nome, String email, String pw, GregorianCalendar dr,
+            Object object, String desc, int numrec, int valaval, int numaval, int dadoscomp, int rm) {
+        this.tipo = tipo;
+        this.nick = nick;
+        this.nome = nome;
+        this.email = email;
+        this.passw = pw;
+        this.descricao = desc;
+        this.datareg = dr;
+        this.img = null; // !!! ATIVAR ISTO, MUDAR OBJECT PARA IMAGEM
+        this.nreceitas = numrec;
+        this.valorav = valaval;
+        this.navaliacoes = numaval;
+        this.dadoscomp = dadoscomp;
+        this.removido = rm;
+    }
+    
+    public GregorianCalendar dataRegisto() {
+        return this.datareg;
+    }
+    
+    public int getTipo() {
+        return this.tipo;
+    }
+    
+    public void setTipo(int t) {
+        this.tipo = t;
     }
 
     public String getNick() {
@@ -116,14 +144,6 @@ public class Utilizador {
 
     public void setRemovido(int removido) {
         this.removido = removido;
-    }
-    
-    public int getAtivo() {
-        return this.ativo;
-    }
-    
-    public void setAtivo(int atv) {
-        this.ativo = atv;
     }
 
     public static String encriptarPassword(String pw) {
