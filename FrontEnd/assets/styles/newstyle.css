@@ -3620,9 +3620,14 @@ div#content div#player-box div.player-aux{
 	overflow: hidden;
 }
 
+div#content div#player-box2 div.player-aux{
+	width: 930px;
+	padding: 25px;
+	overflow: hidden;
+}
+
 div#content div#player-box div.player-aux2 div.lista-ing{
 	float: left;
-	width: 136px;
 	overflow: hidden;
 	margin-right: 15px;
 }
