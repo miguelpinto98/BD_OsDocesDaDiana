@@ -8175,9 +8175,17 @@ div#content div#player-box div.player-aux div.preparacao span.p{
 }
 
 div#content div#player-box div.player-aux div.preparacao div.texto{
+	display: block;
 	width: 910px;
 	margin-left: 20px;
+	overflow: auto;
+	padding-bottom: 15px;	
+	
+}
+
+div#content div#player-box div.player-aux div.preparacao div.texto span{
 	font-family: Arial;
 	font-size: 14px;
+	font-weight: normal;
 	color: #3f3b3b;
 }
