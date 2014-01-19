@@ -8159,3 +8159,25 @@ div#content div.content-box div.ver-receita a{
 div#content div.content-box div.ver-receita a:hover{
 	color: #36423e;
 }
+
+div#content div#player-box div.player-aux div.lista-ing span.ing{
+	font-family: 'PTSans Bold', Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.preparacao span.p{
+	font-family: 'PTSans Bold', Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.preparacao div.texto{
+	width: 910px;
+	margin-left: 20px;
+	font-family: Arial;
+	font-size: 14px;
+	color: #3f3b3b;
+}
