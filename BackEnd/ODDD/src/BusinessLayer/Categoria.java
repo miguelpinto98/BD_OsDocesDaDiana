@@ -5,12 +5,22 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Categoria {
+    private String nomeCategoria;
     private Map<Integer,Receita> categorias;
 
     public Categoria() {
-        this.categorias = new ReceitaDAO();
+        this.nomeCategoria = new String();
+        this.categorias = new ReceitaDAO(this.nomeCategoria);
     }
 
+    public String getNomeCategoria(){
+        return this.nomeCategoria;
+    }
+    
+    public void setNomeCategoria(String n){
+        this.nomeCategoria = n;
+    }
+    
     public Map<Integer, Receita> getCategorias() {
         return categorias;
     }

@@ -11,6 +11,14 @@ public class Comentario {
     private GregorianCalendar datacoment;
     private int removido;
 
+    public Comentario (int id, String user, String coment, GregorianCalendar g, int rm){
+        this.id = id;
+        this.user = user;
+        this.coment = coment;
+        this.datacoment = g;
+        this.removido = rm;
+    }
+    
     public int getId() {
         return id;
     }

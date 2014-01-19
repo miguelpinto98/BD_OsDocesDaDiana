@@ -16,12 +16,12 @@ public class Receita {
     private Imagem img; // private Map<Integer,Imagem> imgs; // <IDRECEITAS,IMAGENS>
     private GregorianCalendar datapub;
     private String user; // private Utilizador u ???
-    private int totalCal;
+    private int totalCal; // NAO DEVERIA SER DOUBLE??
     private Map<Integer, Ingrediente> ingrs;
-    private int vavaliacoes;
+    private int vavaliacoes; // NAO DEVERIA SER DOUBLE??
     private int navaliacoes;
     private Map<Integer, Comentario> coments;
-    private Map<Integer, String> seguidores; // idreceita -> nomeutilizador ou  private Map<Integer,Utilizador> seguidores;
+    private Map<Integer, String> seguidores; // idreceita -> nomeutilizador ou  private Map<Integer,Utilizador> seguidores;  ??IDRECEITA??
     private int removido;
 
     public Receita() {
@@ -38,6 +38,19 @@ public class Receita {
         this.coments = new ComentariosDAO(this.id);
         this.seguidores = new ReceitaSeguidaDAO(this.id);
         this.removido = 0;
+    }
+    
+    public Receita(int id, String nm, String desc, int nrI, GregorianCalendar g, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm){
+        this.id = id;
+        this.nome = nm;
+        this.desc = desc;
+        this.nimgs = nrI;
+        this.datapub = g;
+        this.user = user;
+        this.vavaliacoes = valorA;
+        this.navaliacoes = nrAvaliacoes;
+        this.totalCal = totalCal;
+        this.removido = rm;
     }
 
     public int getId() {
