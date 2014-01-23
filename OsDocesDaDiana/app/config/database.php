@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'odbc',
+	'default' => 'oracle',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -83,14 +83,6 @@ return array(
 			'prefix'   => '',
 		),
 
-		'odbc' => array(
-            'driver' => 'odbc',
-            'dsn' => 'odbc:database',
-            'grammar' => 'DB2',
-            'username' => 'ODDD',
-            'password' => 'ODDD',
-        ),
-
 	),
 
 	/*
@@ -100,7 +92,7 @@ return array(
 	|
 	| This table keeps track of all the migrations that have already run for
 	| your application. Using this information, we can determine which of
-	| the migrations on disk have not actually be run in the databases.
+	| the migrations on disk haven't actually been run in the database.
 	|
 	*/
 
@@ -119,7 +111,7 @@ return array(
 
 	'redis' => array(
 
-		'cluster' => true,
+		'cluster' => false,
 
 		'default' => array(
 			'host'     => '127.0.0.1',
