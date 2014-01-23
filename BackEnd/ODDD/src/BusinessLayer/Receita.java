@@ -1,5 +1,6 @@
 package BusinessLayer;
 
+import DataLayer.AvaliacoesUtilizadorDAO;
 import DataLayer.ComentariosDAO;
 import DataLayer.ReceitaIngredienteDAO;
 import DataLayer.ReceitaSeguidaDAO;
@@ -22,6 +23,7 @@ public class Receita {
     private int navaliacoes;
     private Map<Integer, Comentario> coments;
     private Map<Integer, String> seguidores; // idreceita -> nomeutilizador ou  private Map<Integer,Utilizador> seguidores;  ??IDRECEITA??
+    private Map<Integer, Avaliacao> avaliacoes;
     private int removido;
 
     public Receita() {
@@ -37,6 +39,7 @@ public class Receita {
         this.navaliacoes = 0;
         this.coments = new ComentariosDAO(this.id);
         this.seguidores = new ReceitaSeguidaDAO(this.id);
+        this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
         this.removido = 0;
     }
     
@@ -51,6 +54,14 @@ public class Receita {
         this.navaliacoes = nrAvaliacoes;
         this.totalCal = totalCal;
         this.removido = rm;
+        this.ingrs = new ReceitaIngredienteDAO(this.id);
+        this.coments = new ComentariosDAO(this.id);
+        this.seguidores = new ReceitaSeguidaDAO(this.id);
+        this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
+    }
+    
+    public Map<Integer, Avaliacao> getAvaliacoes() {
+        return avaliacoes;
     }
 
     public int getId() {

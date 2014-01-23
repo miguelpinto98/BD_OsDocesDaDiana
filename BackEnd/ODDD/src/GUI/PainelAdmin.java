@@ -1,41 +1,49 @@
 package GUI;
 
+import BusinessLayer.Categoria;
 import BusinessLayer.ODDD;
-import BusinessLayer.Utilizador;
-import GUI.Categorias.JAdicionarCategoria;
 import GUI.Receitas.ListaReceitas;
 import GUI.Users.InfoUser;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Window;
 import java.lang.reflect.Method;
-import java.util.Collection;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
+import javax.swing.DefaultListModel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-public class PainelAdmin extends javax.swing.JFrame {
+public final class PainelAdmin extends javax.swing.JFrame {
 
     public static final String OS = System.getProperty("os.name").toLowerCase();
 
-    private ODDD sistema;
+    private final ODDD sistema;
 
     public PainelAdmin() {
         this.sistema = new ODDD();
-
-        Utilizador user = this.sistema.getUsers().get("DianaAdmin");
-        System.out.println(user.getNick());
         
-        this.sistema.getUsers().remove("JigsAdmin");
-        
-        Collection<Utilizador> values = this.sistema.getUsers().values();
-        for(Utilizador u : values)
-            System.out.println(u.getEmail());
-        
-        
-
         initComponents();
+        listaCategorias();
+    }
+    
+    /*
+    
+            Set<String> lesc = this.sistema.listaEscolas();
+        DefaultListModel<String> str = new DefaultListModel<>();
+        
+        for(String e : lesc) 
+            str.addElement(e);
+       
+        listaEscolas.setModel(str);
+    
+    */
+    
+    public void listaCategorias() {
+        DefaultListModel<String> str = new DefaultListModel<>();
+
+        for(String s : this.sistema.getCategorias().keySet())
+            str.addElement(s);
+            
+        listaCategoria.setModel(str);
     }
 
     public String seleccionaUser() {
@@ -81,7 +89,7 @@ public class PainelAdmin extends javax.swing.JFrame {
         painelgeral = new javax.swing.JTabbedPane();
         categorias = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        listaCategoria = new javax.swing.JList();
+        listaCategoria = new javax.swing.JList<String>();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
@@ -178,11 +186,9 @@ public class PainelAdmin extends javax.swing.JFrame {
 
         categorias.setBackground(new java.awt.Color(255, 255, 255));
 
-        listaCategoria.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
+        listaCategoria.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
+        listaCategoria.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        listaCategoria.setVisibleRowCount(12);
         jScrollPane1.setViewportView(listaCategoria);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -213,13 +219,14 @@ public class PainelAdmin extends javax.swing.JFrame {
                 .addGroup(categoriasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(categoriasLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(adicionarCategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
                 .addContainerGap())
         );
         categoriasLayout.setVerticalGroup(
@@ -408,7 +415,7 @@ public class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private org.jdesktop.swingx.JXSearchField jXSearchField1;
-    private javax.swing.JList listaCategoria;
+    private javax.swing.JList<String> listaCategoria;
     private javax.swing.JList listaUser;
     private javax.swing.JTabbedPane painelgeral;
     private javax.swing.JPanel utilizadores;

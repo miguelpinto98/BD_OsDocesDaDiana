@@ -1,9 +1,11 @@
 package BusinessLayer;
 
+import DataLayer.ChefesSeguidosDAO;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.GregorianCalendar;
+import java.util.Map;
 
 public class Utilizador {
     private int tipo; /* TIPO 0 = NORMAL TIPO 1 = ADMIN  */
@@ -18,6 +20,7 @@ public class Utilizador {
     private int valorav;
     private int navaliacoes;
     private int dadoscomp;
+    private Map<String,String> chefesseg;
     private int removido;
 
     Utilizador(int tipo, String nickname, String nome, String password, String email, GregorianCalendar g) {
@@ -43,7 +46,12 @@ public class Utilizador {
         this.valorav = valaval;
         this.navaliacoes = numaval;
         this.dadoscomp = dadoscomp;
+        this.chefesseg = new ChefesSeguidosDAO(this.nick);
         this.removido = rm;
+    }
+    
+    public Map<String,String> getChefesSeguidos() {
+        return this.chefesseg;
     }
     
     public GregorianCalendar dataRegisto() {
