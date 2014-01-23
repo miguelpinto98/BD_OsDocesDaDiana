@@ -12,6 +12,11 @@ public class Categoria {
         this.nomeCategoria = new String();
         this.categorias = new ReceitaDAO(this.nomeCategoria);
     }
+    
+    public Categoria(String nome) {
+        this.nomeCategoria = nome;
+        this.categorias = new ReceitaDAO(this.nomeCategoria);
+    }
 
     public String getNomeCategoria(){
         return this.nomeCategoria;

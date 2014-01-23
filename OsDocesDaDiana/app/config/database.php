@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'mysql',
+	'default' => 'odbc',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -82,6 +82,14 @@ return array(
 			'password' => '',
 			'prefix'   => '',
 		),
+
+		'odbc' => array(
+            'driver' => 'odbc',
+            'dsn' => 'odbc:database',
+            'grammar' => 'DB2',
+            'username' => 'ODDD',
+            'password' => 'ODDD',
+        ),
 
 	),
 

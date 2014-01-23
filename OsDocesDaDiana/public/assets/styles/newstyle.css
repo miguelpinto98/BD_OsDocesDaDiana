@@ -1,4 +1,4 @@
-/* FONTS */
+<div class="main-separator1"></div>/* FONTS */
 
 @font-face {
     font-family: 'HelveticaNeueLTStd75Bold';
@@ -8,7 +8,7 @@
          url('fonts/helveticaneueltstd-bd-webfont.ttf') format('truetype'),
          url('fonts/helveticaneueltstd-bd-webfont.svg#HelveticaNeueLTStd75Bold') format('svg');
     font-weight: normal;
-    font-style: normal;
+    font-style: normal;zzz
 }
 
 @font-face {
@@ -83,7 +83,7 @@ html, body{
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	background-color: #E4E4E4;
+	background-color: #90b0a7;
 }
 
 form {
@@ -185,17 +185,6 @@ div#topBar div.socials a{
 	float: left;
 }
 
-div#topBar div.socials a.facebook{
-	width: 16px;
-	height: 15px;
-	background: transparent url('../images/facebook-btn.png') no-repeat;
-	margin-right: 10px;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.facebook:hover{
-	background-position: -16px 0px;
-}
 
 div#topBar div.socials a.mail{
 	width: 19px;
@@ -206,28 +195,6 @@ div#topBar div.socials a.mail{
 
 div#topBar div.socials a.mail:hover{
 	background-position: -19px 0px;
-}
-
-div#topBar div.socials a.twitter{
-	width: 21px;
-	height: 16px;
-	background: transparent url('../images/twitter-btn.png') no-repeat;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.twitter:hover{
-	background-position: -20px 0px;
-}
-
-div#topBar div.socials a.google{
-	width: 18px;
-	height: 18px;
-	background: transparent url('../images/google-btn.png') no-repeat;
-	margin-top: 5px;
-}
-
-div#topBar div.socials a.google:hover{
-	background-position: -18px 0px;
 }
 
 div#topBar div.topNav{
@@ -271,17 +238,16 @@ div#topBar div.topNav div.opts a{
 	font-size: 11px;
 	color: #8e8e94;
 	text-decoration: none;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
 	margin-left: 10px;
 }
 
 div#topBar div.topNav div.opts a.myAccount, div#topBar div.topNav div.opts a.username{
 	font-family: 'PTSans Bold', Tahoma;
-	font-size: 13px;
+	font-size: 11px;
+	color: #8e8e94;
 	padding: 0px;
 	margin-left: 0px;
+	font-weight: bold;
 }
 
 div#topBar div.topNav div.opts a.openRegs {
@@ -294,17 +260,10 @@ div#topBar div.topNav div.opts a.openRegs {
 
 
 
-div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts a.username, div#topBar div.topNav div.opts a.notifsslctd{
-	color: #36423e;
+div#topBar div.topNav div.opts a:hover, div#topBar div.topNav div.opts div.username, div#topBar div.topNav div.opts a.notifsslctd{
+	color: #93a842;
 }
 
-div#topBar div.topNav div.opts a.username:hover{
-	text-decoration: underline;
-}
-
-div#topBar div.topNav div.opts a span{
-	color: #595959;
-}
 
 div#topBar div.topNav div.opts a:hover span, div#topBar div.topNav div.opts a.notifsslctd span{
 	color: #36423e;
@@ -314,9 +273,9 @@ div#topBar div.topNav div.opts span.pipe{
 	display: block;
 	float: left;
 	height: 12px;
-	width: 2px;
+	width: 1px;
 	margin: 4px 10px;
-	background-color: #d3d3d3;
+	background-color: #6c847d;
 }
 
 div#topBar div.topNav div.opts a.notifs{
@@ -389,33 +348,34 @@ nav div.mainNav {
 nav div.mainNav div#logo{
 	float: left;
 	width: 123px;
-	margin-top: -24px;
-	margin-left: -10px;
+	margin-top: -33px;
+	margin-left: -11px;
 	z-index: 9999;
 }
 
 nav div.mainNav div#logo a{
 	display: block;
-	height: 108px;
-	width: 123px;
+	height: 140px;
+	width: 157px;
 	background: transparent url('../images/logo.png') no-repeat;
 	background-position: 0px 0px;
 }
 
+/*efeito logo
 nav div.mainNav div#logo a:hover, nav div.mainNav div#logo a.hover{
-	background-position: -123px 0px;
-}
+	background-position: -2px 0px;
+}*/
 
 nav div.mainNav ul {
 	display: block;
 	float: left;
 	height: 32px;
 	width: 422px;
-	border: 1px solid #116754;
+	border: 1px solid #6c847d;
 	border-top: 0px;
 	border-radius: 5px;
 	margin-top: 13px;
-	margin-left: 20px;
+	margin-left: 70px;
 	overflow: hidden;
 }
 
@@ -462,31 +422,28 @@ nav div.mainNav ul li a{
 	height: 32px;
 	line-height: 34px;
 	width: 83px;
-	padding-left: 41px;
+	padding-left: 35px;
 	text-transform: uppercase;
 }
 
+nav div.mainNav ul li a.mm{
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #90b0a7;
+	text-decoration: none;
+	display: block;
+	float: left;
+	height: 32px;
+	line-height: 34px;
+	width: 83px;
+	padding-left: 50px;
+	text-transform: uppercase;
+}
+
+
 nav div.mainNav ul li a.slctd{
 	color: #f1f1f1;
-}
-
-nav div.mainNav ul li a.movies{
-	/*background: transparent url('../images/menu-movies.png') no-repeat;*/
-	/*background-position: 35px 10px;*/
-	/*padding-left: 60px;*/
-	/*width: 78px;*/
-}
-
-nav div.mainNav ul li a.series{
-	/*background: transparent url('../images/menu-series.png') no-repeat;*/
-	/*background-position: 35px 11px;
-	padding-left: 60px;
-	width: 78px;*/
-}
-
-nav div.mainNav ul li a.news{
-	/*background: transparent url('../images/menu-news.png') no-repeat;*/
-	/*background-position: 30px 11px;*/
 }
 
 nav div.mainNav ul li:hover a{
@@ -505,31 +462,7 @@ div#content{
 	padding-top: 10px;
 }
 
-	/* Pub */
-div#content div.pub{
-	display: block;
-	/*height: 120px;*/
-	width: 978px;
-	border: 1px solid #bdbdbd;
-	-moz-box-shadow: 0px 0px 10px -4px #000;
-	-webkit-box-shadow: 0px 0px 10px -4px #000;
-	box-shadow: 0px 0px 10px -4px #000;
-	background-color: #F6F6F6;
-	background-image: -webkit-linear-gradient(top, #fff, #f6f6f6);
-	background-image: linear-gradient(top, #fff,#f6f6f6);
-	margin-top: 10px;
-	margin-bottom: 15px;
-	overflow: hidden;
-}
 
-div#content div.pub a{
-	display: block;
-	height: 120px;
-	width: 978px;
-}
-
-div#content div.pub a img{
-}
 
 	/* Main Separator */
 
@@ -541,11 +474,19 @@ div#content  div.main-separator {
 	margin: 25px 0px;
 }
 
+div#content  div.main-separator1 {
+	width: 100%;
+	height: 1px;
+	background: transparent 
+	clear: both;
+	margin: 15px 0px;
+}
+
 	/* Movies Box */
 
 div#content div.content-box{
 	width: 980px;
-	background-color: #f4f4f4;
+	background-color: #E4E4E4;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -554,28 +495,20 @@ div#content div.content-box{
 	box-shadow: 0px 1px 10px -4px #000;
 	overflow: hidden;
 	margin-top: 5px;
-}
+} 
 
 	/* Movies Box Header */
 	
 div#content  div.content-box div.box-header{
 	height: 48px;
 	width: 979px;
-	background: #f4f4f4 url('../images/box-bg.png') repeat-x;
-	border: 1px solid #bdbcbc;
+	background: #90b0a7;
+	border: 1px solid #90b0a7;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
 
-div#content  div.content-box div.box-header div.movies-box-icon{
-	float: left;
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/box-movies-btn.png') no-repeat;
-	margin-left: 25px;
-	margin-top: 17px;
-}
 
 /*Botao dinamico para escolher categorias de receitas*/
 
@@ -702,7 +635,7 @@ div.mainNav div.box-search{ /*BARRA DE NAVEGAÇAO*/
 	width: 250px;
 	height: 33px;
 	background-color: #fff;
-	border: 1px solid #116754;
+	border: 1px solid #6c847d;
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;
@@ -760,24 +693,20 @@ div#content  div.content-box div.movies-box-media{
 	overflow: hidden;
 }
 
+/*tamanho da "caixa" cinzenta toda*/
 div#content  div.content-box div.movies-box-media div.movies-list-content{
 	overflow: hidden;
 	height: 642px;
-	/*height: 428px;*/
 	width: 760px;
 	float: left;
 	position: relative;
-}
-
-div#content  div.content-box div#series-box-content div.movies-box-media div.movies-list-content{
-	height: 442px;
-	/*height: 603px;*/
 }
 
 div#content  div.content-box div.movies-box-media div.list-aux{
 	position: absolute;
 }
 
+/*tamanho da "caixa" interior que tem o scroll e a barra cinzenta como bordas*/
 div#content  div.content-box div.movies-box-media div.movies-list{
 	overflow: hidden;
 	height: 832px;
@@ -790,10 +719,11 @@ div#content  div.content-box div.movies-box-media div.loading{
 	background: transparent url('../images/loading-highLights.gif') center center no-repeat;
 }
 
+/*tamanho dos quadrados do index*/
 div#content  div.content-box div.movies-box-media div.movies-list div.item{
 	float: left;
-	width: 128px;
-	height: 190px;
+	width: 220px;
+	height: 220px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
@@ -808,6 +738,8 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item{
 	margin-top: 20px;
 }
 
+
+
 div#content  div.content-box div.movies-box-media div.movies-list div.serie{
 	height: 128px;
 	margin-top: 15px;
@@ -815,6 +747,10 @@ div#content  div.content-box div.movies-box-media div.movies-list div.serie{
 
 div#content  div.content-box div.movies-box-media div.movies-list div.first{
 	margin-left: 0px;
+}
+
+div#content  div.content-box div.movies-box-media div.movies-list div.under3{
+	margin-top: 0px;
 }
 
 div#content  div.content-box div.movies-box-media div.movies-list div.under5{
@@ -857,21 +793,6 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item:hover
 	filter: alpha(opacity=10);
 }
 
-div#content  div.content-box div.movies-box-media div.movies-list div.item a div.officialSubs {
-	float: left;
-	position: absolute;
-	width: 115px;
-	height: 22px;
-	background: transparent url('../images/officialSubs.png') no-repeat;
-	overflow: hidden;
-	margin-top: 2px;
-	margin-left: 2px;
-}
-
-div#content  div.content-box div.movies-box-media div.movies-list div.item:hover a div.officialSubs {
-	background-position: 0px -22px;
-}
-
 div#mycustomscroll{
 	overflow: auto;
 	position: relative;
@@ -880,7 +801,6 @@ div#mycustomscroll{
 div#content  div.content-box div.movies-box-media div.list-scrollbar{
 	float: right;
 	width: 17px;
-	/*height: 633px;*/
 	height: 420px;
 	visibility: visible;
 	background: #e4e4e4;
@@ -990,7 +910,7 @@ div#content  div.content-box div.movies-box-media div.list-scrollbar div.scrollb
 	width: 17px;
 	height: 163px;
 	cursor: pointer;
-	background: transparent url('../images/scrollbar.png') no-repeat;
+	background: #6c847d;
 }
 
 div#content  div.content-box div.movies-box-media div.list-scrollbar div#scrollbar-news-bg div.scrollbar-btn{
@@ -1179,15 +1099,15 @@ div#content  div.content-box div.box-comments div.msgs-header{
 	width: 190px;
 	height: 20px;
 	text-align: center;
-	padding-left: 15px;
+	padding-left: 3px;
 	padding-top: 5px;
 }
 
 div#content  div.content-box div.box-comments div.msgs-header span{
-	font-family: 'Tahoma';
-	font-size: 15px;
-	font-weight: normal;
-	color: #000000;
+	font-family: 'Arial';
+	font-size: 14px;
+	font-weight: bold;
+	color: #6c847d;
 }
 
 div#content  div.content-box div.box-comments div.comments-list{
@@ -1202,10 +1122,6 @@ div#content  div.content-box div.box-comments div.comments-list div.item{
 	margin-left: 15px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #d9d9d9;
-}
-
-div#content  div.content-box div.box-comments div.comments-list div.item:hover{
-	background: #F7F7F7;
 }
 
 div#content  div.content-box div.box-comments div.comments-list div.first{
@@ -1398,7 +1314,6 @@ div#content  div.content-box div.movies-box-media div.list-scrollbar div.scrollb
 	position: absolute;
 	top: 20px;
 	height: 590px;
-	/*height: 387px;*/
 	width: 17px;
 }
 
@@ -1487,156 +1402,35 @@ div#mycustomscroll_vscrollerbase{
 	height: 300px !important;
 }
 
+/*footer{
+	height: 60px;
+	background: #90b0a7;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}*/
 
-/* FOOTER */
-
-
-footer{
-	height: 100px;
-	background: #E4E4E4 url('../images/footer-bg.png') repeat-x;
-}
 
 div#footer{
-	height: 100px;
-	width: 978px;
 	overflow: hidden;
-}
-
-	/* Cats */
-
-div#footer div.cats{
-	overflow: hidden;
-	margin: 40px 0px 0px 395px;
-}
-
-div#footer div.cats div.cat{
 	float: left;
-	width: 150px;
-	height: 100px;
+	padding-left: 220px;
 	line-height: 20px;
-}
-
-div#footer div.cats div.first{
-	margin-left: 0px;
-}
-
-div#footer div.cats div.small{
-	width: 110px;
-}
-
-div#footer div.cats div.cat div.cat-title{
-	
-}
-
-div#footer div.cats div.cat div.cat-title span{
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #797777;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
-	text-decoration: none;
-	cursor: default;
-}
-
-div#footer div.cats div.cat div.sub-cat a{
+	margin-top: 15px;
+	margin-bottom: 0px;
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #7d7d7d;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
+	color: #ffffff;
 	text-decoration: none;
 }
 
-div#footer div.cats div.cat div.sub-cat a:hover{
-	color: #36423e;
-}
-
-	/* Divider */
-
-div#footer div.footer-divider{
-	display: block;
-	width: 978px;
-	height: 2px;
-	background: transparent url('../images/footer-divider.png') repeat-x;
-	margin-top: 25px;
-	margin-bottom: 10px;
-}
-
-	/* Copyright & Stuff */
-
-div#footer div.footer-content{
-	overflow: hidden;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-	
-div#footer div.footer-content div.copyright{
-	float: left;
-	width: 500px;
-	height: 43px;
-	line-height: 43px;
-	overflow: hidden;
-}
-
-div#footer div.footer-content div.copyright span{
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 13px;
-	color: #929191;
-	text-transform: uppercase;
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
-}
-
-div#footer div.footer-content div.copyright span.madewhere{
-	color: #36423e;
-}
-	
-div#footer div.footer-content div.socnet{
-	float: right;
-	width: 300px;
-}
-
-div#footer div.footer-content div.socnet a.facebook-btn{
-	float: right;
-	width: 93px;
-	height: 27px;
-	background: transparent url('../images/footer-facebook-btn.png') no-repeat;
-	margin-top: 7px;
-}
-
-div#footer div.footer-content div.socnet a.facebook-btn:hover{
-	background-position: -93px 0px;
-}
-
-div#footer div.footer-content div.socnet span.pipe{
-	float: right;
-	width: 1px;
-	height: 43px;
-	background: transparent url('../images/play-now-pipe.png') no-repeat;
-	margin: 0px 30px;
-}
-
-div#footer div.footer-content div.socnet a.twitter-btn{
-	float: right;
-	width: 82px;
-	height: 27px;
-	background: transparent url('../images/footer-twitter-btn.png') no-repeat;
-	margin-top: 9px;
-}
-
-div#footer div.footer-content div.socnet a.twitter-btn:hover{
-	background-position: -82px 0px;
+footer{
+	height: 60px;
+	background: #90b0a7 repeat-x;
 }
 
 
-/* MOVIES PAGE */
 
-	/* Left Filters */
 
 div#content  div.content-box div.movies-box-content div.media-left-filters{
 	float: left;
@@ -1910,16 +1704,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 	margin-top: 12px;
 }
 
-div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info a.movie-name{
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 20px;
-	color: #36423e;
-	text-decoration: none;
-}
 
-div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.movie-info div.movie-detailed-info{
 	float: left;
@@ -2297,7 +2082,6 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias {
 	float: left;
 	width: 217px;
 	height: 217px;
-	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -2308,8 +2092,14 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias {
 	padding: 2px;
 	margin: 2px;
 	margin-right: 10px;
+	background: #FFF;
 }
 
+div#content div.content-box div.news-list div.item div.new-imagecategorias .box1 img {
+	width: 217px;
+	height: 217px;
+	background-color: #FFF;
+}
 
 
 div#content div.content-box div.news-list div.item div.new-imagecategorias a {
@@ -2330,11 +2120,11 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias a div
 	float: left;
 	width: 147px;
 	height: 170px;
-	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	background: transparent url('assets/images/categorias/docesdecolher.png') no-repeat;
 	opacity: 0.4;
 	filter: alpha(opacity=40);
 	margin-left: 74px;
-	margin-top: 51px;
+	margin-ntop: 51px;
 }
 
 div#content div.content-box div.news-list div.item div.new-imagecategorias:hover a div.img-effect {
@@ -2345,7 +2135,6 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias:hover
 div#content div.content-box div.news-list div.item div.new-imagecategorias div.title-bg {
 	position: absolute;
 	float: left;
-	display: block;
 	max-width: 221px;
 	height: 24px;
 	background: transparent url('../images/news-title-bgtransp.png');
@@ -2389,58 +2178,11 @@ div#content div.content-box div.news-list div.item div.new-imagecategorias:hover
 	text-decoration: underline;
 }
 
-div#content div#new-info-box div.new-imagecategorias{
-	text-align: center;
-	margin: 15px 0px;
-}
-
-div#content div#new-info-box div.new-imagecategorias img{
-	border: 2px solid #e3e3e3;
-	max-width: 900px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 div#content div.content-box div.news-list div.item div.new-image {
 	float: left;
-	width: 221px;
-	height: 221px;
+	width: 180px;
+	height: 180px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-radius: 2px;
@@ -2534,7 +2276,7 @@ div#content div.content-box div.news-list div.item div.new-image:hover div.title
 div#content div.content-box div.news-list div.item div.new-info{
 	float: left;
 	width: 665px;
-	height: 195px;
+	height: 154px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
@@ -2572,31 +2314,16 @@ div#content div.content-box div.news-list div.item div.new-info div.new-type{
 	line-height: 26px;
 }
 
-div#content div.content-box div.news-list div.item div.new-info div.new-type span{
+div#content div.content-box div.news-list div.item div.new-info div.new-type a{
 	display: block;
 	float: right;
+	font-weight: bold;
 	font-family: Tahoma;
-	font-size: 11px;
-	color: #9D9D9D;
+	font-size: 12px;
+	color: #b5dcd1;
 	text-align: right;
 }
 
-div#content div.content-box div.news-list div.item div.new-info div.new-type span.movies-icon{
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
-	margin-top: 5px;
-	margin-left: 8px;
-}
-
-div#content div.content-box div.news-list div.item div.new-info div.new-type span.series-icon{
-	display: block;
-	width: 13px;
-	height: 12px;
-	background: transparent url('../images/account-media-series.png') no-repeat;
-	margin-top: 7px;
-	margin-left: 8px;
-}
 
 div#content div.content-box div.news-list div.item div.new-info div.divider{
 	display: block;
@@ -2613,7 +2340,7 @@ div#content div.content-box div.news-list div.item div.new-info div.body{
 
 div#content div.content-box div.news-list div.item div.new-info div.body span{
 	float: left;
-	height: 107px;
+	height: 60px;
 	font-family: Tahoma;
 	font-size: 13px;
 	color: #545457;
@@ -2734,21 +2461,19 @@ div#content div.content-box div.login-register input.error-input{
 div#content div.content-box div.login-register input.form-btn{
 	width: 274px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #6c847d;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	background: transparent url('../images/login-btn-bg.png') repeat-x;
+	background: #6c847d;
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #777;
+	color: #b5dcd1;
 	font-weight: bold;
 	line-height: 40px;
 	text-align: center;
 	/*text-transform: uppercase;*/
-	text-shadow: 0px 1px #fff;
-	-moz-text-shadow: 0px 1px #fff;
-	-webkit-text-shadow: 0px 1px #fff;
+
 }
 
 div#content div.content-box div.login-register input.form-btn:hover{
@@ -2929,40 +2654,6 @@ div#content div.content-box div.login-register div.register-form span.info span{
 	color: #36423e;
 }
 
-	/* Facebook Connect */
-
-div#content div.content-box div.fb-connect{
-	width: 914px;
-	height: 65px;
-	overflow: hidden;
-	background-color: #fff;
-	border: 1px solid #e0e0e0;
-	margin: 0px 33px 33px 33px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-btn{
-	display: block;
-	float: left;
-	width: 180px;
-	height: 25px;
-	margin: 20px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-label{
-	float: left;
-	width: 694px;
-	height: 25px;
-	margin: 20px 0px;
-	line-height: 25px;
-}
-
-div#content div.content-box div.fb-connect div.fbcon-label span{
-	font-family: Arial, Tahoma;
-	font-size: 11px;
-	color: #727272;
-}
-
-
 /* WISH LIST */
 
 div#content div.content-box div.wishlist-content{
@@ -3003,7 +2694,7 @@ div#content div.content-box div.wishlist-content div.wishlist-top div.finished a
 	width: 130px;
 	height: 38px;
 	overflow: hidden;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -3284,7 +2975,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	height: 15px;
 	background: transparent url('../images/account-media-movies.png') center left no-repeat;
 	margin: 8px 5px 0px 5px;
-}
+} 
 
 div#content div.content-box div.notifications-content div.notifications-items div.item span.comments-icon {
 	width: 17px;
@@ -3675,10 +3366,6 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	text-decoration: none;
 }
 
-div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
-
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.movie-info div.movie-detailed-info{
 	float: left;
 	width: 350px;
@@ -3933,13 +3620,15 @@ div#content div#player-box div.player-aux{
 	overflow: hidden;
 }
 
+
+
 	/* Player Movie Thumb */
 	
 div#content div#player-box div.player-aux div.thumb{
 	float: left;
-	width: 136px;
+	width: 175px;
 	overflow: hidden;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 
 div#content div#player-box div.player-aux div.serie div.episodes-number{
@@ -3961,7 +3650,7 @@ div#content div#player-box div.player-aux div.serie div.episodes-number span{
 
 div#content div#player-box div.player-aux div.thumb a.thumb-aux{
 	float: left;
-	width: 128px;
+	width: 165px;
 	height: 190px;
 	overflow: hidden;
 	background-color: white;
@@ -3984,7 +3673,7 @@ div#content div#player-box div.player-aux div.thumb a.series {
 div#content div#player-box div.player-aux div.thumb a.thumb-aux img{
 	float: left;
 	position: relative;
-	max-width: 128px;
+	max-width: 190px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -4026,9 +3715,29 @@ div#content div#player-box div.player-aux div.thumb a.thumb-aux div.officialSubs
 
 div#content div#player-box div.player-aux div.movie-info{
 	float: left;
-	width: 779px;
+	width: 300px;
 	margin-top: 2px;
 }
+
+div#content div#player-box div.player-aux div.movie-info2{
+	float: right;
+	width: 348px;
+	height: 229px;
+	margin-top: 0px;
+	margin-right: 3px;
+	overflow: hidden;
+	background-color: #c1c1c1;
+	border: 1px solid #d2d3dd;
+	border-bottom: 1px solid #d2d3dd;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 5px 10px -7px #000;
+	-webkit-box-shadow: 0px 5px 10px -7px #000;
+	box-shadow: 0px 5px 10px -7px #000;
+	padding: 5px;
+}
+
 
 div#content div#player-box div.player-aux div.movie-info a.movie-name{
 	font-family: 'PTSans Bold', Tahoma;
@@ -4037,9 +3746,6 @@ div#content div#player-box div.player-aux div.movie-info a.movie-name{
 	text-decoration: none;
 }
 
-div#content div#player-box div.player-aux div.movie-info a.movie-name:hover{
-	text-decoration: underline;
-}
 
 div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info{
 	float: left;
@@ -4068,6 +3774,13 @@ div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 13px;
 	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info span.genre a{
+	font-family: 'PTSansBoldItalic', Tahoma;
+	font-size: 13px;
+	color: #7F7F82;
+	text-decoration: underline;
 }
 
 div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info span.original-name{
@@ -4112,11 +3825,11 @@ div#content div#player-box div.player-aux div.movie-info div.movie-detailed-info
 		
 div#content div#player-box div.player-aux div.movie-info div.movie-imdb{
 	float: right;
-	width: 335px;
+	width: 300px;
 	height: 67px;
 	line-height: 67px;
-	background: transparent url('../images/movie-info-imdb-bg.png') right top no-repeat;
-	margin-right: -32px;
+	background: #234434;
+	margin-right: -30px;
 	padding-left: 40px;
 }
 
@@ -4124,28 +3837,7 @@ div#content div#player-box div.player-aux div.movie-info div.serie-imdb{
 	margin-top: -23px;
 }
 
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars {
-	float: left;
-	width: 200px;
-	height: 18px;
-	margin-top: 24px;
-}
 
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span {
-	float: left;
-	width: 18px;
-	height: 18px;
-	margin-right: 2px;
-	background: transparent url('../images/imdb-stars.png') no-repeat;
-}
-
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span.full {
-	background-position: -18px 0px;
-}
-
-div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-stars span.half {
-	background-position: -36px 0px;
-}
 
 div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb-rate {
 	float: left;
@@ -4184,9 +3876,9 @@ div#content div#player-box div.player-aux div.movie-info div.movie-imdb div.imdb
 
 div#content div#player-box div.player-aux div.movie-info div.wtv-rating{
 	float: left;
-	width: 195px;
+	width: 100px;
 	overflow: hidden;
-	margin: 0px 0px 5px 0px;
+	margin: 4px 0px 5px 0px;
 }
 
 div#content div#player-box div.player-aux div.movie-info div.wtv-rating span{
@@ -4481,7 +4173,9 @@ div#content div#player-box div.player-aux div.movie-actions a span{
 div#content div#player-box div.player-aux div.movie-actions a span.watch{
 	width: 20px;
 	height: 13px;
-	background: transparent url('../images/watched-icon.png') no-repeat;
+	background: transparent url('../images/watched-icon.png') no-repeat;	
+	margin-top: 3px;	
+	margin-left: 30px;
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.watch{
@@ -4493,6 +4187,7 @@ div#content div#player-box div.player-aux div.movie-actions a span.watched{
 	height: 13px;
 	background: transparent url('../images/watched-icon.png') no-repeat;
 	background-position: -20px 0px;
+
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.watched{
@@ -4525,6 +4220,7 @@ div#content div#player-box div.player-aux div.movie-actions a span.fave{
 	height: 13px;
 	background: transparent url('../images/faved-icon.png') no-repeat;
 	margin-left: 0px;
+	margin-top: 3px;
 }
 
 div#content div#player-box div.player-aux div.movie-actions a:hover span.fave{
@@ -4599,7 +4295,7 @@ div#content div#play-box {
 
 div#content div#player-box div.player-pub, div#content div#play-box div.player-pub {
 	width: 925px;
-	height: 120px;
+	height: 70px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
@@ -6184,271 +5880,10 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 
 	/* News Slide */
 	
-div#content div#new-info-box div.news-slide{
-	float: left;
-	width: 920px;
-	overflow: hidden;
-	margin: 25px 25px 0px 35px;
-}
 
-div#content div#new-info-box div.left-arrow, div#content div#new-info-box div.right-arrow{
-	float: left;
-	width: 23px;
-	height: 40px;
-	overflow: hidden;
-	background: transparent url('../images/news-slide-arrows.png') no-repeat;
-	margin: 13px 25px 13px 25px;
-}
 
-div#content div#new-info-box div.left-arrow{
-	background-position: 0px 0px;
-}
 
-div#content div#new-info-box div.left-arrow:hover{
-	background-position: -23px 0px;
-}
 
-div#content div#new-info-box div.right-arrow{
-	background-position: -46px 0px;
-}
-
-div#content div#new-info-box div.right-arrow:hover{
-	background-position: -69px 0px;
-}
-
-div#content div#new-info-box div.left-arrow a, div#content div#new-info-box div.right-arrow a{
-	display: block;
-	float: left;
-	width: 23px;
-	height: 40px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.slide-content{
-	float: left;
-	width: 761px;
-	height: 78px;
-	border-bottom: 1px solid #c5c3c3;
-}
-
-div#content div#new-info-box div.slide-content div.item{
-	float: left;
-	width: 67px;
-	height: 78px;
-	margin-left: 10px;
-	overflow: hidden;
-	margin-bottom: -1px;
-}
-
-div#content div#new-info-box div.slide-content div.slctd, div#content div#new-info-box div.slide-content div.item:hover{
-	border-bottom: 5px solid #36423e;
-	height: 75px;
-}
-
-div#content div#new-info-box div.slide-content div.first{
-	margin-left: 0px;
-}
-
-div#content div#new-info-box div.slide-content div.item a{
-	float: left;
-	width: 67px;
-	height: 67px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.slide-content div.item a img{
-	float: left;
-	width: 65px;
-	height: 65px;
-	overflow: hidden;
-	border: 1px solid #c5c3c3;
-}
-
-div#content div#new-info-box div.slide-content div.slctd a img, div#content div#new-info-box div.slide-content div.item:hover a img{
-	border: 1px solid #36423e;
-}
-
-div#content div#new-info-box div.slide-content div.item a div.new-thumb-effect{
-	float: left;
-	position: absolute;
-	width: 38px;
-	height: 37px;
-	background: transparent url('../images/new-thumb-effect.png') no-repeat;
-	overflow: hidden;
-	opacity: 0.5;
-	filter: alpha(opacity=50);
-	margin-left: 28px;
-	margin-top: 29px;
-}
-
-div#content div#new-info-box div.slide-content div.item:hover a div.new-thumb-effect{
-	opacity: 0.2;
-	filter: alpha(opacity=20);
-}
-
-	/* New Info */
-
-div#content div#new-info-box div.new-info{
-	float: left;
-	width: 900px;
-	overflow: hidden;
-	background-color: #fff;
-	border: 1px solid #d4d4d4;
-	padding: 15px;
-	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
-	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
-	box-shadow: 0 1px 10px -1px #D9D9D9;
-	margin: 25px;
-}
-
-div#content div#new-info-box div.new-image{
-	text-align: center;
-	margin: 15px 0px;
-}
-
-div#content div#new-info-box div.new-image img{
-	border: 2px solid #e3e3e3;
-	max-width: 900px;
-}
-
-div#content div#new-info-box div.new-info div.title{
-	overflow: hidden;
-	
-}
-
-div#content div#new-info-box div.new-info div.title span{
-	float: left;
-	width: 700px;
-	overflow: hidden;
-	font-family: 'PTSans Bold', Tahoma;
-	font-size: 20px;
-	color: #36423e;
-	text-decoration: none;
-}
-
-div#content div#new-info-box div.new-info div.new-like-btn{
-	float: right;
-	width: 180px;
-	overflow: hidden;
-	text-align: right;
-	margin-top: 2px;
-}
-
-div#content div#new-info-box div.new-info div.new-like-btn .likeBtn{
-	border: none;
-	overflow: hidden;
-	width: 89px;
-	height: 21px;
-}
-
-div#content div#new-info-box div.new-info div.divider{
-	display: block;
-	width: 900px;
-	height: 1px;
-	background-color: #e1e1e1;
-	margin: 10px 0px;
-}
-
-div#content div#new-info-box div.new-info div.body{
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.new-info div.body span{
-	float: left;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 13px;
-	color: #545457;
-	line-height: 17px;
-}
-
-div#content div#new-info-box div.new-info div.body span a{
-	color: #36423e;
-	text-decoration: none;
-}
-
-div#content div#new-info-box div.new-info div.body span a:hover{
-	text-decoration: underline;
-}
-
-div#content div#new-info-box div.new-info div.body span div.img{
-	text-align: center;
-	overflow: hidden;
-	margin: 0px auto;
-}
-
-div#content div#new-info-box div.new-info div.new-details{
-	overflow: hidden;
-	margin-top: 12px;
-	height: 15px;
-	line-height: 15px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.comments{
-	float: left;
-	width: 150px;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9d9d9d;
-	padding-left: 22px;
-	background: transparent url('../images/comments-btn.png') no-repeat;
-	background-position: -1px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.comments span{
-	font-weight: bold;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type{
-	float: left;
-	width: 150px;
-	overflow: hidden;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span{
-	display: block;
-	float: left;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9D9D9D;
-	text-align: left;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span.movies-icon{
-	width: 13px;
-	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
-	margin-right: 8px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.new-type span.series-icon{
-	display: block;
-	width: 13px;
-	height: 12px;
-	background: transparent url('../images/account-media-series.png') no-repeat;
-	margin-top: 2px;
-	margin-right: 8px;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby{
-	float: right;
-	width: 450px;
-	overflow: hidden;
-	font-family: Tahoma;
-	font-size: 11px;
-	color: #9d9d9d;
-	text-align: right;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby span{
-	color: #545457;
-}
-
-div#content div#new-info-box div.new-info div.new-details div.postedby span.date{
-	color: #9d9d9d;
-	font-weight: bold;
-}
 
 
 /* MY ACCOUNT */
@@ -6468,23 +5903,24 @@ div#content div#account-box div.left-content{
 	/* My Account - Settings */
 
 div#content div#account-box div.left-content div.account-settings-wrapper{
+	display: block;
 	width: 290px;
-	height: 270px;
+	height: 315px;
 	overflow: hidden;
 	background-color: #F6F6F6;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
-	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
-	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
+	-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
 	box-shadow: 0 1px 10px -1px #D9D9D9;
 	padding: 5px;
-	
+	 
 }
 
 div#content div#account-box div.left-content div.account-settings{
 	float: left;
 	width: 270px;
-	height: 250px;
+	height: 295px;
 	overflow: hidden;
 	background-color: #fff;
 	padding: 10px;
@@ -6597,7 +6033,7 @@ div#content div#account-box div.left-content div.account-settings div#settings-w
 div#content div#account-box div.left-content div.account-settings div#settings-window div#settings div.window-settings-box input.form-btn{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -6672,7 +6108,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-h
 	overflow: hidden;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #36423e;
+	color: #6c847d;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-header div.user-info div.register-date{
@@ -6692,7 +6128,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-h
 
 div#content div#account-box div.left-content div.account-settings div.settings-content{
 	width: 270px;
-	height: 178px;
+	height: 215px;
 	overflow: hidden;
 }
 
@@ -6710,7 +6146,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 	line-height: 18px;
 	overflow: hidden;
 	padding-left: 15px;
-	background: transparent url('../images/account-settings-dot.png') 1px 7px no-repeat;
+	background: transparent 
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.avatar-option a{
@@ -6730,17 +6166,49 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options{
-	width: 265px;
-	height: 70px;
+	width: 250px;
+	height: 115px;
 	overflow: hidden;
 	padding-left: 15px;
-	background: transparent url('../images/account-settings-dot.png') 1px 8px no-repeat;
+	background: transparent 
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2{
+	width: 250px;
+	height: 30px;
+	overflow: hidden;
+	padding-left: 15px;
+	background: transparent
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2 span.label{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #90b0a7;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options2 span.texto2{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #d1d1d1;
+	font-weight: normal;
+	padding-left: 5px;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options span.label{
 	font-family: Tahoma;
 	font-size: 12px;
-	color: #8e8e94;
+	color: #90b0a7;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options span.texto1{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #d1d1d1;
+	font-weight: normal;
+	padding-left: 5px;
 }
 
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email{
@@ -6750,8 +6218,8 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.email span{
 	font-family: Tahoma;
 	font-size: 11px;
-	color: #36423e;
-	font-weight: bold;
+	color: #8e8e94;
+	font-weight: normal;
 	text-decoration: none;
 }
 
@@ -6875,39 +6343,87 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 	/* My Account - Subscribe Series */
 
 div#content div#account-box div.left-content div.subscribe-series{
-	width: 311px;
-	height: 533px;
+	width: 300px;
+	height: 350px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
-	border-right: 0px solid;
-	margin-top: 10px;
+	/*border-bottom: 0px solid #a7a7a7; 
+	border-right: 0px solid #a7a7a7;
+	-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
+	box-shadow: 0 1px 10px -1px #D9D9D9; */
+	margin-top: 15px;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-header{
 	width: 261px;
 	height: 35px;
 	line-height: 35px;
-	border-left: 5px solid #36423e;
+	/*border-left: 2px solid #a7a7a7;*/
+	/*border-bottom: 2px solid #a7a7a7;*/
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 20px;
-	color: #9d9d9d;
+	color: #6c847d;
 	margin: 15px 15px 0px 15px;
 	padding-left: 15px;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.separator{
-	width: 276px;
+	width: 270px;
 	height: 1px;
 	margin: -1px 15px 15px 20px;
 	background-color: #e9e9e9;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content{
-	width: 281px;
+	width: 270px;
+	height: 280px;
 	overflow: hidden;
-	padding-left: 15px;
+	padding-left: 20px;
 	padding-right: 15px;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content{
+	width: 250px;
+	height: 115px;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	background: transparent 
+}
+
+
+
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content span.label{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #90b0a7;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content span.label2{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #9d9d9d;
+	font-weight: bold;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content div.imagem{
+	margin-top: 5px;
+}
+
+div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content div.imagem a, div#content div#account-box div.left-content div.account-settings div.settings-content div.account-options div.imagem span{
+	font-family: Tahoma;
+	font-size: 12px;
+	color: #8e8e94;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+div#content div#account-box div.left-content div.account-settings div.settings-content div.options-content div.imagem a:hover{
+	text-decoration: underline;
 }
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.subscribe-serie-item{
@@ -7039,39 +6555,36 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 div#content div#account-box div.media-box{
 	float: left;
 	width: 576px;
-	min-height: 785px;
+	min-height: 652px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
+	/*-moz-box-shadow: 5 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 5 1px 10px -1px #D9D9D9; 
+	box-shadow: 0 1px 10px -1px #D9D9D9;*/ 
 	padding: 20px;
 }
 
 div#content div#account-box div.media-box div.media-header{
+	float: left;
+	padding-left: 10px;
 	overflow: hidden;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option{
 	float: left;
-	width: 150px;
+	width: 180px;
 	height: 35px;
 	line-height: 35px;
 	overflow: hidden;
-	border-left: 5px solid #E9E9E9;
-	border-bottom: 1px solid #E9E9E9;
+	border: 2px solid #E9E9E9;
 }
 
-div#content div#account-box div.media-box div.media-header div.episodes{
-	width: 260px;
-}
-
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover, div#content div#account-box div.media-box div.media-header div.h-slctd{
-	border-left: 5px solid #36423e;
-	border-bottom: 1px solid #36423e;
-}
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a{
 	float: left;
-	width: 150px;
+	padding-left: 15px;
+	width: 210px;
 	height: 35px;
 	overflow: hidden;
 	text-decoration: none;
@@ -7079,44 +6592,17 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 }
 
 div#content div#account-box div.media-box div.media-header div.episodes a{
-	width: 260px;
+	float: left;
+	padding-left: 27px;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option div.movies-icon{
 	float: left;
 	width: 13px;
 	height: 15px;
-	background: transparent url('../images/account-media-movies.png') no-repeat;
 	margin: 10px 15px;
 }
 
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover div.movies-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.movies-icon{
-	background-position: -13px 0px;
-}
-
-div#content div#account-box div.media-box div.media-header div.series div.series-icon{
-	float: left;
-	width: 13px;
-	height: 12px;
-	background: transparent url('../images/account-media-series.png') no-repeat;
-	margin: 12px 15px 10px 15px;
-}
-
-div#content div#account-box div.media-box div.media-header div.media-header-option:hover div.series-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.series-icon{
-	background-position: -13px 0px;
-}
-
-div#content div#account-box div.media-box div.media-header div.episodes div.episodes-icon{
-	float: left;
-	width: 12px;
-	height: 12px;
-	background: transparent url('../images/account-media-episodes.png') no-repeat;
-	margin: 12px 15px 10px 15px;
-}
-
-div#content div#account-box div.media-box div.media-header div.episodes:hover div.episodes-icon, div#content div#account-box div.media-box div.media-header div.h-slctd div.episodes-icon{
-	background-position: -12px 0px;
-}
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option a div.media-header-option-label{
 	float: left;
@@ -7124,17 +6610,17 @@ div#content div#account-box div.media-box div.media-header div.media-header-opti
 	font-family: Helvetica;
 	font-size: 20px;
 	font-weight: bold;
-	color: #d1d1d1;
+	color: #6c847d;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option a div.media-header-option-label{
 	font-family: Helvetica;
-	font-size: 13px;
-	margin-top: 1px;
+	font-size: 14px;
+	margin-top: 2px;
 }
 
 div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.how-many-media, div#content div#account-box div.media-box div.media-header div.media-header-option:hover a div.media-header-option-label, div#content div#account-box div.media-box div.media-header div.h-slctd a div.how-many-media, div#content div#account-box div.media-box div.media-header div.h-slctd a div.media-header-option-label{
-	color: #36423e;
+	color: #b5dcd1; 
 }
 
 div#content div#account-box div.media-box div.media-header-options{
@@ -7340,7 +6826,6 @@ div#content div.content-box div.movies-order{
 	color: #9d9d9d;
 	margin-left: 20px;
 	padding-left: 30px;
-	background: transparent url('../images/movies-order.png') 0px 2px no-repeat;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7361,7 +6846,7 @@ div#content div#news-box div.movies-order{
 	font-size: 12px;
 	color: #9d9d9d;
 	margin-left: 20px;
-	padding-left: 30px;
+	padding-left: 0px;
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
@@ -7427,12 +6912,12 @@ div#content div.content-box div.pagination span{
 }
 
 div#content div.content-box div.pagination a:hover{
-	background-color: #aec068;
+	background-color: #6c847d;
 	color: #fff;
 }
 
 div#content div.content-box div.pagination a.actual{
-	background-color: #aec068;
+	background-color: #6c847d;
 	color: #fff;
 	font-weight: bold;
 }
@@ -7564,7 +7049,7 @@ div#report-problems div.reports-box textarea.error{
 div#report-problems div.reports-box input{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -7807,7 +7292,7 @@ div#pw-recovery div.pwr-box div.divider{
 div#pw-recovery div.pwr-box input.form-btn{
 	width: 270px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -7854,9 +7339,9 @@ div#requests-box div.reqLeftContent{
 
 div#requests-box div.reqRightContent{
 	float: left;
-	width: 590px;
+	width: 950px;
 	padding: 25px;
-	background: #FAFBFD;
+	background: #E4E4E4;
 	border-left: 1px solid #D9D9D9;
 	overflow: hidden;
 	min-height: 615px;
@@ -7938,7 +7423,7 @@ div#requests-box div#makeAReq form#reqForm input.form-btn{
 	display: block;
 	width: 289px;
 	height: 40px;
-	border: 1px solid #9AAB5A;
+	border: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -8105,8 +7590,7 @@ div#requests-box div.requests div.reqOrder {
 	text-shadow: 0px 1px #fff;
 	-moz-text-shadow: 0px 1px #fff;
 	-webkit-text-shadow: 0px 1px #fff;
-	padding-left: 25px;
-	background: transparent url('../images/movies-order.png') 0px 2px no-repeat;
+	padding-left: 5px;
 }
 
 div#requests-box div.requests div.reqOrder span{
@@ -8174,10 +7658,6 @@ div#requests-box div.requests div.listMediaType span.pipe{
 	filter: alpha(opacity=50);
 }
 
-div#requests-box div.requests div.pagination{
-	/*width: 265px;*/
-}
-
 div#requests-box div.requests div.pagination div.pagination-aux{
 	padding: 0;
 }
@@ -8194,6 +7674,20 @@ div#requests-box div.requests div.requestsList div.request {
 	overflow: hidden;
 	margin-left: 15px;
 	margin-bottom: 15px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #fff;
+	-moz-box-shadow: inset 0 0 2px #ccc;
+	-webkit-box-shadow: inset 0 0 2px #ccc;
+	box-shadow: inset 0 0 2px #ccc;	
+}
+
+div#requests-box div.requests div.requestsList div.request:hover {
+	overflow: hidden;
+	background-color: #ededed;
+}
 }
 
 div#requests-box div.requests div.requestsList div.first {
@@ -8202,8 +7696,8 @@ div#requests-box div.requests div.requestsList div.first {
 
 div#requests-box div.requests div.requestsList div.request div.thumb{
 	display: block;
-	width: 128px;
-	height: 190px;
+	width: 150px;
+	height: 150px;
 	background-color: white;
 	border: 1px solid #D4D4D4;
 	border-bottom: 1px solid #A7A7A7;
@@ -8214,20 +7708,21 @@ div#requests-box div.requests div.requestsList div.request div.thumb{
 	-webkit-box-shadow: 0px 5px 10px -7px #000;
 	box-shadow: 0px 5px 10px -7px #000;
 	padding: 3px;
+	margin: 6px;
 	margin-bottom: 8px;
 }
 
 div#requests-box div.requests div.requestsList div.request div.thumb a{
 	float: left;
 	overflow: hidden;
-	width: 128px;
-	height: 190px;
+	width: 150px;
+	height: 150px;
 }
 
 div#requests-box div.requests div.requestsList div.request div.thumb a img{
 	float: left;
 	position: relative;
-	max-width: 128px;
+	max-width: 150px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -8252,14 +7747,14 @@ div#requests-box div.requests div.requestsList div.request div.thumb:hover a div
 
 div#requests-box div.requests div.requestsList div.request div.reqInfo {
 	display: block;
-	width: 136px;
+	width: 155px;
 	height: 53px;
-	background: transparent url('../images/requestsListInfo.png') no-repeat;
+	
 }
 
 div#requests-box div.requests div.requestsList div.request div.reqInfo span.hmReqs, div#requests-box div.requests div.requestsList div.request div.reqInfo a{
 	display: block;
-	width: 136px;
+	width: 170px;
 	height: 26px;
 	line-height: 29px;
 	font-family: 'AvenirLT Heavy Bold';
@@ -8272,6 +7767,7 @@ div#requests-box div.requests div.requestsList div.request div.reqInfo span.hmRe
 div#requests-box div.requests div.requestsList div.request div.reqInfo span.hmReqs span {
 	color: #686868;
 }
+
 
 div#requests-box div.requests div.requestsList div.request div.reqInfo a {
 	background: transparent url('../images/requestsListBtn.png') no-repeat;
@@ -8452,6 +7948,85 @@ div#requests-box div#mediaPreview div.mediaInfo div.info div.divider{
 }
 
 
+div#content  div.content-box div.movies-box-media div.movies-list div.item
+div#content div.content-box div.news-list div.item div.nreceitasinicio
+
+div#content div.content-box div.movies-box-media div.movies-list div.item a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	float: left;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item a img {
+	float: left;
+	position: relative;
+	max-width: 221px;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item a div.img-effect {
+	position: absolute;
+	float: left;
+	width: 147px;
+	height: 170px;
+	background: transparent url('../images/news-imgeffect.png') no-repeat;
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+	margin-left: 74px;
+	margin-top: 51px;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item:hover a div.img-effect {
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg {
+	position: absolute;
+	float: left;
+	display: block;
+	max-width: 221px;
+	height: 24px;
+	background: transparent url('../images/news-title-bgtransp.png');
+	overflow: hidden;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+	margin-top: 174px;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg div.title {
+	max-width: 221px;
+	height: 24px;
+	line-height: 24px;
+	background: #f4f4f4 url('../images/news-title-bg.png') repeat-y;
+	font-family: 'AvenirLT Heavy Bold';
+	font-size: 11px;
+	color: #36423e;
+	text-transform: uppercase;
+	overflow: hidden;
+	opacity: 1.0;
+	filter: alpha(opacity=10);
+	padding: 0px 10px;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg div.title a {
+	display: block;
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	color: #36423e;
+	text-transform: uppercase;
+	text-decoration: none;
+	overflow: hidden;
+	text-shadow: 0px 1px #fff;
+	-moz-text-shadow: 0px 1px #fff;
+	-webkit-text-shadow: 0px 1px #fff;
+}
+
+div#content div.content-box div.movies-box-media div.movies-list div.item:hover div.title-bg div.title a {
+	text-decoration: underline;
+}
 
 
 
@@ -8468,3 +8043,150 @@ div#requests-box div#mediaPreview div.mediaInfo div.info div.divider{
 
 
 
+div#content div.content-box div.login-register2{
+	width: 200px;
+	overflow: hidden;
+	height: 42px;
+	float:left;
+	padding-left: 30px;
+	margin-top: 40px; 
+}
+	
+div#content div.content-box div.login-register2 div.login{
+	float: left;
+	width: 200px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+div#content div.content-box div.login-register2 div.login-form{
+	width: 200px;
+	overflow: hidden;
+	height: 45px;
+}
+
+div#content div.content-box div.login-register2 input.form-btn{
+	width: 200px;
+	height: 40px;
+	border: 1px solid #6c847d;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background: #6c847d;
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #b5dcd1;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+
+div#content div#player-box div.player-aux div.thumb2 a.thumb-aux{
+	float: left;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	background-color: white;
+	border: 3px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0px 5px 10px -7px #000;
+	-webkit-box-shadow: 0px 5px 10px -7px #000;
+	box-shadow: 0px 5px 10px -7px #000;
+	padding: 5px;
+}
+
+div#content div#player-box div.player-aux div.thumb2 a.thumb-aux img{
+	float: left;
+	position: relative;
+	max-width: 128px;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+div#content  div.main-separatorr {
+	width: 100%;
+	height: 2px;
+	background: #c6c6cf;
+	margin: 15px 0px;
+}
+
+div#content div#player-box div.player-aux2{
+	width: 930px;
+	padding: 25px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div#content div.content-box div.ver-receita{
+	width: 960px;
+	height: 40px;
+	line-height: 19px;
+	overflow: hidden;
+}
+
+div#content div.content-box div.ver-receita a{
+	float: left;
+	margin-left: 450px;
+	margin-top: 9px;
+	height: 19px;
+	line-height: 19px;
+	overflow: hidden;
+	font-family: Tahoma;
+	font-size: 14px;
+	font-weight: bold;
+	color: #6c847d;
+	text-decoration: none;
+}
+
+div#content div.content-box div.ver-receita a:hover{
+	color: #36423e;
+}
+
+div#content div#player-box div.player-aux div.lista-ing span.ing{
+	font-family: 'PTSans Bold', Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.preparacao span.p{
+	font-family: 'PTSans Bold', Tahoma;
+	font-size: 13px;
+	font-weight: bold;
+	color: #7F7F82;
+}
+
+div#content div#player-box div.player-aux div.preparacao div.texto{
+	display: block;
+	width: 910px;
+	margin-left: 20px;
+	overflow: auto;
+	padding-bottom: 15px;	
+	
+}
+
+div#content div#player-box div.player-aux div.preparacao div.texto span{
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: normal;
+	color: #3f3b3b;
+}

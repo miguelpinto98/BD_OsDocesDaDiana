@@ -33,7 +33,7 @@
 	},
 	"minimum-stability": "dev",
 
-	"require": {
-        "jfelder/oracledb": "*"
- 	}
+ 	"require": {
+  		"ccovey/odbc-driver-l4": "dev-master"
+	}
 }
