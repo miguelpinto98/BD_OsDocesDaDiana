@@ -5,7 +5,7 @@
 			<div class="topNav">
 				<div class="opts">
         			<div class="to-right">
-						<a href="login.html" class="myAccount">Login | Registar</a>
+						<?php echo link_to('login','Login | Registar', array('class'=>'myAccount')); ?>
 					</div>
 				</div>
 			</div>

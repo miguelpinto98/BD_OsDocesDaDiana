@@ -21,6 +21,8 @@ public final class PainelAdmin extends javax.swing.JFrame {
     public PainelAdmin() {
         this.sistema = new ODDD();
         
+        this.sistema.registarUser("admin", "admin", "pw1234", "admin@diana.pt", 1);
+        
         initComponents();
         listaCategorias();
     }

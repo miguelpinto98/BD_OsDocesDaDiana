@@ -3,14 +3,14 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent implements UserInterface {
 
 	/**
 	 * The database table used by the model.
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'UTILIZADORES';
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -26,7 +26,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function getAuthIdentifier()
 	{
-		return $this->getKey();
+		//return $this->getKey();
+		return $this->NOMEUTILIZADOR;
+
 	}
 
 	/**
@@ -44,9 +46,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getReminderEmail()
+	/*public function getReminderEmail()
 	{
 		return $this->email;
-	}
+	}*/
 
 }
