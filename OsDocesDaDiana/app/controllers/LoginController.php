@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends \BaseController {
+class LoginController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class LoginController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('login/index');
+		return View::make('login/login');
 	}
 
 	public function valida() {

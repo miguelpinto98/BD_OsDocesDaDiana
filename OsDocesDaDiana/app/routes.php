@@ -14,3 +14,6 @@
 Route::get('/', 'HomeController@index');
 Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@valida');
+Route::get('/categorias', 'CategoriasController@index');
+Route::get('/chefs', 'ChefsListaController@index');
+Route::get('/sobre', 'SobreNosController@index');

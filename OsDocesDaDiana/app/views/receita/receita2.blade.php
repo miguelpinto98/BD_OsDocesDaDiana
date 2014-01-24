@@ -132,5 +132,7 @@
 					
 			<!--RECEITA-->
 
-	</div>	
+	</div>
+
+@include('footer')	
 @stop

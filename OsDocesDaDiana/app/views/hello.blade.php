@@ -5,8 +5,8 @@
 @section('content')
 			<div class="center">
 
-
-			<!-- SLIDE -->
+				<!--
+			SLIDE
 					<div id="wowslider-container1">
 						<div class="ws_images">
 							<ul>
@@ -36,9 +36,10 @@
 							</div>
 							<script type="text/javascript" src="assets/slide/wowslider.js"></script>
 							<script type="text/javascript" src="assets/slide//script.js"></script>
-			<!-- SLIDE -->
+			SLIDE 
+		
 
-				<div class="main-separator"></div>
+				<div class="main-separator"></div>-->
 
 			
 					<div id="movies-box" class="content-box">
@@ -244,12 +245,9 @@
 				
 					</div>
 
-		<footer>
-			<div class="center">
-				<div id="footer">
-					Design por Diana Lemos, Mariana Medeiros, Mário Leite, Miguel Pinto e Pedro Duarte.
-				</div>
-			</div>
-		</footer>
+					@include('footer')
+
+
+	
 
 @stop
