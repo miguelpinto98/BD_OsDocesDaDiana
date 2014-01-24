@@ -4,7 +4,7 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.0.*"
+		"laravel/framework": "4.1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -18,6 +18,7 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
+			"php artisan clear-compiled",
 			"php artisan optimize"
 		],
 		"post-update-cmd": [
@@ -31,9 +32,12 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "dev",
+	"minimum-stability": "stable",
 
- 	"require": {
-  		"ccovey/odbc-driver-l4": "dev-master"
-	}
+	"require": {
+		"laravel/framework": "4.*",
+        "yajra/laravel-datatables-oracle": "*",
+        "yajra/laravel-pdo-via-oci8": "dev-master",
+        "yajra/laravel-oci8": "*"
+    }
 }
