@@ -25,6 +25,8 @@ public class Receita {
     private Map<Integer, String> seguidores; // idreceita -> nomeutilizador ou  private Map<Integer,Utilizador> seguidores;  ??IDRECEITA??
     private Map<Integer, Avaliacao> avaliacoes;
     private int removido;
+    private int tempoPreparacao;
+    private int dose;
 
     public Receita() {
         this.id = 0; //NECESSARIO CRIAR ID INCREMENTO
@@ -41,9 +43,11 @@ public class Receita {
         this.seguidores = new ReceitaSeguidaDAO(this.id);
         this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
         this.removido = 0;
+        this.tempoPreparacao = 0;
+        this.dose = 0;
     }
     
-    public Receita(int id, String nm, String desc, int nrI, GregorianCalendar g, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm){
+    public Receita(int id, String nm, String desc, int nrI, GregorianCalendar g, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose){
         this.id = id;
         this.nome = nm;
         this.desc = desc;
@@ -58,6 +62,8 @@ public class Receita {
         this.coments = new ComentariosDAO(this.id);
         this.seguidores = new ReceitaSeguidaDAO(this.id);
         this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
+        this.tempoPreparacao = tempoPreparacao;
+        this.dose = dose;
     }
     
     public Map<Integer, Avaliacao> getAvaliacoes() {
@@ -174,6 +180,22 @@ public class Receita {
 
     public void setRemovido(int removido) {
         this.removido = removido;
+    }
+    
+    public int getTempo(){
+        return this.tempoPreparacao;
+    }
+    
+    public void setTempo(int t){
+        this.tempoPreparacao = t;
+    }
+    
+    public int getDose(){
+        return this.dose;
+    }
+    
+    public void setDose(int d){
+        this.dose = d;
     }
 
     @Override

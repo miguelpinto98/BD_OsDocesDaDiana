@@ -17,7 +17,7 @@ import java.util.TreeSet;
 
 public class UtilizadorDAO implements Map<String, Utilizador> {
     
-    public static int NOME = 2;
+    public static int ID = 2;
     public static int EMAIL = 3;
     public static int PW = 4;
     public static int DATA_REG = 5;
@@ -70,7 +70,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         boolean res = false;
         try {
             String nick = (String) key;
-            String sql = "SELECT * FROM UTILIZADORES u WHERE u.NOMEUTILIZADOR = '"+nick+"'";
+            String sql = "SELECT * FROM UTILIZADORES u WHERE u.ID = '"+nick+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             res = rs.next();
@@ -92,11 +92,11 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String nick = (String) key;
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM UTILIZADORES u WHERE u.NOMEUTILIZADOR = '"+nick+"' and u.APAGADO = "+0;
+            String sql = "SELECT * FROM UTILIZADORES u WHERE u.ID = '"+nick+"' and u.APAGADO = "+0;
             ResultSet rs = stm.executeQuery(sql);
             
             if(rs.next()) {
-                String nome = rs.getString(NOME);
+                String nome = rs.getString(ID);
                 String email = rs.getString(EMAIL);
                 String pw = rs.getString(PW);
                 Calendar datareg = GregorianCalendar.getInstance();
@@ -124,7 +124,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Utilizadores(nomeUtilizador, nome, email, password, dataRegisto, tipo) "
+                sql = "INSERT INTO Utilizadores(id, nome, email, password, dataRegisto, tipo) "
                         + "VALUES (?,?,?,?,?,?)";
                 
             } else {
@@ -132,7 +132,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
             }
             PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
             pstm.setString(1, value.getNick());
-            pstm.setString(NOME, value.getNome());
+            pstm.setString(ID, value.getNome());
             pstm.setString(EMAIL, value.getEmail());
             pstm.setString(PW, value.getPassw());
             Timestamp datareg = new Timestamp(value.dataRegisto().getTimeInMillis());
@@ -152,7 +152,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         Utilizador user = null;
         try {
             String nick = (String) key;
-            String sql = "UPDATE Utilizadores SET apagado = 1 WHERE nomeUtilizador = '"+nick+"'";
+            String sql = "UPDATE Utilizadores SET apagado = 1 WHERE id = '"+nick+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             
@@ -176,7 +176,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
     public Set<String> keySet() {
         Set<String> res = new TreeSet<>();
         try {
-            String sql = "SELECT NOMEUTILIZADOR FROM UTILIZADORES u WHERE u.APAGADO = 0";
+            String sql = "SELECT ID FROM UTILIZADORES u WHERE u.APAGADO = 0";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             
@@ -193,7 +193,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
     public Collection<Utilizador> values() {
         Collection<Utilizador> res = new HashSet<>();
         try {
-            String sql = "SELECT NOMEUTILIZADOR FROM UTILIZADORES u WHERE u.APAGADO = 0";
+            String sql = "SELECT ID FROM UTILIZADORES u WHERE u.APAGADO = 0";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             

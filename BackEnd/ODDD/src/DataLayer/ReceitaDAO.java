@@ -29,6 +29,8 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public static int NR_AVALIACOES = 9;
     public static int TOTAL_CALORIAS = 10;
     public static int APAGADO = 11;
+    public static int TEMPO_PREPARACAO = 12;
+    public static int DOSE = 13;
     
     public ReceitaDAO(){
     }
@@ -111,8 +113,10 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 int nrAvaliacoes = rs.getInt(NR_AVALIACOES);
                 int totalCalorias = rs.getInt(TOTAL_CALORIAS); // ALTERAR CASO MUDE NA CLASSE RECEITA
                 int rm = rs.getInt(APAGADO);
+                int tempo = rs.getInt(TEMPO_PREPARACAO);
+                int dose = rs.getInt(DOSE);
                 
-                rec = new Receita(id, nomeReceita, descricao, nrImagens, (GregorianCalendar) dataPub, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm);
+                rec = new Receita(id, nomeReceita, descricao, nrImagens, (GregorianCalendar) dataPub, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -126,8 +130,8 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, dataPublicacao, categoria, nomeUtilizador, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado)"
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, dataPublicacao, categoria, nomeUtilizador, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose)"
+                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 
             } else {
                 sql = "";
@@ -145,6 +149,8 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             pstm.setInt(NR_AVALIACOES, value.getNavaliacoes());
             pstm.setInt(TOTAL_CALORIAS, value.getTotalCal());
             pstm.setInt(APAGADO, value.getRemovido());
+            pstm.setInt(TEMPO_PREPARACAO, value.getTempo());
+            pstm.setInt(DOSE, value.getDose());
             pstm.execute();
             
             rec = value;
