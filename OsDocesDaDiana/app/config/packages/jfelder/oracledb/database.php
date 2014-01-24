@@ -4,7 +4,7 @@ return array(
 	'connections' => array(
 
 		'oracle' => array(
-			'driver'   => 'oci:dbname=orcl',
+			'driver'   => 'odbc',
                         'tns'      => '',
                         'host'     => 'localhost',
                         'port'     => '1521',

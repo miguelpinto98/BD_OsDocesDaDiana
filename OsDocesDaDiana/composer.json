@@ -32,9 +32,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable",
-
-	 "require": {
-        "jfelder/oracledb": "*"
-    }
+	"minimum-stability": "stable"
 }
