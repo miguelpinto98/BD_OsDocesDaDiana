@@ -225,8 +225,7 @@
 								</div>
 									<div class="user-date">
 										<div class="user"><span>Utilizador2</span>
-											<div class="online"></div>
-										</div>
+													</div>
 											<div class="date"><span>há x minutos</span></div>
 									</div>
 							</div>
