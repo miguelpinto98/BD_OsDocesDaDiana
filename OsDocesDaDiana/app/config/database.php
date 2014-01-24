@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sqlite',
+	'default' => 'oracle',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -83,6 +83,16 @@ return array(
 			'prefix'   => '',
 		),
 
+		'oracle' => array(
+	    	'driver' => 'pdo-via-oci8',
+	    	'host' => 'localhost',
+	    	'port' => '1521',
+	    	'database' => 'orcl', // Service ID
+	    	'username' => 'ODDD',
+	    	'password' => 'ODDD',
+	    	'charset' => '',
+	    	'prefix' => '',
+		),
 	),
 
 	/*
