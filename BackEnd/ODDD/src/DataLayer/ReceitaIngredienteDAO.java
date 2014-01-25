@@ -1,6 +1,9 @@
 package DataLayer;
 
 import BusinessLayer.Ingrediente;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -14,12 +17,34 @@ public class ReceitaIngredienteDAO implements Map<Integer, Ingrediente> {
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int res = 0;
+        try {
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            String sql = "SELECT * FROM RECEITASINGREDIENTES";
+            ResultSet rs = stm.executeQuery(sql);
+            
+            while(rs.next())
+                res++;
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean res = false;
+        try {
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            String sql = "SELECT * FROM RECEITASINGREDIENTES";
+            ResultSet rs = stm.executeQuery(sql);
+            res = rs.next();
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override

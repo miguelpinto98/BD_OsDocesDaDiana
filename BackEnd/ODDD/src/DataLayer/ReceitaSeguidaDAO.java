@@ -1,21 +1,23 @@
 package DataLayer;
 
 import BusinessLayer.Utilizador;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class ReceitaSeguidaDAO implements Map<Integer, String> {
-    private int idreceita;
+public class ReceitaSeguidaDAO implements Map<String, Integer> {
+    private String nick;
     
-    public static int NOME_UTILIZADOR = 1;
+    public static int USERNAME = 1;
     public static int ID_RECEITA = 2;
     
-    public ReceitaSeguidaDAO(int idr) {
-        this.idreceita = idr;
+    public ReceitaSeguidaDAO(String nm) {
+        this.nick = nm;
     }
     
     @Override
@@ -52,18 +54,7 @@ public class ReceitaSeguidaDAO implements Map<Integer, String> {
 
     @Override
     public boolean containsKey(Object key) {
-        boolean res = false;
-        try {
-            int id = (Integer) key;
-            String sql = "SELECT * FROM RECEITASSEGUIDAS r WHERE r.IDRECEITA = "+id;
-            Statement stm = ConexaoBD.getConexao().createStatement();
-            ResultSet rs = stm.executeQuery(sql);
-            res = rs.next();
-            
-            ConexaoBD.fecharCursor(rs, stm);
-        } catch (SQLException e) {
-        }
-        return res;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -72,7 +63,7 @@ public class ReceitaSeguidaDAO implements Map<Integer, String> {
     }
 
     @Override
-    public String get(Object key) {
+    public Integer get(Object key) {
         /**try {
             Integer id = (Integer) key;
             Statement stm = ConexaoBD.getConexao().createStatement();
@@ -90,17 +81,31 @@ public class ReceitaSeguidaDAO implements Map<Integer, String> {
     }
 
     @Override
-    public String put(Integer key, String value) {
+    public Integer put(String key, Integer value) {
+        int idRec = 0;
+        try {
+            String sql = null;
+            sql = "INSERT INTO RECEITASSEGUIDAS(username, idReceita)"
+                        + "VALUES (?,?)";
+            PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
+            pstm.setString(USERNAME, this.nick);
+            pstm.setInt(ID_RECEITA,value);
+            pstm.execute();
+            
+            idRec = value;
+            pstm.close();
+        } catch (SQLException e) {
+        }
+        return idRec;
+    }
+
+    @Override
+    public Integer remove(Object key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String remove(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void putAll(Map<? extends Integer, ? extends String> m) {
+    public void putAll(Map<? extends String, ? extends Integer> m) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -110,17 +115,29 @@ public class ReceitaSeguidaDAO implements Map<Integer, String> {
     }
 
     @Override
-    public Set<Integer> keySet() {
+    public Set<String> keySet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Collection<String> values() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Collection<Integer> values() {
+        Collection<Integer> res = new HashSet<>();
+        try {
+            String sql = "SELECT IDRECEITA FROM RECEITASSEGUIDAS r WHERE r.USERNAME = '"+this.nick+"'";
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            
+            while(rs.next())
+                res.add(rs.getInt(1));
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override
-    public Set<Entry<Integer, String>> entrySet() {
+    public Set<Entry<String, Integer>> entrySet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

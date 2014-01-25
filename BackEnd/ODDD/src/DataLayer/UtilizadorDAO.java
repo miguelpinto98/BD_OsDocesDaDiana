@@ -17,19 +17,21 @@ import java.util.TreeSet;
 
 public class UtilizadorDAO implements Map<String, Utilizador> {
     
-    public static int ID = 2;
+    public static int USERNAME = 1;
+    public static int NOME = 2;
     public static int EMAIL = 3;
     public static int PW = 4;
-    public static int DATA_REG = 5;
-    public static int AVATAR = 6;
-    public static int DESC = 7;
-    public static int NUM_RECEITAS = 8;
-    public static int VAL_AVAL = 9;
-    public static int NUM_AVAL = 10;
-    public static int DADOS_COMP = 11;
-    public static int APAGADO = 12;
-    public static int TIPO = 13;
-        
+    public static int AVATAR = 5;
+    public static int DESC = 6;
+    public static int NUM_RECEITAS = 7;
+    public static int VAL_AVAL = 8;
+    public static int NUM_AVAL = 9;
+    public static int DADOS_COMP = 10;
+    public static int APAGADO = 11;
+    public static int TIPO = 12;
+    public static int CREATE = 13;
+    public static int UPDATE = 14;
+    
     public UtilizadorDAO() {
     }
 
@@ -70,7 +72,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         boolean res = false;
         try {
             String nick = (String) key;
-            String sql = "SELECT * FROM UTILIZADORES u WHERE u.ID = '"+nick+"'";
+            String sql = "SELECT * FROM UTILIZADORES u WHERE u.USERNAME = '"+nick+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             res = rs.next();
@@ -92,16 +94,14 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String nick = (String) key;
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM UTILIZADORES u WHERE u.ID = '"+nick+"' and u.APAGADO = "+0;
+            String sql = "SELECT * FROM UTILIZADORES u WHERE u.USERNAME = '"+nick+"' and u.APAGADO = "+0;
             ResultSet rs = stm.executeQuery(sql);
             
             if(rs.next()) {
-                String nome = rs.getString(ID);
+                String nome = rs.getString(USERNAME);
                 String email = rs.getString(EMAIL);
                 String pw = rs.getString(PW);
-                Calendar datareg = GregorianCalendar.getInstance();
-                datareg.setTime(rs.getTimestamp(DATA_REG));
-                Blob img = rs.getBlob(AVATAR); // ATIVAR ISTO
+                String img = rs.getString(AVATAR); // ATIVAR ISTO
                 String desc = rs.getString(DESC);
                 int numrec = rs.getInt(NUM_RECEITAS);
                 int valaval = rs.getInt(VAL_AVAL);
@@ -109,8 +109,12 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
                 int dadoscomp = rs.getInt(DADOS_COMP);
                 int rm = rs.getInt(APAGADO);
                 int tipo = rs.getInt(TIPO);
+                Calendar create = GregorianCalendar.getInstance();
+                create.setTime(rs.getTimestamp(CREATE));
+                Calendar upd = GregorianCalendar.getInstance();
+                upd.setTime(rs.getTimestamp(UPDATE));
                 
-                user = new Utilizador(tipo,nick,nome,email,pw,(GregorianCalendar) datareg, null, desc, numrec,valaval,numaval,dadoscomp,rm);
+                user = new Utilizador (tipo, nick, nome, email, pw, desc, img, numrec, valaval, numaval, dadoscomp, rm, (GregorianCalendar) create, (GregorianCalendar) upd);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -124,20 +128,22 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Utilizadores(id, nome, email, password, dataRegisto, tipo) "
+                sql = "INSERT INTO Utilizadores(username, nome, email, password, tipo, created_at, updated_at) "
                         + "VALUES (?,?,?,?,?,?)";
                 
             } else {
                 sql = "";
             }
             PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
-            pstm.setString(1, value.getNick());
-            pstm.setString(ID, value.getNome());
+            pstm.setString(USERNAME, value.getNick());
+            pstm.setString(NOME, value.getNome());
             pstm.setString(EMAIL, value.getEmail());
-            pstm.setString(PW, value.getPassw());
-            Timestamp datareg = new Timestamp(value.dataRegisto().getTimeInMillis());
-            pstm.setTimestamp(DATA_REG, datareg);            
-            pstm.setInt(6, value.getTipo());
+            pstm.setString(PW, value.getPassw());            
+            pstm.setInt(TIPO, value.getTipo());
+            Timestamp create = new Timestamp(value.getCreate().getTimeInMillis());
+            pstm.setTimestamp(CREATE, create);
+            Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
+            pstm.setTimestamp(UPDATE, update);
             pstm.execute();
             
             user = value;
@@ -176,7 +182,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
     public Set<String> keySet() {
         Set<String> res = new TreeSet<>();
         try {
-            String sql = "SELECT ID FROM UTILIZADORES u WHERE u.APAGADO = 0";
+            String sql = "SELECT USERNAME FROM UTILIZADORES u WHERE u.APAGADO = 0";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             
@@ -193,7 +199,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
     public Collection<Utilizador> values() {
         Collection<Utilizador> res = new HashSet<>();
         try {
-            String sql = "SELECT ID FROM UTILIZADORES u WHERE u.APAGADO = 0";
+            String sql = "SELECT USERNAME FROM UTILIZADORES u WHERE u.APAGADO = 0";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             

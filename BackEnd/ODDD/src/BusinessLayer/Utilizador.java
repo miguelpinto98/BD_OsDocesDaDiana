@@ -4,6 +4,7 @@ import DataLayer.ChefesSeguidosDAO;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import DataLayer.ReceitaSeguidaDAO;
 import java.util.GregorianCalendar;
 import java.util.Map;
 
@@ -14,48 +15,55 @@ public class Utilizador {
     private String email;
     private String passw;
     private String descricao;
-    private GregorianCalendar datareg;
-    private Imagem img;
+    private String img;
     private int nreceitas;
     private int valorav;
     private int navaliacoes;
     private int dadoscomp;
+    private Map<String,Integer> receitasSeguidas;
     private Map<String,String> chefesseg;
     private int removido;
+    private GregorianCalendar create;
+    private GregorianCalendar update;
+    
+    
 
-    Utilizador(int tipo, String nickname, String nome, String password, String email, GregorianCalendar g) {
+    Utilizador(int tipo, String nickname, String nome, String password, String email, GregorianCalendar g, GregorianCalendar d) {
         this.tipo = tipo;
         this.nick = nickname;
         this.nome = nome;
         this.passw = password;
         this.email = email;
-        this.datareg = g;
+        this.create = g;
+        this.update = d;
     }
 
-    public Utilizador(int tipo, String nick, String nome, String email, String pw, GregorianCalendar dr,
-            Object object, String desc, int numrec, int valaval, int numaval, int dadoscomp, int rm) {
+    public Utilizador(int tipo, String nick, String nome, String email, String pw,
+              String desc, String img, int numrec, int valaval, int numaval, int dadoscomp, int rm, GregorianCalendar c, GregorianCalendar u) {
         this.tipo = tipo;
         this.nick = nick;
         this.nome = nome;
         this.email = email;
         this.passw = pw;
         this.descricao = desc;
-        this.datareg = dr;
-        this.img = null; // !!! ATIVAR ISTO, MUDAR OBJECT PARA IMAGEM
+        this.img = img; // !!! ATIVAR ISTO, MUDAR OBJECT PARA IMAGEM
         this.nreceitas = numrec;
         this.valorav = valaval;
         this.navaliacoes = numaval;
         this.dadoscomp = dadoscomp;
+        this.receitasSeguidas = new ReceitaSeguidaDAO(this.nick);
         this.chefesseg = new ChefesSeguidosDAO(this.nick);
         this.removido = rm;
+        this.create = c;
+        this.update = u;
     }
     
     public Map<String,String> getChefesSeguidos() {
         return this.chefesseg;
     }
     
-    public GregorianCalendar dataRegisto() {
-        return this.datareg;
+    public Map<String,Integer> getReceitasSeguidas() {
+        return this.receitasSeguidas;
     }
     
     public int getTipo() {
@@ -98,11 +106,11 @@ public class Utilizador {
         this.passw = passw;
     }
 
-    public Imagem getImg() {
+    public String getImg() {
         return img;
     }
 
-    public void setImg(Imagem img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
@@ -153,7 +161,23 @@ public class Utilizador {
     public void setRemovido(int removido) {
         this.removido = removido;
     }
+    
+    public GregorianCalendar getCreate(){
+        return this.create;
+    }
+    
+    public GregorianCalendar getUpdate(){
+        return this.update;
+    }
 
+    public void setCreate(GregorianCalendar g){
+        this.create = g;
+    }
+    
+    public void setUpdate(GregorianCalendar g){
+        this.update = g;
+    }
+    
     public static String encriptarPassword(String pw) {
         byte[] pwB = pw.getBytes();
         byte[] pwEnc = null;

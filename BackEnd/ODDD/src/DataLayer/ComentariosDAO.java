@@ -21,8 +21,9 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
     public static int NOME_UTILiZADOR = 2;
     public static int ID_RECEITA = 3;
     public static int COMENTARIO = 4;
-    public static int DATA_COMENTARIO = 5;
-    public static int APAGADO = 6;
+    public static int APAGADO = 5;
+    public static int CREATE = 6;
+    public static int UPDATE = 7;
     
     public ComentariosDAO(int idr) {
         this.idreceita = idr;
@@ -94,11 +95,13 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
                 String user = rs.getString(NOME_UTILiZADOR);
                 int idReceita = rs.getInt(ID_RECEITA);
                 String comentario = rs.getString(COMENTARIO);
-                Calendar dataComentario = GregorianCalendar.getInstance();
-                dataComentario.setTime(rs.getTimestamp(DATA_COMENTARIO));
                 int rm = rs.getInt(APAGADO);
+                Calendar create = GregorianCalendar.getInstance();
+                create.setTime(rs.getTimestamp(CREATE));
+                Calendar update = GregorianCalendar.getInstance();
+                update.setTime(rs.getTimestamp(UPDATE));
                 
-                com = new Comentario(id,user,comentario,(GregorianCalendar) dataComentario,rm);
+                com = new Comentario(id,user,idReceita,comentario,rm,(GregorianCalendar) create, (GregorianCalendar) update);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -112,7 +115,7 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Comentarios(idComentario, nomeUtilizador, idReceita, comentario, dataComentario, apagado)"
+                sql = "INSERT INTO Comentarios(idComentario, username, idReceita, comentario, apagado, created_at, update_at)"
                         + "VALUES (?,?,?,?,?,?)";
                 
             } else {
@@ -122,10 +125,12 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
             pstm.setInt(ID_COMENTARIO, value.getId());
             pstm.setString(NOME_UTILiZADOR, value.getUser());
             pstm.setInt(ID_RECEITA, this.idreceita);
-            pstm.setString(COMENTARIO, value.getComent());
-            Timestamp dataCom = new Timestamp(value.getDatacoment().getTimeInMillis());
-            pstm.setTimestamp(DATA_COMENTARIO, dataCom);            
+            pstm.setString(COMENTARIO, value.getComent());            
             pstm.setInt(APAGADO, value.getRemovido());
+            Timestamp create = new Timestamp(value.getCreate().getTimeInMillis());
+            pstm.setTimestamp(CREATE, create);
+            Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
+            pstm.setTimestamp(UPDATE, update);
             pstm.execute();
             
             com = value;

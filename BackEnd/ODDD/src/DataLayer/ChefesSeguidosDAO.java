@@ -1,18 +1,24 @@
 package DataLayer;
 
+import static DataLayer.ReceitaSeguidaDAO.USERNAME;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class ChefesSeguidosDAO implements Map<String,String> {
 
-    private String chefe;
+    private String user;
+    
+    public static int USERNAME = 1;
+    public static int CHEFESEGUIDO = 2;
     
     public ChefesSeguidosDAO(String nick) {
-        this.chefe = nick;
+        this.user = nick;
     }
 
     @Override
@@ -49,18 +55,7 @@ public class ChefesSeguidosDAO implements Map<String,String> {
 
     @Override
     public boolean containsKey(Object key) {
-        boolean res = false;
-        try {
-            String nick = (String) key;
-            String sql = "SELECT * FROM CHEFESSEGUIDOS c WHERE c.NOMEUTILIZADOR = '"+nick+"'";
-            Statement stm = ConexaoBD.getConexao().createStatement();
-            ResultSet rs = stm.executeQuery(sql);
-            res = rs.next();
-            
-            ConexaoBD.fecharCursor(rs, stm);
-        } catch (SQLException e) {
-        }
-        return res;
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -87,7 +82,21 @@ public class ChefesSeguidosDAO implements Map<String,String> {
 
     @Override
     public String put(String key, String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String chefeseg = "";
+        try {
+            String sql = null;
+            sql = "INSERT INTO CHEFESSEGUIDOS (username, chefeseguido)"
+                        + "VALUES (?,?)";
+            PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
+            pstm.setString(USERNAME, user);
+            pstm.setString(CHEFESEGUIDO,value);
+            pstm.execute();
+            
+            chefeseg = value;
+            pstm.close();
+        } catch (SQLException e) {
+        }
+        return chefeseg;
     }
 
     @Override
@@ -112,7 +121,19 @@ public class ChefesSeguidosDAO implements Map<String,String> {
 
     @Override
     public Collection<String> values() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Collection<String> res = new HashSet<>();
+        try {
+            String sql = "SELECT CHEFESEGUIDO FROM CHEFESSEGUIDOS c WHERE c.USERNAME = '"+this.user+"'";
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            
+            while(rs.next())
+                res.add(rs.getString(1));
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override

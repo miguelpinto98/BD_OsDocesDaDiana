@@ -22,15 +22,16 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public static int NOME = 2;
     public static int DESCRICAO = 3;
     public static int NR_IMAGENS = 4;
-    public static int DATA_PUBLICACAO = 5;
-    public static int CATEGORIA = 6;
-    public static int NOME_UTILIZADOR = 7;
-    public static int VALOR_AVALIACOES = 8;
-    public static int NR_AVALIACOES = 9;
-    public static int TOTAL_CALORIAS = 10;
-    public static int APAGADO = 11;
-    public static int TEMPO_PREPARACAO = 12;
-    public static int DOSE = 13;
+    public static int CATEGORIA = 5;
+    public static int NOME_UTILIZADOR = 6;
+    public static int VALOR_AVALIACOES = 7;
+    public static int NR_AVALIACOES = 8;
+    public static int TOTAL_CALORIAS = 9;
+    public static int APAGADO = 10;
+    public static int TEMPO_PREPARACAO = 11;
+    public static int DOSE = 12;
+    public static int CREATE = 13;
+    public static int UPDATE = 14;
     
     public ReceitaDAO(){
     }
@@ -105,9 +106,6 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 String nomeReceita = rs.getString(NOME);
                 String descricao = rs.getString(DESCRICAO);
                 int nrImagens = rs.getInt(NR_IMAGENS);
-                Calendar dataPub = GregorianCalendar.getInstance();
-                dataPub.setTime(rs.getTimestamp(DATA_PUBLICACAO));
-                //String categoria = rs.getString(CATEGORIA);
                 String user = rs.getString(NOME_UTILIZADOR);
                 int valorAvaliacoes = rs.getInt(VALOR_AVALIACOES); // ALTERAR CASO MUDE NA CLASSE RECEITA
                 int nrAvaliacoes = rs.getInt(NR_AVALIACOES);
@@ -115,8 +113,12 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 int rm = rs.getInt(APAGADO);
                 int tempo = rs.getInt(TEMPO_PREPARACAO);
                 int dose = rs.getInt(DOSE);
+                Calendar create = GregorianCalendar.getInstance();
+                create.setTime(rs.getTimestamp(CREATE));
+                Calendar update = GregorianCalendar.getInstance();
+                update.setTime(rs.getTimestamp(UPDATE));
                 
-                rec = new Receita(id, nomeReceita, descricao, nrImagens, (GregorianCalendar) dataPub, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose);
+                rec = new Receita(id, nomeReceita, descricao, nrImagens, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose, (GregorianCalendar) create, (GregorianCalendar) update);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -130,8 +132,8 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, dataPublicacao, categoria, nomeUtilizador, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose)"
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose, created_at, updated_at)"
+                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 
             } else {
                 sql = "";
@@ -141,8 +143,6 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             pstm.setString(NOME, value.getNome());
             pstm.setString(DESCRICAO, value.getDesc());
             pstm.setInt(NR_IMAGENS, value.getNimgs());
-            Timestamp dataPub = new Timestamp(value.getDatapub().getTimeInMillis());
-            pstm.setTimestamp(DATA_PUBLICACAO, dataPub);
             pstm.setString(CATEGORIA, this.nomeCategoria);
             pstm.setString(NOME_UTILIZADOR, value.getUser());
             pstm.setInt(VALOR_AVALIACOES, value.getVavaliacoes());
@@ -151,6 +151,10 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             pstm.setInt(APAGADO, value.getRemovido());
             pstm.setInt(TEMPO_PREPARACAO, value.getTempo());
             pstm.setInt(DOSE, value.getDose());
+            Timestamp create = new Timestamp(value.getCreate().getTimeInMillis());
+            pstm.setTimestamp(CREATE, create);
+            Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
+            pstm.setTimestamp(UPDATE, update);
             pstm.execute();
             
             rec = value;

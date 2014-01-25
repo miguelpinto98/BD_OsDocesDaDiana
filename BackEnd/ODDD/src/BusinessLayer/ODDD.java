@@ -98,10 +98,11 @@ public class ODDD {
 
     public boolean registarUser(String nickname, String nome, String password, String email, int tipo) {
         GregorianCalendar g = new GregorianCalendar();
+        GregorianCalendar u = new GregorianCalendar();
         boolean inserido = false;
 
         if (validaPassword(password)) {
-            Utilizador user = new Utilizador(tipo, nickname, nome, password, email, g);
+            Utilizador user = new Utilizador(tipo, nickname, nome, password, email, g, u);
             String pw = Utilizador.encriptarPassword(password);
             user.setPassw(pw);
             inserido = inserirUtilizador(user);

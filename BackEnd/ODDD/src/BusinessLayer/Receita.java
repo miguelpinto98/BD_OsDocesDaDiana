@@ -3,7 +3,6 @@ package BusinessLayer;
 import DataLayer.AvaliacoesUtilizadorDAO;
 import DataLayer.ComentariosDAO;
 import DataLayer.ReceitaIngredienteDAO;
-import DataLayer.ReceitaSeguidaDAO;
 import java.util.GregorianCalendar;
 import java.util.Map;
 import java.util.Objects;
@@ -15,44 +14,43 @@ public class Receita {
     private String desc;
     private int nimgs;
     private Imagem img; // private Map<Integer,Imagem> imgs; // <IDRECEITAS,IMAGENS>
-    private GregorianCalendar datapub;
     private String user; // private Utilizador u ???
     private int totalCal; // NAO DEVERIA SER DOUBLE??
     private Map<Integer, Ingrediente> ingrs;
     private int vavaliacoes; // NAO DEVERIA SER DOUBLE??
     private int navaliacoes;
     private Map<Integer, Comentario> coments;
-    private Map<Integer, String> seguidores; // idreceita -> nomeutilizador ou  private Map<Integer,Utilizador> seguidores;  ??IDRECEITA??
     private Map<Integer, Avaliacao> avaliacoes;
     private int removido;
     private int tempoPreparacao;
     private int dose;
+    private GregorianCalendar create;
+    private GregorianCalendar update;
 
     public Receita() {
         this.id = 0; //NECESSARIO CRIAR ID INCREMENTO
         this.nome = "";
         this.nimgs = 0;
         this.img = new Imagem();
-        this.datapub = new GregorianCalendar();
         this.user = ""; 
         this.totalCal = 0;
         this.ingrs = new ReceitaIngredienteDAO(this.id);
         this.vavaliacoes = 0;
         this.navaliacoes = 0;
         this.coments = new ComentariosDAO(this.id);
-        this.seguidores = new ReceitaSeguidaDAO(this.id);
         this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
         this.removido = 0;
         this.tempoPreparacao = 0;
         this.dose = 0;
+        this.create = new GregorianCalendar();
+        this.update = new GregorianCalendar();
     }
     
-    public Receita(int id, String nm, String desc, int nrI, GregorianCalendar g, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose){
+    public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u){
         this.id = id;
         this.nome = nm;
         this.desc = desc;
         this.nimgs = nrI;
-        this.datapub = g;
         this.user = user;
         this.vavaliacoes = valorA;
         this.navaliacoes = nrAvaliacoes;
@@ -60,10 +58,11 @@ public class Receita {
         this.removido = rm;
         this.ingrs = new ReceitaIngredienteDAO(this.id);
         this.coments = new ComentariosDAO(this.id);
-        this.seguidores = new ReceitaSeguidaDAO(this.id);
         this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
         this.tempoPreparacao = tempoPreparacao;
         this.dose = dose;
+        this.create = g;
+        this.update = u;
     }
     
     public Map<Integer, Avaliacao> getAvaliacoes() {
@@ -108,14 +107,6 @@ public class Receita {
 
     public void setImg(Imagem img) {
         this.img = img;
-    }
-
-    public GregorianCalendar getDatapub() {
-        return datapub;
-    }
-
-    public void setDatapub(GregorianCalendar datapub) {
-        this.datapub = datapub;
     }
 
     public String getUser() {
@@ -166,14 +157,6 @@ public class Receita {
         this.coments = coments;
     }
 
-    public Map<Integer, String> getSeguidores() {
-        return seguidores;
-    }
-
-    public void setSeguidores(Map<Integer, String> seguidores) {
-        this.seguidores = seguidores;
-    }
-
     public int getRemovido() {
         return removido;
     }
@@ -196,6 +179,22 @@ public class Receita {
     
     public void setDose(int d){
         this.dose = d;
+    }
+    
+        public GregorianCalendar getCreate(){
+        return this.create;
+    }
+    
+    public GregorianCalendar getUpdate(){
+        return this.update;
+    }
+
+    public void setCreate(GregorianCalendar g){
+        this.create = g;
+    }
+    
+    public void setUpdate(GregorianCalendar g){
+        this.update = g;
     }
 
     @Override
@@ -230,9 +229,6 @@ public class Receita {
         if (!Objects.equals(this.img, other.img)) {
             return false;
         }
-        if (!Objects.equals(this.datapub, other.datapub)) {
-            return false;
-        }
         if (!Objects.equals(this.user, other.user)) {
             return false;
         }
@@ -251,7 +247,10 @@ public class Receita {
         if (!Objects.equals(this.coments, other.coments)) {
             return false;
         }
-        if (!Objects.equals(this.seguidores, other.seguidores)) {
+        if (!Objects.equals(this.create, other.create)) {
+            return false;
+        }
+        if (!Objects.equals(this.update, other.update)) {
             return false;
         }
         return this.removido == other.removido;

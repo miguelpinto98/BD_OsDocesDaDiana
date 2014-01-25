@@ -7,16 +7,20 @@ public class Comentario {
 
     private int id;
     private String user; // ???
+    private int idReceita;
     private String coment;
-    private GregorianCalendar datacoment;
     private int removido;
-
-    public Comentario (int id, String user, String coment, GregorianCalendar g, int rm){
+    private GregorianCalendar create;
+    private GregorianCalendar update;
+    
+    public Comentario (int id, String user, int idRec, String coment, int rm, GregorianCalendar g, GregorianCalendar u){
         this.id = id;
         this.user = user;
+        this.idReceita = idRec;
         this.coment = coment;
-        this.datacoment = g;
         this.removido = rm;
+        this.create = g;
+        this.update = u;
     }
     
     public int getId() {
@@ -35,20 +39,20 @@ public class Comentario {
         this.user = user;
     }
 
+    public int getIdReceita() {
+        return idReceita;
+    }
+
+    public void setIdReceita(int id) {
+        this.idReceita = id;
+    }
+    
     public String getComent() {
         return coment;
     }
 
     public void setComent(String coment) {
         this.coment = coment;
-    }
-
-    public GregorianCalendar getDatacoment() {
-        return datacoment;
-    }
-
-    public void setDatacoment(GregorianCalendar datacoment) {
-        this.datacoment = datacoment;
     }
 
     public int getRemovido() {
@@ -59,14 +63,31 @@ public class Comentario {
         this.removido = removido;
     }
 
+    public GregorianCalendar getCreate(){
+        return this.create;
+    }
+    
+    public GregorianCalendar getUpdate(){
+        return this.update;
+    }
+
+    public void setCreate(GregorianCalendar g){
+        this.create = g;
+    }
+    
+    public void setUpdate(GregorianCalendar g){
+        this.update = g;
+    }
+
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 97 * hash + this.id;
         hash = 97 * hash + Objects.hashCode(this.user);
         hash = 97 * hash + Objects.hashCode(this.coment);
-        hash = 97 * hash + Objects.hashCode(this.datacoment);
         hash = 97 * hash + this.removido;
+        hash = 97 * hash + Objects.hashCode(this.create);
+        hash = 97 * hash + Objects.hashCode(this.update);
         return hash;
     }
 
@@ -88,7 +109,10 @@ public class Comentario {
         if (!Objects.equals(this.coment, other.coment)) {
             return false;
         }
-        if (!Objects.equals(this.datacoment, other.datacoment)) {
+        if (!Objects.equals(this.create, other.create)) {
+            return false;
+        }
+        if (!Objects.equals(this.update, other.update)) {
             return false;
         }
         return this.removido == other.removido;
