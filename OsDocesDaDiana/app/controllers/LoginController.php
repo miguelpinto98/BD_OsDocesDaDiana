@@ -13,12 +13,11 @@ class LoginController extends BaseController {
 	}
 
 	public function valida() {
-		//var_dump(Input::all()); exit();
 		$data = Input::all();
 		
 		if(strcmp($data['loginBtn'],'ENTRAR AGORA') == 0) {
        		$validator = Validator::make($data,array(
-         		'username' => 'required',
+         		'nickname' => 'required',
          		'password' => 'required|min:6'));
      	} else {
        		$validator = Validator::make($data,array(
@@ -31,16 +30,18 @@ class LoginController extends BaseController {
 
 	    if ($validator->fails()) {
 	       	$messages = array(
+	       		'nickname.required' => 'ABC',
 	         	'email.required' => 'We need to know your e-mail address!',
 	         	'password.min:6' => 'Password deve ter pelo menos 6 caracteres');
-	 
-	       		var_dump($messages);
+	 	
+	       		var_dump($data);
+	       		echo 'AQUI';
 	    } else {
 	    	if(strcmp($data['loginBtn'],'ENTRAR AGORA') == 0) {
-	         	$aux = $data['username'];
+	         	$aux = $data['nickname'];
 	         	$aux2 = md5($data['password']);
 	         
-	         	$user = User::where('username', '=', $data['username'])->firstOrFail();
+	         	$user = User::where('username', '=', $data['nickname'])->firstOrFail();
 	         	if(isset($user)) {
 	             	if($user->password == md5($data['password'])) { // If their password is still MD5
 	                 	Auth::login($user);

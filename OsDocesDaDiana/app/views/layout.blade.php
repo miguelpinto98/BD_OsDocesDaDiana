@@ -30,7 +30,11 @@
 	
 	<body>
 		<header>
-			@yield('headerbar');
+		<?php if(Auth::check()) { ;?>
+				@yield('headerbar_logged')
+		<?php } else { ;?>
+				@yield('headerbar_guest')
+		<?php	} ;?>	
 		</header>
 
 		<div id="content">

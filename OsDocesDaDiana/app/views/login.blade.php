@@ -1,6 +1,10 @@
 @extends('layout')
 
-@include('headerbar')
+<?php if(Auth::check()) { ;?> 
+	@include('headerbar_logged')
+<?php } else { ;?> 
+	@include('headerbar_guest')
+<?php } ;?>
 
 @section('content')
 		<div class="center">
@@ -40,31 +44,31 @@
 							<div class="title">Registar</div>
 							<div class="login-divider"></div>
 								<div class="login-form">
-									<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
+									<form method="post" id="loginForm" name="loginForm">
 										<!-- CAMPOS -->
 												<div class="user">
 													<span id="usernameLabel" class="loginLabel">Nome</span>
-													<input type="text" name="name" id="username" class="form-input" value="" onfocus="loginFields(1, 'username');" onblur="loginFields(0, 'username');" defaulttext="Nome" />	
+													<input type="text" name="name" id="name" class="form-input" value=""/>	
 												</div>
 
 												<div class="user">
 													<span id="nikcname1Label" class="loginLabel">Nome de Utilizador</span>
-													<input type="text" name="nikcname1" id="nikcname1" class="form-input" value="" onfocus="loginFields(1, 'nikcname1');" onblur="loginFields(0, 'nikcname1');" defaulttext="Nome de Utilizador" />	
+													<input type="text" name="username" id="username" class="form-input" value=""/>	
 												</div>
 												
 												<div class="user">
 													<span id="mailLabel" class="loginLabel">E-mail</span>
-													<input type="text" name="email" id="email" class="form-input" value="" onfocus="loginFields(1, 'email');" onblur="loginFields(0, 'email');" defaulttext="Email" />	
+													<input type="text" name="email" id="email" class="form-input" value=""/>	
 												</div></br></br></br>
 
 												<div class="pw">
 													<span id="password3Label" class="loginLabel">Password</span>
-													<input type="password" name="password3" id="password3" class="form-input" value="" onfocus="loginFields(1, 'password3');" onblur="loginFields(0, 'password3');" defaulttext="Password" />
+													<input type="password" name="password" id="password" class="form-input" value=""/>
 												</div>
 
 												<div class="pw">
 													<span id="passwordcLabel" class="loginLabel">Confirmar Password</span>
-													<input type="password" name="passwordc" id="passwordc" class="form-input" value="" onfocus="loginFields(1, 'passwordc');" onblur="loginFields(0, 'passwordc');" defaulttext="Password" />
+													<input type="password" name="password_confirmation" id="passwordc" class="form-input" value=""/>
 												</div>
 										<!-- CAMPOS -->
 

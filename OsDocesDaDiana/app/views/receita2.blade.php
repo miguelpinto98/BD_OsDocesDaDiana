@@ -1,6 +1,10 @@
 @extends('layout')
 
-@include('headerbar')
+<?php if(Auth::check()) { ;?> 
+	@include('headerbar_logged')
+<?php } else { ;?> 
+	@include('headerbar_guest')
+<?php } ;?>
 
 @section('content')
 	<div class="center">

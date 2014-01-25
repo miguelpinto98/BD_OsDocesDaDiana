@@ -1,10 +1,11 @@
-@section('headerbar')
-	
-	<div id="topBar">
+@section('headerbar_logged')
+
+<div id="topBar">
 	<div class="center">
-		<div class="topNav">
-			<a href="http://www.wareztuga.tv/account.php" class="avatar">
-			<img src="./wareztuga.tv - Filmes, Séries, Anime e Documentários HD Online Legendados_files/zoe_saldana.png" alt="98jigs">
+	<div class="topNav">
+
+	<a href="http://www.wareztuga.tv/account.php" class="avatar">
+			<img src="./assets/images/Users/avatar.png">
 
 			</a>
 			<form method="post" id="logoutForm">
@@ -12,9 +13,8 @@
 			<input type="hidden" name="logout" value="true">
 			<!--	<a href="javascript:;" onclick="$(&#39;form#logoutForm&#39;).submit(); return false;" title="Sair"></a>-->
 			</form>
-			
-			<div class="opts">
-				<div class="to-right">
+		<div class="opts">
+			<div class="to-right">
 
 					<?php echo link_to('perfil','A minha Conta', array('class'=>'myAccount')); ?>
 					<!--<span class="pipe"></span>
@@ -23,17 +23,14 @@
 					<a href="http://www.wareztuga.tv/account.php?action=cliped" class="agends"><span class="icon"></span><span>0</span> Agendados</a>-->
 					<span class="pipe"></span>
 					
-					<?php echo link_to('/','Sair', array('class'=>'myAccount')); 
-						Auth::logout();
-					?>
+					<?php echo link_to('logout','Sair', array('class'=>'myAccount')); ?>
 					<!--<a href="http://www.wareztuga.tv/account.php" class="username">98jigs</a>-->
 				</div>
-			</div>
 		</div>
 	</div>
-	</div>
+</div>
+</div>
 
-			
 	<!-- BARRA PRETA -->						
 	<nav>
 		<div class="center">
@@ -64,5 +61,6 @@
 
 	<!-- BARRA PRETA -->
 	<div class="clear"></div>
+
 
 @stop
