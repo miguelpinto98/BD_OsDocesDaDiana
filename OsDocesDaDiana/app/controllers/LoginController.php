@@ -14,8 +14,6 @@ class LoginController extends BaseController {
 
 	public function valida() {
 		//var_dump(Input::all()); exit();
-		var_dump(strtotime(getdate())); exit();
-
 		$data = Input::all();
 		
 		if(strcmp($data['loginBtn'],'ENTRAR AGORA') == 0) {
@@ -25,8 +23,8 @@ class LoginController extends BaseController {
 		} else {
 			$validator = Validator::make($data,array(
 				'name' => 'required',
-				'username' => 'required',
-				'email' => 'required|email', //unique:users
+				'username' => 'required|unique:UTILIZADORES',
+				'email' => 'required|email|unique:UTILIZADORES', //unique:users
 				'password' => 'required|min:6|confirmed'
 				//'password_confirmation' => 'required|min:6|confirmed'
 				));
@@ -44,19 +42,28 @@ class LoginController extends BaseController {
 				$aux = $data['username'];
 				$aux2 = md5($data['password']);
 				
-				echo '<pre>';
-				var_dump($aux);
-				var_dump($aux2);
+				$user = User::where('username', '=', $data['username'])->firstOrFail();
+				if(isset($user)) {
+				    if($user->password == md5($data['password'])) { // If their password is still MD5
+				        Auth::login($user);
+				        echo 'aaaaa';
+    				}
+    				else
+    					return 'falhou pass';
+				}
+				else
+					return 'erro1';
 			} else {
 				$pass = md5($data['password']);
 				$user = new User;
-				$user->id = $data['username'];
-				$user->nome = $data['name'];
-				$user->data = getTimestamp();
-				$user->email = $data['email'];
-				$user->password = $pass;
-				$user->tipo = 0;
-				$user->save();
+					$user->username = $data['username'];
+					$user->nome = $data['name'];
+					$user->email = $data['email'];
+					$user->password = $pass;
+					$user->tipo = 0;
+					$user->save();
+
+					return Redirect::to('/login')->with('message', 'Thanks for registering!');
 			}
 		}
 
