@@ -464,46 +464,46 @@ function loginFields(mode, label){
 }
 
 function validateLogin(){
-	$('#loginForm #username').removeClass('error-input');
-	$('#loginForm #usernameLabel').css('color', '#727272');
-	$('#loginForm #password').removeClass('error-input');
-	$('#loginForm #passwordLabel').css('color', '#727272');
+	$('#loginForm #nickname').removeClass('error-input');
+	$('#loginForm #nicknameLabel').css('color', '#727272');
+	$('#loginForm #password1').removeClass('error-input');
+	$('#loginForm #password1Label').css('color', '#727272');
 	var error = 0;
 	
-	if($('#loginForm #username').val() == '' || $('#loginForm #username').val() == $('#loginForm #username').attr('defaulttext')){
-		$('#loginForm #usernameLabel').css('color', 'red');
-		$('#loginForm #username').addClass('error-input');
+	if($('#loginForm #nickname').val() == '' || $('#loginForm #nickname').val() == $('#loginForm #nickname').attr('defaulttext')){
+		$('#loginForm #nicknameLabel').css('color', 'red');
+		$('#loginForm #nickname').addClass('error-input');
 		error = 1;
 	}
-	if($('#loginForm #password').val() == '' || $('#loginForm #password').val() == $('#loginForm #password').attr('defaulttext')){
-		$('#loginForm #passwordLabel').css('color', 'red');
-		$('#loginForm #password').addClass('error-input');
+	if($('#loginForm #password1').val() == '' || $('#loginForm #password1').val() == $('#loginForm #password1').attr('defaulttext')){
+		$('#loginForm #password1Label').css('color', 'red');
+		$('#loginForm #password1').addClass('error-input');
 		error = 1;
 	}
 	
 	if(error == 0){
 		$.ajax({
 			type: "GET",
-			url: 'login.ajax.php?username='+$('#loginForm #username').val()+'&password='+$('#loginForm #password').val(),
+			url: 'login.ajax.php?nickname='+$('#loginForm #nickname').val()+'&password='+$('#loginForm #password1').val(),
 			success: function(msg){
 				switch(msg){
 					case '0':
-						window.location = 'index-2.html';
+						window.location = 'hello.blade.php';
 						break;
 					
 					case '1':
 						//$('#loginForm #usernameLabel').css('color', 'red');
-						$('#loginForm #username').addClass('error-input');
+						$('#loginForm #nickname').addClass('error-input');
 						break;
 					
 					case '2':
 						//$('#loginForm #passwordLabel').css('color', 'red');
-						$('#loginForm #password').addClass('error-input');
+						$('#loginForm #password1').addClass('error-input');
 						break;
 					
 					case '3':
 						//$('#loginForm #usernameLabel').css('color', 'red');
-						$('#loginForm #username').addClass('error-input');
+						$('#loginForm #nickname').addClass('error-input');
 						break;
 				}
 			}
@@ -512,82 +512,96 @@ function validateLogin(){
 }
 
 function validateRegister(){
-	$('#registerForm #regUsername').removeClass('error-input');
-	$('#registerForm #regUsernameL').css('color', '#727272');
-	$('#registerForm #regEmail').removeClass('error-input');
-	$('#registerForm #regEmailL').css('color', '#727272');
-	$('#registerForm #regPassword').removeClass('error-input');
-	$('#registerForm #regPasswordL').css('color', '#727272');
-	$('#registerForm #regConfPassword').removeClass('error-input');
-	$('#registerForm #regConfPasswordL').css('color', '#727272');
+	$('#loginForm #name').removeClass('error-input');
+	$('#loginForm #nameL').css('color', '#727272');
+	$('#loginForm #username').removeClass('error-input');
+	$('#loginForm #usernameL').css('color', '#727272');
+	$('#loginForm #email').removeClass('error-input');
+	$('#loginForm #emailL').css('color', '#727272');
+	$('#loginForm #password').removeClass('error-input');
+	$('#loginForm #passwordL').css('color', '#727272');
+	$('#loginForm #password confirmation').removeClass('error-input');
+	$('#loginForm #password confirmationL').css('color', '#727272');
 	var error = 0;
 	
-	if($('#registerForm #regUsername').val() == $('#registerForm #regUsername').attr('defaulttext')){
-		$('#registerForm #regUsernameL').css('color', 'red');
-		$('#registerForm #regUsername').addClass('error-input');
+	if($('#loginForm #name').val() == $('#loginForm #name').attr('defaulttext')){
+		$('#loginForm #nameL').css('color', 'red');
+		$('#loginForm #name').addClass('error-input');
 		error = 1;
 	}
-	if($('#registerForm #regEmail').val() == $('#registerForm #regEmail').attr('defaulttext')){
-		$('#registerForm #regEmailL').css('color', 'red');
-		$('#registerForm #regEmail').addClass('error-input');
+
+	if($('#loginForm #username').val() == $('#loginForm #username').attr('defaulttext')){
+		$('#loginForm #usernameL').css('color', 'red');
+		$('#loginForm #username').addClass('error-input');
 		error = 1;
 	}
-	if($('#registerForm #regPassword').val() == $('#registerForm #regPassword').attr('defaulttext')){
-		$('#registerForm #regPasswordL').css('color', 'red');
-		$('#registerForm #regPassword').addClass('error-input');
+
+	if($('#loginForm #email').val() == $('#loginForm #email').attr('defaulttext')){
+		$('#loginForm #emailL').css('color', 'red');
+		$('#loginForm #email').addClass('error-input');
 		error = 1;
 	}
-	if($('#registerForm #regConfPassword').val() == $('#registerForm #regConfPassword').attr('defaulttext')){
-		$('#registerForm #regConfPasswordL').css('color', 'red');
-		$('#registerForm #regConfPassword').addClass('error-input');
+	if($('#loginForm #password').val() == $('#loginForm #password').attr('defaulttext')){
+		$('#loginForm #passwordL').css('color', 'red');
+		$('#loginForm #password').addClass('error-input');
+		error = 1;
+	}
+	if($('#loginForm #password confirmation').val() == $('#loginForm #password confirmation').attr('defaulttext')){
+		$('#loginForm #password confirmationL').css('color', 'red');
+		$('#loginForm #password confirmation').addClass('error-input');
 		error = 1;
 	}
 	
 	if(error == 0){
 		$.ajax({
 			type: "GET",
-			url: 'register.ajax.php?username='+$('#registerForm #regUsername').val()+'&email='+$('#registerForm #regEmail').val()+'&password='+$('#registerForm #regPassword').val()+'&rePassword='+$('#registerForm #regConfPassword').val(),
+			url: 'register.ajax.php?username='+$('#loginForm #username').val()+'&name='+$('#loginForm #name').val()+'&email='+$('#loginForm #email').val()+'&password='+$('#loginForm #password').val()+'&password confirmation='+$('#loginForm #password confirmation').val(),
 			success: function(msg){
 				
 				
 				
 				switch(msg){
 					case '0':
-						window.location = 'wishlist.php';
+						window.location = 'hello.blade.php';
 						break;
 					
 					case '1':
-						$('#registerForm #regUsernameL').css('color', 'red');
-						$('#registerForm #regUsername').addClass('error-input');
+						$('#loginForm #usernameL').css('color', 'red');
+						$('#loginForm #username').addClass('error-input');
 						break;
 					
 					case '2':
-						$('#registerForm #regEmailL').css('color', 'red');
-						$('#registerForm #regEmail').addClass('error-input');
+						$('#loginForm #nameL').css('color', 'red');
+						$('#loginForm #name').addClass('error-input');
 						break;
-					
+
 					case '3':
-						$('#registerForm #regPasswordL').css('color', 'red');
-						$('#registerForm #regPassword').addClass('error-input');
+						$('#loginForm #emailL').css('color', 'red');
+						$('#loginForm #email').addClass('error-input');
 						break;
 					
 					case '4':
-						$('#registerForm #regConfPasswordL').css('color', 'red');
-						$('#registerForm #regConfPassword').addClass('error-input');
+						$('#loginForm #passwordL').css('color', 'red');
+						$('#loginForm #password').addClass('error-input');
 						break;
 					
 					case '5':
-						$('#registerForm #regUsernameL').css('color', 'red');
-						$('#registerForm #regUsername').addClass('error-input');
-						usernameLabel = $('#registerForm #regUsernameL').html().split(' já existente');
-						$('#registerForm #regUsernameL').html(usernameLabel[0] + ' já existente');
+						$('#loginForm #password confirmationL').css('color', 'red');
+						$('#loginForm #password confirmation').addClass('error-input');
+						break;
+					
+					case '5':
+						$('#loginForm #usernameL').css('color', 'red');
+						$('#loginForm #username').addClass('error-input');
+						usernameLabel = $('#loginForm #usernameL').html().split(' já existente');
+						$('#loginForm #usernameL').html(usernameLabel[0] + ' já existente');
 						break;
 					
 					case '6':
-						$('#registerForm #regEmailL').css('color', 'red');
-						$('#registerForm #regEmail').addClass('error-input');
-						emailLabel = $('#registerForm #regEmailL').html().split(' já existente');
-						$('#registerForm #regEmailL').html(emailLabel[0] + ' já existente');
+						$('#loginForm #emailL').css('color', 'red');
+						$('#loginForm #email').addClass('error-input');
+						emailLabel = $('#loginForm #emailL').html().split(' já existente');
+						$('#loginForm #emailL').html(emailLabel[0] + ' já existente');
 						break;
 				}
 			}
