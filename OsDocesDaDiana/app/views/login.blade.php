@@ -19,8 +19,8 @@
 										<span id="passwordLabel" class="loginLabel">Password</span>
 										<input type="password" name="password" id="password" class="form-input" value="" />
 									</div>
-									<input type="submit" name="loginBtn" id="loginBtn" class="form-btn" value="ENTRAR AGORA" />
-									<!-- <span>Esqueceu-se dos dados de acesso? <a href="javascript:;" onclick="openPasswordRecovery();">Clique aqui</a>.</span> -->
+									<input type="submit" name="loginBtn" id="loginBtn" class="form-btn" value="Entrar Agora" />
+									<span>Esqueceu-se dos dados de acesso? <a href="javascript:;" onclick="openPasswordRecovery();">Clique aqui</a>.</span>
 								</form>
 							</div>
 						</div>
@@ -35,11 +35,11 @@
 							<div class="title">Registar</div>
 							<div class="login-divider"></div>
 								<div class="login-form">
-									<form method="post" id="loginForm" name="loginForm">
+									<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
 										<!-- CAMPOS -->
 												<div class="user">
 													<span id="usernameLabel" class="loginLabel">Nome</span>
-													<input type="text" name="name" id="username" class="form-input" value="" />	
+													<input type="text" name="name" id="username" class="form-input" value="" onfocus="loginFields(1, 'username');" onblur="loginFields(0, 'username');" defaulttext="Nome" />	
 												</div>
 
 												<div class="user">
@@ -59,7 +59,7 @@
 
 												<div class="pw">
 													<span id="passwordLabel" class="loginLabel">Confirmar Password</span>
-													<input type="password" name="password_confirmation" id="password" class="form-input" value="" onfocus="loginFields(1, 'password');" onblur="loginFields(0, 'password');" defaulttext="Password" />
+													<input type="password" name="password" id="password" class="form-input" value="" onfocus="loginFields(1, 'password');" onblur="loginFields(0, 'password');" defaulttext="Password" />
 												</div>
 										<!-- CAMPOS -->
 

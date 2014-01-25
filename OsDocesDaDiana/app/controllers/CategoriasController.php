@@ -9,7 +9,7 @@ class CategoriasController extends BaseController {
 	 */
 	public function index()
 	{
-		return View::make('categorias/categorias1');
+		return View::make('categorias');
 	}
 
 	

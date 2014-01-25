@@ -1,6 +1,6 @@
 <?php
 
-class SobreNosController extends BaseController {
+class Receita1Controller extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,7 @@ class SobreNosController extends BaseController {
 	 */
 	public function index()
 	{
-		return View::make('sobrenos');
+	return View::make('receita1');
 	}
 
 	

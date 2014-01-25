@@ -22,19 +22,18 @@
 							<?php echo link_to('categorias','Categorias', array('class'=>'movies')); ?>							
 						</li>
 						<li class="">
-							<?php echo link_to('chefs','Chefs', array('class'=>'mm')); ?>
+							<?php echo link_to('listachefs','Chefs', array('class'=>'mm')); ?>
 						
 						</li>
 						<li class="last">
-							<?php echo link_to('sobre','Sobre Nós', array('class'=>'news')); ?>
+							<?php echo link_to('sobrenos','Sobre Nós', array('class'=>'news')); ?>
 						</li>
 					</ul>
 
 				<div class="box-search">
 					<form action="javascript: search('movies', 0);" method="post" id="movies-searchForm" onsubmit="if(($('#movies-searchForm input#searchBox').attr('defaultText') == $('#movies-searchForm input#searchBox').val()) || ($('#movies-searchForm input#searchBox').val() == '')) return false;">
-					<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Procure aqui um filme');" onblur="vblur(this, 'Procure aqui um filme');" defaulttext="Procure aqui um filme" />
-					<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span>
-					</a>
+						<input type="text" name="searchBox" id="searchBox" value="Pesquise por uma receita" onfocus="vfocus(this, 'Pesquise por uma receita');" onblur="vblur(this, 'Pesquise por uma receita');" defaulttext="Procure aqui um filme" />
+						<a href="javascript:;" class="search-btn" onclick="$('#movies-searchForm').submit();"><span></span></a>
 					</form>
 				</div>
 			</div>

@@ -6,7 +6,7 @@
 			<div class="center">
 
 				<!--
-			SLIDE
+			
 					<div id="wowslider-container1">
 						<div class="ws_images">
 							<ul>
@@ -36,7 +36,7 @@
 							</div>
 							<script type="text/javascript" src="assets/slide/wowslider.js"></script>
 							<script type="text/javascript" src="assets/slide//script.js"></script>
-			SLIDE 
+			
 		
 
 				<div class="main-separator"></div>-->
@@ -85,6 +85,99 @@
 							<div id="movies-list" class="movies-list">
 								<div class="list-aux">
 
+
+						<!--	
+								$num = sql_row_count(SELECT * from table);
+								$c=1;									
+									while($c<=$num){
+										if($c<=$num && $c==1){
+											echo {
+												<div id="5" class="item first under3" title="Peixe com Atum">
+													<a href="moviefb5f.html?m=The_Worlds_End">
+														<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+														<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+														<div class="thumb-effect" title="The World's End"></div>
+														<div class="img-effect"></div>
+													</a>
+													<div class="title-bg">
+													<div class="title"><a href="#">Ver Receita</a></div>
+													</div>
+												</div>
+											}
+											$c++; break;
+										}
+
+										if($c<=$num && $c==2){
+											echo {
+													<div id="5" class="item under3" title="Peixe com Atum">
+														<a href="moviefb5f.html?m=The_Worlds_End">
+															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+															<div class="thumb-effect" title="The World's End"></div>
+															<div class="img-effect"></div>
+														</a>
+														<div class="title-bg">
+														<div class="title"><a href="#">Ver Receita</a></div>
+														</div>
+													</div>
+												}
+												$c++; break;
+										}
+
+										if($c<=$num && $c==3){
+											echo {
+													<div id="5" class="item under3" title="Peixe com Atum">
+														<a href="moviefb5f.html?m=The_Worlds_End">
+															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+															<div class="thumb-effect" title="The World's End"></div>
+															<div class="img-effect"></div>
+														</a>
+														<div class="title-bg">
+														<div class="title"><a href="#">Ver Receita</a></div>
+														</div>
+													</div>
+												}
+												$c++; break;
+										}
+
+										if($c<=$num && ($c==4 || $c==7 || $c==10 || $c==13)){
+											echo {
+													<div id="5" class="item first" title="Peixe com Atum">
+														<a href="moviefb5f.html?m=The_Worlds_End">
+															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+															<div class="thumb-effect" title="The World's End"></div>
+															<div class="img-effect"></div>
+														</a>
+														<div class="title-bg">
+														<div class="title"><a href="#">Ver Receita</a></div>
+														</div>
+													</div>
+												}
+												$c++; break;
+										}
+
+										if($c<=$num && ($c==5 || $c==6 || $c==8 || $c==9 || $c==11 || $c==12)){
+											echo {
+													<div id="5" class="item" title="Peixe com Atum">
+														<a href="moviefb5f.html?m=The_Worlds_End">
+															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
+															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
+															<div class="thumb-effect" title="The World's End"></div>
+															<div class="img-effect"></div>
+														</a>
+														<div class="title-bg">
+														<div class="title"><a href="#">Ver Receita</a></div>
+														</div>
+													</div>
+												}
+												$c++; break;
+										}
+									}		
+							 -->
+
+							
 
 							<!-- primeira linha -->
 								<div id="5" class="item first under3" title="Peixe com Atum">
@@ -165,18 +258,90 @@
 								</div>
 							<!-- segunda linha -->
 
-							
+							<!-- segunda linha -->
+								<div id="5" class="item first">
+									<a href="moviea189.html?m=Planes">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5062.png" alt="AviÃµes" title="AviÃµes" /><noscript>
+										<img src="images/movies_thumbs/thumb5062.png" alt="AviÃµes" title="AviÃµes" /></noscript>
+											<div class="thumb-effect" title="AviÃµes"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+
+
+
+								<div id="5" class="item">
+									<a href="moviebac2.html?m=2_Guns">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+										<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+											<div class="thumb-effect" title="Dois Tiros"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+
+								<div id="5" class="item">
+									<a href="moviebac2.html?m=2_Guns">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+										<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+											<div class="thumb-effect" title="Dois Tiros"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+							<!-- segunda linha -->
+
+							<!-- segunda linha -->
+								<div id="5" class="item first">
+									<a href="moviea189.html?m=Planes">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5062.png" alt="AviÃµes" title="AviÃµes" /><noscript>
+										<img src="images/movies_thumbs/thumb5062.png" alt="AviÃµes" title="AviÃµes" /></noscript>
+											<div class="thumb-effect" title="AviÃµes"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+
+
+
+								<div id="5" class="item">
+									<a href="moviebac2.html?m=2_Guns">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+										<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+											<div class="thumb-effect" title="Dois Tiros"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+
+								<div id="5" class="item">
+									<a href="moviebac2.html?m=2_Guns">
+										<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /><noscript>
+										<img src="images/movies_thumbs/thumb5061.png" alt="Dois Tiros" title="Dois Tiros" /></noscript>
+											<div class="thumb-effect" title="Dois Tiros"></div><div class="img-effect"></div>
+									</a>
+									<div class="title-bg">
+											<div class="title"><a href="#">Receita1</a></div>
+											</div>
+								</div>
+							<!-- segunda linha -->
 
 
 							</div></div>
 
 								<!-- scrollbar lateral -->
 									<div class="list-scrollbar" id="movies-list-scrollbar">
-									<div class="scrollbar-up"></div>
+										<div class="scrollbar-up"></div>
 										<div class="scrollbar-down"></div>
-											<div class="scrollbar-bg">
-												<div class="scrollbar-btn"></div>
-											</div>
+										<div class="scrollbar-bg">
+										<div class="scrollbar-btn"></div>
+										</div>
 									</div>
 								<!-- scrollbar lateral -->
 
@@ -225,7 +390,7 @@
 								</div>
 									<div class="user-date">
 										<div class="user"><span>Utilizador2</span>
-													</div>
+										</div>
 											<div class="date"><span>há x minutos</span></div>
 									</div>
 							</div>

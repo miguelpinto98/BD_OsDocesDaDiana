@@ -9,7 +9,7 @@ class ChefsListaController extends BaseController {
 	 */
 	public function index()
 	{
-		return View::make('chefs/listachefs');
+		return View::make('listachefs');
 	}
 
 	
