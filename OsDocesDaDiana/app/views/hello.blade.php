@@ -409,9 +409,5 @@
 				
 					</div>
 
-					@include('footer')
-
-
-	
-
+	@include('footer')
 @stop

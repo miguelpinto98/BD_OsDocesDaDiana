@@ -19,8 +19,8 @@
 										<span id="passwordLabel" class="loginLabel">Password</span>
 										<input type="password" name="password" id="password" class="form-input" value="" />
 									</div>
-									<input type="submit" name="loginBtn" id="loginBtn" class="form-btn" value="Entrar Agora" />
-									<span>Esqueceu-se dos dados de acesso? <a href="javascript:;" onclick="openPasswordRecovery();">Clique aqui</a>.</span>
+									<input type="submit" name="loginBtn" id="loginBtn" class="form-btn" value="ENTRAR AGORA" />
+									<!--<span>Esqueceu-se dos dados de acesso? <a href="javascript:;" onclick="openPasswordRecovery();">Clique aqui</a>.</span>-->
 								</form>
 							</div>
 						</div>
