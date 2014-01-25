@@ -25,7 +25,7 @@
 
 						<div class="pw">
 							<span id="password1Label" class="loginLabel">Password</span>
-							<input type="password1" name="password1" id="password1" class="form-input" value="" onfocus="loginFields(1, 'password1');" onblur="loginFields(0, 'password1');" defaulttext="Password" />	
+							<input type="password" name="password1" id="password1" class="form-input" value="" onfocus="loginFields(1, 'password1');" onblur="loginFields(0, 'password1');" defaulttext="Password" />	
 						</div>
 
 						<input type="submit" name="loginBtn" id="loginBtn" class="form-btn" value="ENTRAR AGORA" />
