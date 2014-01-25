@@ -5458,7 +5458,6 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	/*width: 418px;*/
 	width: 753px;
 	overflow: hidden;
-	background: transparent url('../images/comments-btn.png') 0px 4px no-repeat;
 	text-indent: 27px;
 	font-family: 'Helvetica65Med', Tahoma;
 	font-size: 14px;
@@ -5472,13 +5471,21 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	/*width: 414px;*/
 	width: 750px;
 	height: 120px;
-	border: none;
 	resize: none;
 	background: transparent;
 	font-family: Tahoma;
 	font-size: 12px;
 	color: #8e8e94;
 	line-height: 17px;
+	border: 1px solid #d4d4d4;
+	border-bottom: 1px solid #a7a7a7;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 10px -1px #D9D9D9;
+	-webkit-box-shadow: 0 1px 10px -1px #D9D9D9;
+	box-shadow: 0 1px 10px -1px #D9D9D9;
+	overflow: auto;
 }
 
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.separator{
