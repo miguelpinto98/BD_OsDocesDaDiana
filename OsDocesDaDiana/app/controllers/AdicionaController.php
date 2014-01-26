@@ -20,7 +20,7 @@ class AdicionaController extends BaseController {
         foreach($_FILES['file'] as $key => $abc) {
             $temp = explode(".", $_FILES["file"]["name"]);
             $extension = end($temp);
-            $destinationPath = 'assets/images/uploads/'."cena".'.'.$extension;
+            $destinationPath = 'assets/images/uploads/'.str_random(8).'.'.$extension;
             var_dump($_FILES); exit();
             if(in_array($extension, $allowedExts) && ($_FILES["file"]["size"] < 20000000)) {
                 if($_FILES["file"]["error"] > 0) {
