@@ -68,10 +68,9 @@
 
 										<div class="main-separator1"></div>
 										
-										<form action="upload_file.php" method="post"
-										enctype="multipart/form-data">
+										<form action="adicionareceita" method="post" enctype="multipart/form-data">
 										<label for="file">Imagens:</label>
-										<input type="file" multiple name="file" id="file"><br>
+										<input type="file" name="file" multiple="multiple"><br>
 										<input type="submit" name="submit" value="Carregar">
 										</form>
 
