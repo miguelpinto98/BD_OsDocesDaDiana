@@ -22,4 +22,6 @@ Route::get('/sobrenos', 'SobreNosController@index');
 Route::get('/categoria', 'CategoriaController@index');
 Route::get('/perfil', 'PerfilController@index');
 Route::get('/receita1', 'Receita1Controller@index');
+
 Route::get('/receita2', 'Receita2Controller@index');
+Route::get('/adicionareceita', 'AdicionaController@index');
