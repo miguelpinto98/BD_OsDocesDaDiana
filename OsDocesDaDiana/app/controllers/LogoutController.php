@@ -7,10 +7,9 @@ class LogoutController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
+	public function index() {
 		Auth::logout();
-		return View::make('hello');
+		return Redirect::to('/');
 	}
 
 	/**
