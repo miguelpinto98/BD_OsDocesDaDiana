@@ -6,16 +6,16 @@ import java.util.Objects;
 
 public class Categoria {
     private String nomeCategoria;
-    private Map<Integer,Receita> categorias;
+    private Map<Integer,Receita> receitas;
 
     public Categoria() {
         this.nomeCategoria = new String();
-        this.categorias = new ReceitaDAO(this.nomeCategoria);
+        this.receitas = new ReceitaDAO(this.nomeCategoria);
     }
     
     public Categoria(String nome) {
         this.nomeCategoria = nome;
-        this.categorias = new ReceitaDAO(this.nomeCategoria);
+        this.receitas = new ReceitaDAO(this.nomeCategoria);
     }
 
     public String getNomeCategoria(){
@@ -27,17 +27,17 @@ public class Categoria {
     }
     
     public Map<Integer, Receita> getCategorias() {
-        return categorias;
+        return receitas;
     }
 
     public void setCategorias(Map<Integer, Receita> categorias) {
-        this.categorias = categorias;
+        this.receitas = categorias;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.categorias);
+        hash = 37 * hash + Objects.hashCode(this.receitas);
         return hash;
     }
 
@@ -50,6 +50,16 @@ public class Categoria {
             return false;
         }
         final Categoria other = (Categoria) obj;
-        return Objects.equals(this.categorias, other.categorias);
+        return Objects.equals(this.receitas, other.receitas);
     }
+    
+    public boolean inserirReceita(Receita rec) {
+        boolean ins = false;
+        if(!this.receitas.containsKey(rec.getId())) {
+            this.receitas.put(rec.getId(),rec);
+            ins = true;
+        }
+        return ins;
+    }
+    
 }

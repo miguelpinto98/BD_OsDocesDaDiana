@@ -1,5 +1,5 @@
 package BusinessLayer;
-
+/**ELIMINAR*/
 public class Ingrediente {
     private int id;
     private String nome;

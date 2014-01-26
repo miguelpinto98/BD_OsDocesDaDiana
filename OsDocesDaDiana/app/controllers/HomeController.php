@@ -15,8 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function index()
-	{
-		return View::make('hello');
+	public function index() {
+		$receitas = Receitas::all();
+		$coments = Comentarios::all();
+		$data = array('coments' => $coments, 'receitas' =>$receitas);
+
+		return View::make('hello',$data);
 	}
 }

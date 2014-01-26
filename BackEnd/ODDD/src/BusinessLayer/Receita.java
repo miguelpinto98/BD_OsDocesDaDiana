@@ -266,4 +266,15 @@ public class Receita {
         }
         return this.removido == other.removido;
     }
+    
+    public boolean inserirComentario(Comentario com) {
+        boolean ins = false;
+        if(!this.coments.containsKey(com.getId())) {
+            this.coments.put(com.getId(),com);
+            ins = true;
+        }
+        return ins;
+    }
+   
+    //avaliacao
 }

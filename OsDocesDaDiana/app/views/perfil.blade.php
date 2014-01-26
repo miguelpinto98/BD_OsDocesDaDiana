@@ -60,7 +60,7 @@
 					<div id="login" class="login">
 						<div class="login-form">
 							<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
-							<input type="button" name="loginBtn" id="loginBtn" class="form-btn" value="Adicionar Nova Receita" onclick="location.href='adicionarReceita.html';"/>
+								<?php echo link_to('adicionareceita', 'Adicionar Nova Receita', array('type'=>'button','name'=>'loginBtn','id'=>'loginBtn', 'class'=>'form-btn')); ?>
 							</form>
 						</div>
 					</div>
