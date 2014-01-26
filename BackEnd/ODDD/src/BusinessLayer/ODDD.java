@@ -118,6 +118,15 @@ public class ODDD {
         }
         return ins;
     }
+    
+    public boolean inserirCategoria(Categoria cat) {
+        boolean ins = false;
+        if(!this.categorias.containsKey(cat.getNomeCategoria())) {
+            this.categorias.put(cat.getNomeCategoria(),cat);
+            ins = true;
+        }
+        return ins;
+    }
 
     public void actualizarUtilizador(Utilizador user) {
         this.users.put(user.getNick(), user);
