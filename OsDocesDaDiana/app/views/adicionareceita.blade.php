@@ -22,48 +22,56 @@
 
 						
 						<div class="comments-header">
-							<div class="comment-reply-wraper" style="height:750px";>
-								<div class="comment-reply" style="height:700px";>
+							<div class="comment-reply-wraper" style="height:850px";>
+								<div class="comment-reply" style="height:800px";>
 									
-								<div class="post-comment-wrapper" style="height:660px";>
-									<div class="post-comment" style="height:630px";>
+								<div class="post-comment-wrapper" style="height:800px";>
+									<div class="post-comment" style="height:770px";>
 
 															
 										<div class="post-comment-box"style="height:30px">
-											<span id="comment-box-label" class="comment-box-label">Nome</span>
-											<textarea id="commentBox" style="height:20px" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Categoria</span>
+											<textarea id="categoria" style="margin-left:160px; height:20px; width:120px" name="categoria" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+										</div>
+										<div class="main-separator1"></div>	
+
+
+										<div class="post-comment-box"style="height:30px">
+											<span>Nome</span>
+											<textarea id="nome" style="margin-left:185px; height:20px; width:120px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span id="comment-box-label" class="comment-box-label">Tempo de Preparação</span>
-											<textarea id="commentBox" style="height:20px" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Tempo de Preparação</span>
+											<textarea id="tempo" style="margin-left:80px; height:20px; width:120px" name="tempo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span id="comment-box-label" class="comment-box-label">Dose (número de pessoas)</span>
-											<textarea id="commentBox" style="height:20px" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Dose (número de pessoas)</span>
+											<textarea id="DOSE" style="margin-left:50px; height:20px; width:120px" name="dose" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span id="comment-box-label" class="comment-box-label">Custo por dose</span>
-											<textarea id="commentBox" style="height:20px" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Custo (em €/por dose)</span>
+											<textarea id="custo" style="margin-left:80px; height:20px; width:120px" name="custo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 
 
 										<div class="post-comment-box">
-											<span id="comment-box-label" class="comment-box-label">Ingredientes</span>
-											<textarea id="commentBox" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Ingredientes&nbsp;&nbsp;</span>
+											<textarea id="ing" style="margin-left:10px; width:500px" name="ing" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
+
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box">
-											<span id="comment-box-label" class="comment-box-label">Preparação</span>
-											<textarea id="commentBox" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Preparação&nbsp;&nbsp; </span>
+											<textarea id="prep" style="margin-left:15px; width:500px" name="prep" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 
 										<div class="main-separator1"></div>
