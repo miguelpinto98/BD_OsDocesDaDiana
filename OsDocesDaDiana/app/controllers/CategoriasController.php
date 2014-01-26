@@ -12,5 +12,11 @@ class CategoriasController extends BaseController {
 		return View::make('categorias');
 	}
 
-	
+	public function getCategoria($id) {
+
+	}
+
+	public function show() {
+		return Input::all();
+	}
 }

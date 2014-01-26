@@ -16,11 +16,12 @@
 					<div id="new55" class="item first">
 						<!--Primeiro Quadrado-->
 							<div class="new-imagecategorias">
-								<a href=" {{}}">
+								<a href="#">
 									<img src="assets/images/categorias/docesdecolher.png" width="217px" height="217px"/>
 								</a>
 								<div class="title-bg">
-									<div class="title"><a href="categoria.html">Doces de Colher</a></div>
+									
+									<div class="title" id="Doces de Colher"><?php echo link_to('categorias/show/docesdecolher','Doces de Colher');?></div>
 								</div>
 							</div>
 						<!--Primeiro Quadrado-->

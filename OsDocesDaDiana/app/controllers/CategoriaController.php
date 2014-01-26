@@ -9,8 +9,7 @@ class CategoriaController extends BaseController {
 	 */
 	public function index()
 	{
+		var_dump(Input::all()); exit();
 		return View::make('categoria');
 	}
-
-	
 }
