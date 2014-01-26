@@ -21,7 +21,7 @@ class AdicionaController extends BaseController {
             $temp = explode(".", $_FILES["file"]["name"]);
             $extension = end($temp);
             $destinationPath = 'uploads/'.str_random(8).'.'.$extension;
-            var_dump($_FILES); exit();
+            
             if(in_array($extension, $allowedExts) && ($_FILES["file"]["size"] < 20000000)) {
                 if($_FILES["file"]["error"] > 0) {
                     echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
