@@ -15,11 +15,6 @@
 		<script type="text/javascript" src="assets/slide/jquery.js"></script>
 		<script type="text/javascript" src="assets/scripts/flexcroll.js"></script>
 		<script src="assets/scripts/bootstrap.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				$(".dropdown-toggle").dropdown();
-			});  
-		</script>
 		
 		<script language='javascript' type='text/javascript'>
 			if (top != self) {

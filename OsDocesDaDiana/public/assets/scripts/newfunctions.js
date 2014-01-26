@@ -1,46 +1,3 @@
-$(document).ready(function() {
-	
-	var fullUrl = location.href.split("index.html");
-	var url = fullUrl[3].split("?");
-	if((url[0] == '') || (url[0] == 'index-2.html')){
-
-		//Media Scroller
-		mediaScroller('');
-		
-		//Format Comments
-		formatComments();
-	
-	}else if((url[0] == 'movies.html') || (url[0] == 'series.html') || (url[0] == 'animes.html') || (url[0] == 'index-2.html') || (url[0] == 'index-2.html')){
-		
-		//Format Checkbox
-		formatCheckb('');
-		
-	}else if((url[0] == 'index-2.html') || (url[0] == 'index-2.html')){
-		
-		rateStars();
-		
-		if(url[0] == 'index-2.html'){
-			episodeSlide();
-			seasonsList();
-		}
-		
-		mediaScroll();
-		showPlayer();
-		
-		
-	}else if(url[0] == 'account.html'){
-	
-		//Format Checkbox
-		formatCheckb('');
-		
-		// faved or cliped? then scroll to account-box
-		favedOrCliped(url);
-	
-	}
-	
-	
-});
-
 /* General */
 
 function loginRedirect(){
@@ -1107,22 +1064,20 @@ function accountSerieSubscribe(serieID){
 }
 
 function openAccountSettings(setting){
-	if($("form#logoutForm").length){
-		$.ajax({
-			type: "GET",
-			url: 'accountSettingsWindow.ajax.php?setting='+setting,
-			success: function(msg){
-				$('div#settings-window').html(msg);
-				$('div#settings-window #settings-bg').css("height", $(document).height()+"px");
-				$('div#settings-window #settings-bg').fadeIn('fast');
-				$('div#settings-window #settings').fadeIn('fast');
-				document.body.style.overflow="hidden";
-				if((setting == 'email') || (setting == 'pw'))
-					$('div#settings-window #settings input#password').focus();
-			}
-		});
-	}else
-		loginRedirect();
+	alert("NOT SET!");
+	$.ajax({
+		type: "GET",
+		url: '/perfil',
+		success: function(msg){
+			$('div#settings-window').html(msg);
+			$('div#settings-window #settings-bg').css("height", $(document).height()+"px");
+			$('div#settings-window #settings-bg').fadeIn('fast');
+			$('div#settings-window #settings').fadeIn('fast');
+			document.body.style.overflow="hidden";
+			if((setting == 'email') || (setting == 'pw'))
+				$('div#settings-window #settings input#password').focus();
+		}
+	});
 }
 
 function closeAccountSettings(){
