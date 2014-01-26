@@ -16,7 +16,7 @@
 					<div id="new55" class="item first">
 						<!--Primeiro Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href=" {{}}">
 									<img src="assets/images/categorias/docesdecolher.png" width="217px" height="217px"/>
 								</a>
 								<div class="title-bg">

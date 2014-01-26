@@ -9,8 +9,9 @@ class ChefsListaController extends BaseController {
 	 */
 	public function index()
 	{
-		return View::make('listachefs');
-	}
+		$users = User::all();
+		$data = array('users' => $users);
 
-	
+		return View::make('listachefs', $data);
+	}
 }

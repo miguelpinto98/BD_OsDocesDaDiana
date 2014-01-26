@@ -2,76 +2,73 @@
 
 <?php if(Auth::check()) { ;?> 
 	@include('headerbar_logged')
-<?php } else { ;?> 
-	@include('headerbar_guest')
-<?php } ;?>
+<?php } else { 
+	echo link_to('logout','');
+	} ;?>
 
 @section('content')
-		<div class="center">
-				<div id="account-box" class="content-box">
-					<div class="left-content">
+<div class="center">
+	<div id="account-box" class="content-box">
+		<div class="left-content">
 
-						<!--Utilizador-->	
-							<div class="account-settings-wrapper">
-								<div class="account-settings">
-									<div id="settings-window"></div>
-										<div class="settings-header">
-											<div class="avatar">
-												<img data-cfsrc="images/users/avatars/zoe_saldana.png" alt="98jigs" src="./Minha Conta_files/zoe_saldana.png">
-											</div>
-											<div class="user-info">
-												<div class="username">Utilizador</div>
-												<div class="register-date">Desde&nbsp;<span>12 de Dezembro, 2011</span></div>
-											</div>
-										</div>
-											<div class="settings-content">												
-												<div class="account-options2">
-													<span class="label">Reputação:</span>
-													<span class="texto2">5 estrelas</span>
-												</div>
-												<div class="account-options2">
-													<span class="label">Localidade:</span>
-													<span class="texto2">Braga</span>
-												</div>
-												<div class="separator"></div>
-												<div class="account-options">
-													<span class="label">Sobre mim:</span>
-													<span class="texto1">239 caracteres.</span>
-												</div>
-
-											</div>
-									</div>
-								</div>
-						<!--Utilizador-->
-
-						<!--Gerir Conta-->
-							<div class="subscribe-series">
-								<div class="subscribe-header">Gerir conta</div>
-								<div class="separator"> </div>
-								<div class="subscribe-content">
-									
-									<div class="options-content">
-										<span class="label">Alterar dados:</span> 
-										<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">E-mail</a></div>
-										<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">Password</a></div>
-										<div class="imagem"> <span>-&nbsp;&nbsp;</span> <a href="javascript: openAccountSettings('avatar');">Imagem de perfil</a></div>
-										<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">Descrição pessoal</a></div>
-									</div>
-
-									<div class="login-register2">				
-										<div id="login" class="login">
-											<div class="login-form">
-												<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
-													<input type="button" name="loginBtn" id="loginBtn" class="form-btn" value="Adicionar Nova Receita" onclick="location.href='adicionarReceita.html';"/>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						<!--Gerir Conta-->
-
+		<!--Utilizador-->	
+		<div class="account-settings-wrapper">
+			<div class="account-settings">
+				<div class="settings-header">
+					<div class="avatar">
+						<img src="{{ asset( $user = Auth::user()-> avatar) }}">
 					</div>
+					
+					<div class="user-info">
+						<div class="username"> {{ Auth::user()->nome }} </div>
+						<div class="register-date">Desde&nbsp;<span>{{date(Auth::user()->created_at) }}</span></div>
+					</div>
+				</div>
+				<div class="settings-content">												
+					<div class="account-options2">
+						<span class="label">Reputação:</span>
+						<span class="texto2"> {{ Auth::user()->valoravaliacoes }} estrelas</span>
+					</div>
+					
+					<div class="account-options2">
+						<span class="label">Localidade:</span>
+						<span class="texto2">{{ Auth::user()->localidade }}</span>
+					</div>
+					<div class="separator"></div>
+					<div class="account-options">
+						<span class="label">Sobre mim:</span>
+						<span class="texto1">{{ Auth::user()->descricao }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--Gerir Conta-->
+		<div class="subscribe-series">
+			<div class="subscribe-header">Gerir conta</div>
+			<div class="separator"></div>
+			
+			<div class="subscribe-content">							
+				<div class="options-content">
+					<span class="label">Alterar dados:</span> 
+					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">E-mail</a></div>
+					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('email');">Password</a></div>
+					<div class="imagem"> <span>-&nbsp;&nbsp;</span> <a href="javascript: openAccountSettings('avatar');">Imagem de perfil</a></div>
+					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('descricao');">Descrição pessoal</a></div>
+				</div>
+				<div class="login-register2">				
+					<div id="login" class="login">
+						<div class="login-form">
+							<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
+							<input type="button" name="loginBtn" id="loginBtn" class="form-btn" value="Adicionar Nova Receita" onclick="location.href='adicionarReceita.html';"/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--Gerir Conta-->
 
 					<div class="media-box">
 						<div id="mediaHeader" class="media-header">

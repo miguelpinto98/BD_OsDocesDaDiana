@@ -4,10 +4,7 @@
 	<div class="center">
 	<div class="topNav">
 
-	<a href="http://www.wareztuga.tv/account.php" class="avatar">
-			<img src="./assets/images/Users/avatar.png">
-
-			</a>
+	<a class="avatar"><img src="{{ Auth::user()->avatar }}"></a>
 			<form method="post" id="logoutForm">
 			
 			<input type="hidden" name="logout" value="true">
