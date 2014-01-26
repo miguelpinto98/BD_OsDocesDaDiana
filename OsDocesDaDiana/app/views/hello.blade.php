@@ -357,61 +357,37 @@
 						</div>
 
 
-						<!-- BARRA COMENTARIOS -->
-							<div id="movies-box-comments" class="box-comments">
-								<div class="msgs-header">
-									<span>Comentários Recentes</span>
-								</div>
-									<div id="movies-comments-list" class="comments-list">
-										<!-- comentarios -->
-											<div id="msg811192" class="item first" title="Bolo de Chocolate">
-											<input type="hidden" name="movies-lcID" id="movies-lcID" value="811192" />
-											<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">
-												<div class="msg-info">
-													<div class="avatar">
-														<img style="display:none;visibility:hidden;" data-cfsrc="assets/images/categorias/bolos.png" alt=""/>
-														<noscript>
-														<img src="assets/images/categorias/bolos.png" alt="" /></noscript>
-													</div>
-														<div class="user-date">
-															<div class="user"><span>Mariana63</span></div>
-															<div class="date"><span>há 5 minutos</span></div>
-														</div>
-												</div>
-														<div class="preview"> <span>Muito bom. Aconselho.</span></div>
-											</a>
-											</div>
-
-
-
-							<div id="msg811189" class="item" title="Escrito em 'Depois da Vida'">	
-							<a href="movie3e9f.html?m=AfterLife&amp;comment=811189">
-							<div class="msg-info">
-								<div class="avatar">
-									<img style="display:none;visibility:hidden;" data-cfsrc="images/users/avatar736262.png" alt=""/>
-									<noscript>
-									<img src="images/users/avatar736262.png" alt="" /></noscript>
-								</div>
-									<div class="user-date">
-										<div class="user"><span>Utilizador2</span>
-										</div>
-											<div class="date"><span>há x minutos</span></div>
-									</div>
-							</div>
-								<div class="preview"><span>Comentário2</span></div>
-							</a>
-							</div>
-
-										<!-- comentarios -->
-									</div>
-							</div>
-						<!-- BARRA COMENTARIOS -->
-
-						</div>
-					<!-- CAIXA (comentÃ¡rios e imagens)-->
+	<!-- BARRA COMENTARIOS -->
+	<div id="movies-box-comments" class="box-comments">
+		<div class="msgs-header">
+			<span>Comentários Recentes</span>
+		</div>
+		<div id="movies-comments-list" class="comments-list">
+		<!-- comentarios -->
+		@foreach($coments as $coment)
+			<div id="{{ $coment->idreceita }}" class="item" title="Não Definido">
+				<input type="hidden" name="N.D." id="N.D." value="N.D." />
+				<!--<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">-->
+				<div class="msg-info">
+					<div class="avatar">
+						<img style="display:none;visibility:hidden;" data-cfsrc="" alt=""/>
+						<noscript><img src="" alt="" /></noscript>
 					</div>
-				
+					<div class="user-date">
+						<div class="user"><span>{{ $coment->username }}</span></div>
+						<div class="date"><span>{{ $coment->created_at }}</span></div>
 					</div>
+				</div>
+				<div class="preview"> <span> {{ $coment->comentario }}</span></div>
+				<!--</a>-->
+			</div>
+		@endforeach
+		</div>
+	</div>
+	<!-- BARRA COMENTARIOS -->
+</div>
+</div>			
+</div>
 
-	@include('footer')
+@include('footer')
 @stop
