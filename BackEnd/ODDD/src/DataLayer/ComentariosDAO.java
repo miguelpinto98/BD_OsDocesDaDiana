@@ -174,7 +174,7 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
             ResultSet rs = stm.executeQuery(sql);
             
             while(rs.next())
-                res.add(rs.getInt(ID_COMENTARIO));
+                res.add(rs.getInt(1));
             
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -191,7 +191,7 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
             ResultSet rs = stm.executeQuery(sql);
             
             while(rs.next())
-                res.add(this.get(rs.getInt(ID_COMENTARIO)));
+                res.add(this.get(rs.getInt(1)));
             
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {

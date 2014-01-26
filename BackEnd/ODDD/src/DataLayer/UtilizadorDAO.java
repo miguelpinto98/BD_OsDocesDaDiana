@@ -31,6 +31,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
     public static int TIPO = 12;
     public static int CREATE = 13;
     public static int UPDATE = 14;
+    public static int LOCALIDADE = 15;
     
     public UtilizadorDAO() {
     }
@@ -113,8 +114,9 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
                 create.setTime(rs.getTimestamp(CREATE));
                 Calendar upd = GregorianCalendar.getInstance();
                 upd.setTime(rs.getTimestamp(UPDATE));
+                String localidade = rs.getString(LOCALIDADE);
                 
-                user = new Utilizador (tipo, nick, nome, email, pw, desc, img, numrec, valaval, numaval, dadoscomp, rm, (GregorianCalendar) create, (GregorianCalendar) upd);
+                user = new Utilizador (tipo, nick, nome, email, pw, desc, img, numrec, valaval, numaval, dadoscomp, rm, (GregorianCalendar) create, (GregorianCalendar) upd, localidade);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -128,8 +130,8 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Utilizadores(username, nome, email, password, tipo, created_at, updated_at) "
-                        + "VALUES (?,?,?,?,?,?)";
+                sql = "INSERT INTO Utilizadores(username, nome, email, password, tipo, created_at, updated_at, localidade) "
+                        + "VALUES (?,?,?,?,?,?,?,?)";
                 
             } else {
                 sql = "";
@@ -144,6 +146,8 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
             pstm.setTimestamp(CREATE, create);
             Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
             pstm.setTimestamp(UPDATE, update);
+            pstm.setString(LOCALIDADE, value.getLocalidade());
+            
             pstm.execute();
             
             user = value;

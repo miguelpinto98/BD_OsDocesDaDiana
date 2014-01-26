@@ -1,14 +1,15 @@
 package DataLayer;
 
-import BusinessLayer.Avaliacao;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class AvaliacoesUtilizadorDAO implements Map<Integer,Avaliacao> {
+public class AvaliacoesUtilizadorDAO implements Map<String,Integer> {
     
     private int idReceita;
     
@@ -54,10 +55,10 @@ public class AvaliacoesUtilizadorDAO implements Map<Integer,Avaliacao> {
 
     @Override
     public boolean containsKey(Object key) {
-        /*boolean res = false;
+        boolean res = false;
         try {
-            int id = (Integer) key;
-            String sql = "SELECT * FROM AVALIACAOUTILIZADOR c WHERE c.USERNAME = "+id;
+            String nick = (String) key;
+            String sql = "SELECT * FROM AVALIACAOUTILIZADOR a WHERE a.USERNAME = '"+nick+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             res = rs.next();
@@ -65,8 +66,7 @@ public class AvaliacoesUtilizadorDAO implements Map<Integer,Avaliacao> {
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
         }
-        return res;*/
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return res;
     }
 
     @Override
@@ -75,22 +75,42 @@ public class AvaliacoesUtilizadorDAO implements Map<Integer,Avaliacao> {
     }
 
     @Override
-    public Avaliacao get(Object key) {
+    public Integer get(Object key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Avaliacao put(Integer key, Avaliacao value) {
+    public Integer put(String key, Integer value) {
+        Integer valor = null;
+        try {
+            String sql = null;
+            if(!this.containsKey(key)) {
+                sql = "INSERT INTO AVALIACAOUTILIZADOR(username, idReceita, valor)"
+                        + "VALUES (?,?,?)";
+                
+            } else {
+                sql = "";
+            }
+            PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
+            pstm.setString(USERNAME, key);
+            pstm.setInt(ID_RECEITA, this.idReceita);
+            pstm.setInt(VALOR, value);
+            pstm.execute();
+            
+            valor = value;
+            pstm.close();
+        } catch (SQLException e) {
+        }
+        return valor;
+    }
+
+    @Override
+    public Integer remove(Object key) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Avaliacao remove(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void putAll(Map<? extends Integer, ? extends Avaliacao> m) {
+    public void putAll(Map<? extends String, ? extends Integer> m) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -100,17 +120,29 @@ public class AvaliacoesUtilizadorDAO implements Map<Integer,Avaliacao> {
     }
 
     @Override
-    public Set<Integer> keySet() {
+    public Set<String> keySet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Collection<Avaliacao> values() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Collection<Integer> values() {
+        Collection<Integer> res = new HashSet<>();
+        try {
+            String sql = "SELECT VALOR FROM AVALIACAOUTILIZADOR";
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            
+            while(rs.next())
+                res.add(rs.getInt(1));
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override
-    public Set<Entry<Integer, Avaliacao>> entrySet() {
+    public Set<Entry<String, Integer>> entrySet() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

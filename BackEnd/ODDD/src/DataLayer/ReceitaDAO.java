@@ -32,6 +32,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public static int DOSE = 12;
     public static int CREATE = 13;
     public static int UPDATE = 14;
+    public static int INGREDIENTES = 15;
     
     public ReceitaDAO(){
     }
@@ -117,8 +118,9 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 create.setTime(rs.getTimestamp(CREATE));
                 Calendar update = GregorianCalendar.getInstance();
                 update.setTime(rs.getTimestamp(UPDATE));
+                String ingr = rs.getString(INGREDIENTES);
                 
-                rec = new Receita(id, nomeReceita, descricao, nrImagens, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose, (GregorianCalendar) create, (GregorianCalendar) update);
+                rec = new Receita(id, nomeReceita, descricao, nrImagens, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose, (GregorianCalendar) create, (GregorianCalendar) update, ingr);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -132,7 +134,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose, created_at, updated_at)"
+                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose, created_at, updated_at, ingredientes)"
                         + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 
             } else {
@@ -155,6 +157,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             pstm.setTimestamp(CREATE, create);
             Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
             pstm.setTimestamp(UPDATE, update);
+            pstm.setString(INGREDIENTES, value.getIngredientes());
             pstm.execute();
             
             rec = value;

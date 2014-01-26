@@ -25,6 +25,7 @@ public class Utilizador {
     private int removido;
     private GregorianCalendar create;
     private GregorianCalendar update;
+    private String localidade;
     
     
 
@@ -39,7 +40,7 @@ public class Utilizador {
     }
 
     public Utilizador(int tipo, String nick, String nome, String email, String pw,
-              String desc, String img, int numrec, int valaval, int numaval, int dadoscomp, int rm, GregorianCalendar c, GregorianCalendar u) {
+              String desc, String img, int numrec, int valaval, int numaval, int dadoscomp, int rm, GregorianCalendar c, GregorianCalendar u, String l) {
         this.tipo = tipo;
         this.nick = nick;
         this.nome = nome;
@@ -56,6 +57,7 @@ public class Utilizador {
         this.removido = rm;
         this.create = c;
         this.update = u;
+        this.localidade = l;
     }
     
     public Map<String,String> getChefesSeguidos() {
@@ -64,6 +66,14 @@ public class Utilizador {
     
     public Map<String,Integer> getReceitasSeguidas() {
         return this.receitasSeguidas;
+    }
+    
+    public String getLocalidade() {
+        return this.localidade;
+    }
+
+    public void setLocalidade(String l) {
+        this.localidade = l;
     }
     
     public int getTipo() {

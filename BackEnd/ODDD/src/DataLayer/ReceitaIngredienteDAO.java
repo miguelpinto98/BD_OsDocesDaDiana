@@ -1,15 +1,20 @@
 package DataLayer;
 
 import BusinessLayer.Ingrediente;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
 public class ReceitaIngredienteDAO implements Map<Integer, Ingrediente> {    
     private int idreceita;
+    
+    public static int ID_RECEITA = 1;
+    public static int ID_INGREDIENTE = 2;
     
     public ReceitaIngredienteDAO(int idr) {
         this.idreceita = idr;
@@ -49,7 +54,18 @@ public class ReceitaIngredienteDAO implements Map<Integer, Ingrediente> {
 
     @Override
     public boolean containsKey(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean res = false;
+        try {
+            int id = (Integer) key;
+            String sql = "SELECT * FROM RECEITASINGREDIENTES r WHERE r.IDINGREDIENTE = "+id;
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            res = rs.next();
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override
@@ -64,7 +80,26 @@ public class ReceitaIngredienteDAO implements Map<Integer, Ingrediente> {
 
     @Override
     public Ingrediente put(Integer key, Ingrediente value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Ingrediente ing = null;
+        try {
+            String sql = null;
+            if(!this.containsKey(key)) {
+                sql = "INSERT INTO RECEITASINGREDIENTES(idReceita, idingrediente)"
+                        + "VALUES (?,?)";
+                
+            } else {
+                sql = "";
+            }
+            PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
+            pstm.setInt(ID_RECEITA, this.idreceita);
+            pstm.setInt(ID_INGREDIENTE, key);            
+            pstm.execute();
+            
+            ing = value;
+            pstm.close();
+        } catch (SQLException e) {
+        }
+        return ing;
     }
 
     @Override
@@ -89,7 +124,19 @@ public class ReceitaIngredienteDAO implements Map<Integer, Ingrediente> {
 
     @Override
     public Collection<Ingrediente> values() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Collection<Ingrediente> res = new HashSet<>();
+        try {
+            String sql = "SELECT IDINGREDIENTE FROM RECEITASINGREDIENTES r";
+            Statement stm = ConexaoBD.getConexao().createStatement();
+            ResultSet rs = stm.executeQuery(sql);
+            
+            while(rs.next())
+                res.add(this.get(rs.getInt(1)));
+            
+            ConexaoBD.fecharCursor(rs, stm);
+        } catch (SQLException e) {
+        }
+        return res;
     }
 
     @Override

@@ -20,12 +20,13 @@ public class Receita {
     private int vavaliacoes; // NAO DEVERIA SER DOUBLE??
     private int navaliacoes;
     private Map<Integer, Comentario> coments;
-    private Map<Integer, Avaliacao> avaliacoes;
+    private Map<String, Integer> avaliacoes;
     private int removido;
     private int tempoPreparacao;
     private int dose;
     private GregorianCalendar create;
     private GregorianCalendar update;
+    private String ingredientes;
 
     public Receita() {
         this.id = 0; //NECESSARIO CRIAR ID INCREMENTO
@@ -44,9 +45,10 @@ public class Receita {
         this.dose = 0;
         this.create = new GregorianCalendar();
         this.update = new GregorianCalendar();
+        this.ingredientes = "";
     }
     
-    public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u){
+    public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u, String in){
         this.id = id;
         this.nome = nm;
         this.desc = desc;
@@ -63,9 +65,10 @@ public class Receita {
         this.dose = dose;
         this.create = g;
         this.update = u;
+        this.ingredientes = in;
     }
     
-    public Map<Integer, Avaliacao> getAvaliacoes() {
+    public Map<String, Integer> getAvaliacoes() {
         return avaliacoes;
     }
 
@@ -195,6 +198,14 @@ public class Receita {
     
     public void setUpdate(GregorianCalendar g){
         this.update = g;
+    }
+    
+    public String getIngredientes(){
+        return this.ingredientes;
+    }
+    
+    public void setIngredientes(String in){
+        this.ingredientes = in;
     }
 
     @Override

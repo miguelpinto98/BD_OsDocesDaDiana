@@ -4,6 +4,7 @@ public class Ingrediente {
     private int id;
     private String nome;
     private double ncal;
+    private int quantidade;
 
     public int getId() {
         return id;
@@ -27,5 +28,13 @@ public class Ingrediente {
 
     public void setNcal(double ncal) {
         this.ncal = ncal;
+    }
+    
+    public int getQuantidade() {
+        return this.quantidade;
+    }
+
+    public void setQuantidade(int q) {
+        this.quantidade = q;
     }
 }
