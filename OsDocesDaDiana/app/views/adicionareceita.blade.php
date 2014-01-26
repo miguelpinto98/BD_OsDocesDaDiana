@@ -96,7 +96,7 @@
 										
 										<form action="adicionareceita" method="post" enctype="multipart/form-data">
 										<label for="file">Imagens:</label>
-										<input type="file" name="file"><br>
+										<input type="file" name="file" multiple="multiple"><br>
 										<input type="submit" name="submit" value="Carregar">
 										</form>
 
