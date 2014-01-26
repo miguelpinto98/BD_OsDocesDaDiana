@@ -1141,7 +1141,7 @@ div#content  div.content-box div.box-comments div.comments-list div.item a{
 
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info{
 	overflow: hidden;
-	margin-left: 2px;
+	margin-left: 0px;
 }
 
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info div.avatar{
@@ -1176,8 +1176,8 @@ div#content  div.content-box div.box-comments div.comments-list div.item div.msg
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info div.user span{
 	float: left;
 	font-family: 'PTSans Bold';
-	font-size: 13px;
-	font-weight: normal;
+	font-size: 14px;
+	font-weight: bold;
 	color: #565656;
 	max-width: 105px;
 }

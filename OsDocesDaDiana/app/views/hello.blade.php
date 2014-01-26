@@ -211,10 +211,6 @@
 				<input type="hidden" name="N.D." id="N.D." value="N.D." />
 				<!--<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">-->
 				<div class="msg-info">
-					<div class="avatar">
-						<img style="display:none;visibility:hidden;" data-cfsrc="" alt=""/>
-						<noscript><img src="" alt="" /></noscript>
-					</div>
 					<div class="user-date">
 						<div class="user"><span>{{ $coment->username }}</span></div>
 						<div class="date"><span>{{ $coment->created_at }}</span></div>
