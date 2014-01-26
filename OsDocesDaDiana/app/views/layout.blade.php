@@ -9,7 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="assets/styles/newstyle.css" />
 		<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
 		<script type="text/javascript" src="assets/scripts/newfunctions.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/slide/style.css" media="screen" />
 		<script type="text/javascript" src="assets/slide/jquery.js"></script>
