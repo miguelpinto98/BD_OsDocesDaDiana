@@ -16,7 +16,7 @@ class CategoriasController extends BaseController {
 
 	}
 
-	public function show() {
-		return Input::all();
+	public function show($nomecategoria) {
+		return $nomecategoria;
 	}
 }
