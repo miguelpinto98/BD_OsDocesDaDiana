@@ -16,7 +16,8 @@ Route::get('/login','LoginController@index');
 Route::post('/login','LoginController@valida');
 Route::get('/logout', 'LogoutController@index');
 
-Route::get('/categorias/show/{nomecategoria}', 'CategoriasController@show');
+Route::get('/categorias/{nomecategoria}', 'CategoriaController@index');
+
 
 
 Route::get('/categorias', 'CategoriasController@index');
