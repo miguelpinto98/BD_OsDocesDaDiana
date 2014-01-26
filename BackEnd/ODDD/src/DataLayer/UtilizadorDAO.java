@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.Map;
@@ -110,10 +111,12 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
                 int dadoscomp = rs.getInt(DADOS_COMP);
                 int rm = rs.getInt(APAGADO);
                 int tipo = rs.getInt(TIPO);
+                Date d1 = new Date();
+                Date d2 = new Date();
                 Calendar create = GregorianCalendar.getInstance();
-                create.setTime(rs.getTimestamp(CREATE));
+                create.setTime(d1);
                 Calendar upd = GregorianCalendar.getInstance();
-                upd.setTime(rs.getTimestamp(UPDATE));
+                upd.setTime(d2);
                 String localidade = rs.getString(LOCALIDADE);
                 
                 user = new Utilizador (tipo, nick, nome, email, pw, desc, img, numrec, valaval, numaval, dadoscomp, rm, (GregorianCalendar) create, (GregorianCalendar) upd, localidade);

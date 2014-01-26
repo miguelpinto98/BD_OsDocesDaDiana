@@ -2,6 +2,7 @@ package GUI;
 
 import BusinessLayer.Categoria;
 import BusinessLayer.ODDD;
+import BusinessLayer.Utilizador;
 import GUI.Receitas.ListaReceitas;
 import GUI.Users.InfoUser;
 import java.awt.BorderLayout;
@@ -9,36 +10,47 @@ import java.awt.EventQueue;
 import java.awt.Window;
 import java.lang.reflect.Method;
 import javax.swing.DefaultListModel;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public final class PainelAdmin extends javax.swing.JFrame {
 
     public static final String OS = System.getProperty("os.name").toLowerCase();
-
+    
+    public static boolean REGISTADO = false;
+    public static String UTILIZADOR = null; 
+    
     private final ODDD sistema;
+    private Utilizador user;
 
     public PainelAdmin() {
         this.sistema = new ODDD();
-        
+        this.user=null;
         this.sistema.registarUser("admin", "admin", "pw1234", "admin@diana.pt", 1);
         
         initComponents();
         listaCategorias();
+        verificaUser(user);
     }
     
-    /*
+    public void verificaUser(Utilizador user){
+      if(user==null){
+          JDialog f = new JLogin(this);
+          f.setLocationRelativeTo(null);
+          f.setVisible(true);
+      }  
+    }
     
-            Set<String> lesc = this.sistema.listaEscolas();
-        DefaultListModel<String> str = new DefaultListModel<>();
-        
-        for(String e : lesc) 
-            str.addElement(e);
-       
-        listaEscolas.setModel(str);
+    public void setUser(Utilizador user) {
+        this.user = user;
+    }
     
-    */
-    
+     public ODDD getSistema() {
+        return this.sistema;
+    }
+     
     public void listaCategorias() {
         DefaultListModel<String> str = new DefaultListModel<>();
 
