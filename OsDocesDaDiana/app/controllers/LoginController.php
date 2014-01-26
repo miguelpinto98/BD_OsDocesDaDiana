@@ -18,7 +18,7 @@ class LoginController extends BaseController {
 		if(strcmp($data['loginBtn'],'ENTRAR AGORA') == 0) {
        		$validator = Validator::make($data,array(
          		'nickname' => 'required',
-         		'password' => 'required|min:6'));
+         		'password1' => 'required|min:6'));
      	} else {
        		$validator = Validator::make($data,array(
          		'name' => 'required',
@@ -39,11 +39,11 @@ class LoginController extends BaseController {
 	    } else {
 	    	if(strcmp($data['loginBtn'],'ENTRAR AGORA') == 0) {
 	         	$aux = $data['nickname'];
-	         	$aux2 = md5($data['password']);
+	         	$aux2 = md5($data['password1']);
 	         
 	         	$user = User::where('username', '=', $data['nickname'])->firstOrFail();
 	         	if(isset($user)) {
-	             	if($user->password == md5($data['password'])) { // If their password is still MD5
+	             	if($user->password == md5($data['password1'])) { // If their password is still MD5
 	                 	Auth::login($user);
 
 	                 	return Redirect::to('perfil')->with('message', 'Logged On!');

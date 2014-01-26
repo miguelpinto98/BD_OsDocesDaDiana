@@ -12,7 +12,7 @@
 			</form>
 		<div class="opts">
 			<div class="to-right">
-
+					<a class="icon"><?php echo 'Bem-vindo '.Auth::user()->nome  ;?></a><span class="pipe"></span>
 					<?php echo link_to('perfil','A minha Conta', array('class'=>'myAccount')); ?>
 					<!--<span class="pipe"></span>
 					<a href="http://www.wareztuga.tv/notifications.php" class="notifsslctd"><span class="icon"></span><span>7</span> Notificações</a>
