@@ -44,23 +44,47 @@
 		</div>
 		
 		<!--Gerir Conta-->
-		<div class="subscribe-series">
+			<div class="subscribe-series">
 			<div class="subscribe-header">Gerir conta</div>
 			<div class="separator"></div>
 			
 			<div class="subscribe-content">							
 				<div class="options-content">
-					<span class="label">Alterar dados:</span> 
-					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('pw');">E-mail</a></div>
-					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('email');">Password</a></div>
-					<div class="imagem"> <span>-&nbsp;&nbsp;</span> <a href="javascript: openAccountSettings('avatar');">Imagem de perfil</a></div>
-					<div class="imagem"><span>-&nbsp;&nbsp;</span><a href="javascript: openAccountSettings('descricao');">Descrição pessoal</a></div>
-				</div>
+					<span class="label">Alterar dados:</span>
+					
+					<div class="post-comment-box"style="height:15px">
+						<span>E-mail</span>
+						<textarea id="nome" style="margin-left:30px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+					</div>
+					<div class="main-separator1"></div>
+
+					<div class="post-comment-box"style="height:15px">
+						<span>Password</span>
+						<textarea id="nome" style="margin-left:10px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+					</div>
+					<div class="main-separator1"></div>
+
+					<div class="post-comment-box"style="height:15px">
+						<span>Descrição</span>
+						<textarea id="nome" style="margin-left:9px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+					</div>
+					<div class="main-separator1"></div>
+
+					<form action="adicionareceita" method="post" enctype="multipart/form-data" style="margin-top:30px">
+						<label for="file">Imagens:</label>
+						<input type="file" name="file" multiple="multiple"><br>
+						<input type="submit" name="submit" value="Carregar">
+					</form>
+
+
+					</div>
+
+
 				<div class="login-register2">				
 					<div id="login" class="login">
 						<div class="login-form">
-							<form method="post" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
-								<?php echo link_to('adicionareceita', 'Adicionar Nova Receita', array('type'=>'button','name'=>'loginBtn','id'=>'loginBtn', 'class'=>'form-btn')); ?>
+							<form method="post" style="margin-top:10px; margin-left:10px" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
+								<?php echo link_to('adicionareceita', 'Adicionar Nova Receita', array('type'=>'button','class'=>'form-btn')); ?>
 							</form>
 						</div>
 					</div>

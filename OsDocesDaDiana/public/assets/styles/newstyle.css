@@ -5341,7 +5341,7 @@ div#content div#comments-box div.comments-header div.comment-reply {
 
 div#content div#comments-box div.comments-header div.comment-reply div.user-info{
 	float: left;
-	width: 66px;
+	width: 54px;
 	overflow: hidden;
 }
 
@@ -5406,7 +5406,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.user-info
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment-wrapper{
 	float: left;
 	/*width: 449px;*/
-	width: 773px;
+	width: 785px;
 	height: 187px;
 	overflow: hidden;
 	background-color: #e9eed9;
@@ -6351,7 +6351,7 @@ div#content div#account-box div.left-content div.account-settings div.settings-c
 
 div#content div#account-box div.left-content div.subscribe-series{
 	width: 300px;
-	height: 350px;
+	height: 400px;
 	overflow: hidden;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
@@ -6385,7 +6385,7 @@ div#content div#account-box div.left-content div.subscribe-series div.separator{
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content{
 	width: 270px;
-	height: 280px;
+	height: 330px;
 	overflow: hidden;
 	padding-left: 20px;
 	padding-right: 15px;
@@ -6393,7 +6393,7 @@ div#content div#account-box div.left-content div.subscribe-series div.subscribe-
 
 div#content div#account-box div.left-content div.subscribe-series div.subscribe-content div.options-content{
 	width: 250px;
-	height: 115px;
+	height: 250px;
 	overflow: hidden;
 	padding-left: 10px;
 	padding-bottom: 10px;
@@ -8056,7 +8056,8 @@ div#content div.content-box div.login-register2{
 	height: 42px;
 	float:left;
 	padding-left: 30px;
-	margin-top: 40px; 
+	margin-top: 20px;
+	background-color:#90b0a7;
 }
 	
 div#content div.content-box div.login-register2 div.login{
