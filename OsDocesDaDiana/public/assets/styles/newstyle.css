@@ -779,7 +779,7 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item a div
 	overflow: hidden;
 	opacity: 0.2;
 	filter: alpha(opacity=20);
-	margin-left: 55px;
+	margin-left: 87px;
 }
 
 div#content  div.content-box div.movies-box-media div.movies-list div.item a div.thumb-effect2{
@@ -6754,8 +6754,8 @@ div#content div#account-box div.media-box div.media-account-content div.episodes
 div#content div#account-box div.media-box div.media-account-content div.accmedia-item a div.thumb-effect{
 	float: left;
 	position: absolute;
-	width: 73px;
-	height: 141px;
+	width: 160px;
+	height: 160px;
 	background: transparent url('../images/movies-imgeffect.png') no-repeat;
 	overflow: hidden;
 	opacity: 0.2;
@@ -7974,7 +7974,7 @@ div#content div.content-box div.movies-box-media div.movies-list div.item a img 
 div#content div.content-box div.movies-box-media div.movies-list div.item a div.img-effect {
 	position: absolute;
 	float: left;
-	width: 147px;
+	width: 160px;
 	height: 160px;
 	background: transparent url('../images/news-imgeffect.png') no-repeat;
 	opacity: 0.4;

@@ -82,100 +82,6 @@
 					<div class="list-aux">
 
 
-						<!--	
-								$num = sql_row_count(SELECT * from table);
-								$c=1;									
-									while($c<=$num){
-										if($c<=$num && $c==1){
-											echo {
-												<div id="5" class="item first under3" title="Peixe com Atum">
-													<a href="moviefb5f.html?m=The_Worlds_End">
-														<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
-														<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-														<div class="thumb-effect" title="The World's End"></div>
-														<div class="img-effect"></div>
-													</a>
-													<div class="title-bg">
-													<div class="title"><a href="#">Ver Receita</a></div>
-													</div>
-												</div>
-											}
-											$c++; break;
-										}
-
-										if($c<=$num && $c==2){
-											echo {
-													<div id="5" class="item under3" title="Peixe com Atum">
-														<a href="moviefb5f.html?m=The_Worlds_End">
-															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
-															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-															<div class="thumb-effect" title="The World's End"></div>
-															<div class="img-effect"></div>
-														</a>
-														<div class="title-bg">
-														<div class="title"><a href="#">Ver Receita</a></div>
-														</div>
-													</div>
-												}
-												$c++; break;
-										}
-
-										if($c<=$num && $c==3){
-											echo {
-													<div id="5" class="item under3" title="Peixe com Atum">
-														<a href="moviefb5f.html?m=The_Worlds_End">
-															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
-															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-															<div class="thumb-effect" title="The World's End"></div>
-															<div class="img-effect"></div>
-														</a>
-														<div class="title-bg">
-														<div class="title"><a href="#">Ver Receita</a></div>
-														</div>
-													</div>
-												}
-												$c++; break;
-										}
-
-										if($c<=$num && ($c==4 || $c==7 || $c==10 || $c==13)){
-											echo {
-													<div id="5" class="item first" title="Peixe com Atum">
-														<a href="moviefb5f.html?m=The_Worlds_End">
-															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
-															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-															<div class="thumb-effect" title="The World's End"></div>
-															<div class="img-effect"></div>
-														</a>
-														<div class="title-bg">
-														<div class="title"><a href="#">Ver Receita</a></div>
-														</div>
-													</div>
-												}
-												$c++; break;
-										}
-
-										if($c<=$num && ($c==5 || $c==6 || $c==8 || $c==9 || $c==11 || $c==12)){
-											echo {
-													<div id="5" class="item" title="Peixe com Atum">
-														<a href="moviefb5f.html?m=The_Worlds_End">
-															<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /><noscript>
-															<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="The World's End" /></noscript>
-															<div class="thumb-effect" title="The World's End"></div>
-															<div class="img-effect"></div>
-														</a>
-														<div class="title-bg">
-														<div class="title"><a href="#">Ver Receita</a></div>
-														</div>
-													</div>
-												}
-												$c++; break;
-										}
-									}		
-							 -->
-
-						
-							<!-- primeira linha -->
-
 
 		@foreach($receitas as $receita)
 			<?php $img = DB::table('Imagens')->where('idreceita', $receita->idreceita)->first() ;?>
@@ -186,7 +92,6 @@
 				<img src="<?php echo asset($img->imagem) ;?>" width="160" heigth="160" title="{{ $receita->nome }}" />
 				@endif	
 				<div class="thumb-effect" title="{{ $receita->nome }}"></div>
-				<div class="img-effect"></div>
 				</a>
 				<div class="title-bg">
 					<div class="title"><a href="<?php echo '/receita/'.$receita->idreceita ;?>">Ver Receita</a></div>
