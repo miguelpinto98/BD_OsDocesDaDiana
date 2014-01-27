@@ -105,30 +105,25 @@
 								<div class="account-media-divider"></div>
 								<div id="mediaAccountContent" class="media-account-content">
 
-								@foreach($receitas as $receita)
-									<div id="$receita->idreceita" class="accmedia-item">
-										<a href="{{ '/receita'.$receita->idreceita }}" title="{{ $receita->nome }}">
-											<img src="#">
-											<div class="thumb-effect"></div>
-										</a>
-										<a href="javascript:;" class="remove-media-content series" onclick="removeMediaContent('series', 183, 'Deseja remover este conteúdo desta lista?');"></a>
-									</div>
-								@endforeach	
-
-
-								</div>
-							</div>
-
-
-								<div id="pagination" class="pagination" style="margin-top: 10px;">
-									<div class="pagination-aux">
-										<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: myAccount('accountMedia.ajax.php?p=2&cat=movies', $('#accountMediaChangeContent'));" onclick="scrollToDiv('#content #account-box');">2</a>
-									</div>
-								</div>
-					</div>
-
+					@foreach($receitas as $receita)
+						<div id="$receita->idreceita" class="accmedia-item">
+							<a href="{{ '/receita/'.$receita->idreceita }}" title="{{ $receita->nome }}">
+							<img src="#">
+							<div class="thumb-effect"></div>
+							</a>
+							<!--<a href="javascript:;" class="remove-media-content" onclick="removeMediaContent('receitas', 183, 'Deseja remover este conteúdo desta lista?');"></a>-->
+						</div>
+					@endforeach	
 				</div>
 			</div>
+<!--
+			<div id="pagination" class="pagination" style="margin-top: 10px;">
+				<div class="pagination-aux">
+					<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: myAccount('accountMedia.ajax.php?p=2&cat=movies', $('#accountMediaChangeContent'));" onclick="scrollToDiv('#content #account-box');">2</a>
+				</div>
+			</div> -->
+		</div>
+	</div>
+</div>
 @include('footer')
-
 @stop

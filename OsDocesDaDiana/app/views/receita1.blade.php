@@ -105,7 +105,11 @@
 					<div id="movie-rate" class="movie-rate">
 						<span class="raterLabel">Classifique esta receita</span>
 						<div class="stars">
-							<a href="javascript: mediaRater('movies', 5158, 6);" id="rater6"></a><a href="javascript: mediaRater('movies', 5158, 7);" id="rater7"></a><a href="javascript: mediaRater('movies', 5158, 8);" id="rater8"></a><a href="javascript: mediaRater('movies', 5158, 9);" id="rater9"></a><a href="javascript: mediaRater('movies', 5158, 10);" id="rater10"></a>
+							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 1);" id="rater1"></a>
+							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 2);" id="rater2"></a>
+							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 3);" id="rater3"></a>
+							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 4);" id="rater4"></a>
+							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 5);" id="rater5"></a>
 						</div>
 						<input type="hidden" id="raterDefault" value="0" />
 					</div>
