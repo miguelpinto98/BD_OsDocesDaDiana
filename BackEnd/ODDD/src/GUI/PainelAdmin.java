@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Window;
 import java.lang.reflect.Method;
+import java.util.Map;
 import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -29,6 +30,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
         this.sistema = new ODDD();
         this.user=null;
         this.sistema.registarUser("admin", "admin", "pw1234", "admin@diana.pt", 1);
+        this.sistema.registarUser("admin1", "admin1", "pw1234", "admin@diana.pt", 0);
         
         initComponents();
         listaCategorias();
@@ -348,10 +350,18 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
         // TODO add your handling code here:
         String s = seleccionaCategoria();
-
+        Categoria cat = new Categoria();
+        
+        Map<String, Categoria> categorias = sistema.getCategorias();
+        
+        for(Categoria ca : categorias.values()){
+            if(ca.getNomeCategoria().equals(s))
+                cat = ca;
+        }
+        
         if (s != null) {
             this.jPanel3.removeAll();
-            this.jPanel3.add(new ListaReceitas(this), BorderLayout.CENTER);
+            this.jPanel3.add(new ListaReceitas(this,cat), BorderLayout.CENTER);
             this.jPanel3.updateUI();
             this.jPanel3.validate();
         }

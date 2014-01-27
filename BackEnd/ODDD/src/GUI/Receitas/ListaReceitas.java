@@ -1,13 +1,16 @@
 package GUI.Receitas;
 
+import BusinessLayer.Categoria;
 import GUI.PainelAdmin;
 import javax.swing.JDialog;
 
 public class ListaReceitas extends javax.swing.JPanel {
 
+    private Categoria c;
     private PainelAdmin p;
-    public ListaReceitas(PainelAdmin p) {
+    public ListaReceitas(PainelAdmin p,Categoria c) {
         this.p=p;
+        this.c=c;
         initComponents();
     }
 
@@ -107,7 +110,7 @@ public class ListaReceitas extends javax.swing.JPanel {
         // TODO add your handling code here:
         String s = seleccionaReceita();
         if(s!=null){
-         JDialog frame = new JAdicionarReceita(this);
+         JDialog frame = new JAdicionarReceita(p,this,c);
          frame.setLocationRelativeTo(null);
          frame.setVisible(true);
         }
