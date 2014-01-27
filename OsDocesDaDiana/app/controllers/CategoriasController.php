@@ -11,6 +11,4 @@ class CategoriasController extends BaseController {
 	{
 		return View::make('categorias');
 	}
-
-	
 }

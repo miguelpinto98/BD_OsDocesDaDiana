@@ -16,11 +16,12 @@
 					<div id="new55" class="item first">
 						<!--Primeiro Quadrado-->
 							<div class="new-imagecategorias">
-								<a href=" {{}}">
+								<a href="categorias/Doces de Colher">
 									<img src="assets/images/categorias/docesdecolher.png" width="217px" height="217px"/>
 								</a>
 								<div class="title-bg">
-									<div class="title"><a href="categoria.html">Doces de Colher</a></div>
+									
+									<div class="title"><?php echo link_to('categorias/Doces de Colher','Doces de Colher');?></div>
 								</div>
 							</div>
 						<!--Primeiro Quadrado-->
@@ -28,11 +29,11 @@
 
 						<!--Segundo Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Bolinhos">
 									<img src="assets/images/categorias/cupcakes.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Bolinhos</a></div>
+										<div class="title"><?php echo link_to('categorias/Bolinhos','Bolinhos');?></div>
 									</div>
 							</div>
 						<!--Segundo Quadrado-->
@@ -40,22 +41,22 @@
 
 						<!--Terceiro Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Bolos">
 									<img src="assets/images/categorias/bolos.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Bolos</a></div>
+										<div class="title"><?php echo link_to('categorias/Bolos','Bolos');?></div>
 									</div>
 							</div>
 						<!--Terceiro Quadrado-->
 
 						<!--Quarto Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Bolachas e Biscoitos">
 									<img src="assets/images/categorias/bolachas.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Bolachas e Biscoitos</a></div>
+										<div class="title"><?php echo link_to('categorias/Bolachas e Biscoitos','Bolachas e Biscoitos');?></div>
 									</div>
 							</div>
 						<!-- Quarto Quadrado-->

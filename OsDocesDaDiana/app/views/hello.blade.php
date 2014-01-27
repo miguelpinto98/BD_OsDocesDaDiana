@@ -45,7 +45,7 @@
 				<div class="main-separator"></div>-->
 
 			
-	<div id="movies-box" class="content-box">
+	<div id="movies-box" class="content-box" style="height:800px; padding-bottom:10px">
 	<!-- BARRA CINZENTA-->
 		<div class="box-header"> 
 			<div class="btn-group">
@@ -193,14 +193,7 @@
 		</div>
 	</div>
 
-	<!-- scrollbar lateral -->
-	<div class="list-scrollbar" id="movies-list-scrollbar">
-		<div class="scrollbar-up"></div>
-		<div class="scrollbar-down"></div>
-		<div class="scrollbar-bg">
-			<div class="scrollbar-btn"></div>
-		</div>
-	</div>
+	
 </div> 
 </div>
 
@@ -212,15 +205,12 @@
 		</div>
 		<div id="movies-comments-list" class="comments-list">
 		<!-- comentarios -->
+		<?php $i=0;?>
 		@foreach($coments as $coment)
-			<div id="{{ $coment->idreceita }}" class="item" title="Não Definido">
+			 <div id="{{ $coment->idreceita }}" class="item" title="Não Definido">
 				<input type="hidden" name="N.D." id="N.D." value="N.D." />
 				<!--<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">-->
 				<div class="msg-info">
-					<div class="avatar">
-						<img style="display:none;visibility:hidden;" data-cfsrc="" alt=""/>
-						<noscript><img src="" alt="" /></noscript>
-					</div>
 					<div class="user-date">
 						<div class="user"><span>{{ $coment->username }}</span></div>
 						<div class="date"><span>{{ $coment->created_at }}</span></div>
@@ -229,7 +219,11 @@
 				<div class="preview"> <span> {{ $coment->comentario }}</span></div>
 				<!--</a>-->
 			</div>
-		@endforeach
+				<?php $i++;?>
+				@if($i==5)
+					<?break;?>
+				@endif
+			@endforeach
 		</div>
 	</div>
 	<!-- BARRA COMENTARIOS -->

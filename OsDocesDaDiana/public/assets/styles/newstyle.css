@@ -684,22 +684,21 @@ div.mainNav  div.box-search a.search-btn:hover span{
 
 div#content  div.content-box div.movies-box-content{
 	width: 950px;
-	overflow: hidden;
+	
 }
 
 div#content  div.content-box div.movies-box-media{
 	float: left;
 	width: 760px;
-	overflow: hidden;
 }
 
 /*tamanho da "caixa" cinzenta toda*/
 div#content  div.content-box div.movies-box-media div.movies-list-content{
-	overflow: hidden;
-	height: 642px;
+	height: 700px;
 	width: 760px;
 	float: left;
 	position: relative;
+	overflow: scroll;
 }
 
 div#content  div.content-box div.movies-box-media div.list-aux{
@@ -708,7 +707,6 @@ div#content  div.content-box div.movies-box-media div.list-aux{
 
 /*tamanho da "caixa" interior que tem o scroll e a barra cinzenta como bordas*/
 div#content  div.content-box div.movies-box-media div.movies-list{
-	overflow: hidden;
 	height: 832px;
 	/*height: 428px;*/
 	width: 736px;
@@ -722,8 +720,8 @@ div#content  div.content-box div.movies-box-media div.loading{
 /*tamanho dos quadrados do index*/
 div#content  div.content-box div.movies-box-media div.movies-list div.item{
 	float: left;
-	width: 220px;
-	height: 220px;
+	width: 160px;
+	height: 160px;
 	background-color: #fff;
 	border: 1px solid #d4d4d4;
 	border-bottom: 1px solid #a7a7a7;
@@ -776,7 +774,7 @@ div#content  div.content-box div.movies-box-media div.movies-list div.item a div
 	float: left;
 	position: absolute;
 	width: 73px;
-	height: 190px;
+	height: 160px;
 	background: transparent url('../images/movies-imgeffect.png') no-repeat;
 	overflow: hidden;
 	opacity: 0.2;
@@ -1092,6 +1090,7 @@ div#content  div.content-box div.movies-box-media div.movies-news-list div.movie
 div#content  div.content-box div.box-comments{
 	float: left;
 	width: 190px;
+	height: 680px;
 	overflow: hidden;
 }
 
@@ -1112,6 +1111,7 @@ div#content  div.content-box div.box-comments div.msgs-header span{
 
 div#content  div.content-box div.box-comments div.comments-list{
 	width: 190px;
+	height: 660px;
 	overflow: hidden;
 }
 
@@ -1141,7 +1141,7 @@ div#content  div.content-box div.box-comments div.comments-list div.item a{
 
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info{
 	overflow: hidden;
-	margin-left: 2px;
+	margin-left: 0px;
 }
 
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info div.avatar{
@@ -1176,8 +1176,8 @@ div#content  div.content-box div.box-comments div.comments-list div.item div.msg
 div#content  div.content-box div.box-comments div.comments-list div.item div.msg-info div.user span{
 	float: left;
 	font-family: 'PTSans Bold';
-	font-size: 13px;
-	font-weight: normal;
+	font-size: 14px;
+	font-weight: bold;
 	color: #565656;
 	max-width: 105px;
 }
@@ -7975,12 +7975,12 @@ div#content div.content-box div.movies-box-media div.movies-list div.item a div.
 	position: absolute;
 	float: left;
 	width: 147px;
-	height: 170px;
+	height: 160px;
 	background: transparent url('../images/news-imgeffect.png') no-repeat;
 	opacity: 0.4;
 	filter: alpha(opacity=40);
-	margin-left: 74px;
-	margin-top: 51px;
+	margin-left: 0px;
+	margin-top: 0px;
 }
 
 div#content div.content-box div.movies-box-media div.movies-list div.item:hover a div.img-effect {
@@ -7999,7 +7999,7 @@ div#content div.content-box div.movies-box-media div.movies-list div.item div.ti
 	padding-top: 2px;
 	padding-bottom: 2px;
 	padding-right: 2px;
-	margin-top: 174px;
+	margin-top: 116px;
 }
 
 div#content div.content-box div.movies-box-media div.movies-list div.item div.title-bg div.title {
