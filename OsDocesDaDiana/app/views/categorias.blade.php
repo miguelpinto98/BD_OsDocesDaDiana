@@ -69,11 +69,11 @@
 				
 						<!--Quinto Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Tartes">
 									<img src="assets/images/categorias/tartes.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Tartes</a></div>
+										<div class="title"><?php echo link_to('categorias/Tartes','Tartes');?></div>
 									</div>
 							</div>
 						<!--Quinto Quadrado-->
@@ -81,22 +81,22 @@
 
 						<!--Sexto Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Tortas">
 									<img src="assets/images/categorias/torta.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Tortas</a></div>
+										<div class="title"><?php echo link_to('categorias/Tortas','Tortas');?></div>
 									</div>
 							</div>
 						<!--Sexto Quadrado-->
 
 						<!--Sétimo Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Pudins">
 									<img src="assets/images/categorias/pudim.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Pudins</a></div>
+										<div class="title"><?php echo link_to('categorias/Pudins','Pudins');?></div>
 									</div>
 							</div>
 						<!--Sétimo Quadrado-->
@@ -104,11 +104,11 @@
 
 						<!--Oitavo Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="categoria.html">
+								<a href="categorias/Bombons e Docinhos">
 									<img src="assets/images/categorias/bombons.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Bombons e Docinhos</a></div>
+										<div class="title"><?php echo link_to('categorias/Bombons e Docinhos','Bombons e Docinhos');?></div>
 									</div>
 							</div>
 						<!--Oitavo Quadrado-->
@@ -123,22 +123,22 @@
 
 						<!--Nono Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="#">
+								<a href="categorias/Semi-frios">
 									<img src="assets/images/categorias/semi-frio.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Semi-frios</a></div>
+										<div class="title"><?php echo link_to('categorias/Semi-frios','Semi-frios');?></div>
 									</div>
 							</div>
 						<!--Nono Quadrado-->
 
 						<!--Décimo Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="#">
+								<a href="categorias/Gelados">
 									<img src="assets/images/categorias/gelado.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Gelados</a></div>
+										<div class="title"><?php echo link_to('categorias/Gelados','Gelados');?></div>
 									</div>
 							</div>
 						<!--Décimo Quadrado-->
@@ -146,11 +146,11 @@
 
 						<!--Décimo-primeiro Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="#">
+								<a href="categorias/Doces Fritos">
 									<img src="assets/images/categorias/frito2.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Doces Fritos</a></div>
+										<div class="title"><?php echo link_to('categorias/Doces Fritos','Doces Fritos');?></div>
 									</div>
 							</div>
 						<!--Décimo-primeiro Quadrado-->
@@ -158,11 +158,11 @@
 
 						<!--Décimo-segundo Quadrado-->
 							<div class="new-imagecategorias">
-								<a href="#">
+								<a href="categorias/Frutos e Outros">
 									<img src="assets/images/categorias/fruto.png" width="217px" height="217px"/>
 								</a>
 									<div class="title-bg">
-										<div class="title"><a href="categoria.html">Frutos e Outros</a></div>
+										<div class="title"><?php echo link_to('categorias/Frutos e Outros','Frutos e Outros');?></div>
 									</div>
 							</div>
 						<!--Décimo-segundo Quadrado-->

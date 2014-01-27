@@ -9,7 +9,7 @@ class CategoriaController extends BaseController {
 	 */
 	public function index($nomecategoria) {
 		$receitas = Receitas::where('categoria','=',$nomecategoria)->get();
-		$data = array('receitas' => $receitas);
+		$data = array('receitas' => $receitas, 'categoria'=>$nomecategoria);
 
 		return View::make('categoria',$data);
 	}

@@ -7,21 +7,20 @@
 <?php } ;?>
 
 @section('content')
-		<div class="center">
+<div class="center">
+<!--RECEITA-->
+	<div id="player-box" class="content-box">
+		<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
+			<div class="thumb" title="">
+				<a class="thumb-aux">
+					<img src="{{ asset('assets/images/categorias/teste.png'); }}" width="165px" height="190px">
+					<div class="thumb-effect" title=""></div>
+				</a>
+			</div>
+			<div class="movie-info">
 
-
-				<!--RECEITA-->
-					<div id="player-box" class="content-box">
-						<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
-							<div class="thumb" title="">
-								<a href="#" class="thumb-aux">
-								<img src="assets/images/categorias/teste.png" width="165px" height="190px">
-								<div class="thumb-effect" title=""></div>
-								</a>
-							</div>
-								<div class="movie-info">
-									<a class="movie-name">Doce da Avó</a>
-									<div class="clear"></div>
+				<a class="movie-name">{{ $receita->nome }}</a>
+				<div class="clear"></div>
 									<div class="movie-detailed-info">
 										<div class="detailed-aux" style="height: 20px; line-height: 18px;">
 											<span class="genre">Receita por:
