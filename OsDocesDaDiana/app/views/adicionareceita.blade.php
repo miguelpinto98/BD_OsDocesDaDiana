@@ -22,11 +22,11 @@
 
 						
 						<div class="comments-header">
-							<div class="comment-reply-wraper" style="height:850px";>
-								<div class="comment-reply" style="height:800px";>
+							<div class="comment-reply-wraper" style="height:900px";>
+								<div class="comment-reply" style="height:850px";>
 									
-								<div class="post-comment-wrapper" style="height:800px";>
-									<div class="post-comment" style="height:770px";>
+								<div class="post-comment-wrapper" style="height:840px";>
+									<div class="post-comment" style="height:810px";>
 
 															
 										
@@ -68,7 +68,13 @@
 
 										<div class="post-comment-box" style="height:30px">
 											<span>Dose (número de pessoas)</span>
-											<textarea id="DOSE" style="margin-left:50px; height:20px; width:200px" name="dose" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<textarea id="dose" style="margin-left:50px; height:20px; width:200px" name="dose" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+										</div>
+										<div class="main-separator1"></div>
+
+										<div class="post-comment-box" style="height:30px">
+											<span>Valor Nutricional</span>
+											<textarea id="valornutricional" style="margin-left:120px; height:20px; width:200px" name="valornutricional" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
