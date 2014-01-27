@@ -12,26 +12,26 @@
 			<!--RECEITA-->
 				<div id="player-box" class="content-box">
 					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
-						<div class="thumb" title="Os Selvagens da Noite">
-							<a href="./wareztuga.tv - Os Selvagens da Noite (1979)_files/wareztuga.tv - Os Selvagens da Noite (1979).html" class="thumb-aux">
+						<div class="thumb" title="">
+							<a href="#" class="thumb-aux">
 							<img src="assets/images/categorias/teste.png" width="165px" height="190px">
-							<div class="thumb-effect" title="Os Selvagens da Noite"></div>
-							</a>
-						</div>
-							<div class="movie-info">
-								<a class="movie-name">Doce da Avó</a>
-								<div class="clear"></div>
-								<div class="movie-detailed-info">
-									<div class="detailed-aux" style="height: 20px; line-height: 18px;">
-										<span class="genre">Receita por:
-											<a href="perfil.html" style="">Mariana63</a> em <a href="categoria.html" style="">Doces de Colher</a>
-										</span>
-									</div>
-									<div class="detailed-aux">
-										<span class="director-caption">Tempo de Preparação:</span>
-										<span class="director">1000 minutos</span><br>
-										<span class="director-caption">Dose:</span>
-										<span class="director">6363 pessoas</span><br>
+								<div class="thumb-effect" title="Os Selvagens da Noite"></div>
+								</a>
+							</div>
+								<div class="movie-info">
+									<a class="movie-name">Doce da Avó</a>
+									<div class="clear"></div>
+									<div class="movie-detailed-info">
+										<div class="detailed-aux" style="height: 20px; line-height: 18px;">
+											<span class="genre">Receita por:
+												<a href="perfil.html" style="">Mariana63</a> em <a href="categoria.html" style="">Doces de Colher</a>
+											</span>
+										</div>
+										<div class="detailed-aux">
+											<span class="director-caption">Tempo de Preparação:</span>
+											<span class="director">1000 minutos</span><br>
+											<span class="director-caption">Dose:</span>
+											<span class="director">6363 pessoas</span><br>
 										<span class="director-caption">Custo (por dose):</span>
 										<span class="director">777777 €</span><br>
 										<span class="director-caption">Valor Nutricional (por dose):</span>
@@ -135,7 +135,65 @@
 					
 					
 			<!--RECEITA-->
+						<div id="comments-list" class="comments-list">
+							<!--Comentário Esquerdo-->
+								<div class="left-comments">				
+									<div id="comment812604" class="item-wrapper first ">
+										<div class="item">
+											<div class="comment-header">
+												<div class="avatar">
+													<img data-cfsrc="images/users/avatars/zooey_deschanel.png" alt="pinkwargasm" src="./wareztuga.tv - Os Selvagens da Noite (1979)_files/zooey_deschanel.png">		
+												</div>
+												<div class="comment-info">
+													<div class="comment-user">
+														<div class="username"><span>Utilizador1</span></div>
+														</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+											<div class="comment-body">
+												<span>Comentário1.</span>
+											</div>
+											
+										</div>
+									</div>			
+								</div>
+							<!--Comentário Esquerdo-->
 
+							<!--Comentário Direito-->
+								<div class="right-comments">
+									<div id="comment812562" class="item-wrapper first even">
+										<div class="item ">
+											<div class="comment-header">
+												<div class="avatar">
+													<img data-cfsrc="images/users/avatar167315.jpg" alt="DONMIRA" src="./wareztuga.tv - Os Selvagens da Noite (1979)_files/avatar167315.jpg">
+												</div>
+												<div class="comment-info">
+													<div class="comment-user">
+														<div class="username">
+															<span>Utilizador2</span>
+														</div>
+														</div>
+												</div>
+											</div>
+											<div class="clear"></div>
+												<div class="comment-body">
+													<span>Comentário2.</span>
+												</div>
+												
+										</div>
+									</div>
+								</div>
+							<!--Comentário Direito-->
+
+
+								<div id="pagination" class="pagination" style="margin-top: 20px; clear: both;">
+									<div class="pagination-aux">
+										<a href="javascript:;" onclick="return false;" class="actual">1</a><a href="javascript:;" onclick="reloadComments(&#39;movies&#39;, 5170, 2); scrollToDiv(&#39;#comments-list&#39;);">2</a>
+									</div>
+								</div>
+
+						</div>
 	</div>
 
 @include('footer')	
