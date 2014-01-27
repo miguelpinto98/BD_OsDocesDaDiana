@@ -16,8 +16,8 @@ class HomeController extends BaseController {
 	*/
 
 	public function index() {
-		$receitas = Receitas::all();
-		$coments = Comentarios::all();
+		$receitas = DB::table('receitas')->orderBy('updated_at', 'asc')->get();
+		$coments = DB::table('comentarios')->orderBy('updated_at', 'desc')->get();
 		$data = array('coments' => $coments, 'receitas' =>$receitas);
 
 		return View::make('hello',$data);

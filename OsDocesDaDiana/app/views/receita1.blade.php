@@ -14,8 +14,11 @@
 		<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
 			<div class="thumb" title="">
 				<a class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/teste.png'); }}" width="165px" height="190px">
+				@foreach($imagens as $imagem)
+					<img src="{{ asset($imagem->imagem) }}" width="165px" height="190px">
 					<div class="thumb-effect" title=""></div>
+				<?php break; ?>
+				@endforeach	
 				</a>
 			</div>
 			<div class="movie-info">
@@ -64,36 +67,13 @@
 				<div class="clear"></div>
 			</div>
 			<div class="movie-info2">
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/teste.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/cupcakes.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/teste.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/cupcakes.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/teste.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
-				<div class="thumb2">
-					<a href="" class="thumb-aux">
-					<img src="{{ asset('assets/images/categorias/cupcakes.png'); }}" width="100px" height="100px">
-					</a>
-				</div>
+			@foreach($imagens as $imagem)
+			<div class="thumb2">
+				<a href="" class="thumb-aux">
+				<img src="{{ asset($imagem->imagem); }}" width="100px" height="100px">
+				</a>
+			</div>
+			@endforeach
 			</div>	
 			<div class="clear"></div>
 		</div>

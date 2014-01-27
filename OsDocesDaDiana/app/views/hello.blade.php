@@ -178,10 +178,13 @@
 
 
 		@foreach($receitas as $receita)
+			<?php $img = DB::table('Imagens')->where('idreceita', $receita->idreceita)->first() ;?>
 			<div id="{{ $receita->idreceita }}" class="item" title="{{ $receita->nome }}">
-				<a href="<?php echo '/receita/'.$receita->idreceita ;?>">
-				<img style="display:none;visibility:hidden;" title="{{ $receita->nome }}" /><noscript>
-				<img src="#" alt="The World's End" title="{{ $receita->nome }}" /></noscript>
+				<a href="<?php echo asset('/receita/'.$receita->idreceita) ;?>">
+				@if($img)
+				<img style="display:none;visibility:hidden;" title="{{ $receita->nome }}" />
+				<img src="<?php echo asset($img->imagem) ;?>" width="160" heigth="160" title="{{ $receita->nome }}" />
+				@endif	
 				<div class="thumb-effect" title="{{ $receita->nome }}"></div>
 				<div class="img-effect"></div>
 				</a>

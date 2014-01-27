@@ -69,50 +69,48 @@
 		</div>
 		</div>
 		<!--Gerir Conta-->
-
-					<div class="media-box">
-						<div id="mediaHeader" class="media-header">
-								<div id="mediaHeader-movies" class="media-header-option movies">
-									<a href="javascript: myAccount('accountMedia.ajax.php?cat=movies', $('#accountMediaChangeContent')); setAccountCategory('movies');">
-										<div class="media-header-option-label">As Minhas Receitas</div>
-									</a>
-								</div>
-								<div id="mediaHeader-series" class="media-header-option series">
-									<a href="javascript: myAccount('accountMedia.ajax.php?cat=series', $('#accountMediaChangeContent')); setAccountCategory('series');">
-										<div class="media-header-option-label">Receitas Favoritas</div>
-									</a>
-								</div>
-								<div id="mediaHeader-episodes" class="media-header-option episodes">
-									<a href="javascript: myAccount('accountMedia.ajax.php?cat=episodes', $('#accountMediaChangeContent')); setAccountCategory('episodes');">
-										<div class="media-header-option-label">Chefs Seguidos</div>
-									</a>
-								</div>
+		<div class="media-box">
+			<div id="mediaHeader" class="media-header">
+				<div id="mediaHeader-movies" class="media-header-option movies">
+					<a href="javascript: myAccount('accountMedia.ajax.php?cat=movies', $('#accountMediaChangeContent')); setAccountCategory('movies');">
+					<div class="media-header-option-label">As Minhas Receitas</div>
+					</a>
+				</div>
+				<div id="mediaHeader-series" class="media-header-option series">
+					<a href="javascript: myAccount('accountMedia.ajax.php?cat=series', $('#accountMediaChangeContent')); setAccountCategory('series');">
+					<div class="media-header-option-label">Receitas Favoritas</div>
+					</a>
+				</div>
+				<div id="mediaHeader-episodes" class="media-header-option episodes">
+					<a href="javascript: myAccount('accountMedia.ajax.php?cat=episodes', $('#accountMediaChangeContent')); setAccountCategory('episodes');">
+					<div class="media-header-option-label">Chefs Seguidos</div>
+					</a>
+				</div>
+			</div>
+			<div id="mediaAccountContent" class="media-account-content">								
+				<input type="hidden" name="selectedCat" id="selectedCat" value="series">
+				<div id="mediaHeaderOptions" class="media-header-options">
+					<div class="movies-order without-icon" style="width: 300px; margin-top: 15px;">
+						<div class="movies-order-caption">Ordernar por:
+							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=name&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'name');" style="font-family: 'HelveticaNeueBold';">Título</a>,
+							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=date&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'date');" style="">Data</a>,
+							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=year&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'year');" style="">Ano</a>
 						</div>
-							<div id="mediaAccountContent" class="media-account-content">								
-								<input type="hidden" name="selectedCat" id="selectedCat" value="series">
-								<div id="mediaHeaderOptions" class="media-header-options">
-									<div class="movies-order without-icon" style="width: 300px; margin-top: 15px;">
-										<div class="movies-order-caption">Ordernar por:
-											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=name&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'name');" style="font-family: 'HelveticaNeueBold';">Título</a>,
-											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=date&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'date');" style="">Data</a>,
-											<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=year&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'year');" style="">Ano</a>
-										</div>
-										<input type="hidden" value="name" id="account-order">
-									</div>
-								</div>
-								<div class="clear"></div>
-								
-								<div class="account-media-divider"></div>
-								<div id="mediaAccountContent" class="media-account-content">
+						<input type="hidden" value="name" id="account-order">
+					</div>
+				</div>
+				<div class="clear"></div>
 
+				<div class="account-media-divider"></div>
+				<div id="mediaAccountContent" class="media-account-content">
 					@foreach($receitas as $receita)
-						<div id="$receita->idreceita" class="accmedia-item">
-							<a href="{{ '/receita/'.$receita->idreceita }}" title="{{ $receita->nome }}">
-							<img src="#">
-							<div class="thumb-effect"></div>
-							</a>
-							<!--<a href="javascript:;" class="remove-media-content" onclick="removeMediaContent('receitas', 183, 'Deseja remover este conteúdo desta lista?');"></a>-->
-						</div>
+					<div id="$receita->idreceita" class="accmedia-item">
+						<a href="{{ '/receita/'.$receita->idreceita }}" title="{{ $receita->nome }}">
+						<img src="#">
+						<div class="thumb-effect"></div>
+						</a>
+						<!--<a href="javascript:;" class="remove-media-content" onclick="removeMediaContent('receitas', 183, 'Deseja remover este conteúdo desta lista?');"></a>-->
+					</div>
 					@endforeach	
 				</div>
 			</div>
