@@ -12,7 +12,6 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -28,10 +27,11 @@ public final class PainelAdmin extends javax.swing.JFrame {
     public PainelAdmin() {
         this.sistema = new ODDD();
         this.user=null;
-        
+                
         initComponents();
         listaCategorias();
-        verificaUser(user);
+        listaUtilizadores();
+        //verificaUser(user);
     }
     
     public void verificaUser(Utilizador user){
@@ -58,6 +58,15 @@ public final class PainelAdmin extends javax.swing.JFrame {
             
         listaCategoria.setModel(str);
     }
+    
+    public void listaUtilizadores() {
+        DefaultListModel<String> str = new DefaultListModel<>();
+
+        for(String s : this.sistema.getUsers().keySet())
+            str.addElement(s);
+            
+        listaUser.setModel(str);
+    }
 
     public String seleccionaUser() {
         String s;
@@ -74,16 +83,12 @@ public final class PainelAdmin extends javax.swing.JFrame {
     }
 
     public String seleccionaCategoria() {
-        String s;
+        String s = null;
 
-        if (listaCategoria.getSelectedIndex() != -1) {
+        if (listaCategoria.getSelectedIndex() != -1)
             s = listaCategoria.getSelectedValue().toString();
-        } else {
-            s = null;
-        }
 
         listaCategoria.clearSelection();
-
         return s;
     }
 
@@ -109,7 +114,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
         adicionarCategoria1 = new javax.swing.JButton();
         utilizadores = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        listaUser = new javax.swing.JList();
+        listaUser = new javax.swing.JList<String>();
         jLabel3 = new javax.swing.JLabel();
         consultarUser = new javax.swing.JButton();
         BloquearUser = new javax.swing.JButton();
@@ -141,7 +146,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(483, Short.MAX_VALUE)
+                .addContainerGap(551, Short.MAX_VALUE)
                 .addComponent(jXSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
@@ -233,13 +238,13 @@ public final class PainelAdmin extends javax.swing.JFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(categoriasLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(adicionarCategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(adicionarCategoria1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         categoriasLayout.setVerticalGroup(
@@ -265,11 +270,8 @@ public final class PainelAdmin extends javax.swing.JFrame {
 
         utilizadores.setBackground(new java.awt.Color(255, 255, 255));
 
-        listaUser.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
+        listaUser.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
+        listaUser.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(listaUser);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -300,9 +302,11 @@ public final class PainelAdmin extends javax.swing.JFrame {
             utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(utilizadoresLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
+                .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(utilizadoresLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
@@ -311,7 +315,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 355, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
                 .addContainerGap())
         );
         utilizadoresLayout.setVerticalGroup(
@@ -328,12 +332,12 @@ public final class PainelAdmin extends javax.swing.JFrame {
                         .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utilizadoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator2)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -347,16 +351,11 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
         // TODO add your handling code here:
         String s = seleccionaCategoria();
-        Categoria cat = new Categoria();
         
-        Map<String, Categoria> categorias = sistema.getCategorias();
-        
-        for(Categoria ca : categorias.values()){
-            if(ca.getNomeCategoria().equals(s))
-                cat = ca;
-        }
-        
-        if (s != null) {
+        if(s != null) {
+            System.out.println(s);
+            Categoria cat = this.sistema.getCategorias().get(s);
+
             this.jPanel3.removeAll();
             this.jPanel3.add(new ListaReceitas(this,cat), BorderLayout.CENTER);
             this.jPanel3.updateUI();
@@ -437,7 +436,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private org.jdesktop.swingx.JXSearchField jXSearchField1;
     private javax.swing.JList<String> listaCategoria;
-    private javax.swing.JList listaUser;
+    private javax.swing.JList<String> listaUser;
     private javax.swing.JTabbedPane painelgeral;
     private javax.swing.JPanel utilizadores;
     // End of variables declaration//GEN-END:variables

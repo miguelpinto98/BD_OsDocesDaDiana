@@ -26,7 +26,7 @@ public class Categoria {
         this.nomeCategoria = n;
     }
     
-    public Map<Integer, Receita> getCategorias() {
+    public Map<Integer, Receita> getReceitas() {
         return receitas;
     }
 

@@ -118,7 +118,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
                 upd.setTime(d2);
                 String localidade = rs.getString(LOCALIDADE);
                 
-                user = new Utilizador (tipo, nick, nome, email, pw, desc, img, numrec, valaval, numaval, dadoscomp, rm, (GregorianCalendar) create, (GregorianCalendar) upd, localidade);
+                user = new Utilizador (nick, nome, email, pw, img, desc, numrec, valaval, numaval, dadoscomp, rm, tipo,(GregorianCalendar) create, (GregorianCalendar) upd, localidade);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -132,25 +132,19 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Utilizadores(username, nome, email, password, tipo, created_at, updated_at, localidade) "
-                        + "VALUES (?,?,?,?,?,?,?,?)";
-                
+               GregorianCalendar c = value.getCreated();
+               String cr = c.get(c.YEAR)+"-"+(c.get(c.MONTH)+1)+"-"+c.get(c.DAY_OF_MONTH)+" "+c.get(c.HOUR_OF_DAY)+":"+c.get(c.MINUTE)+":"+c.get(c.SECOND);
+               c = value.getUpdated();
+               String up = c.get(c.YEAR)+"-"+(c.get(c.MONTH)+1)+"-"+c.get(c.DAY_OF_MONTH)+" "+c.get(c.HOUR_OF_DAY)+":"+c.get(c.MINUTE)+":"+c.get(c.SECOND);
+               
+               sql = "INSERT INTO UTILIZADORES (USERNAME, NOME, EMAIL, PASSWORD, TIPO, CREATED_AT, UPDATED_AT) "
+                    + "VALUES ('"+value.getUsername()+"', '"+value.getNome()+"', '"+value.getEmail()+"', '"+value.getPassword()+"', "
+                    + "'"+value.getTipo()+"', TO_DATE('"+cr+"', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('"+up+"', 'YYYY-MM-DD HH24:MI:SS'))";  
             } else {
-                sql = "";
-            }
+                ;
+            }   
             PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
-            pstm.setString(USERNAME, value.getNick());
-            pstm.setString(NOME, value.getNome());
-            pstm.setString(EMAIL, value.getEmail());
-            pstm.setString(PW, value.getPassw());            
-            pstm.setInt(TIPO, value.getTipo());
-            Timestamp create = new Timestamp(value.getCreate().getTimeInMillis());
-            pstm.setTimestamp(CREATE, create);
-            Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
-            pstm.setTimestamp(UPDATE, update);
-            pstm.setString(LOCALIDADE, value.getLocalidade());
-            
-            pstm.execute();
+            pstm.executeQuery();
             
             user = value;
             pstm.close();

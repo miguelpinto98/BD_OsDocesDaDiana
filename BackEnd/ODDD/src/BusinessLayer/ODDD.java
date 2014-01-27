@@ -98,13 +98,11 @@ public class ODDD {
 
     public boolean registarUser(String nickname, String nome, String password, String email, int tipo) {
         GregorianCalendar g = new GregorianCalendar();
-        GregorianCalendar u = new GregorianCalendar();
         boolean inserido = false;
 
         if (validaPassword(password)) {
-            Utilizador user = new Utilizador(tipo, nickname, nome, password, email, g, u);
             String pw = Utilizador.encriptarPassword(password);
-            user.setPassw(pw);
+            Utilizador user = new Utilizador(tipo,nickname,nome,pw,email);  
             inserido = inserirUtilizador(user);
         }
         return inserido;
@@ -112,8 +110,8 @@ public class ODDD {
 
     public boolean inserirUtilizador(Utilizador user) {
         boolean ins = false;
-        if (!(existeUtilizador(user.getNick(), user.getEmail()))) {
-            this.users.put(user.getNick(), user);
+        if (!(existeUtilizador(user.getUsername(), user.getUsername()))) {
+            this.users.put(user.getUsername(), user);
             ins = true;
         }
         return ins;
@@ -129,11 +127,11 @@ public class ODDD {
     }
 
     public void actualizarUtilizador(Utilizador user) {
-        this.users.put(user.getNick(), user);
+        this.users.put(user.getUsername(), user);
     }
 
     public void removerUtilizador(Utilizador user) {
-        this.users.remove(user.getNick());
+        this.users.remove(user.getUsername());
     }
 
     public boolean validaLogin(String nickname, String password) {

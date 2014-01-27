@@ -280,7 +280,7 @@ public class JAdicionarReceita extends javax.swing.JDialog {
             erro.setText("Dados Incompletos");
         else{
             ODDD sys = this.p.getSistema();
-            Receita e = new Receita(9000,nome, descricao,0,utilizador,categoria,0,0,caloriasP,0,tempoP,doseP,dataCriar,dataUpdate,ingredientes);
+            Receita e = new Receita(9000,nome, descricao,0,utilizador,categoria,0,0,caloriasP,0,tempoP,doseP,dataCriar,dataUpdate,ingredientes,0);
             
             boolean res = c.inserirReceita(e);
             erro.setText("Receita criada com Sucesso");

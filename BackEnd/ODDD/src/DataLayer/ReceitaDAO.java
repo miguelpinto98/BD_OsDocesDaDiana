@@ -26,16 +26,14 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public static int NOME_UTILIZADOR = 6;
     public static int VALOR_AVALIACOES = 7;
     public static int NR_AVALIACOES = 8;
-    public static int TOTAL_CALORIAS = 9;
+    public static int CUSTO = 9;
     public static int APAGADO = 10;
     public static int TEMPO_PREPARACAO = 11;
     public static int DOSE = 12;
     public static int CREATE = 13;
     public static int UPDATE = 14;
     public static int INGREDIENTES = 15;
-    
-    public ReceitaDAO(){
-    }
+    public static int VALOR_NUTRI = 16;
     
     public ReceitaDAO(String nCat) {
         this.nomeCategoria = nCat;
@@ -46,7 +44,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         int res = 0;
         try {
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM RECEITAS";
+            String sql = "SELECT * FROM RECEITAS r WHERE r.CATEGORIA = '"+this.nomeCategoria+"'";
             ResultSet rs = stm.executeQuery(sql);
             
             while(rs.next())
@@ -63,7 +61,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         boolean res = false;
         try {
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM RECEITAS";
+            String sql = "SELECT * FROM RECEITAS r WHERE r.CATEGORIA = '"+this.nomeCategoria+"'";
             ResultSet rs = stm.executeQuery(sql);
             res = rs.next();
             
@@ -78,7 +76,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         boolean res = false;
         try {
             int id = (Integer) key;
-            String sql = "SELECT * FROM RECEITAS r WHERE r.IDRECEITA = "+id;
+            String sql = "SELECT * FROM RECEITAS r WHERE r.IDRECEITA = "+id+" and r.CATEGORIA = '"+this.nomeCategoria+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             res = rs.next();
@@ -100,7 +98,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         try {
             int id = (Integer) key;
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM RECEITAS r WHERE r.IDRECEITA = "+id+" and u.APAGADO = "+0;
+            String sql = "SELECT * FROM RECEITAS r WHERE r.CATEGORIA = '"+this.nomeCategoria+"' and r.IDRECEITA = "+id+" and r.APAGADO = "+0;
             ResultSet rs = stm.executeQuery(sql);
             
             if(rs.next()) {
@@ -110,7 +108,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 String user = rs.getString(NOME_UTILIZADOR);
                 int valorAvaliacoes = rs.getInt(VALOR_AVALIACOES); // ALTERAR CASO MUDE NA CLASSE RECEITA
                 int nrAvaliacoes = rs.getInt(NR_AVALIACOES);
-                int totalCalorias = rs.getInt(TOTAL_CALORIAS); // ALTERAR CASO MUDE NA CLASSE RECEITA
+                int custo = rs.getInt(CUSTO); //CUSTO
                 int rm = rs.getInt(APAGADO);
                 int tempo = rs.getInt(TEMPO_PREPARACAO);
                 int dose = rs.getInt(DOSE);
@@ -119,8 +117,9 @@ public class ReceitaDAO implements Map<Integer, Receita>{
                 Calendar update = GregorianCalendar.getInstance();
                 update.setTime(rs.getTimestamp(UPDATE));
                 String ingr = rs.getString(INGREDIENTES);
+                int vnut = rs.getInt(VALOR_NUTRI); //PASSAR
                 
-                rec = new Receita(id, nomeReceita, descricao, nrImagens, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, totalCalorias, rm, tempo, dose, (GregorianCalendar) create, (GregorianCalendar) update, ingr);
+                rec = new Receita(id, nomeReceita, descricao, nrImagens, this.nomeCategoria, user, valorAvaliacoes, nrAvaliacoes, custo, rm, tempo, dose, (GregorianCalendar) create, (GregorianCalendar) update, ingr, vnut);
             }            
             ConexaoBD.fecharCursor(rs, stm);
         } catch (SQLException e) {
@@ -134,8 +133,8 @@ public class ReceitaDAO implements Map<Integer, Receita>{
         try {
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, totalCalorias, apagado, tempoPreparacao, dose, created_at, updated_at, ingredientes)"
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, custo, apagado, tempoPreparacao, dose, created_at, updated_at, ingredientes, VNUTRICIONAL)"
+                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 
             } else {
                 sql = "";
@@ -149,7 +148,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             pstm.setString(NOME_UTILIZADOR, value.getUser());
             pstm.setInt(VALOR_AVALIACOES, value.getVavaliacoes());
             pstm.setInt(NR_AVALIACOES, value.getNavaliacoes());
-            pstm.setInt(TOTAL_CALORIAS, value.getTotalCal());
+            pstm.setInt(CUSTO, value.getCusto());
             pstm.setInt(APAGADO, value.getRemovido());
             pstm.setInt(TEMPO_PREPARACAO, value.getTempo());
             pstm.setInt(DOSE, value.getDose());
@@ -158,6 +157,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
             Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
             pstm.setTimestamp(UPDATE, update);
             pstm.setString(INGREDIENTES, value.getIngredientes());
+            pstm.setInt(VALOR_NUTRI, value.getValorNutricional());
             pstm.execute();
             
             rec = value;
@@ -196,7 +196,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public Set<Integer> keySet() {
         Set<Integer> res = new TreeSet<>();
         try {
-            String sql = "SELECT IDRECEITA FROM RECEITAS r WHERE r.APAGADO = 0";
+            String sql = "SELECT IDRECEITA FROM RECEITAS r WHERE r.APAGADO = 0 and r.CATEGORIA = '"+this.nomeCategoria+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             
@@ -213,7 +213,7 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     public Collection<Receita> values() {
         Collection<Receita> res = new HashSet<>();
         try {
-            String sql = "SELECT IDRECEITA FROM RECEITAS r WHERE r.APAGADO = 0";
+            String sql = "SELECT IDRECEITA FROM RECEITAS r WHERE r.APAGADO = 0 and r.CATEGORIA = '"+this.nomeCategoria+"'";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             

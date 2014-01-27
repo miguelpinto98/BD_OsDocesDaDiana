@@ -15,7 +15,7 @@ public class Receita {
     private int nimgs;
     private Imagem img; // private Map<Integer,Imagem> imgs; // <IDRECEITAS,IMAGENS>
     private String user; // private Utilizador u ???
-    private int totalCal; // NAO DEVERIA SER DOUBLE??
+    private int custo; // NAO DEVERIA SER DOUBLE??
     private Map<Integer, Ingrediente> ingrs;
     private int vavaliacoes; // NAO DEVERIA SER DOUBLE??
     private int navaliacoes;
@@ -27,6 +27,7 @@ public class Receita {
     private GregorianCalendar create;
     private GregorianCalendar update;
     private String ingredientes;
+    private int vnutri;
 
     public Receita() {
         this.id = 0; //NECESSARIO CRIAR ID INCREMENTO
@@ -34,7 +35,7 @@ public class Receita {
         this.nimgs = 0;
         this.img = new Imagem();
         this.user = ""; 
-        this.totalCal = 0;
+        this.custo = 0;
         this.ingrs = new ReceitaIngredienteDAO(this.id);
         this.vavaliacoes = 0;
         this.navaliacoes = 0;
@@ -46,9 +47,10 @@ public class Receita {
         this.create = new GregorianCalendar();
         this.update = new GregorianCalendar();
         this.ingredientes = "";
+        this.vnutri = 0;
     }
     
-    public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u, String in){
+    public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u, String in, int vn){
         this.id = id;
         this.nome = nm;
         this.desc = desc;
@@ -56,7 +58,7 @@ public class Receita {
         this.user = user;
         this.vavaliacoes = valorA;
         this.navaliacoes = nrAvaliacoes;
-        this.totalCal = totalCal;
+        this.custo = totalCal;
         this.removido = rm;
         this.ingrs = new ReceitaIngredienteDAO(this.id);
         this.coments = new ComentariosDAO(this.id);
@@ -66,6 +68,11 @@ public class Receita {
         this.create = g;
         this.update = u;
         this.ingredientes = in;
+        this.vnutri = vn;
+    }
+    
+    public int getValorNutricional() {
+        return this.vnutri;
     }
     
     public Map<String, Integer> getAvaliacoes() {
@@ -120,12 +127,12 @@ public class Receita {
         this.user = user;
     }
 
-    public int getTotalCal() {
-        return totalCal;
+    public int getCusto() {
+        return this.custo;
     }
 
-    public void setTotalCal(int totalCal) {
-        this.totalCal = totalCal;
+    public void setCusto(int totalCal) {
+        this.custo = totalCal;
     }
 
     public Map<Integer, Ingrediente> getIngrs() {
@@ -243,7 +250,7 @@ public class Receita {
         if (!Objects.equals(this.user, other.user)) {
             return false;
         }
-        if (this.totalCal != other.totalCal) {
+        if (this.custo != other.custo) {
             return false;
         }
         if (!Objects.equals(this.ingrs, other.ingrs)) {

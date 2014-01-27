@@ -1,95 +1,88 @@
 package BusinessLayer;
 
-import DataLayer.ChefesSeguidosDAO;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import DataLayer.ReceitaSeguidaDAO;
 import java.util.GregorianCalendar;
-import java.util.Map;
+import java.util.Objects;
 
 public class Utilizador {
-    private int tipo; /* TIPO 0 = NORMAL TIPO 1 = ADMIN  */
-    private String nick;
+    private String username;
     private String nome;
     private String email;
-    private String passw;
+    private String password;
+    private String avatar;
     private String descricao;
-    private String img;
-    private int nreceitas;
-    private int valorav;
-    private int navaliacoes;
-    private int dadoscomp;
-    private Map<String,Integer> receitasSeguidas;
-    private Map<String,String> chefesseg;
-    private int removido;
-    private GregorianCalendar create;
-    private GregorianCalendar update;
+    private int numreceitas;
+    private int valavaliacoes;
+    private int numavaliacoes;
+    private int dadoscompletos;
+    private int apagado;
+    private int tipo;
+    private GregorianCalendar created;
+    private GregorianCalendar updated;
     private String localidade;
     
-    
+    public Utilizador() {
+        this.username = new String();
+        this.nome = new String();
+        this.email = new String();
+        this.password = new String();
+        this.avatar = new String();
+        this.descricao = new String();
+        this.numreceitas = 0;
+        this.valavaliacoes = 0;
+        this.numavaliacoes = 0;
+        this.dadoscompletos = 0;
+        this.apagado = 0;
+        this.tipo = 0;
+        this.created = new GregorianCalendar();
+        this.updated = new GregorianCalendar();
+        this.localidade = new String();
+    }
 
-    Utilizador(int tipo, String nickname, String nome, String password, String email, GregorianCalendar g, GregorianCalendar d) {
-        this.tipo = tipo;
-        this.nick = nickname;
+    public Utilizador(String username, String nome, String email, String password, String avatar, String descricao, int numreceitas, int valavaliacoes, int numavaliacoes, int dadoscompletos, int apagado, int tipo, GregorianCalendar created, GregorianCalendar updated, String localidade) {
+        this.username = username;
         this.nome = nome;
-        this.passw = password;
         this.email = email;
-        this.create = g;
-        this.update = d;
-    }
-
-    public Utilizador(int tipo, String nick, String nome, String email, String pw,
-              String desc, String img, int numrec, int valaval, int numaval, int dadoscomp, int rm, GregorianCalendar c, GregorianCalendar u, String l) {
+        this.password = password;
+        this.avatar = avatar;
+        this.descricao = descricao;
+        this.numreceitas = numreceitas;
+        this.valavaliacoes = valavaliacoes;
+        this.numavaliacoes = numavaliacoes;
+        this.dadoscompletos = dadoscompletos;
+        this.apagado = apagado;
         this.tipo = tipo;
-        this.nick = nick;
-        this.nome = nome;
-        this.email = email;
-        this.passw = pw;
-        this.descricao = desc;
-        this.img = img; // !!! ATIVAR ISTO, MUDAR OBJECT PARA IMAGEM
-        this.nreceitas = numrec;
-        this.valorav = valaval;
-        this.navaliacoes = numaval;
-        this.dadoscomp = dadoscomp;
-        this.receitasSeguidas = new ReceitaSeguidaDAO(this.nick);
-        this.chefesseg = new ChefesSeguidosDAO(this.nick);
-        this.removido = rm;
-        this.create = c;
-        this.update = u;
-        this.localidade = l;
-    }
-    
-    public Map<String,String> getChefesSeguidos() {
-        return this.chefesseg;
-    }
-    
-    public Map<String,Integer> getReceitasSeguidas() {
-        return this.receitasSeguidas;
-    }
-    
-    public String getLocalidade() {
-        return this.localidade;
+        this.created = created;
+        this.updated = updated;
+        this.localidade = localidade;
     }
 
-    public void setLocalidade(String l) {
-        this.localidade = l;
-    }
-    
-    public int getTipo() {
-        return this.tipo;
-    }
-    
-    public void setTipo(int t) {
+    Utilizador(int t, String nick, String nom, String pw, String mail) {
+        this.username = nick;
+        this.nome = nom;
+        this.email = mail;
+        this.password = pw;
+        this.avatar = "";
+        this.descricao = "";
+        this.numreceitas = 0;
+        this.valavaliacoes = 0;
+        this.numavaliacoes = 0;
+        this.dadoscompletos = 0;
+        this.apagado = 0;
         this.tipo = t;
+        this.created = new GregorianCalendar();
+        this.updated = new GregorianCalendar();
+        this.localidade = "";
     }
 
-    public String getNick() {
-        return nick;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNick(String nick) {
-        this.nick = nick;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getNome() {
@@ -108,20 +101,20 @@ public class Utilizador {
         this.email = email;
     }
 
-    public String getPassw() {
-        return passw;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassw(String passw) {
-        this.passw = passw;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getImg() {
-        return img;
+    public String getAvatar() {
+        return avatar;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getDescricao() {
@@ -132,78 +125,123 @@ public class Utilizador {
         this.descricao = descricao;
     }
 
-    public int getNreceitas() {
-        return nreceitas;
+    public int getNumReceitas() {
+        return numreceitas;
     }
 
-    public void setNreceitas(int nreceitas) {
-        this.nreceitas = nreceitas;
+    public void setNumReceitas(int numreceitas) {
+        this.numreceitas = numreceitas;
     }
 
-    public int getValorav() {
-        return valorav;
+    public int getValAvaliacoes() {
+        return valavaliacoes;
     }
 
-    public void setValorav(int valorav) {
-        this.valorav = valorav;
+    public void setValAvaliacoes(int valavaliacoes) {
+        this.valavaliacoes = valavaliacoes;
     }
 
-    public int getNavaliacoes() {
-        return navaliacoes;
+    public int getNumAvaliacoes() {
+        return numavaliacoes;
     }
 
-    public void setNavaliacoes(int navaliacoes) {
-        this.navaliacoes = navaliacoes;
+    public void setNumAvaliacoes(int numavaliacoes) {
+        this.numavaliacoes = numavaliacoes;
     }
 
     public int getDadosCompletos() {
-        return dadoscomp;
+        return dadoscompletos;
     }
 
-    public void setDadosCompletos(int dadoscomp) {
-        this.dadoscomp = dadoscomp;
+    public void setDadosCompletos(int dadoscompletos) {
+        this.dadoscompletos = dadoscompletos;
     }
 
-    public int getRemovido() {
-        return removido;
+    public int getApagado() {
+        return apagado;
     }
 
-    public void setRemovido(int removido) {
-        this.removido = removido;
-    }
-    
-    public GregorianCalendar getCreate(){
-        return this.create;
-    }
-    
-    public GregorianCalendar getUpdate(){
-        return this.update;
+    public void setApagado(int apagado) {
+        this.apagado = apagado;
     }
 
-    public void setCreate(GregorianCalendar g){
-        this.create = g;
+    public int getTipo() {
+        return tipo;
     }
-    
-    public void setUpdate(GregorianCalendar g){
-        this.update = g;
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
-    
-    public static String encriptarPassword(String pw) {
-        byte[] pwB = pw.getBytes();
-        byte[] pwEnc = null;
-        String res = null;
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            pwEnc = md.digest(pwB);
-            BigInteger big = new BigInteger(1, pwEnc);
-            res = big.toString(16);
-        } catch (NoSuchAlgorithmException e) {
-            throw new NullPointerException(e.getMessage());
+
+    public GregorianCalendar getCreated() {
+        return created;
+    }
+
+    public void setCreated(GregorianCalendar created) {
+        this.created = created;
+    }
+
+    public GregorianCalendar getUpdated() {
+        return updated;
+    }
+
+    public void setUpdated(GregorianCalendar updated) {
+        this.updated = updated;
+    }
+
+    public String getLocalidade() {
+        return localidade;
+    }
+
+    public void setLocalidade(String localidade) {
+        this.localidade = localidade;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + Objects.hashCode(this.username);
+        hash = 67 * hash + Objects.hashCode(this.nome);
+        hash = 67 * hash + Objects.hashCode(this.email);
+        hash = 67 * hash + Objects.hashCode(this.password);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
         }
-        return res;
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Utilizador other = (Utilizador) obj;
+        if (!Objects.equals(this.username, other.username)) {
+            return false;
+        }
+        if (!Objects.equals(this.email, other.email)) {
+            return false;
+        }
+        if (!Objects.equals(this.password, other.password)) {
+            return false;
+        }
+        return true;
+    }
+  
+    public static String encriptarPassword (String pw) {
+        byte[] pwB = pw.getBytes() ;
+        byte[] pwEnc = null ;
+        String res = null ;        
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5") ;
+            pwEnc = md.digest(pwB) ;
+            BigInteger big = new BigInteger(1, pwEnc) ;
+            res = big.toString(16) ;            
+        } catch (NoSuchAlgorithmException e) {throw new NullPointerException(e.getMessage()) ;}
+        return res ;
     }
 
     public boolean passwordCorresponde(String pw) {
-        return this.passw.equals(encriptarPassword(pw));
+        return this.password.equals(encriptarPassword(pw));
     }
 }

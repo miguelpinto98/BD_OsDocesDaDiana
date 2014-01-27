@@ -153,7 +153,7 @@ public class CategoriaDAO implements Map<String, Categoria>{
     public Collection<Categoria> values() {
         Collection<Categoria> res = new HashSet<>();
         try {
-            String sql = "SELECT NOMECATEGORIA FROM CATEGORIA c WHERE c.APAGADO = 0";
+            String sql = "SELECT NOMECATEGORIA FROM CATEGORIAS c WHERE c.APAGADO = 0";
             Statement stm = ConexaoBD.getConexao().createStatement();
             ResultSet rs = stm.executeQuery(sql);
             
