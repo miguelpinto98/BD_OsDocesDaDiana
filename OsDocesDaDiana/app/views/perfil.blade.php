@@ -72,14 +72,18 @@
 							<div class="main-separator1"></div>
 
 
-							<form action="adicionareceita" method="post" enctype="multipart/form-data" style="margin-top:30px">
+							<form action="perfil" method="post" enctype="multipart/form-data" style="margin-top:30px">
 								<label for="file">Imagens:</label>
 								<input type="file" name="file" multiple="multiple"><br>
 								<input type="submit" name="submit" value="Carregar">
 							</form>
 
+							
+
+							<form action="perfil" method="post" enctype="multipart/form-data">
 							<input type="submit" id="cena" name="cena" style="background-color:#93a842; color: white; height:50px; width:200px; margin-left:20px" name="submit" value="Alterar Dados" />
 							<div class="main-separatorr"></div>
+							</form>
 						
 
 						</div>
@@ -122,7 +126,7 @@
 				<div id="mediaHeaderOptions" class="media-header-options">
 					<div class="movies-order without-icon" style="width: 300px; margin-top: 15px;">
 						<div class="movies-order-caption">Ordernar por:
-							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=name&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'name');" style="font-family: 'HelveticaNeueBold';">Título</a>,
+							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=name&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'name');" style="">Título</a>,
 							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=date&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'date');" style="">Data</a>,
 							<a href="javascript: myAccount('accountMedia.ajax.php?p=1&order=year&cat=series', $('#accountMediaChangeContent')); setOrderBy('account', 'year');" style="">Ano</a>
 						</div>
