@@ -97,7 +97,7 @@
 			</div>	
 			<div class="clear"></div>
 		</div>
-		
+		@if(Auth::check())
 		<div class="player-aux" style="padding-top: 0px; display: block;">
 			<div id="movie-actions" class="movie-actions">
 				<a id="faved" href="javascript: playerMovieAction('movies', 5170, 'faved');" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
@@ -111,96 +111,144 @@
 					</div>
 			</div>
 		</div>
+		@endif
 	</div>
 	<!--VER RECEITA vvv -->
-	<div id="" class="content-box">
-		<div class="ver-receita">
-			<a href="receita2.html" id="comment-submit">Ver receita</a>
-		</div>
-	</div>
+				
+				<div id="player-box" class="content-box">
+					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
+								<div class="movie-info">									
+									<div class="movie-detailed-info">	
+									</div>							
+								
+									<!--<span id="movie-synopsis" class="movie-synopsis">Texto.<a href="javascript: readMore('movies', 5170);">ler mais</a></span>
+									<span id="movie-synopsis-aux" class="movie-synopsis-aux">Texto todo.</span>-->
+							</div>
+
+
+							<div class="clear"></div>
+					</div>
+				
+					
+					<div class="player-aux" style="overflow: visible; padding-bottom: 25px;">
+						<div class="lista-ing">
+							<span class="ing">Ingredientes:</span>
+							<div class="clear"></div>
+							<ul>
+							<!--	<li class="">200g de manteiga</li>
+								<li class="">5 ovos</li>
+								<li class="">leite</li>-->
+								{{$receita->ingredientes}}
+							</ul>
+						</div>
+
+						
+						<div class="preparacao">
+							<span class="p">Preparação:</span>
+								<div class="texto">
+									<span>
+									{{$receita->descricao}}
+									</span>										
+								</div>
+						</div>
+						
+
+						
+					</div>
+
+
+				</div>
 
 	<div class="main-separator"></div>
 
 	@if(Auth::check())
 	<div id="comments-box" class="content-box">
-						<div class="comments-header">
-							<div class="comment-reply-wraper">
-								<div class="comment-reply">
-									<div class="user-info">
-										<div class="avatar">
-											<img data-cfsrc="images/users/avatars/zoe_saldana.png" alt="" src="./wareztuga.tv - Os Selvagens da Noite (1979)_files/zoe_saldana.png">
-										</div>
-										<div class="username"><span>98jigs</span></div>
-									</div>
-								<div class="post-comment-wrapper">
-									<div class="post-comment">
-										<div class="comment-box-arrow"></div>
-										<div class="post-comment-box">
-											<span id="comment-box-label" class="comment-box-label">Deixe aqui o seu comentário.</span>
-											<textarea id="commentBox" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
-										</div>
-										<div class="separator"></div>
-											<div class="comment-box-footer">
-												<div class="comment-submit">
-													<a href="javascript:;" id="comment-submit" onclick="putComment(&#39;movies&#39;, 5170, 1)"><span></span>Submeter</a>
-												</div>
-											</div>
-										</div>
-									</div>
+		<div class="comments-header">
+			<div class="comment-reply-wraper">
+				<div class="comment-reply">
+					<div class="user-info">
+						<div class="avatar">
+							<img src="{{ asset(Auth::user()->avatar); }}">
+						</div>
+						<div class="username"><span>{{Auth::user()->username}}</span></div>
+					</div>
+					<div class="post-comment-wrapper">
+						<div class="post-comment">
+							<div class="comment-box-arrow"></div>
+							<div class="post-comment-box">
+								<span id="comment-box-label" class="comment-box-label">Deixe aqui o seu comentário.</span>
+								<textarea id="commentBox" name="commentBox" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+							</div>
+							<div class="separator"></div>
+							<div class="comment-box-footer">
+								<div class="comment-submit">
+									<a href="javascript:;" id="comment-submit" onclick="putComment(&#39;movies&#39;, 5170, 1)"><span></span>Submeter</a>
 								</div>
 							</div>
 						</div>
-						
+					</div>
+				</div>
+			</div>
+		</div>
 
-						<div id="comments-list" class="comments-list">
-							
-							<!--Comentário Esquerdo-->
-								<div class="left-comments">				
-									<div id="comment812604" class="item-wrapper first ">
-										<div class="item">
-											<div class="comment-header">
-												<div class="avatar">
-													<img data-cfsrc="images/users/avatars/zooey_deschanel.png" alt="pinkwargasm" src="./wareztuga.tv - Os Selvagens da Noite (1979)_files/zooey_deschanel.png">		
-												</div>
-												<div class="comment-info">
-													<div class="comment-user">
-														<div class="username"><span>Utilizador1</span></div>
-														</div>
-												</div>
-											</div>
-											<div class="clear"></div>
-											<div class="comment-body">
-												<span>Comentário1.</span>
-											</div>
-											
-										</div>
-									</div>			
-								</div>
-							<!--Comentário Esquerdo-->
+		<div id="comments-list" class="comments-list">
+		<?php $res=1; ?>
+		<?php $count = count($comentarios); ?>
+		@foreach($comentarios as $comentario)
+			<?php $tbl = DB::table('Utilizadores')->where('username', $comentario->username)->first() ;?>
 
-							<!--Comentário Direito-->
-								<div class="right-comments">
-									<div id="comment812562" class="item-wrapper first even">
-										<div class="item ">
-											<div class="comment-header">
-												<div class="avatar">
-													<img data-cfsrc="images/users/avatar167315.jpg" alt="DONMIRA" src="./wareztuga.tv - Os Selvagens da Noite (1979)_files/avatar167315.jpg">
-												</div>
-												<div class="comment-info">
-													<div class="comment-user">
-														<div class="username">
-															<span>Utilizador2</span>
-														</div>
-														</div>
-												</div>
-											</div>
-											<div class="clear"></div>
+		<!--Comentário Esquerdo-->
+		@if($res % 2 == 0)
+			<div class="left-comments">				
+				<div id="comment812604" class="item-wrapper first ">
+					<div class="item">
+						<div class="comment-header">
+							<div class="avatar">
+								<img src="{{ asset($tbl->avatar); }}">		
+							</div>
+						<div class="comment-info">
+							<div class="comment-user">
+								<div class="username"><span>{{ $comentario->username }}</span></div>
+								<div class="comment-date"><span>{{ $comentario->created_at }}</span></div>
+							</div>
+							<div class="comment-number">{{ $count; }}</div> <?php $count--;?>
+						</div>
+						</div>
+						<div class="clear"></div>
+							<div class="comment-body">
+								<span>{{ $comentario->comentario }}</span>
+							</div>						
+					</div>
+				</div>			
+			</div>
+		@endif
+		<!--Comentário Direito-->
+		@if($res % 2 != 0)
+			<div class="right-comments">
+				<div id="comment812562" class="item-wrapper first even">
+					<div class="item ">
+						<div class="comment-header">
+							<div class="avatar">
+								<img src="{{ asset($tbl->avatar); }}">
+							</div>
+						<div class="comment-info">
+							<div class="comment-user">
+								<div class="username"><span>{{ $comentario->username }}</span></div>
+								<div class="comment-date"><span>{{ $comentario->created_at }}</span></div>
+							</div>
+							<div class="comment-number">{{ $count; }}</div> <?php $count--;?>
+						</div>
+						</div>
+						<div class="clear"></div>
 						<div class="comment-body">
-							<span>Comentário2.</span>
+							<span>{{ $comentario->comentario }}</span>
 						</div>						
 					</div>
 				</div>
 			</div>
+		@endif
+		<?php $res++; ?>
+		@endforeach	
 	@endif		
 
 <!--

@@ -4,7 +4,7 @@
 	<div class="center">
 	<div class="topNav">
 
-	<a class="avatar"><img src="{{ Auth::user()->avatar }}"></a>
+	<a class="avatar"><img src="{{ asset(Auth::user()->avatar); }}"></a>
 			<form method="post" id="logoutForm">
 			
 			<input type="hidden" name="logout" value="true">

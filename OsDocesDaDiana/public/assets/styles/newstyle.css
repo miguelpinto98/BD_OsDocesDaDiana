@@ -5341,7 +5341,7 @@ div#content div#comments-box div.comments-header div.comment-reply {
 
 div#content div#comments-box div.comments-header div.comment-reply div.user-info{
 	float: left;
-	width: 54px;
+	width: 66px;
 	overflow: hidden;
 }
 
@@ -5406,7 +5406,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.user-info
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment-wrapper{
 	float: left;
 	/*width: 449px;*/
-	width: 785px;
+	width: 773px;
 	height: 187px;
 	overflow: hidden;
 	background-color: #e9eed9;

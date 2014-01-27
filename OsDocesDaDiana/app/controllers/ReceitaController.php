@@ -9,7 +9,9 @@ class ReceitaController extends \BaseController {
 	 */
 	public function index($idreceita) {
 		$receita = Receitas::where('idreceita','=',$idreceita)->firstOrFail();
-		$data = array('receita' => $receita);
+		$comentarios = Comentarios::where('idreceita','=', $idreceita)->orderBy('created_at','asc')->get();
+
+		$data = array('receita' => $receita, 'comentarios'=> $comentarios);
 
 		return View::make('receita1',$data);
 	}

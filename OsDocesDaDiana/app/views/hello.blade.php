@@ -179,14 +179,14 @@
 
 		@foreach($receitas as $receita)
 			<div id="{{ $receita->idreceita }}" class="item" title="{{ $receita->nome }}">
-				<a href="#">
-				<img style="display:none;visibility:hidden;" data-cfsrc="images/movies_thumbs/thumb5129.png" alt="The World's End" title="{{ $receita->nome }}" /><noscript>
-				<img src="images/movies_thumbs/thumb5129.png" alt="The World's End" title="{{ $receita->nome }}" /></noscript>
+				<a href="<?php echo '/receita/'.$receita->idreceita ;?>">
+				<img style="display:none;visibility:hidden;" title="{{ $receita->nome }}" /><noscript>
+				<img src="#" alt="The World's End" title="{{ $receita->nome }}" /></noscript>
 				<div class="thumb-effect" title="{{ $receita->nome }}"></div>
 				<div class="img-effect"></div>
 				</a>
 				<div class="title-bg">
-					<div class="title"><a href="#">Ver Receita</a></div>
+					<div class="title"><a href="<?php echo '/receita/'.$receita->idreceita ;?>">Ver Receita</a></div>
 				</div>
 			</div>
 		@endforeach						
@@ -207,9 +207,10 @@
 		<!-- comentarios -->
 		<?php $i=0;?>
 		@foreach($coments as $coment)
-			 <div id="{{ $coment->idreceita }}" class="item" title="Não Definido">
+			<?php $tbl = DB::table('Receitas')->where('idreceita', $coment->idreceita )->first() ;?>
+			 <div id="{{ $coment->idreceita }}" class="item" title="{{ $tbl->nome }}">
 				<input type="hidden" name="N.D." id="N.D." value="N.D." />
-				<!--<a href="movie2934.html?m=Alone_in_the_Dark&amp;comment=811192">-->
+				<a href="<?php echo '/receita/'.$coment->idreceita ;?>">
 				<div class="msg-info">
 					<div class="user-date">
 						<div class="user"><span>{{ $coment->username }}</span></div>

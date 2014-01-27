@@ -18,6 +18,7 @@ Route::get('/logout', 'LogoutController@index');
 
 Route::get('/categorias/{nomecategoria}', 'CategoriaController@index');
 Route::get('/categorias/receita/{idreceita}', 'ReceitaController@index');
+Route::get('/receita/{idreceita}', 'ReceitaController@index');
 
 
 
