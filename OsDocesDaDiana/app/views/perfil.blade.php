@@ -101,18 +101,19 @@
 									</div>
 								</div>
 								<div class="clear"></div>
+								
 								<div class="account-media-divider"></div>
 								<div id="mediaAccountContent" class="media-account-content">
 
-
-									<div id="accmedia183" class="accmedia-item first series">
-										<a href="serie.php?s=90210" title="90210">
-											<img src="images/series_v2_thumbs/thumb183.png" alt="90210">
+								@foreach($receitas as $receita)
+									<div id="$receita->idreceita" class="accmedia-item">
+										<a href="{{ '/receita'.$receita->idreceita }}" title="{{ $receita->nome }}">
+											<img src="#">
 											<div class="thumb-effect"></div>
 										</a>
 										<a href="javascript:;" class="remove-media-content series" onclick="removeMediaContent('series', 183, 'Deseja remover este conteúdo desta lista?');"></a>
 									</div>
-									
+								@endforeach	
 
 
 								</div>

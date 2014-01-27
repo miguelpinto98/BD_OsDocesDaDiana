@@ -7,9 +7,13 @@ class PerfilController extends BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
-	return View::make('perfil');
+	public function index() {
+		$user = Auth::user()->username;
+		$receitas = Receitas::where('username','=',$user)->get();
+
+		$data = array('receitas'=>$receitas);
+
+		return View::make('perfil',$data);
 	}
 
 	
