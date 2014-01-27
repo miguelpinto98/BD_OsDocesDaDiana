@@ -9,12 +9,11 @@ public class JLogin extends javax.swing.JDialog {
     private PainelAdmin p;
     
     public JLogin(PainelAdmin p) {
-        
-        initComponents();
         this.p=p;
+        initComponents();
                
         this.setModal(true);
-        setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
         setAlwaysOnTop(true);
         p.setEnabled(false); 
     }
@@ -23,21 +22,33 @@ public class JLogin extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jXLoginPane1 = new org.jdesktop.swingx.JXLoginPane();
+        loginpane = new org.jdesktop.swingx.JXLoginPane();
         jPanel1 = new javax.swing.JPanel();
         sair = new javax.swing.JButton();
         entrar = new javax.swing.JButton();
-        error = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setTitle("ODDD_System ");
+        setMaximumSize(new java.awt.Dimension(399, 210));
+        setMinimumSize(new java.awt.Dimension(399, 210));
+        setPreferredSize(new java.awt.Dimension(399, 210));
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jXLoginPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(loginpane, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 160));
 
         sair.setText("Sair");
+        sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairActionPerformed(evt);
+            }
+        });
 
         entrar.setText("Entrar");
-
-        error.setText("   ");
+        entrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                entrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -49,34 +60,51 @@ public class JLogin extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(sair, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(error)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(error)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(sair)
-                    .addComponent(entrar))
-                .addContainerGap())
+                    .addComponent(entrar)
+                    .addComponent(sair))
+                .addGap(31, 31, 31))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 400, 60));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 400, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void sairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairActionPerformed
+        // TODO add your handling code here:
+        System.exit(1);
+        
+    }//GEN-LAST:event_sairActionPerformed
+
+    private void entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entrarActionPerformed
+        // TODO add your handling code here:
+        ODDD sistema = p.getSistema();
+        String username = loginpane.getUserName();
+        String password = new String(loginpane.getPassword());
+        
+        if(!sistema.login(username, password))
+            loginpane.setMessage("Não existe nenhum utilizador com essa password");
+        else {     
+            Utilizador user = sistema.getUsers().get(username);
+            
+            PainelAdmin.UTILIZADOR = username;
+            PainelAdmin.REGISTADO = true;
+            p.setUser(user);
+            p.setEnabled(true);
+            dispose();
+        }
+    }//GEN-LAST:event_entrarActionPerformed
+
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton entrar;
-    private javax.swing.JLabel error;
     private javax.swing.JPanel jPanel1;
-    private org.jdesktop.swingx.JXLoginPane jXLoginPane1;
+    private org.jdesktop.swingx.JXLoginPane loginpane;
     private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
 }

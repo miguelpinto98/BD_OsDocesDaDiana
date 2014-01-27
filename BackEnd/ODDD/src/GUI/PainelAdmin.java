@@ -17,7 +17,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 public final class PainelAdmin extends javax.swing.JFrame {
-
     public static final String OS = System.getProperty("os.name").toLowerCase();
     
     public static boolean REGISTADO = false;
@@ -29,8 +28,6 @@ public final class PainelAdmin extends javax.swing.JFrame {
     public PainelAdmin() {
         this.sistema = new ODDD();
         this.user=null;
-        this.sistema.registarUser("admin", "admin", "pw1234", "admin@diana.pt", 1);
-        this.sistema.registarUser("admin1", "admin1", "pw1234", "admin@diana.pt", 0);
         
         initComponents();
         listaCategorias();
