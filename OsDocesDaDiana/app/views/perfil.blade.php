@@ -104,9 +104,13 @@
 				<div class="account-media-divider"></div>
 				<div id="mediaAccountContent" class="media-account-content">
 					@foreach($receitas as $receita)
+					<?php $img = DB::table('Imagens')->where('idreceita', $receita->idreceita)->first(); ?>
+
 					<div id="$receita->idreceita" class="accmedia-item">
 						<a href="{{ '/receita/'.$receita->idreceita }}" title="{{ $receita->nome }}">
-						<img src="#">
+						@if($img)
+							<img src="{{ asset($img->imagem); }}" height="95" width="141">
+						@endif	
 						<div class="thumb-effect"></div>
 						</a>
 						<!--<a href="javascript:;" class="remove-media-content" onclick="removeMediaContent('receitas', 183, 'Deseja remover este conteúdo desta lista?');"></a>-->
