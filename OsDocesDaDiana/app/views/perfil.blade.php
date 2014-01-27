@@ -11,88 +11,94 @@
 	<div id="account-box" class="content-box">
 		<div class="left-content">
 
-		<!--Utilizador-->	
-		<div class="account-settings-wrapper">
-			<div class="account-settings">
-				<div class="settings-header">
-					<div class="avatar">
-						<img src="{{ asset( $user = Auth::user()-> avatar) }}">
-					</div>
-					
-					<div class="user-info">
-						<div class="username"> {{ Auth::user()->nome }} </div>
-						<div class="register-date">Desde&nbsp;<span>{{date(Auth::user()->created_at) }}</span></div>
-					</div>
-				</div>
-				<div class="settings-content">												
-					<div class="account-options2">
-						<span class="label">Reputação:</span>
-						<span class="texto2"> {{ Auth::user()->valoravaliacoes }} estrelas</span>
-					</div>
-					
-					<div class="account-options2">
-						<span class="label">Localidade:</span>
-						<span class="texto2">{{ Auth::user()->localidade }}</span>
-					</div>
-					<div class="separator"></div>
-					<div class="account-options">
-						<span class="label">Sobre mim:</span>
-						<span class="texto1">{{ Auth::user()->descricao }}</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<!--Gerir Conta-->
-			<div class="subscribe-series">
-			<div class="subscribe-header">Gerir conta</div>
-			<div class="separator"></div>
-			
-			<div class="subscribe-content">							
-				<div class="options-content">
-					<span class="label">Alterar dados:</span>
-					
-					<div class="post-comment-box"style="height:15px">
-						<span>E-mail</span>
-						<textarea id="nome" style="margin-left:30px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
-					</div>
-					<div class="main-separator1"></div>
-
-					<div class="post-comment-box"style="height:15px">
-						<span>Password</span>
-						<textarea id="nome" style="margin-left:10px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
-					</div>
-					<div class="main-separator1"></div>
-
-					<div class="post-comment-box"style="height:15px">
-						<span>Descrição</span>
-						<textarea id="nome" style="margin-left:9px; margin-top:5px; height:20px; width:160px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
-					</div>
-					<div class="main-separator1"></div>
-
-					<form action="adicionareceita" method="post" enctype="multipart/form-data" style="margin-top:30px">
-						<label for="file">Imagens:</label>
-						<input type="file" name="file" multiple="multiple"><br>
-						<input type="submit" name="submit" value="Carregar">
-					</form>
-
-
-					</div>
-
-
-				<div class="login-register2">				
-					<div id="login" class="login">
-						<div class="login-form">
-							<form method="post" style="margin-top:10px; margin-left:10px" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
-								<?php echo link_to('adicionareceita', 'Adicionar Nova Receita', array('type'=>'button','class'=>'form-btn')); ?>
-							</form>
+			<!--Utilizador-->	
+				<div class="account-settings-wrapper">
+					<div class="account-settings">
+						<div class="settings-header">
+							<div class="avatar">
+								<img src="{{ asset( $user = Auth::user()-> avatar) }}">
+							</div>
+							
+							<div class="user-info">
+								<div class="username"> {{ Auth::user()->nome }} </div>
+								<div class="register-date">Desde&nbsp;<span>{{date(Auth::user()->created_at) }}</span></div>
+							</div>
+						</div>
+						<div class="settings-content">												
+							<div class="account-options2">
+								<span class="label">Reputação:</span>
+								<span class="texto2"> {{ Auth::user()->valoravaliacoes }} estrelas</span>
+							</div>
+							
+							<div class="account-options2">
+								<span class="label">Localidade:</span>
+								<span class="texto2">{{ Auth::user()->localidade }}</span>
+							</div>
+							<div class="separator"></div>
+							<div class="account-options">
+								<span class="label">Sobre mim:</span>
+								<span class="texto1">{{ Auth::user()->descricao }}</span>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			<!--Utilizador-->
+			
+			<!--Gerir Conta-->
+				<div class="subscribe-series">
+					<div class="subscribe-header">Gerir conta</div>
+					<div class="separator"></div>
+					
+					<div class="subscribe-content">							
+						<div class="options-content">
+							<span class="label">Alterar dados:</span>
+							
+							<div class="post-comment-box"style="height:15px">
+								<span>E-mail</span>
+								<textarea id="email" style="margin-left:30px; margin-top:5px; height:20px; width:160px" name="email" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+							</div>
+							<div class="main-separator1"></div>
+
+							<div class="post-comment-box"style="height:15px">
+								<span>Password</span>
+								<textarea id="pass" style="margin-left:10px; margin-top:5px; height:20px; width:160px" name="pass" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+							</div>
+							<div class="main-separator1"></div>
+
+							<div class="post-comment-box"style="height:15px">
+								<span>Descrição</span>
+								<textarea id="desc" style="margin-left:9px; margin-top:5px; height:20px; width:160px" name="desc" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+							</div>
+							<div class="main-separator1"></div>
+
+
+							<form action="adicionareceita" method="post" enctype="multipart/form-data" style="margin-top:30px">
+								<label for="file">Imagens:</label>
+								<input type="file" name="file" multiple="multiple"><br>
+								<input type="submit" name="submit" value="Carregar">
+							</form>
+
+							<input type="submit" id="cena" name="cena" style="background-color:#93a842; color: white; height:50px; width:200px; margin-left:20px" name="submit" value="Alterar Dados" />
+							<div class="main-separatorr"></div>
+						
+
+						</div>
+
+
+						<div class="login-register2" style="margin-left:20px">				
+							<div id="login" class="login">
+								<div class="login-form">
+									<form method="post" style="margin-top:10px; margin-left:10px" id="loginForm" name="loginForm" onsubmit="validateLogin(); return false;">
+										<?php echo link_to('adicionareceita', 'Adicionar Nova Receita', array('type'=>'button','class'=>'form-btn')); ?>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>		
+			<!--Gerir Conta-->
+
 		</div>
-		</div>
-		<!--Gerir Conta-->
 		<div class="media-box">
 			<div id="mediaHeader" class="media-header">
 				<div id="mediaHeader-movies" class="media-header-option movies">
@@ -142,8 +148,8 @@
 					@endforeach	
 				</div>
 			</div>
-<!--
-			<div id="pagination" class="pagination" style="margin-top: 10px;">
+
+			<!--<div id="pagination" class="pagination" style="margin-top: 10px;">
 				<div class="pagination-aux">
 					<a href="#" onclick="return false;" class="actual">1</a><a href="javascript: myAccount('accountMedia.ajax.php?p=2&cat=movies', $('#accountMediaChangeContent'));" onclick="scrollToDiv('#content #account-box');">2</a>
 				</div>
