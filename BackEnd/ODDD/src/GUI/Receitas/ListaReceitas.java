@@ -88,7 +88,7 @@ public class ListaReceitas extends javax.swing.JPanel {
                 java.lang.Integer.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                true, false
+                false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -99,10 +99,13 @@ public class ListaReceitas extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tabreceitas.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(tabreceitas);
         if (tabreceitas.getColumnModel().getColumnCount() > 0) {
             tabreceitas.getColumnModel().getColumn(0).setResizable(false);
+            tabreceitas.getColumnModel().getColumn(0).setPreferredWidth(8);
             tabreceitas.getColumnModel().getColumn(1).setResizable(false);
+            tabreceitas.getColumnModel().getColumn(1).setPreferredWidth(150);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -151,10 +154,11 @@ public class ListaReceitas extends javax.swing.JPanel {
     private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
         // TODO add your handling code here:
         String s = seleccionaReceita();
+        
         if(s!=null){
-         JDialog frame = new JEditarReceita(this);
-         frame.setLocationRelativeTo(null);
-         frame.setVisible(true);
+            JDialog frame = new JEditarReceita(this);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
         }
     }//GEN-LAST:event_adicionarCategoria1ActionPerformed
 

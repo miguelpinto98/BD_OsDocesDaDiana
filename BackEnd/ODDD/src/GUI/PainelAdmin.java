@@ -31,7 +31,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
         initComponents();
         listaCategorias();
         listaUtilizadores();
-        //verificaUser(user);
+        verificaUser(user);
     }
     
     public void verificaUser(Utilizador user){
@@ -39,6 +39,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
           JDialog f = new JLogin(this);
           f.setLocationRelativeTo(null);
           f.setVisible(true);
+          labeluser.setText("Bem-Vindo "+this.user.getUsername());
       }  
     }
     
@@ -103,6 +104,8 @@ public final class PainelAdmin extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jXSearchField1 = new org.jdesktop.swingx.JXSearchField();
         jButton3 = new javax.swing.JButton();
+        labeluser = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         painelgeral = new javax.swing.JTabbedPane();
         categorias = new javax.swing.JPanel();
@@ -141,12 +144,21 @@ public final class PainelAdmin extends javax.swing.JFrame {
 
         jButton3.setText("Pesquisar");
 
+        labeluser.setFont(new java.awt.Font("Lucida Grande", 3, 14)); // NOI18N
+        labeluser.setText("Bem-Vindo XXX");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione uma base de dados", "Oracle", " " }));
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(551, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(labeluser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
                 .addComponent(jXSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
@@ -156,10 +168,13 @@ public final class PainelAdmin extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jXSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(labeluser, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jXSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton3)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel4, java.awt.BorderLayout.PAGE_START);
@@ -332,7 +347,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
                         .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utilizadoresLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -420,6 +435,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JButton consultarUser;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -435,6 +451,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private org.jdesktop.swingx.JXSearchField jXSearchField1;
+    private javax.swing.JLabel labeluser;
     private javax.swing.JList<String> listaCategoria;
     private javax.swing.JList<String> listaUser;
     private javax.swing.JTabbedPane painelgeral;
