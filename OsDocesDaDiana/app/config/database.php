@@ -85,7 +85,7 @@ return array(
 
 		'oracle' => array(
 	    	'driver' => 'pdo-via-oci8',
-	    	'host' => 'localhost',
+	    	'host' => '192.168.1.84',
 	    	'port' => '1521',
 	    	'database' => 'orcl', // Service ID
 	    	'username' => 'ODDD',

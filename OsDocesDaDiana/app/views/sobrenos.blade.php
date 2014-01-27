@@ -80,7 +80,6 @@
 
 
 			<script type="text/javascript" src="assets/scripts/modernizr.custom.js"></script>
-			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 			<script src="assets/scripts/jquery.flexslider-min.js" type="text/javascript"></script>
 			<script src="assets/scripts/jquery.backstretch.min.js" type="text/javascript"></script>
 			<script src="assets/scripts/bootstrap.min.js"></script>

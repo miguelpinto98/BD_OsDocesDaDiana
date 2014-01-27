@@ -2,9 +2,6 @@
 <html>
 	<head>
 		<title>Os Doces da Diana</title>
-
-
-
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
 
 		<link rel="stylesheet" type="text/css" href="{{ asset('assets/styles/newstyle.css'); }}">
@@ -15,10 +12,6 @@
 		<script type="text/javascript" src="{{ asset('assets/slide/jquery.js'); }}"></script>
 		<script type="text/javascript" src="{{ asset('assets/scripts/flexcroll.js'); }}"></script>
 		<script src="{{ asset('assets/scripts/bootstrap.js'); }}"></script>
-
-		<!-- PARA QUE SERVE ISTO-->
-		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
 	</head>
 	
 	<body>
