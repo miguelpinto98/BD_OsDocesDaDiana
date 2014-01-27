@@ -23,46 +23,60 @@ public class JLogin extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        loginpane = new org.jdesktop.swingx.JXLoginPane();
-        jButton2 = new javax.swing.JButton();
+        jXLoginPane1 = new org.jdesktop.swingx.JXLoginPane();
+        jPanel1 = new javax.swing.JPanel();
+        sair = new javax.swing.JButton();
+        entrar = new javax.swing.JButton();
+        error = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        getContentPane().add(loginpane, java.awt.BorderLayout.CENTER);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jXLoginPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jButton2.setText("Confirmar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton2, java.awt.BorderLayout.PAGE_END);
+        sair.setText("Sair");
+
+        entrar.setText("Entrar");
+
+        error.setText("   ");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(entrar, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sair, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(error)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(error)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sair)
+                    .addComponent(entrar))
+                .addContainerGap())
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 400, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        ODDD o = p.getSistema();
-        String username = loginpane.getUserName();
-        String password = new String(loginpane.getPassword());
-        
-        if(!o.login(username, password))
-            loginpane.setMessage("Não existe nenhum utilizador com essa password");
-        else {     
-            Utilizador user = o.getUsers().get(username);
-            
-            PainelAdmin.UTILIZADOR = username;
-            PainelAdmin.REGISTADO = true;
-            p.setUser(user);
-            p.verificaUser(user);
-            p.setEnabled(true);
-            dispose();
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private org.jdesktop.swingx.JXLoginPane loginpane;
+    private javax.swing.JButton entrar;
+    private javax.swing.JLabel error;
+    private javax.swing.JPanel jPanel1;
+    private org.jdesktop.swingx.JXLoginPane jXLoginPane1;
+    private javax.swing.JButton sair;
     // End of variables declaration//GEN-END:variables
 }
