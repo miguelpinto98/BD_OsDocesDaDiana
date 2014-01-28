@@ -34,9 +34,9 @@
 						<span class="director-caption">Dose:</span>
 						<span class="director">{{$receita->dose}} pessoas</span><br>
 						<span class="director-caption">Custo (por dose):</span>
-						<span class="director">N.D. €</span><br>
+						<span class="director">{{$receita->custo}} €</span><br>
 						<span class="director-caption">Valor Nutricional (por dose):</span>
-						<span class="director">N.D.</span>
+						<span class="director">{{ $receita->vnutricional}} Kcal</span>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -67,9 +67,11 @@
 				<div class="clear"></div>
 			</div>
 			<div class="movie-info2">
+
 			@foreach($imagens as $imagem)
 			<div class="thumb2">
 				<a href="" class="thumb-aux">
+
 				<img src="{{ asset($imagem->imagem); }}" width="100px" height="100px">
 				</a>
 			</div>
@@ -119,10 +121,10 @@
 							<span class="ing">Ingredientes:</span>
 							<div class="clear"></div>
 							<ul>
-							<!--	<li class="">200g de manteiga</li>
-								<li class="">5 ovos</li>
-								<li class="">leite</li>-->
-								{{$receita->ingredientes}}
+							<?php $ingr = explode(", ", $receita->ingredientes) ;?>
+							@foreach($ingr as $i)
+								<li class="">{{ $i }}</li>
+							@endforeach
 							</ul>
 						</div>
 

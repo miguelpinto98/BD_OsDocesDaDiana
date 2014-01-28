@@ -120,6 +120,8 @@
 				<input type="hidden" name="N.D." id="N.D." value="N.D." />
 				<a href="<?php echo '/receita/'.$coment->idreceita ;?>">
 				<div class="msg-info">
+					<?php $x = DB::table('Utilizadores')->where('username', $coment->username)->first();?>
+					<div class="avatar"><img src="<?php echo $x->avatar ;?>" alt=""></div>
 					<div class="user-date">
 						<div class="user"><span>{{ $coment->username }}</span></div>
 						<div class="date"><span>{{ $coment->created_at }}</span></div>

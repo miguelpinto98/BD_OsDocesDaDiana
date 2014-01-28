@@ -26,11 +26,14 @@
 				<div class="clear"></div>
 					<div id="requestsList" class="requestsList">
 						@foreach($receitas as $receita)
+						<?php $img = DB::table('Imagens')->where('idreceita', $receita->idreceita)->first() ;?>
 							<div id="{{ $receita->idreceita }}" class="request">
 								<div class="thumb">
 									<a href="<?php echo 'receita/'.$receita->idreceita ;?>"> <!-- FALTA COLOCAR AS IMAGENS -->
-										<img src="{{ asset('assets/images/categorias/docesdecolher.png'); }}" width="150px" height="150px">
+										@if($img)
+											<img src="<?php echo $img->imagem; ?>" width="150px" height="150px">
 										<noscript><img src="images/requests_thumbs/thumb404.jpg"></noscript>
+										@endif
 									</a>
 								</div>
 								<div class="reqInfo">

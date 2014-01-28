@@ -14,6 +14,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JDialog;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.table.DefaultTableModel;
 
 public final class PainelAdmin extends javax.swing.JFrame {
     public static final String OS = System.getProperty("os.name").toLowerCase();
@@ -61,19 +62,24 @@ public final class PainelAdmin extends javax.swing.JFrame {
     }
     
     public void listaUtilizadores() {
-        DefaultListModel<String> str = new DefaultListModel<>();
-
-        for(String s : this.sistema.getUsers().keySet())
-            str.addElement(s);
-            
-        listaUser.setModel(str);
+        Object[] columnNames = new String[] {"Tipo","Nome"};
+        Object[][] data = new Object[][] {};
+        DefaultTableModel x = new DefaultTableModel(data, columnNames);
+        
+        Map<String, Utilizador> users = this.sistema.getUsers();
+        if(users != null)
+            for(String n : users.keySet())
+                x.addRow(new Object[]{users.get(n).getTipo(),n});
+        
+        listaUser.setModel(x);
     }
 
-    public String seleccionaUser() {
+    public String seleccionaUser() {        
         String s;
+        int row = this.listaUser.getSelectedRow();
 
-        if (listaUser.getSelectedIndex() != -1) {
-            s = listaUser.getSelectedValue().toString();
+        if (row != -1) {
+            s = (String) this.listaUser.getValueAt(row, 1);
         } else {
             s = null;
         }
@@ -116,16 +122,18 @@ public final class PainelAdmin extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         adicionarCategoria1 = new javax.swing.JButton();
         utilizadores = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        listaUser = new javax.swing.JList<String>();
         jLabel3 = new javax.swing.JLabel();
         consultarUser = new javax.swing.JButton();
         BloquearUser = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        listaUser = new org.jdesktop.swingx.JXTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(856, 535));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(144, 176, 167));
 
@@ -156,9 +164,9 @@ public final class PainelAdmin extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labeluser, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGap(52, 52, 52)
                 .addComponent(jXSearchField1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton3)
@@ -285,16 +293,13 @@ public final class PainelAdmin extends javax.swing.JFrame {
 
         utilizadores.setBackground(new java.awt.Color(255, 255, 255));
 
-        listaUser.setFont(new java.awt.Font("Lucida Grande", 0, 13)); // NOI18N
-        listaUser.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane2.setViewportView(listaUser);
-
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(76, 106, 98));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Lista de Utilizadores");
 
-        consultarUser.setText("Consultar");
+        consultarUser.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        consultarUser.setText("Consultar/Editar");
         consultarUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 consultarUserActionPerformed(evt);
@@ -311,6 +316,36 @@ public final class PainelAdmin extends javax.swing.JFrame {
 
         jButton1.setText("Adicionar");
 
+        listaUser.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Ativo", "Nome"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        listaUser.getTableHeader().setReorderingAllowed(false);
+        jScrollPane3.setViewportView(listaUser);
+        if (listaUser.getColumnModel().getColumnCount() > 0) {
+            listaUser.getColumnModel().getColumn(0).setResizable(false);
+            listaUser.getColumnModel().getColumn(1).setResizable(false);
+        }
+
         javax.swing.GroupLayout utilizadoresLayout = new javax.swing.GroupLayout(utilizadores);
         utilizadores.setLayout(utilizadoresLayout);
         utilizadoresLayout.setHorizontalGroup(
@@ -320,39 +355,40 @@ public final class PainelAdmin extends javax.swing.JFrame {
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(utilizadoresLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(consultarUser, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                            .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                             .addComponent(BloquearUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 434, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
                 .addContainerGap())
         );
         utilizadoresLayout.setVerticalGroup(
             utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(utilizadoresLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(utilizadoresLayout.createSequentialGroup()
-                        .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(78, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utilizadoresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator2)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(utilizadoresLayout.createSequentialGroup()
+                                .addComponent(consultarUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(BloquearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, utilizadoresLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(utilizadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator2)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 343, Short.MAX_VALUE))))
                 .addContainerGap())
         );
 
@@ -384,8 +420,9 @@ public final class PainelAdmin extends javax.swing.JFrame {
         String s = seleccionaUser();
 
         if (s != null) {
+            System.out.println(s);
             this.jPanel5.removeAll();
-            this.jPanel5.add(new InfoUser(this), BorderLayout.CENTER);
+            this.jPanel5.add(new InfoUser(this,s), BorderLayout.CENTER);
             this.jPanel5.updateUI();
             this.jPanel5.validate();
         }
@@ -447,13 +484,13 @@ public final class PainelAdmin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private org.jdesktop.swingx.JXSearchField jXSearchField1;
     private javax.swing.JLabel labeluser;
     private javax.swing.JList<String> listaCategoria;
-    private javax.swing.JList<String> listaUser;
+    private org.jdesktop.swingx.JXTable listaUser;
     private javax.swing.JTabbedPane painelgeral;
     private javax.swing.JPanel utilizadores;
     // End of variables declaration//GEN-END:variables

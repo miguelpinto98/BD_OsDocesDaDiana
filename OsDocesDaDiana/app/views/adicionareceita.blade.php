@@ -7,28 +7,23 @@
 <?php } ;?>
 
 @section('content')
-		<div class="center">
-
-			
-				<div id="comments-box" class="content-box">
-					<div id="login-box">
-					<div class="login-register">					
-						<div id="login" class="login login2" style="padding:10px;">
-							<div class="title">Adicionar Receita</div>
-							<div class="login-divider"></div>
-						</div>
-					</div></div>
-
-
-						
-						<div class="comments-header">
-							<div class="comment-reply-wraper" style="height:900px";>
-								<div class="comment-reply" style="height:850px";>
-									
-								<div class="post-comment-wrapper" style="height:840px";>
-									<div class="post-comment" style="height:810px";>
-
-															
+<div class="center">
+	<div id="comments-box" class="content-box">
+		<div id="login-box">
+			<div class="login-register">					
+				<div id="login" class="login login2" style="padding:10px;">
+					<div class="title">Adicionar Receita</div>
+					<div class="login-divider"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="comments-header">
+			<div class="comment-reply-wraper" style="height:900px";>
+				<div class="comment-reply" style="height:850px";>
+					<div class="post-comment-wrapper" style="height:840px";>
+						<div class="post-comment" style="height:810px";>
+							<form method="post" id="adicionareceita">			
 										
 										<div class="post-comment-box"style="height:30px">
 											<span>Categoria</span>
@@ -109,7 +104,9 @@
 										<div class="separator"></div>
 											<div class="comment-box-footer">
 												<div class="comment-submit">
-													<a href="javascript:;" id="comment-submit" onclick="putComment(&#39;movies&#39;, 5170, 1)"><span></span>Submeter</a>
+
+												<input type="submit" method="post" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"/>
+
 												</div>
 											</div>
 

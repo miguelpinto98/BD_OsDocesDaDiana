@@ -17,6 +17,8 @@ public class ListaReceitas extends javax.swing.JPanel {
         initComponents();
         Map<Integer, Receita> receitas = c.getReceitas();
         
+        this.labelistareceitas.setText("Lista de Receitas de "+c.getNomeCategoria());
+        
         Object[] columnNames = new String[] {"ID","Título"};
         Object[][] data = new Object[][] {};
         DefaultTableModel x = new DefaultTableModel(data, columnNames);
@@ -25,55 +27,58 @@ public class ListaReceitas extends javax.swing.JPanel {
             for(Integer n : receitas.keySet())
                 x.addRow(new Object[]{n, receitas.get(n).getNome() });
         
-        tabreceitas.setModel(x);
+        listareceitas.setModel(x);
     }
-
-    public String seleccionaReceita(){
-        String s;
+    
+    public int seleccionaReceita() {        
+        int id = -1;
+        int row = this.listareceitas.getSelectedRow();
         
-       
-       return null;
+        if (row != -1)
+            id = (int) this.listareceitas.getValueAt(row, 0);
+        
+        listareceitas.clearSelection();
+
+        return id;
     }
-    
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        adicionarCategoria = new javax.swing.JButton();
-        adicionarCategoria1 = new javax.swing.JButton();
-        adicionarCategoria2 = new javax.swing.JButton();
+        labelistareceitas = new javax.swing.JLabel();
+        adicionar = new javax.swing.JButton();
+        consulta = new javax.swing.JButton();
+        remove = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tabreceitas = new org.jdesktop.swingx.JXTable();
+        listareceitas = new org.jdesktop.swingx.JXTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(359, 351));
         setPreferredSize(new java.awt.Dimension(359, 351));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(76, 106, 98));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Lista de Receitas");
+        labelistareceitas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        labelistareceitas.setForeground(new java.awt.Color(76, 106, 98));
+        labelistareceitas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelistareceitas.setText("Lista de Receitas");
 
-        adicionarCategoria.setText("Adicionar");
-        adicionarCategoria.addActionListener(new java.awt.event.ActionListener() {
+        adicionar.setText("Adicionar");
+        adicionar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarCategoriaActionPerformed(evt);
+                adicionarActionPerformed(evt);
             }
         });
 
-        adicionarCategoria1.setText("Editar");
-        adicionarCategoria1.addActionListener(new java.awt.event.ActionListener() {
+        consulta.setText("Consultar/Editar");
+        consulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarCategoria1ActionPerformed(evt);
+                consultaActionPerformed(evt);
             }
         });
 
-        adicionarCategoria2.setText("Remover");
+        remove.setText("Remover");
 
-        tabreceitas.setModel(new javax.swing.table.DefaultTableModel(
+        listareceitas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -99,13 +104,13 @@ public class ListaReceitas extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tabreceitas.getTableHeader().setReorderingAllowed(false);
-        jScrollPane2.setViewportView(tabreceitas);
-        if (tabreceitas.getColumnModel().getColumnCount() > 0) {
-            tabreceitas.getColumnModel().getColumn(0).setResizable(false);
-            tabreceitas.getColumnModel().getColumn(0).setPreferredWidth(8);
-            tabreceitas.getColumnModel().getColumn(1).setResizable(false);
-            tabreceitas.getColumnModel().getColumn(1).setPreferredWidth(150);
+        listareceitas.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(listareceitas);
+        if (listareceitas.getColumnModel().getColumnCount() > 0) {
+            listareceitas.getColumnModel().getColumn(0).setResizable(false);
+            listareceitas.getColumnModel().getColumn(0).setPreferredWidth(8);
+            listareceitas.getColumnModel().getColumn(1).setResizable(false);
+            listareceitas.getColumnModel().getColumn(1).setPreferredWidth(150);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -114,61 +119,59 @@ public class ListaReceitas extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE))
+                    .addComponent(labelistareceitas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(adicionarCategoria1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(adicionarCategoria, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                    .addComponent(adicionarCategoria2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(consulta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(adicionar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(remove, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(labelistareceitas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(adicionarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(adicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(adicionarCategoria1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(consulta, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(adicionarCategoria2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(38, Short.MAX_VALUE))
+                        .addComponent(remove, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void adicionarCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoriaActionPerformed
+    private void adicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarActionPerformed
         // TODO add your handling code here:
-        String s = seleccionaReceita();
-        if(s!=null){
-         JDialog frame = new JAdicionarReceita(p,this,c);
-         frame.setLocationRelativeTo(null);
-         frame.setVisible(true);
-        }
-    }//GEN-LAST:event_adicionarCategoriaActionPerformed
+        JDialog frame = new JAdicionarReceita(p,this,c);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }//GEN-LAST:event_adicionarActionPerformed
 
-    private void adicionarCategoria1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarCategoria1ActionPerformed
+    private void consultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consultaActionPerformed
         // TODO add your handling code here:
-        String s = seleccionaReceita();
+        int id = seleccionaReceita();
         
-        if(s!=null){
-            JDialog frame = new JEditarReceita(this);
+        if(id != -1) {
+            
+            JDialog frame = new JEditarReceita(this,this.c.getReceitas().get(id),this.c.getNomeCategoria());
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         }
-    }//GEN-LAST:event_adicionarCategoria1ActionPerformed
+    }//GEN-LAST:event_consultaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton adicionarCategoria;
-    private javax.swing.JButton adicionarCategoria1;
-    private javax.swing.JButton adicionarCategoria2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton adicionar;
+    private javax.swing.JButton consulta;
     private javax.swing.JScrollPane jScrollPane2;
-    private org.jdesktop.swingx.JXTable tabreceitas;
+    private javax.swing.JLabel labelistareceitas;
+    private org.jdesktop.swingx.JXTable listareceitas;
+    private javax.swing.JButton remove;
     // End of variables declaration//GEN-END:variables
 }

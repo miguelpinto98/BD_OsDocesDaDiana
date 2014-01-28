@@ -25,7 +25,7 @@
 							<div style="width:20%;float:left;">
 					            <div class="content-panel">
 					                <div class="boxgrid slideright">
-					                    <img class="cover" src="{{ asset('assets/developers/diana.jpg'); }}" style="left: 0px;">
+					                    <img class="cover" src="{{ asset('assets/developers/diana.jpg'); }}" width="163" height="197" style="left: 0px;">
 					                    <h3 style="text-align:center;">Diana Lemos</h3>
 					                    <p style="text-align:center;">a61031</p>
 					                </div>
@@ -35,7 +35,7 @@
 					        <div style="width:20%;float:left;">
 					            <div class="content-panel">
 					                <div class="boxgrid slideright">
-					                    <img class="cover" src="{{ asset('assets/developers/mariana.jpg'); }}" style="left: 0px;" hspace="7">
+					                    <img class="cover" src="{{ asset('assets/developers/mariana.jpg'); }}" width="163" height="197" style="left: 0px;" hspace="7">
 					                    <h3 style="text-align:center;">Mariana Medeiros</h3>
 					                    <p style="text-align:center;">a61041</p>
 					                </div>
@@ -45,7 +45,7 @@
 					        <div style="width:20%;float:left;">
 					            <div class="content-panel">
 					                <div class="boxgrid slideright">
-					                    <img class="cover" src="{{ asset('assets/developers/mario.jpg'); }}" style="left: 0px;" hspace="7">
+					                    <img class="cover" src="{{ asset('assets/developers/mario.jpg'); }}" width="163" height="197" style="left: 0px;" hspace="7">
 					                    <h3 style="text-align:center;">Mário Leite</h3>
 					                    <p style="text-align:center;">a61021</p>
 					                </div>
@@ -55,7 +55,7 @@
 					        <div style="width:20%;float:left;">
 					            <div class="content-panel">
 					                <div class="boxgrid slideright">
-					                    <img class="cover" src="{{ asset('assets/developers/miguel.jpg'); }}" style="left: 0px;" hspace="7">
+					                    <img class="cover" src="{{ asset('assets/developers/miguel.jpg'); }}" width="163" height="197" style="left: 0px;" hspace="7">
 					                    <h3 style="text-align:center;">Miguel Pinto</h3>
 					                    <p style="text-align:center;">a61049</p>
 					                </div>
@@ -65,7 +65,7 @@
 					        <div style="width:20%;float:left;">
 					            <div class="content-panel">
 					                <div class="boxgrid slideright">
-					                    <img class="cover" src="{{ asset('assets/developers/pedro.jpg'); }}" alt="" style="left: 0px;" hspace="7">
+					                    <img class="cover" src="{{ asset('assets/developers/pedro.jpg'); }}" width="163" height="197" alt="" style="left: 0px;" hspace="7">
 					                    <h3 style="text-align:center;">Pedro Duarte</h3>
 					                    <p style="text-align:center;">a61071</p>
 					                </div>
