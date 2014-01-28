@@ -82,7 +82,10 @@
 		@if(Auth::check())
 		<div class="player-aux" style="padding-top: 0px; display: block;">
 			<div id="movie-actions" class="movie-actions">
-				<a id="faved" href="javascript: playerMovieAction('movies', 5170, 'faved');" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
+				<form method="post" id="perfil" name="perfil" action="favorita" enctype="multipart/form-data">									
+					<a id="faved" href="<?php echo '/receita/'.$receita->idreceita.'/favorita' ;?>" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
+				</form>
+
 				<a id="watched" href="javascript: playerMovieAction('movies', 5170, 'watched');" class="watched ">Seguir Chef<span class="watch"></span></a>
 					<div id="movie-rate" class="movie-rate">
 						<span class="raterLabel">Classifique esta receita</span>
