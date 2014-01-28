@@ -19,11 +19,11 @@
 		</div>
 		
 		<div class="comments-header">
-			<div class="comment-reply-wraper" style="height:900px";>
-				<div class="comment-reply" style="height:850px";>
-					<div class="post-comment-wrapper" style="height:840px";>
-						<div class="post-comment" style="height:810px";>
-							<form method="post" id="adicionareceita">			
+			<div class="comment-reply-wraper" style="height:920px";>
+				<div class="comment-reply" style="height:870px";>
+					<div class="post-comment-wrapper" style="height:870px";>
+						<div class="post-comment" style="height:840px";>
+							<form method="post" id="adicionareceita" name="adicionareceita" action="adicionareceita" enctype="multipart/form-data">			
 										
 										<div class="post-comment-box"style="height:30px">
 											<span>Categoria</span>
@@ -95,22 +95,22 @@
 
 										<div class="main-separator1"></div>
 										
-										<form action="adicionareceita" method="post" enctype="multipart/form-data">
-										<label for="file">Imagens:</label>
-										<input type="file" name="file" multiple="multiple"><br>
-										<input type="submit" name="submit" value="Carregar">
-										</form>
+										<div class="post-comment-box">
+											<label for="file">Imagens:</label>
+											<input type="file" name="file" multiple="multiple"><br>
+											<input type="submit" name="submit" value="Carregar">
+										</div>
+									
 
 										<div class="separator"></div>
-											<div class="comment-box-footer">
-												<div class="comment-submit">
-
-												<input type="submit" method="post" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"/>
-
+											<div class="comment-box-footer" style="height:30px">
+												<div class="comment-submit" style="height:30px">
+												<input type="submit" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"/>
 												</div>
 											</div>
 
-										</div>
+							</form>
+									</div>
 									</div>
 								</div>
 							</div>
