@@ -18,6 +18,9 @@ class PerfilController extends BaseController {
 
 
 	public function uploadf(){
+		$data = Input::all(); 
+
+		var_dump(Input::all()); exit();
 		$user = Auth::user()->username;
         $allowedExts = array("jpeg", "jpg", "png","JPEG", "JPG", "PNG");
 		$temp = explode(".", $_FILES["file"]["name"]);

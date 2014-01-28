@@ -30,7 +30,7 @@ class LoginController extends BaseController {
 
 	    if ($validator->fails()) {
 	       	$messages = array(
-	       		'nickname.required' => 'ABC',
+	       		'username.required' => 'Erro no username',
 	         	'email.required' => 'We need to know your e-mail address!',
 	         	'password.min:6' => 'Password deve ter pelo menos 6 caracteres');
 	 	

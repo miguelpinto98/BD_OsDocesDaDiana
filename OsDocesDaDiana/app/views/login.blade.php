@@ -70,7 +70,7 @@
 
 												<div class="pw">
 													<span id="passwordcLabel" class="loginLabel">Confirmar Password</span>
-													<input type="password" name="password_confirmation" id="passwordc" class="form-input" value="" onfocus="loginFields(1, 'passwordc');" onblur="loginFields(0, 'passwordc');" defaulttext="Confirmar Password"/>
+													<input type="password" name="password_confirmation" id="password_confirmation" class="form-input" value="" onfocus="loginFields(1, 'passwordc');" onblur="loginFields(0, 'passwordc');" defaulttext="Confirmar Password"/>
 												</div>
 										<!-- CAMPOS -->
 
