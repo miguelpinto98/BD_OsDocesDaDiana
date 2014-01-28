@@ -65,11 +65,11 @@
 					    <li><a href="#">Frutos e Outros</a></li>
 					</ul>
 			</div>
-                    <ul class="movies-box-btn">
-						<li id="movies" class="first"><a href="javascript:;" onclick="changeHighLightsContent('movies', 'movies');">Mais Recentes</a></li>
-                        <li id="featuredmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'featuredmovies');">Em Destaque</a></li> <!--class="slctd"-->
-                        <li id="mostviewedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'mostviewedmovies');">Mais Vistas</a></li>
-                        <li id="recommendedmovies" class=""><a href="javascript:;" onclick="changeHighLightsContent('movies', 'recommendedmovies');">Recomendadas</a></li>
+                    <ul class="movies-box-btn">													<!-- movies -->
+						<li id="movies" class="first"><a href="#" onclick="changeHighLightsContent('receitas', 'movies');">Mais Recentes</a></li>
+                        <li id="featuredmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'featuredmovies');">Em Destaque</a></li> <!--class="slctd"-->
+                        <li id="mostviewedmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'mostviewedmovies');">Mais Vistas</a></li>
+                        <li id="recommendedmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'recommendedmovies');">Recomendadas</a></li>
                     </ul> 
         </div>
 	<!-- BARRA CINZENTA-->
