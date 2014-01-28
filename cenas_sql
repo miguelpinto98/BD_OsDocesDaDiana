@@ -105,3 +105,30 @@ UPDATE RECEITAS SET VALORAVALIACOES = VALORAVALIACOES + :NEW.VALOR WHERE IDRECEI
 UPDATE UTILIZADORES SET NRAVALIACOES = NRAVALIACOES + 1 WHERE (SELECT USERNAME FROM RECEITAS WHERE IDRECEITA = :NEW.IDRECEITA) = UTILIZADORES.USERNAME;
 UPDATE UTILIZADORES SET VALORAVALIACOES = VALORAVALIACOES + :NEW.VALOR WHERE (SELECT USERNAME FROM RECEITAS WHERE IDRECEITA = :NEW.IDRECEITA) = UTILIZADORES.USERNAME;
 END;
+
+------------------------------------------------
+FUNCTION
+------------------------------------------------
+create or replace FUNCTION f_mediaAvaliacao(arg_IdReceita IN NUMBER) 
+   RETURN NUMBER 
+   IS res_Media NUMBER(11,2);
+      v_ValorA NUMBER; 
+      v_NrAva NUMBER;
+BEGIN 
+   SELECT VALORAVALIACOES INTO v_ValorA FROM RECEITAS WHERE IDRECEITA = arg_IdReceita;
+   SELECT NRAVALIACOES INTO v_NrAva FROM RECEITAS WHERE IDRECEITA = arg_IdReceita;
+   IF (v_ValorA = 0 OR v_NrAva = 0) THEN RETURN 0;
+   ELSE res_Media := (v_ValorA/v_NrAva);
+        return res_Media;
+   END IF;
+ END;
+
+ -----------------------------------------------
+ PROCEDURE
+ -----------------------------------------------
+ create or replace 
+ PROCEDURE p_apagaUser
+ (argUserName varchar2) IS
+ BEGIN
+ UPDATE UTILIZADORES SET APAGADO = 1;
+ END p_apagaUser;
