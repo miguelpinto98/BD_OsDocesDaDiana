@@ -5527,34 +5527,34 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	margin-top: -1px;
 }
 
-div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a{
+div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit input{
 	float: right;
-	height: 19px;
-	line-height: 19px;
+	height: 20px;
+	line-height: 20px;
 	overflow: hidden;
 	font-family: Tahoma;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 	color: #8e8e94;
 	text-decoration: none;
 	text-align: right;
 }
 
-div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a:hover{
+div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit input:hover{
 	color: #36423e;
 }
 
-div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a span{
+div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit input span{
 	display: block;
 	float: right;
 	width: 20px;
 	height: 20px;
 	background: transparent url('../images/comment-submit-btn.png') no-repeat;
-	margin-left: 7px;
-	margin-top: 1px;
+	margin-left: 10px;
+	margin-top: 2px;
 }
 
-div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit a:hover span{
+div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit input:hover span{
 	background-position: -20px 0px;
 }
 

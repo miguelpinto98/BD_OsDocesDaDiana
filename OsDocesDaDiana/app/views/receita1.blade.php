@@ -158,6 +158,7 @@
 						</div>
 						<div class="username"><span>{{Auth::user()->username}}</span></div>
 					</div>
+					<form method="post">
 					<div class="post-comment-wrapper">
 						<div class="post-comment">
 							<div class="comment-box-arrow"></div>
@@ -168,11 +169,12 @@
 							<div class="separator"></div>
 							<div class="comment-box-footer">
 								<div class="comment-submit">
-									<a href="javascript:;" id="comment-submit" onclick="putComment(&#39;movies&#39;, 5170, 1)"><span></span>Submeter</a>
+									<input type="submit" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"></input>
 								</div>
 							</div>
 						</div>
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>

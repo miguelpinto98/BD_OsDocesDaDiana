@@ -19,7 +19,8 @@ Route::get('/logout', 'LogoutController@index');
 Route::get('/categorias/{nomecategoria}', 'CategoriaController@index');
 Route::get('/categorias/receita/{idreceita}', 'ReceitaController@index');
 Route::get('/receita/{idreceita}', 'ReceitaController@index');
-
+Route::post('/categorias/receita/{idreceita}', 'ReceitaController@comentario');
+Route::post('/receita/{idreceita}', 'ReceitaController@comentario');
 
 
 Route::get('/categorias', 'CategoriasController@index');

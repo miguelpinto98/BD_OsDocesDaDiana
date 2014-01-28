@@ -9,7 +9,7 @@ class ReceitaController extends \BaseController {
 	 */
 	public function index($idreceita) {
 		$receita = Receita::where('idreceita','=',$idreceita)->firstOrFail();
-		$comentarios = Comentario::where('idreceita','=', $idreceita)->orderBy('created_at','asc')->get();
+		$comentarios = Comentario::where('idreceita','=', $idreceita)->orderBy('created_at','desc')->get();
 		$imagens = DB::table('Imagens')->where('idreceita', $idreceita)->get();
 
 		$data = array('receita' => $receita, 'comentarios'=> $comentarios, 'imagens'=>$imagens);
@@ -17,68 +17,27 @@ class ReceitaController extends \BaseController {
 		return View::make('receita1',$data);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+	public function comentario($idreceita) {
+		$data = Input::all();
+		if(strcmp($data['comment-submit'],'Submeter') == 0) {
+            $validator = Validator::make($data,array(
+                'commentBox' => 'required'));
+        }
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+        if($validator->fails()) {
+            $messages = array(
+                'commentBox.required' => 'Comentario não pode ir a vazio');
+                var_dump($messages); echo "ERROR"; exit();
+        } else {
+        	$coment = new Comentario;
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+        	$coment->idreceita = $idreceita;
+        	$coment->username = Auth::user()->username;
+        	$coment->comentario = $data['commentBox'];
+        	$coment->save();
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+        	return Redirect::to('receita/'.$idreceita);
+        }
 	}
 
 }
