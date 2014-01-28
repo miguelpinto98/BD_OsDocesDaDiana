@@ -32,7 +32,7 @@ public final class PainelAdmin extends javax.swing.JFrame {
         initComponents();
         listaCategorias();
         listaUtilizadores();
-        verificaUser(user);
+        //verificaUser(user);
     }
     
     public void verificaUser(Utilizador user){

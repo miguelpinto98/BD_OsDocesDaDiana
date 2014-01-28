@@ -55,10 +55,8 @@ public class Categoria {
     
     public boolean inserirReceita(Receita rec) {
         boolean ins = false;
-        if(!this.receitas.containsKey(rec.getId())) {
-            this.receitas.put(rec.getId(),rec);
-            ins = true;
-        }
+        this.receitas.put(0,rec);
+        ins = true;
         return ins;
     }
     

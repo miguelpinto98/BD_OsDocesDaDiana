@@ -54,6 +54,8 @@ public class JAdicionarReceita extends javax.swing.JDialog {
         jcalorias = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jdose = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jcusto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -158,9 +160,11 @@ public class JAdicionarReceita extends javax.swing.JDialog {
 
         jLabel2.setText("Utilizador");
 
-        jLabel10.setText("Calorias");
+        jLabel10.setText("valor nutricional");
 
         jLabel11.setText("Dose");
+
+        jLabel12.setText("Custo por dose");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -177,21 +181,23 @@ public class JAdicionarReceita extends javax.swing.JDialog {
                     .addComponent(jLabel2)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addComponent(jtempo)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                     .addComponent(jnome)
                     .addComponent(jcategoria, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(erro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(juser)
                     .addComponent(jcalorias)
+                    .addComponent(jdose)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jdose))
+                    .addComponent(jcusto))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -229,7 +235,11 @@ public class JAdicionarReceita extends javax.swing.JDialog {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jdose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(jcusto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jButton1))
@@ -263,22 +273,28 @@ public class JAdicionarReceita extends javax.swing.JDialog {
         String descricao = jdescricao.getText();
         String tempo = jtempo.getText();
         int tempoP = Integer.parseInt(tempo);
-        String categoria = jcategoria.getName();
         String utilizador = juser.getText();
         String calorias = jcalorias.getText();
         int caloriasP = Integer.parseInt(calorias);
         String dose = jdose.getText();
         int doseP = Integer.parseInt(dose);
+        String custo = jcusto.getText();
+        int custoP = Integer.parseInt(custo);
         GregorianCalendar dataCriar = new GregorianCalendar();
         GregorianCalendar dataUpdate = new GregorianCalendar();
         
-        if(nome.equals("") || ingredientes.equals("") || descricao.equals("") || categoria.equals("") || utilizador.equals(""))
-            erro.setText("Dados Incompletos");
+        System.out.println(nome);
+        
+        if(nome.equals("") || ingredientes.equals("") || descricao.equals("") || utilizador.equals(""))
+        {
+        erro.setText("Dados Incompletos");
+        }
         else{
             ODDD sys = this.p.getSistema();
-            Receita e = new Receita(9000,nome, descricao,0,utilizador,categoria,0,0,caloriasP,0,tempoP,doseP,dataCriar,dataUpdate,ingredientes,0);
+            Receita e = new Receita(nome, descricao,0,utilizador,this.c.getNomeCategoria(),0,0,custoP,0,tempoP,doseP,dataCriar,dataUpdate,ingredientes,caloriasP);
             
-            boolean res = c.inserirReceita(e);
+            System.out.println("ATUM");
+            boolean res = sys.getCategorias().get(c.getNomeCategoria()).inserirReceita(e);
             erro.setText("Receita criada com Sucesso");
                //p.reloadlistareceita();
             p.setEnabled(true);
@@ -298,6 +314,7 @@ public class JAdicionarReceita extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -313,6 +330,7 @@ public class JAdicionarReceita extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jcalorias;
     private javax.swing.JComboBox jcategoria;
+    private javax.swing.JTextField jcusto;
     private javax.swing.JTextArea jdescricao;
     private javax.swing.JTextField jdose;
     private javax.swing.JTextArea jingrediente;

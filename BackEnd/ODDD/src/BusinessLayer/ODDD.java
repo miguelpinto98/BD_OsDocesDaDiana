@@ -141,7 +141,8 @@ public class ODDD {
     /* Ainda Falta Fazer Uma Verificação */
     public boolean login(String nickname, String password) {
         boolean lg;
-        if (validaLogin(nickname, password)) {
+        int tipo = this.users.get(nickname).getTipo();
+        if (validaLogin(nickname, password) && tipo == 1) {
             this.emSessao = this.users.get(nickname);
             lg = true;
             if (this.users.get(nickname).getDadosCompletos() == 1) {

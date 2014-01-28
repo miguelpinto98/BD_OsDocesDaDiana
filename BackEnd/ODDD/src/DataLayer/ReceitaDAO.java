@@ -130,40 +130,36 @@ public class ReceitaDAO implements Map<Integer, Receita>{
     @Override
     public Receita put(Integer key, Receita value) {
         Receita rec = null;
+        
         try {
+            PreparedStatement pstm;
             String sql = null;
             if(!this.containsKey(key)) {
-                sql = "INSERT INTO Receita(idReceita, nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, custo, apagado, tempoPreparacao, dose, created_at, updated_at, ingredientes, VNUTRICIONAL)"
-                        + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+               GregorianCalendar c = value.getCreate();
+               String cr = c.get(c.YEAR)+"-"+(c.get(c.MONTH)+1)+"-"+c.get(c.DAY_OF_MONTH)+" "+c.get(c.HOUR_OF_DAY)+":"+c.get(c.MINUTE)+":"+c.get(c.SECOND);
+               c = value.getUpdate();
+               String up = c.get(c.YEAR)+"-"+(c.get(c.MONTH)+1)+"-"+c.get(c.DAY_OF_MONTH)+" "+c.get(c.HOUR_OF_DAY)+":"+c.get(c.MINUTE)+":"+c.get(c.SECOND);
+               
+                sql = "INSERT INTO Receitas (nome, descricao, nrImagens, categoria, username, valorAvaliacoes, nrAvaliacoes, custo, apagado, tempoPreparacao, dose, created_at, updated_at, ingredientes, vnutricional)"
+                        + "VALUES ('"+value.getNome()+"', '"+value.getDesc()+"', '"+value.getNimgs()+"', '"+this.nomeCategoria+"', '"+value.getUser()
+                        +"', '"+value.getVavaliacoes()+"', '"+value.getNavaliacoes()+"', '"+value.getCusto()+"', '"+value.getRemovido()+"', '"+value.getTempo()
+                        +"', '"+value.getDose()+"', TO_DATE('"+cr+"', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('"+up+"', 'YYYY-MM-DD HH24:MI:SS'), '"+value.getIngredientes()
+                        +"', '"+value.getValorNutricional()+"')";
                 
             } else {
                 sql = "";
             }
-            PreparedStatement pstm = ConexaoBD.getConexao().prepareStatement(sql);
-            pstm.setInt(ID_RECEITA, value.getId());
-            pstm.setString(NOME, value.getNome());
-            pstm.setString(DESCRICAO, value.getDesc());
-            pstm.setInt(NR_IMAGENS, value.getNimgs());
-            pstm.setString(CATEGORIA, this.nomeCategoria);
-            pstm.setString(NOME_UTILIZADOR, value.getUser());
-            pstm.setInt(VALOR_AVALIACOES, value.getVavaliacoes());
-            pstm.setInt(NR_AVALIACOES, value.getNavaliacoes());
-            pstm.setInt(CUSTO, value.getCusto());
-            pstm.setInt(APAGADO, value.getRemovido());
-            pstm.setInt(TEMPO_PREPARACAO, value.getTempo());
-            pstm.setInt(DOSE, value.getDose());
-            Timestamp create = new Timestamp(value.getCreate().getTimeInMillis());
-            pstm.setTimestamp(CREATE, create);
-            Timestamp update = new Timestamp(value.getUpdate().getTimeInMillis());
-            pstm.setTimestamp(UPDATE, update);
-            pstm.setString(INGREDIENTES, value.getIngredientes());
-            pstm.setInt(VALOR_NUTRI, value.getValorNutricional());
-            pstm.execute();
+            System.out.println(sql);
+            pstm = ConexaoBD.getConexao().prepareStatement(sql);
+            pstm.executeQuery();
+             pstm.close();
             
-            rec = value;
-            pstm.close();
+         
         } catch (SQLException e) {
-        }
+            e.printStackTrace();
+           
+        }   rec = value;
+            
         return rec;
     }
 

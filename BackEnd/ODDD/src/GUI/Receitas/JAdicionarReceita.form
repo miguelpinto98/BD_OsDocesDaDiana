@@ -153,22 +153,24 @@
                       <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane2" max="32767" attributes="0"/>
                       <Component id="jtempo" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" alignment="0" pref="292" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" pref="313" max="32767" attributes="0"/>
                       <Component id="jnome" alignment="0" max="32767" attributes="0"/>
                       <Component id="jcategoria" alignment="0" max="32767" attributes="0"/>
                       <Component id="erro" max="32767" attributes="0"/>
                       <Component id="juser" max="32767" attributes="0"/>
                       <Component id="jcalorias" max="32767" attributes="0"/>
+                      <Component id="jdose" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
                           <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jdose" max="32767" attributes="0"/>
+                      <Component id="jcusto" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -217,7 +219,12 @@
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jdose" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcusto" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="12" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -334,7 +341,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Calorias"/>
+            <Property name="text" type="java.lang.String" value="valor nutricional"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jcalorias">
@@ -345,6 +352,13 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jdose">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Custo por dose"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jcusto">
         </Component>
       </SubComponents>
     </Container>

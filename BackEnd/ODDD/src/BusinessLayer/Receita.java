@@ -50,6 +50,26 @@ public class Receita {
         this.vnutri = 0;
     }
     
+    public Receita(String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u, String in, int vn){
+        this.nome = nm;
+        this.desc = desc;
+        this.nimgs = nrI;
+        this.user = user;
+        this.vavaliacoes = valorA;
+        this.navaliacoes = nrAvaliacoes;
+        this.custo = totalCal;
+        this.removido = rm;
+        this.ingrs = new ReceitaIngredienteDAO(this.id);
+        this.coments = new ComentariosDAO(this.id);
+        this.avaliacoes = new AvaliacoesUtilizadorDAO(this.id);
+        this.tempoPreparacao = tempoPreparacao;
+        this.dose = dose;
+        this.create = g;
+        this.update = u;
+        this.ingredientes = in;
+        this.vnutri = vn;
+    }
+    
     public Receita(int id, String nm, String desc, int nrI, String user, String cetegoria, int valorA, int nrAvaliacoes, int totalCal, int rm, int tempoPreparacao, int dose, GregorianCalendar g, GregorianCalendar u, String in, int vn){
         this.id = id;
         this.nome = nm;
