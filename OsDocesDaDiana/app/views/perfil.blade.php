@@ -143,7 +143,7 @@
 					<div id="$receita->idreceita" class="accmedia-item">
 						<a href="{{ '/receita/'.$receita->idreceita }}" title="{{ $receita->nome }}">
 						@if($img)
-							<img src="{{ asset($img->imagem); }}" height="165" width="165">
+							<img src="{{ asset($img->imagem); }}" height="120" width="120">
 						@endif	
 						<div class="thumb-effect"></div>
 						</a>
