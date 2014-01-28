@@ -118,7 +118,7 @@
 			<?php $tbl = DB::table('Receitas')->where('idreceita', $coment->idreceita )->first() ;?>
 			 <div id="{{ $coment->idreceita }}" class="item" title="{{ $tbl->nome }}">
 				<input type="hidden" name="N.D." id="N.D." value="N.D." />
-				<a href="<?php echo '/receita/'.$coment->idreceita ;?>">
+				<a href="<?php echo '/receita/'.$coment->idreceita ;?>"></a>
 				<div class="msg-info">
 					<?php $x = DB::table('Utilizadores')->where('username', $coment->username)->first();?>
 					<div class="avatar"><img src="<?php echo asset($x->avatar) ;?>" alt=""></div>
