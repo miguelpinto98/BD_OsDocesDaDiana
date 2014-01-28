@@ -17,68 +17,35 @@ class ReceitaController extends \BaseController {
 		return View::make('receita1',$data);
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+	/*public function favorita($idreceita){
+		$user = Auth::user()->username;
+		$receita = ReceitaSeguida::where('idreceita','=', $idreceita)->get();
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+		if ($receita == NULL) {
+			$recSeg = new ReceitaSeguida;
+			$recSeg->username = $user;
+			$recSeg->idreceita = $idreceita;
+			$recSeg->save;
+		}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+		else { DB::table('receitasseguidas')->where('idreceita','=', $idreceita)->delete(); }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+		return Redirect::to('receita/'.$idreceita);		
+	}*/
 
+	/*public function seguido($idchef){
+		$user = Auth::user()->username;
+
+		if(user()->)
+
+		$chefSeg = new ChefSeguido;
+		$chefSeg->username = $user;
+		$chefSeg->chefeseguido = $idchef;
+		$chefSeg->save;
+
+		return Redirect::to('receita/'.$idreceita);
+		
+	}*/
 }
