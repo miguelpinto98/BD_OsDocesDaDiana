@@ -25,57 +25,41 @@
 						<div class="post-comment" style="height:840px";>
 							<form method="post" id="adicionareceita" name="adicionareceita" action="adicionareceita" enctype="multipart/form-data">			
 										
-										<div class="post-comment-box"style="height:30px">
+										<div class="post-comment-box"style="height:30px" name="adicionareceita" action="adicionareceita">
 											<span>Categoria</span>
-											<select class="dropdown" style="margin-left:155px; height:20px; width:200px">
-												<option value="" class="label">Seleccione</option>
-												<option value="1">Doces de Colher</option>
-												<option value="2">Bolinhos</option>
-												<option value="3">Bolos</option>
-												<option value="4">Bolachas e Biscoitos</option>
-												<option value="5">Tartes</option>
-												<option value="6">Tortas</option>
-												<option value="7">Pudins</option>
-												<option value="8">Bombons e Docinhos</option>
-												<option value="9">Semi-Frios</option>
-												<option value="10">Gelados</option>
-												<option value="11">Doces Fritos</option>
-												<option value="12">Frutos e Outros</option>
-												<option value=""></option>
-											</select>
+											<textarea id="categoria" style="margin-left:160px; height:20px; width:250px" name="categoria" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
-
 
 										<div class="main-separator1"></div>	
 
 
 										<div class="post-comment-box"style="height:30px">
-											<span>Nome</span>
-											<textarea id="nome" style="margin-left:185px; height:20px; width:200px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Nome Receita</span>
+											<textarea id="nome" style="margin-left:130px; height:20px; width:250px" name="nome" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span>Tempo de Preparação</span>
-											<textarea id="tempo" style="margin-left:80px; height:20px; width:200px" name="tempo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Tempo de Preparação (minutos)</span>
+											<textarea id="tempo" style="margin-left:16px; height:20px; width:150px" name="tempo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
 											<span>Dose (número de pessoas)</span>
-											<textarea id="dose" style="margin-left:50px; height:20px; width:200px" name="dose" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<textarea id="dose" style="margin-left:50px; height:20px; width:150px" name="dose" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span>Valor Nutricional</span>
-											<textarea id="valornutricional" style="margin-left:120px; height:20px; width:200px" name="valornutricional" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Valor Nutricional (Kcal)</span>
+											<textarea id="valornutricional" style="margin-left:80px; height:20px; width:150px" name="valornutricional" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
 											<span>Custo (em €/por dose)</span>
-											<textarea id="custo" style="margin-left:80px; height:20px; width:200px" name="custo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<textarea id="custo" style="margin-left:80px; height:20px; width:150px" name="custo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
@@ -98,14 +82,14 @@
 										<div class="post-comment-box">
 											<label for="file">Imagens:</label>
 											<input type="file" name="file" multiple="multiple"><br>
-											<input type="submit" name="submit" value="Carregar">
+											<!--<input type="submit" name="submit" value="Carregar">-->
 										</div>
 									
 
 										<div class="separator"></div>
 											<div class="comment-box-footer" style="height:30px">
 												<div class="comment-submit" style="height:30px">
-												<input type="submit" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"/>
+												<input type="submit" name="Receita" id="comment-submit" class="comment-submit" value="Submeter"/>
 												</div>
 											</div>
 

@@ -9,7 +9,7 @@ class PerfilController extends BaseController {
 	 */
 	public function index() {
 		$user = Auth::user()->username;
-		$receitas = Receitas::where('username','=',$user)->get();
+		$receitas = Receita::where('username','=',$user)->get();
 
 		$data = array('receitas'=>$receitas);
 

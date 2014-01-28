@@ -8,8 +8,8 @@ class ReceitaController extends \BaseController {
 	 * @return Response
 	 */
 	public function index($idreceita) {
-		$receita = Receitas::where('idreceita','=',$idreceita)->firstOrFail();
-		$comentarios = Comentarios::where('idreceita','=', $idreceita)->orderBy('created_at','asc')->get();
+		$receita = Receita::where('idreceita','=',$idreceita)->firstOrFail();
+		$comentarios = Comentario::where('idreceita','=', $idreceita)->orderBy('created_at','asc')->get();
 		$imagens = DB::table('Imagens')->where('idreceita', $idreceita)->get();
 
 		$data = array('receita' => $receita, 'comentarios'=> $comentarios, 'imagens'=>$imagens);

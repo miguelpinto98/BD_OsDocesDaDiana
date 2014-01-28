@@ -1,6 +1,6 @@
 <?php
 
-class Receitas extends Eloquent {
+class Receita extends Eloquent {
 
 	/**
 	 * The database table used by the model.
@@ -8,5 +8,8 @@ class Receitas extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'RECEITAS';
+	protected $primaryKey = 'idreceita';
+
+
 
 }
