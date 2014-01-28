@@ -283,7 +283,7 @@ public class JAdicionarReceita extends javax.swing.JDialog {
         GregorianCalendar dataCriar = new GregorianCalendar();
         GregorianCalendar dataUpdate = new GregorianCalendar();
         
-        System.out.println(nome);
+        
         
         if(nome.equals("") || ingredientes.equals("") || descricao.equals("") || utilizador.equals(""))
         {

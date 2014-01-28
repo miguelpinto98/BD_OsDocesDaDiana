@@ -99,7 +99,7 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
             ResultSet rs = stm.executeQuery(sql);
             
             if(rs.next()) {
-                String nome = rs.getString(USERNAME);
+                String nome = rs.getString(NOME);
                 String email = rs.getString(EMAIL);
                 String pw = rs.getString(PW);
                 String img = rs.getString(AVATAR); // ATIVAR ISTO
@@ -137,9 +137,10 @@ public class UtilizadorDAO implements Map<String, Utilizador> {
                c = value.getUpdated();
                String up = c.get(c.YEAR)+"-"+(c.get(c.MONTH)+1)+"-"+c.get(c.DAY_OF_MONTH)+" "+c.get(c.HOUR_OF_DAY)+":"+c.get(c.MINUTE)+":"+c.get(c.SECOND);
                
-               sql = "INSERT INTO UTILIZADORES (USERNAME, NOME, EMAIL, PASSWORD, TIPO, CREATED_AT, UPDATED_AT) "
-                    + "VALUES ('"+value.getUsername()+"', '"+value.getNome()+"', '"+value.getEmail()+"', '"+value.getPassword()+"', "
-                    + "'"+value.getTipo()+"', TO_DATE('"+cr+"', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('"+up+"', 'YYYY-MM-DD HH24:MI:SS'))";  
+               sql = "INSERT INTO UTILIZADORES (USERNAME, NOME, EMAIL, PASSWORD, DESCRICAO, TIPO, CREATED_AT, UPDATED_AT, LOCALIDADE) "
+                    + "VALUES ('"+value.getUsername()+"', '"+value.getNome()+"', '"+value.getEmail()+"', '"+value.getPassword()+"', '"
+                    +value.getDescricao()+"', '"+value.getTipo()+"', TO_DATE('"+cr+"', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('"+up+"', 'YYYY-MM-DD HH24:MI:SS'), '"
+                    +value.getLocalidade()+"')";  
             } else {
                 ;
             }   
