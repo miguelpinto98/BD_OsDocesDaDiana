@@ -72,4 +72,20 @@ class ReceitaController extends \BaseController {
 		}
 		return Redirect::to('receita/'.$idreceita);		
 	}
+
+	public function avaliar($idreceita, $rate) {
+		$user = Auth::user()->username;
+		$existe = AvaliacaoUtilizador::where('username','=',$user)->where('idreceita','=',$idreceita)->get();
+
+		if(count($existe)!=0) {
+			;//AvaliacaoUtilizador::where('username','=',$user)->where('idreceita','=',$idreceita)->delete();
+		} else {
+			$av = new AvaliacaoUtilizador;
+			$av->username = $user;
+			$av->idreceita = $idreceita;
+			$av->valor = $rate;
+			$av->save();
+		}
+		return Redirect::to('receita/'.$idreceita);	
+	}
 }

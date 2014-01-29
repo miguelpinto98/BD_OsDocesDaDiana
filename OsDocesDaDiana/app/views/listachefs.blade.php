@@ -46,7 +46,8 @@
 					<div class="divider" style="margin-top: 15px;"></div>
 					<div class="new-details">
 						<div class="comments">Pontuação de {{ $user->valoravaliacoes }} estrelas</div>
-						<div class="comments">Seguido por <span>10</span> chefs (N.D.)</div>
+						<?php  $num = ChefSeguido::where('chefeseguido','=', $user->username)->count(); ?>
+						<div class="comments">Seguido por <span>{{ $num }}</span> chefs</div>
 						<div class="comments"> {{ $user->nrreceitas }} Receitas próprias</div>
 					</div>
 				</div>

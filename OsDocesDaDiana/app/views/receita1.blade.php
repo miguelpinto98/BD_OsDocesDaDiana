@@ -107,14 +107,28 @@
 			@endif
 					<div id="movie-rate" class="movie-rate">
 						<span class="raterLabel">Classifique esta receita</span>
+						<?php $user = Auth::user()->username;
+							  $existe = AvaliacaoUtilizador::where('username','=',$user)->where('idreceita','=',$receita->idreceita)->first(); ?>
+						@if(!$existe)	  
 						<div class="stars">
-							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 1);" id="rater1"></a>
-							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 2);" id="rater2"></a>
-							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 3);" id="rater3"></a>
-							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 4);" id="rater4"></a>
-							<a href="javascript: mediaRater('receita', {{$receita->idreceita}}, 5);" id="rater5"></a>
+							<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/1' ;?>" id="rater1" class="full"></a>
+							<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/2' ;?>" id="rater2" class="full"></a>
+							<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/3' ;?>" id="rater3"></a>
+							<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/4' ;?>" id="rater4"></a>
+							<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/5' ;?>" id="rater5"></a>
 						</div>
-						<input type="hidden" id="raterDefault" value="0" />
+						@else
+						<?php $i=0; 
+							$res=$existe->valor;
+							while($i<5) { ?>
+								@if($i < $res)
+									<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/'.($i+1) ;?>" id="<?php echo 'rater'.($i+1);?>" class="full"></a>
+								@else
+									<a href="<?php echo '/receita/'.$receita->idreceita.'/avaliar/'.($i+1) ;?>" id="<?php echo 'rater'.($i+1);?>"></a>
+								@endif												
+								<?php		$i++;
+								}?>	
+						@endif
 					</div>
 			</div>
 		</div>
