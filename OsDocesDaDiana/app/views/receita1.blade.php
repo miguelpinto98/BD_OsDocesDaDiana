@@ -109,7 +109,7 @@
 	<!--VER RECEITA vvv -->
 				
 				<div id="player-box" class="content-box">
-					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
+					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 0px;">
 								<div class="movie-info">									
 									<div class="movie-detailed-info">	
 									</div>							
@@ -125,6 +125,7 @@
 					
 					<div class="player-aux" style="overflow: visible; padding-bottom: 25px;">
 						<div class="lista-ing">
+							<span class="ing"><font color="#363636"><font size=4>Receita</font></font></span></br></br>
 							<span class="ing">Ingredientes:</span>
 							<div class="clear"></div>
 							<ul>
