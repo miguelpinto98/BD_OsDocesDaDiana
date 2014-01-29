@@ -88,7 +88,7 @@ public class ComentariosDAO implements Map<Integer,Comentario>{
         try {
             int id = (Integer) key;
             Statement stm = ConexaoBD.getConexao().createStatement();
-            String sql = "SELECT * FROM COMENTARIOS c WHERE c.IDCOMENTARIO = "+id+" and u.APAGADO = "+0;
+            String sql = "SELECT * FROM COMENTARIOS c WHERE c.IDCOMENTARIO = "+id+" and c.APAGADO = "+0;
             ResultSet rs = stm.executeQuery(sql);
             
             if(rs.next()) {
