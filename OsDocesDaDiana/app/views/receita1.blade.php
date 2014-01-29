@@ -205,7 +205,7 @@
 							<div class="separator"></div>
 							<div class="comment-box-footer">
 								<div class="comment-submit">
-									<input type="submit" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter"></input>
+									<input type="submit" name="comment-submit" id="comment-submit" class="comment-submit" value="Submeter" style="background-color:#b5dcd1"></input>
 								</div>
 							</div>
 						</div>

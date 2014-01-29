@@ -1648,7 +1648,7 @@ div#content div.content-box div.movies-box-content div.media-right-content div.m
 	overflow: hidden;
 	opacity: 0.2;
 	filter: alpha(opacity=20);
-	margin-left: 55px;
+	margin-left: 95px;
 }
 
 div#content div.content-box div.movies-box-content div.media-right-content div.movies-list div.item div.thumb a div.thumb-effect2{
@@ -2775,7 +2775,7 @@ div#content div.content-box div.wishlist-content div.item div.thumb a div.thumb-
 	overflow: hidden;
 	opacity: 0.2;
 	filter: alpha(opacity=20);
-	margin-left: 55px;
+	margin-left: 95px;
 }
 
 div#content div.content-box div.wishlist-content div.item div.add-btn{
@@ -3322,7 +3322,7 @@ div#content div.content-box div.notifications-content div.notifications-items di
 	overflow: hidden;
 	opacity: 0.2;
 	filter: alpha(opacity=20);
-	margin-left: 55px;
+	margin-left: 95px;
 }
 
 div#content div.content-box div.notifications-content div.notifications-items div.item div.notification-preview div.preview div.media div.thumb a div.thumb-effect2{
@@ -3688,7 +3688,7 @@ div#content div#player-box div.player-aux div.thumb a.thumb-aux div.thumb-effect
 	overflow: hidden;
 	opacity: 0.2;
 	filter: alpha(opacity=20);
-	margin-left: 55px;
+	margin-left: 95px;
 }
 
 div#content div#player-box div.player-aux div.thumb a.thumb-aux div.thumb-effect2{
@@ -5310,9 +5310,9 @@ div#content div#comments-box div.comments-header div.comment-reply-wraper {
 	/*width: 585px;*/
 	width: 922px;
 	height: 250px;
-	background-color: #F6F6F6;
-	border: 1px solid #d4d4d4;
-	border-bottom: 1px solid #a7a7a7;
+	background-color: #b5dcd1;
+	border: 1px solid #b5dcd1;
+	border-bottom: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -5409,7 +5409,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	width: 785px;
 	height: 187px;
 	overflow: hidden;
-	background-color: #e9eed9;
+	background-color: #b5dcd1;
 	border: 1px solid #dddddd;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -5441,6 +5441,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	width: 17px;
 	height: 15px;
 	background: transparent url('../images/comment-box-arrow.png') no-repeat;
+	background-color: #b5dcd1;
 	margin-left: -32px;
 }
 
@@ -5461,7 +5462,7 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 	text-indent: 27px;
 	font-family: 'Helvetica65Med', Tahoma;
 	font-size: 14px;
-	color: #76892a;
+	color: #8B7D7B;
 	line-height: 22px;
 }
 
@@ -5530,12 +5531,14 @@ div#content div#comments-box div.comments-header div.comment-reply div.post-comm
 div#content div#comments-box div.comments-header div.comment-reply div.post-comment div.comment-box-footer div.comment-submit input{
 	float: right;
 	height: 20px;
-	line-height: 20px;
+	line-height: 10px;
 	overflow: hidden;
 	font-family: Tahoma;
-	font-size: 12px;
+	font-size: 15px;
 	font-weight: bold;
-	color: #8e8e94;
+	color: #5E5E5E;
+	background-color: #b5dcd1;
+	border: 1px solid #b5dcd1;
 	text-decoration: none;
 	text-align: right;
 }
@@ -5584,9 +5587,9 @@ div#content div#comments-box div.comments-list div.item-wrapper{
 	float: left;
 	width: 450px;
 	overflow: hidden;
-	background-color: #F6F6F6;
-	border: 1px solid #d4d4d4;
-	border-bottom: 1px solid #a7a7a7;
+	background-color: #b5dcd1;
+	border: 1px solid #b5dcd1;
+	border-bottom: 1px solid #b5dcd1;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -5610,7 +5613,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item{
 	float: left;
 	width: 420px;
 	overflow: hidden;
-	background-color: #fff;
+	background-color: #FFFFFF;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
@@ -5717,7 +5720,7 @@ div#content div#comments-box div.comments-list div.item-wrapper div.item div.com
 	overflow: hidden;
 	font-family: 'PTSans Bold', Tahoma;
 	font-size: 48px;
-	color: #eaeaea;
+	color: #b5dcd1;
 	text-align: right;
 }
 
