@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class ConexaoBD {
 
-    public static final String ip = "192.168.1.84";
+    public static final String ip = "localhost";
     public static final String porta = "1521";
     public static final String sid = "orcl";
     public static final String user = "ODDD";
