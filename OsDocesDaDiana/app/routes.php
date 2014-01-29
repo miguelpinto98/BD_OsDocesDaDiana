@@ -33,5 +33,5 @@ Route::post('/adicionareceita','AdicionaController@create');
 Route::post('/perfil', 'PerfilController@uploadf');
 //Route::post('/perfil', 'PerfilController@alteradados');
 Route::get('/receita/{idreceita}/favorita', 'ReceitaController@favorita');
-Route::get('/receita/{idreceita}/favorita', 'ReceitaController@seguirchef');
+Route::get('/receita/{idreceita}/seguir', 'ReceitaController@seguir');
 

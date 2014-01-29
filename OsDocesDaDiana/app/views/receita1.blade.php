@@ -79,18 +79,32 @@
 			</div>	
 			<div class="clear"></div>
 		</div>
-		@if(Auth::check())
+		@if(Auth::check() && (Auth::user()->username != $receita->username))
 		<div class="player-aux" style="padding-top: 0px; display: block;">
 			<div id="movie-actions" class="movie-actions">
+			<?php 	$user = Auth::user();
+					$rec = ReceitaSeguida::where('IDRECEITA','=',$receita->idreceita)->where('USERNAME','=',$user->username)->get();?>
+			@if(count($rec) != 0)
+				<form method="post" id="perfil" name="perfil" action="favorita" enctype="multipart/form-data">									
+					<a id="faved" href="<?php echo '/receita/'.$receita->idreceita.'/favorita' ;?>" class="faved "  style="hover;">Adicionou a receita como favorita<span class="fave"></span></a>
+				</form>
+			@else
 				<form method="post" id="perfil" name="perfil" action="favorita" enctype="multipart/form-data">									
 					<a id="faved" href="<?php echo '/receita/'.$receita->idreceita.'/favorita' ;?>" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
 				</form>
-
+			@endif
+			<?php 	$user = Auth::user()->username;
+					$cs = Receita::where('idreceita','=',$receita->idreceita)->firstOrFail();
+					$rec = ChefSeguido::where('username','=',$user)->where('chefeseguido','=',$cs->username)->get();?>
+			@if(count($rec) != 0)	
 				<form method="post" id="perfil" name="perfil" action="seguido" enctype="multipart/form-data">									
-					<a id="watched" href="<?php echo '/receita/'.$receita->idreceita.'/seguirchef' ;?>" class="watched">Seguir Chef<span class="watch"></span></a>
+					<a id="watched" href="<?php echo '/receita/'.$receita->idreceita.'/seguir' ;?>" class="watched">A seguir este chef<span class="watch"></span></a>
 				</form>
-
-		
+			@else	
+				<form method="post" id="perfil" name="perfil" action="seguido" enctype="multipart/form-data">									
+					<a id="watched" href="<?php echo '/receita/'.$receita->idreceita.'/seguir' ;?>" class="watched">Seguir Chef<span class="watch"></span></a>
+				</form>
+			@endif
 					<div id="movie-rate" class="movie-rate">
 						<span class="raterLabel">Classifique esta receita</span>
 						<div class="stars">
