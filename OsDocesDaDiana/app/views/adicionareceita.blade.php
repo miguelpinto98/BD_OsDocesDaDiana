@@ -52,14 +52,14 @@
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span>Valor Nutricional (Kcal)</span>
-											<textarea id="valornutricional" style="margin-left:80px; height:20px; width:150px" name="valornutricional" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Valor Nutricional (Total Kcal)</span>
+											<textarea id="valornutricional" style="margin-left:45px; height:20px; width:150px" name="valornutricional" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 
 										<div class="post-comment-box" style="height:30px">
-											<span>Custo (em €/por dose)</span>
-											<textarea id="custo" style="margin-left:80px; height:20px; width:150px" name="custo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
+											<span>Custo (Total em €)</span>
+											<textarea id="custo" style="margin-left:105px; height:20px; width:150px" name="custo" value="" onblur="textareaLabel(0);" onfocus="textareaLabel(1);"></textarea>
 										</div>
 										<div class="main-separator1"></div>
 

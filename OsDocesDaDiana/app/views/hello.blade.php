@@ -67,7 +67,7 @@
 			</div>
                     <ul class="movies-box-btn">													<!-- movies -->
 						<li id="movies" class="first"><a href="#" onclick="changeHighLightsContent('receitas', 'movies');">Mais Recentes</a></li>
-                        <li id="featuredmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'featuredmovies');">Em Destaque</a></li> <!--class="slctd"-->
+                        <!--<li id="featuredmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'featuredmovies');">Em Destaque</a></li> class="slctd"-->
                         <li id="mostviewedmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'mostviewedmovies');">Mais Vistas</a></li>
                         <li id="recommendedmovies" class=""><a href="#" onclick="changeHighLightsContent('receitas', 'recommendedmovies');">Recomendadas</a></li>
                     </ul> 

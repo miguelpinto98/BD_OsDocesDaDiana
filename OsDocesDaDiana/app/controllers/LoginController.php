@@ -41,7 +41,7 @@ class LoginController extends BaseController {
 	         	$aux = $data['nickname'];
 	         	$aux2 = md5($data['password1']);
 	         
-	         	$user = User::where('username', '=', $data['nickname'])->firstOrFail();
+	         	$user = User::where('username', '=', $data['nickname'])->first();
 	         	if(isset($user)) {
 	             	if($user->password == md5($data['password1'])) { // If their password is still MD5
 	                 	Auth::login($user);
