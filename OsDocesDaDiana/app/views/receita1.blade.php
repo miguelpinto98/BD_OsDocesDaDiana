@@ -79,11 +79,32 @@
 			</div>	
 			<div class="clear"></div>
 		</div>
-		@if(Auth::check())
+		@if(Auth::check() && (Auth::user()->username != $receita->username))
 		<div class="player-aux" style="padding-top: 0px; display: block;">
 			<div id="movie-actions" class="movie-actions">
-				<a id="faved" href="javascript: playerMovieAction('movies', 5170, 'faved');" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
-				<a id="watched" href="javascript: playerMovieAction('movies', 5170, 'watched');" class="watched ">Seguir Chef<span class="watch"></span></a>
+			<?php 	$user = Auth::user();
+					$rec = ReceitaSeguida::where('IDRECEITA','=',$receita->idreceita)->where('USERNAME','=',$user->username)->get();?>
+			@if(count($rec) != 0)
+				<form method="post" id="perfil" name="perfil" action="favorita" enctype="multipart/form-data">									
+					<a id="faved" href="<?php echo '/receita/'.$receita->idreceita.'/favorita' ;?>" class="faved "  style="hover;">Adicionou a receita como favorita<span class="fave"></span></a>
+				</form>
+			@else
+				<form method="post" id="perfil" name="perfil" action="favorita" enctype="multipart/form-data">									
+					<a id="faved" href="<?php echo '/receita/'.$receita->idreceita.'/favorita' ;?>" class="faved ">Adicionar esta receita aos favoritos<span class="fave"></span></a>
+				</form>
+			@endif
+			<?php 	$user = Auth::user()->username;
+					$cs = Receita::where('idreceita','=',$receita->idreceita)->firstOrFail();
+					$rec = ChefSeguido::where('username','=',$user)->where('chefeseguido','=',$cs->username)->get();?>
+			@if(count($rec) != 0)	
+				<form method="post" id="perfil" name="perfil" action="seguido" enctype="multipart/form-data">									
+					<a id="watched" href="<?php echo '/receita/'.$receita->idreceita.'/seguir' ;?>" class="watched">A seguir este chef<span class="watch"></span></a>
+				</form>
+			@else	
+				<form method="post" id="perfil" name="perfil" action="seguido" enctype="multipart/form-data">									
+					<a id="watched" href="<?php echo '/receita/'.$receita->idreceita.'/seguir' ;?>" class="watched">Seguir Chef<span class="watch"></span></a>
+				</form>
+			@endif
 					<div id="movie-rate" class="movie-rate">
 						<span class="raterLabel">Classifique esta receita</span>
 						<div class="stars">
@@ -102,7 +123,7 @@
 	<!--VER RECEITA vvv -->
 				
 				<div id="player-box" class="content-box">
-					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 25px;">
+					<div id="movie5170" class="player-aux" style="overflow: visible; padding-bottom: 0px;">
 								<div class="movie-info">									
 									<div class="movie-detailed-info">	
 									</div>							
@@ -118,6 +139,7 @@
 					
 					<div class="player-aux" style="overflow: visible; padding-bottom: 25px;">
 						<div class="lista-ing">
+							<span class="ing"><font color="#363636"><font size=4>Receita</font></font></span></br></br>
 							<span class="ing">Ingredientes:</span>
 							<div class="clear"></div>
 							<ul>

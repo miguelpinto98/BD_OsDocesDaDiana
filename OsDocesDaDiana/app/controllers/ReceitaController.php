@@ -40,33 +40,36 @@ class ReceitaController extends \BaseController {
         }
 	}
 
-	/*public function favorita($idreceita){
+	public function favorita($idreceita){
 		$user = Auth::user()->username;
-		$receita = ReceitaSeguida::where('idreceita','=', $idreceita)->get();
+		$rec = ReceitaSeguida::where('IDRECEITA','=',$idreceita)->where('USERNAME','=',$user)->get();
 
-		if ($receita == NULL) {
+		if(count($rec)!=0) {
+			ReceitaSeguida::where('IDRECEITA','=',$idreceita)->where('USERNAME','=',$user)->delete();
+		}
+		else {
 			$recSeg = new ReceitaSeguida;
 			$recSeg->username = $user;
 			$recSeg->idreceita = $idreceita;
-			$recSeg->save;
+			$recSeg->save();
 		}
-
-
-		else { DB::table('receitasseguidas')->where('idreceita','=', $idreceita)->delete(); }
-
 		return Redirect::to('receita/'.$idreceita);		
 	}
 
-	public function seguido($idchef){
+	public function seguir($idreceita){
 		$user = Auth::user()->username;
+		$cs = Receita::where('idreceita','=',$idreceita)->firstOrFail();
+		$rec = ChefSeguido::where('username','=',$user)->where('chefeseguido','=',$cs->username)->get();
 
-		if(user()->)
-
-		$chefSeg = new ChefSeguido;
-		$chefSeg->username = $user;
-		$chefSeg->chefeseguido = $idchef;
-		$chefSeg->save;
-
-		return Redirect::to('receita/'.$idreceita);	
-	}*/
+		if(count($rec)!=0) {
+			ChefSeguido::where('username','=',$user)->where('chefeseguido','=',$cs->username)->delete();
+		}
+		else {
+			$seg = new ChefSeguido;
+			$seg->username = $user;
+			$seg->chefeseguido = $cs->username;
+			$seg->save();
+		}
+		return Redirect::to('receita/'.$idreceita);		
+	}
 }

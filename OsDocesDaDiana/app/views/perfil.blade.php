@@ -48,7 +48,8 @@
 				<div class="subscribe-series">
 					<div class="subscribe-header">Gerir conta</div>
 					<div class="separator"></div>
-					
+					<form action="perfil" method="post" enctype="multipart/form-data">
+
 					<div class="subscribe-content">							
 						<div class="options-content">
 							<span class="label">Alterar dados:</span>
@@ -72,16 +73,12 @@
 							<div class="main-separator1"></div>
 
 
-							<form action="perfil" method="post" enctype="multipart/form-data" style="margin-top:30px">
-								<label for="file">Imagens:</label>
-								<input type="file" name="file" multiple="multiple"><br>
-								<input type="submit" name="submit" value="Carregar">
+							<form action="perfil" method="post" enctype="singlepart/form-data" style="margin-top:30px">
+								<label for="file">Avatar</label>
+								<input type="file" name="file" multiple="single"><br>
 							</form>
 
-							
-
-							<form action="perfil" method="post" enctype="multipart/form-data">
-							<input type="submit" id="cena" name="cena" style="background-color:#93a842; color: white; height:50px; width:200px; margin-left:20px" name="submit" value="Alterar Dados" />
+							<input type="submit" id="cena" name="cena" style="background-color:#93a842; color: white; height:50px; width:200px; margin-left:20px; margin-top:30px" name="submit" value="Alterar Dados" />
 							<div class="main-separatorr"></div>
 							</form>
 						
